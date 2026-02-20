@@ -1,0 +1,79 @@
+2025-12-09 11:39:29,595 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-09 11:39:30,107 - __main__ - INFO - User session started at: 2025-12-09 11:39:30.107632
+2025-12-09 11:39:30,107 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 11:39:34,668 - __main__ - INFO - User selected option: 2
+2025-12-09 11:39:34,669 - __main__ - INFO - Starting Source-Target Comparison module
+2025-12-09 11:39:34,672 - dq_comparison - INFO - STARTING UNIVERSAL SOURCE-TARGET COMPARISON TOOL
+2025-12-09 11:39:34,673 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-09 11:39:34,673 - dq_comparison - INFO - SOURCE DATA:
+2025-12-09 11:39:34,673 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 11:39:37,327 - dq_unified - INFO - User selected source type: 1
+2025-12-09 11:39:37,329 - dq_unified - INFO - Getting CSV file path from user
+2025-12-09 11:39:58,638 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv (0.0MB)
+2025-12-09 11:39:58,638 - dq_comparison - INFO - TARGET DATA:
+2025-12-09 11:39:58,640 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 11:40:00,729 - dq_unified - INFO - User selected source type: 3
+2025-12-09 11:40:00,731 - dq_unified - INFO - GETTING DATABASE CONFIGURATION
+2025-12-09 11:40:02,417 - dq_unified - INFO - User selected database type: 2
+2025-12-09 11:40:11,621 - dq_unified - INFO - Database configuration collected: mysql, Table: customers
+2025-12-09 11:40:11,623 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-09 11:40:11,627 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-09 11:40:11,630 - dq_unified - INFO - CSV file has 15 rows
+2025-12-09 11:40:11,630 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-09 11:40:11,643 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-09 11:40:11,648 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-09 11:40:11,649 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 86.5MB total, 0.0MB for dataframe
+2025-12-09 11:40:11,652 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-09 11:40:11,654 - dq_unified - INFO - Loading large database table: customers
+2025-12-09 11:40:11,766 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-09 11:40:11,768 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-09 11:40:12,928 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-09 11:40:12,933 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-09 11:40:12,933 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 107.5MB total, 0.0MB for dataframe
+2025-12-09 11:40:12,934 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-09 11:40:12,934 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-09 11:40:17,160 - dq_comparison - INFO - User column selection input: all
+2025-12-09 11:40:17,161 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-09 11:40:17,163 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-09 11:40:17,164 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Database: mysql - Table: customers, Selected columns: 10
+2025-12-09 11:40:17,165 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-09 11:40:17,167 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 11:40:17,189 - dq_error_log - INFO - Database connection successful
+2025-12-09 11:40:17,190 - dq_comparison - INFO - Session ID: CMP_20251209_114017
+2025-12-09 11:40:17,191 - dq_comparison - INFO - RUNNING COMPARISON CHECKS IN CORRECT SEQUENCE:
+2025-12-09 11:40:17,192 - dq_comparison - INFO - 
+1️⃣ FIRST: ROW COUNT CHECK
+2025-12-09 11:40:17,193 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-09 11:40:17,193 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-09 11:40:17,193 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-09 11:40:17,194 - dq_comparison - INFO - 
+2️⃣ SECOND: HASH-BASED COMPARISON
+2025-12-09 11:40:17,195 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON
+2025-12-09 11:40:17,196 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-09 11:40:17,196 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-09 11:40:17,202 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-09 11:40:17,205 - dq_comparison - INFO - Hash-based Comparison: Common rows: 9, Rows only in source: 5, Rows only in target: 5
+2025-12-09 11:40:17,206 - dq_comparison - INFO - Logging 5 rows missing in target...
+2025-12-09 11:40:17,229 - dq_error_log - INFO - Batch logged 5 errors for session CMP_20251209_114017
+2025-12-09 11:40:17,230 - dq_comparison - INFO - Logging 5 rows extra in target...
+2025-12-09 11:40:17,253 - dq_error_log - INFO - Batch logged 5 errors for session CMP_20251209_114017
+2025-12-09 11:40:17,253 - dq_comparison - INFO - THIRD CHECK: ANALYZING VALUE MISMATCHES IN COMMON ROWS
+2025-12-09 11:40:17,256 - dq_comparison - INFO - 
+3️⃣ THIRD: DETAILED ANALYSIS (mismatches found)
+2025-12-09 11:40:17,256 - dq_comparison - INFO - Analyzing structure compatibility...
+2025-12-09 11:40:17,257 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-09 11:40:17,261 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-09 11:40:17,265 - dq_comparison - INFO - Duplicate rows - Source: 0, Target: 1
+2025-12-09 11:40:17,304 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 11:40:17,304 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-09 11:40:17,328 - dq_audit - INFO - Inserted comparison record
+2025-12-09 11:40:17,328 - dq_audit - INFO - comparison audit record successfully stored in database
+2025-12-09 11:40:17,340 - dq_comparison - INFO - 
+✅ Comparison completed! Session ID: CMP_20251209_114017
+2025-12-09 11:40:17,341 - dq_comparison - INFO - Check dq_error_logs table for detailed error information.
+2025-12-09 11:40:17,341 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-09 11:40:17,342 - __main__ - INFO - Source-Target Comparison completed successfully
+2025-12-09 11:40:17,342 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 12:03:20,012 - __main__ - INFO - User selected option: 6
+2025-12-09 12:03:20,013 - __main__ - INFO - User session ended. Duration: 0:23:49.905753
+2025-12-09 12:03:20,014 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

@@ -1,0 +1,101 @@
+2025-12-29 15:44:06,522 - root - INFO - CLI Mode Logging Initialized
+2025-12-29 15:44:06,522 - root - INFO - CLI logs will be saved to: logs/dq_framework_20251229_154406.log
+2025-12-29 15:44:06,522 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-29 15:44:06,523 - __main__ - INFO - Starting system resource check
+2025-12-29 15:44:06,529 - __main__ - INFO - Total RAM: 15.7 GB
+2025-12-29 15:44:06,529 - __main__ - INFO - Available RAM: 2.3 GB
+2025-12-29 15:44:06,529 - __main__ - INFO - Memory used: 85.4%
+2025-12-29 15:44:06,529 - __main__ - INFO - Memory status: OK
+2025-12-29 15:44:06,530 - __main__ - INFO - Free disk space: 261.7 GB
+2025-12-29 15:44:06,530 - __main__ - INFO - Disk used: 45.0%
+2025-12-29 15:44:06,530 - __main__ - INFO - Disk space: OK
+2025-12-29 15:44:07,031 - __main__ - INFO - CPU cores: 8
+2025-12-29 15:44:07,031 - __main__ - INFO - CPU usage: 27.0%
+2025-12-29 15:44:07,031 - __main__ - INFO - Python version: 3.12.4
+2025-12-29 15:44:07,031 - __main__ - INFO - System platform: win32
+2025-12-29 15:44:07,031 - __main__ - INFO - User session started at: 2025-12-29 15:44:07.031258
+2025-12-29 15:44:07,031 - __main__ - INFO - Displaying main menu options to user
+2025-12-29 15:44:10,094 - __main__ - INFO - User selected option: 1
+2025-12-29 15:44:10,097 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-29 15:44:10,099 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-29 15:44:10,099 - dq_unified - INFO - Prompting user for data source type
+2025-12-29 15:44:10,100 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-29 15:44:11,277 - dq_unified - INFO - User selected source type: 3
+2025-12-29 15:44:11,278 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-29 15:44:19,930 - dq_unified - INFO - User selected Browse and Select mode
+2025-12-29 15:44:19,938 - database_navigator - INFO - DatabaseNavigator initialized
+2025-12-29 15:44:19,939 - database_navigator - INFO - Starting database navigation...
+2025-12-29 15:44:23,100 - database_navigator - INFO - Database type: mysql
+2025-12-29 15:44:23,100 - database_navigator - INFO - Getting database configuration...
+2025-12-29 15:44:29,087 - database_navigator - INFO - Connecting to MYSQL...
+2025-12-29 15:44:29,280 - database_navigator - INFO - Successfully connected to MYSQL!
+2025-12-29 15:44:29,293 - database_navigator - INFO - Found 13 databases
+2025-12-29 15:44:43,508 - database_navigator - INFO - Selected database: dq_checks
+2025-12-29 15:44:43,512 - database_navigator - INFO - Found 1 schemas
+2025-12-29 15:44:48,903 - database_navigator - INFO - Selected schema: dq_checks
+2025-12-29 15:44:48,919 - database_navigator - INFO - Found 6 tables in schema 'dq_checks'
+2025-12-29 15:44:53,591 - database_navigator - INFO - Selected table: employee
+2025-12-29 15:44:53,597 - database_navigator - INFO - Selection complete: {'type': 'mysql', 'database': 'dq_checks', 'schema': 'dq_checks', 'table': 'employee', 'selection_mode': 'hierarchical', 'host': 'localhost', 'port': '3306', 'user': 'root'}
+2025-12-29 15:44:53,599 - dq_unified - INFO - Selected via navigation: dq_checks.dq_checks.employee
+2025-12-29 15:44:53,599 - dq_unified - INFO - Loading data from DATABASE
+2025-12-29 15:44:53,600 - dq_unified - INFO - Loading data from DATABASE
+2025-12-29 15:44:53,600 - dq_unified - INFO - Loading large database table: employee
+2025-12-29 15:44:53,612 - dq_unified - ERROR - Error loading large database: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 185, in load_large_database
+    return LargeDatasetHandler._load_large_mysql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 281, in _load_large_mysql
+    conn = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-12-29 15:44:53,647 - dq_unified - ERROR - Error loading data from database: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1196, in load_data_from_source
+    df = LargeDatasetHandler.load_large_database(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 185, in load_large_database
+    return LargeDatasetHandler._load_large_mysql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 281, in _load_large_mysql
+    conn = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-12-29 15:44:53,649 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-29 15:44:53,650 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-29 15:44:53,650 - __main__ - INFO - Displaying main menu options to user
+2025-12-29 15:53:11,853 - __main__ - INFO - User selected option: 6
+2025-12-29 15:53:11,853 - __main__ - INFO - User session ended. Duration: 0:09:04.822333
+2025-12-29 15:53:11,854 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

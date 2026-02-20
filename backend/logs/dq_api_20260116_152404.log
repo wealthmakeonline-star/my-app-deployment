@@ -1,0 +1,500 @@
+2026-01-16 15:24:04,616 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-16 15:24:04,617 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260116_152404.log
+2026-01-16 15:24:04,693 - dq_rules - WARNING - Could not load config from database: name 'get_db_connection' is not defined
+2026-01-16 15:24:04,698 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-16 15:24:04,699 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-16 15:24:04,702 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-16 15:24:04,702 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:24:04,703 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-16 15:24:04,726 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-16 15:24:04,727 - __main__ - INFO - 📊 Modules available: True
+2026-01-16 15:24:04,728 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-16 15:24:04,728 - __main__ - INFO - 📋 Available endpoints:
+2026-01-16 15:24:04,729 - __main__ - INFO -   GET  /              - API status
+2026-01-16 15:24:04,730 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-16 15:24:04,731 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-16 15:24:04,731 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-16 15:24:04,732 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-01-16 15:24:04,733 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-01-16 15:24:04,734 - __main__ - INFO -   GET  /api/compare/{id}/rows/source_only - Source-only rows
+2026-01-16 15:24:04,734 - __main__ - INFO -   GET  /api/compare/{id}/rows/target_only - Target-only rows
+2026-01-16 15:24:04,735 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-01-16 15:24:04,736 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-16 15:24:04,737 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-16 15:24:04,737 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-16 15:24:04,737 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-16 15:24:04,739 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-16 15:24:45,915 - __main__ - INFO - POST /api/advanced - Request started
+2026-01-16 15:24:45,917 - __main__ - INFO - Advanced checks request received
+2026-01-16 15:24:45,919 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-01-16 15:24:45,921 - __main__ - INFO - DEBUG: Using as-is: []
+2026-01-16 15:24:45,923 - __main__ - INFO - Starting advanced checks for session ADV_20260116_152445_183d5513
+2026-01-16 15:24:45,925 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-01-16 15:24:45,925 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-01-16 15:24:45,926 - dq_unified - INFO - Prompting user for data source type
+2026-01-16 15:24:45,928 - dq_unified - INFO - UI Data source_type: database
+2026-01-16 15:24:45,929 - dq_unified - INFO - Using source_type from UI data: database
+2026-01-16 15:24:45,929 - dq_unified - INFO - Loading data from DATABASE
+2026-01-16 15:24:45,930 - dq_unified - INFO - Loading large database table: employee
+2026-01-16 15:24:45,931 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-16 15:24:46,198 - dq_unified - INFO - MySQL table employee has 89,999 rows
+2026-01-16 15:24:46,199 - dq_unified - INFO - Loading 89,999 rows from MySQL...
+2026-01-16 15:24:47,577 - dq_unified - INFO - Loaded 89,999 rows from MySQL
+2026-01-16 15:24:48,420 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2026-01-16 15:24:48,421 - dq_unified - INFO - Standardizing data types...
+2026-01-16 15:24:49,618 - dq_unified - INFO - Data type standardization complete
+2026-01-16 15:24:49,742 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 205.6MB total, 18.9MB for dataframe
+2026-01-16 15:24:49,743 - dq_advanced - INFO - Data loaded: 89,999 rows, 12 columns from Database: mysql - Table: employee
+2026-01-16 15:24:49,743 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-16 15:24:49,769 - dq_error_log - INFO - Database connection successful
+2026-01-16 15:24:49,770 - dq_advanced - INFO - Session ID: ADV_20260116_152449_4628
+2026-01-16 15:24:49,770 - dq_advanced - INFO - Starting comprehensive validations on 89,999 rows, 12 columns
+2026-01-16 15:24:49,771 - dq_advanced - INFO - Analyzing 12 columns...
+2026-01-16 15:24:49,780 - dq_advanced - INFO - Analyzed column 'id': numeric with 2 patterns
+2026-01-16 15:24:49,908 - dq_advanced - INFO - Analyzed column 'customer_id': text with 1 patterns
+2026-01-16 15:24:50,027 - dq_advanced - INFO - Analyzed column 'transaction_id': text with 1 patterns
+2026-01-16 15:24:50,112 - dq_advanced - INFO - Analyzed column 'customer_name': text with 0 patterns
+2026-01-16 15:24:50,218 - dq_advanced - INFO - Analyzed column 'email': text with 1 patterns
+2026-01-16 15:24:50,344 - dq_advanced - INFO - Analyzed column 'phone': text with 2 patterns
+2026-01-16 15:24:50,410 - dq_advanced - INFO - Analyzed column 'transaction_date': text with 0 patterns
+2026-01-16 15:24:50,427 - dq_advanced - INFO - Analyzed column 'amount': numeric with 0 patterns
+2026-01-16 15:24:50,437 - dq_advanced - INFO - Analyzed column 'quantity': numeric with 1 patterns
+2026-01-16 15:24:50,445 - dq_advanced - INFO - Analyzed column 'age': numeric with 2 patterns
+2026-01-16 15:24:50,520 - dq_advanced - INFO - Analyzed column 'status': text with 0 patterns
+2026-01-16 15:24:50,612 - dq_advanced - INFO - Analyzed column 'description': text with 0 patterns
+2026-01-16 15:24:56,739 - dq_error_log - INFO - Starting batch logging for 69257 errors, session: ADV_20260116_152449_4628
+2026-01-16 15:24:56,806 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-16 15:24:56,861 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-16 15:24:56,912 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-01-16 15:24:56,973 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-01-16 15:24:57,045 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-01-16 15:24:57,119 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-01-16 15:24:57,174 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-01-16 15:24:57,233 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-01-16 15:24:57,282 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-01-16 15:24:57,332 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-01-16 15:24:57,332 - dq_error_log - INFO - Progress: 5000/69257 errors processed
+2026-01-16 15:24:57,390 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-01-16 15:24:57,456 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-01-16 15:24:57,524 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-01-16 15:24:57,584 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-01-16 15:24:57,633 - dq_error_log - INFO - Batch 15: Successfully logged 500 errors
+2026-01-16 15:24:57,682 - dq_error_log - INFO - Batch 16: Successfully logged 500 errors
+2026-01-16 15:24:57,745 - dq_error_log - INFO - Batch 17: Successfully logged 500 errors
+2026-01-16 15:24:57,804 - dq_error_log - INFO - Batch 18: Successfully logged 500 errors
+2026-01-16 15:24:57,862 - dq_error_log - INFO - Batch 19: Successfully logged 500 errors
+2026-01-16 15:24:57,923 - dq_error_log - INFO - Batch 20: Successfully logged 500 errors
+2026-01-16 15:24:57,924 - dq_error_log - INFO - Progress: 10000/69257 errors processed
+2026-01-16 15:24:57,971 - dq_error_log - INFO - Batch 21: Successfully logged 500 errors
+2026-01-16 15:24:58,039 - dq_error_log - INFO - Batch 22: Successfully logged 500 errors
+2026-01-16 15:24:58,089 - dq_error_log - INFO - Batch 23: Successfully logged 500 errors
+2026-01-16 15:24:58,149 - dq_error_log - INFO - Batch 24: Successfully logged 500 errors
+2026-01-16 15:24:58,211 - dq_error_log - INFO - Batch 25: Successfully logged 500 errors
+2026-01-16 15:24:58,268 - dq_error_log - INFO - Batch 26: Successfully logged 500 errors
+2026-01-16 15:24:58,323 - dq_error_log - INFO - Batch 27: Successfully logged 500 errors
+2026-01-16 15:24:58,383 - dq_error_log - INFO - Batch 28: Successfully logged 500 errors
+2026-01-16 15:24:58,439 - dq_error_log - INFO - Batch 29: Successfully logged 500 errors
+2026-01-16 15:24:58,496 - dq_error_log - INFO - Batch 30: Successfully logged 500 errors
+2026-01-16 15:24:58,497 - dq_error_log - INFO - Progress: 15000/69257 errors processed
+2026-01-16 15:24:58,549 - dq_error_log - INFO - Batch 31: Successfully logged 500 errors
+2026-01-16 15:24:58,606 - dq_error_log - INFO - Batch 32: Successfully logged 500 errors
+2026-01-16 15:24:58,662 - dq_error_log - INFO - Batch 33: Successfully logged 500 errors
+2026-01-16 15:24:58,723 - dq_error_log - INFO - Batch 34: Successfully logged 500 errors
+2026-01-16 15:24:58,774 - dq_error_log - INFO - Batch 35: Successfully logged 500 errors
+2026-01-16 15:24:58,826 - dq_error_log - INFO - Batch 36: Successfully logged 500 errors
+2026-01-16 15:24:58,883 - dq_error_log - INFO - Batch 37: Successfully logged 500 errors
+2026-01-16 15:24:58,938 - dq_error_log - INFO - Batch 38: Successfully logged 500 errors
+2026-01-16 15:24:58,989 - dq_error_log - INFO - Batch 39: Successfully logged 500 errors
+2026-01-16 15:24:59,042 - dq_error_log - INFO - Batch 40: Successfully logged 500 errors
+2026-01-16 15:24:59,043 - dq_error_log - INFO - Progress: 20000/69257 errors processed
+2026-01-16 15:24:59,100 - dq_error_log - INFO - Batch 41: Successfully logged 500 errors
+2026-01-16 15:24:59,149 - dq_error_log - INFO - Batch 42: Successfully logged 500 errors
+2026-01-16 15:24:59,203 - dq_error_log - INFO - Batch 43: Successfully logged 500 errors
+2026-01-16 15:24:59,260 - dq_error_log - INFO - Batch 44: Successfully logged 500 errors
+2026-01-16 15:24:59,320 - dq_error_log - INFO - Batch 45: Successfully logged 500 errors
+2026-01-16 15:24:59,371 - dq_error_log - INFO - Batch 46: Successfully logged 500 errors
+2026-01-16 15:24:59,459 - dq_error_log - INFO - Batch 47: Successfully logged 500 errors
+2026-01-16 15:24:59,513 - dq_error_log - INFO - Batch 48: Successfully logged 500 errors
+2026-01-16 15:24:59,566 - dq_error_log - INFO - Batch 49: Successfully logged 500 errors
+2026-01-16 15:24:59,637 - dq_error_log - INFO - Batch 50: Successfully logged 500 errors
+2026-01-16 15:24:59,638 - dq_error_log - INFO - Progress: 25000/69257 errors processed
+2026-01-16 15:24:59,694 - dq_error_log - INFO - Batch 51: Successfully logged 500 errors
+2026-01-16 15:24:59,753 - dq_error_log - INFO - Batch 52: Successfully logged 500 errors
+2026-01-16 15:24:59,809 - dq_error_log - INFO - Batch 53: Successfully logged 500 errors
+2026-01-16 15:24:59,866 - dq_error_log - INFO - Batch 54: Successfully logged 500 errors
+2026-01-16 15:24:59,919 - dq_error_log - INFO - Batch 55: Successfully logged 500 errors
+2026-01-16 15:24:59,973 - dq_error_log - INFO - Batch 56: Successfully logged 500 errors
+2026-01-16 15:25:00,034 - dq_error_log - INFO - Batch 57: Successfully logged 500 errors
+2026-01-16 15:25:00,089 - dq_error_log - INFO - Batch 58: Successfully logged 500 errors
+2026-01-16 15:25:00,148 - dq_error_log - INFO - Batch 59: Successfully logged 500 errors
+2026-01-16 15:25:00,196 - dq_error_log - INFO - Batch 60: Successfully logged 500 errors
+2026-01-16 15:25:00,197 - dq_error_log - INFO - Progress: 30000/69257 errors processed
+2026-01-16 15:25:00,271 - dq_error_log - INFO - Batch 61: Successfully logged 500 errors
+2026-01-16 15:25:00,329 - dq_error_log - INFO - Batch 62: Successfully logged 500 errors
+2026-01-16 15:25:00,390 - dq_error_log - INFO - Batch 63: Successfully logged 500 errors
+2026-01-16 15:25:00,447 - dq_error_log - INFO - Batch 64: Successfully logged 500 errors
+2026-01-16 15:25:00,498 - dq_error_log - INFO - Batch 65: Successfully logged 500 errors
+2026-01-16 15:25:00,551 - dq_error_log - INFO - Batch 66: Successfully logged 500 errors
+2026-01-16 15:25:00,609 - dq_error_log - INFO - Batch 67: Successfully logged 500 errors
+2026-01-16 15:25:00,691 - dq_error_log - INFO - Batch 68: Successfully logged 500 errors
+2026-01-16 15:25:00,751 - dq_error_log - INFO - Batch 69: Successfully logged 500 errors
+2026-01-16 15:25:00,797 - dq_error_log - INFO - Batch 70: Successfully logged 500 errors
+2026-01-16 15:25:00,798 - dq_error_log - INFO - Progress: 35000/69257 errors processed
+2026-01-16 15:25:00,845 - dq_error_log - INFO - Batch 71: Successfully logged 500 errors
+2026-01-16 15:25:00,889 - dq_error_log - INFO - Batch 72: Successfully logged 500 errors
+2026-01-16 15:25:00,939 - dq_error_log - INFO - Batch 73: Successfully logged 500 errors
+2026-01-16 15:25:00,999 - dq_error_log - INFO - Batch 74: Successfully logged 500 errors
+2026-01-16 15:25:01,053 - dq_error_log - INFO - Batch 75: Successfully logged 500 errors
+2026-01-16 15:25:01,103 - dq_error_log - INFO - Batch 76: Successfully logged 500 errors
+2026-01-16 15:25:01,156 - dq_error_log - INFO - Batch 77: Successfully logged 500 errors
+2026-01-16 15:25:01,209 - dq_error_log - INFO - Batch 78: Successfully logged 500 errors
+2026-01-16 15:25:01,269 - dq_error_log - INFO - Batch 79: Successfully logged 500 errors
+2026-01-16 15:25:01,340 - dq_error_log - INFO - Batch 80: Successfully logged 500 errors
+2026-01-16 15:25:01,341 - dq_error_log - INFO - Progress: 40000/69257 errors processed
+2026-01-16 15:25:01,392 - dq_error_log - INFO - Batch 81: Successfully logged 500 errors
+2026-01-16 15:25:01,445 - dq_error_log - INFO - Batch 82: Successfully logged 500 errors
+2026-01-16 15:25:01,496 - dq_error_log - INFO - Batch 83: Successfully logged 500 errors
+2026-01-16 15:25:01,547 - dq_error_log - INFO - Batch 84: Successfully logged 500 errors
+2026-01-16 15:25:01,616 - dq_error_log - INFO - Batch 85: Successfully logged 500 errors
+2026-01-16 15:25:01,684 - dq_error_log - INFO - Batch 86: Successfully logged 500 errors
+2026-01-16 15:25:01,737 - dq_error_log - INFO - Batch 87: Successfully logged 500 errors
+2026-01-16 15:25:01,789 - dq_error_log - INFO - Batch 88: Successfully logged 500 errors
+2026-01-16 15:25:01,850 - dq_error_log - INFO - Batch 89: Successfully logged 500 errors
+2026-01-16 15:25:01,898 - dq_error_log - INFO - Batch 90: Successfully logged 500 errors
+2026-01-16 15:25:01,901 - dq_error_log - INFO - Progress: 45000/69257 errors processed
+2026-01-16 15:25:01,957 - dq_error_log - INFO - Batch 91: Successfully logged 500 errors
+2026-01-16 15:25:02,014 - dq_error_log - INFO - Batch 92: Successfully logged 500 errors
+2026-01-16 15:25:02,064 - dq_error_log - INFO - Batch 93: Successfully logged 500 errors
+2026-01-16 15:25:02,119 - dq_error_log - INFO - Batch 94: Successfully logged 500 errors
+2026-01-16 15:25:02,170 - dq_error_log - INFO - Batch 95: Successfully logged 500 errors
+2026-01-16 15:25:02,221 - dq_error_log - INFO - Batch 96: Successfully logged 500 errors
+2026-01-16 15:25:02,281 - dq_error_log - INFO - Batch 97: Successfully logged 500 errors
+2026-01-16 15:25:02,326 - dq_error_log - INFO - Batch 98: Successfully logged 500 errors
+2026-01-16 15:25:02,376 - dq_error_log - INFO - Batch 99: Successfully logged 500 errors
+2026-01-16 15:25:02,425 - dq_error_log - INFO - Batch 100: Successfully logged 500 errors
+2026-01-16 15:25:02,426 - dq_error_log - INFO - Progress: 50000/69257 errors processed
+2026-01-16 15:25:02,486 - dq_error_log - INFO - Batch 101: Successfully logged 500 errors
+2026-01-16 15:25:02,566 - dq_error_log - INFO - Batch 102: Successfully logged 500 errors
+2026-01-16 15:25:02,625 - dq_error_log - INFO - Batch 103: Successfully logged 500 errors
+2026-01-16 15:25:02,677 - dq_error_log - INFO - Batch 104: Successfully logged 500 errors
+2026-01-16 15:25:02,725 - dq_error_log - INFO - Batch 105: Successfully logged 500 errors
+2026-01-16 15:25:02,776 - dq_error_log - INFO - Batch 106: Successfully logged 500 errors
+2026-01-16 15:25:02,832 - dq_error_log - INFO - Batch 107: Successfully logged 500 errors
+2026-01-16 15:25:02,878 - dq_error_log - INFO - Batch 108: Successfully logged 500 errors
+2026-01-16 15:25:02,927 - dq_error_log - INFO - Batch 109: Successfully logged 500 errors
+2026-01-16 15:25:02,975 - dq_error_log - INFO - Batch 110: Successfully logged 500 errors
+2026-01-16 15:25:02,977 - dq_error_log - INFO - Progress: 55000/69257 errors processed
+2026-01-16 15:25:03,024 - dq_error_log - INFO - Batch 111: Successfully logged 500 errors
+2026-01-16 15:25:03,072 - dq_error_log - INFO - Batch 112: Successfully logged 500 errors
+2026-01-16 15:25:03,122 - dq_error_log - INFO - Batch 113: Successfully logged 500 errors
+2026-01-16 15:25:03,169 - dq_error_log - INFO - Batch 114: Successfully logged 500 errors
+2026-01-16 15:25:03,231 - dq_error_log - INFO - Batch 115: Successfully logged 500 errors
+2026-01-16 15:25:03,303 - dq_error_log - INFO - Batch 116: Successfully logged 500 errors
+2026-01-16 15:25:03,346 - dq_error_log - INFO - Batch 117: Successfully logged 500 errors
+2026-01-16 15:25:03,394 - dq_error_log - INFO - Batch 118: Successfully logged 500 errors
+2026-01-16 15:25:03,441 - dq_error_log - INFO - Batch 119: Successfully logged 500 errors
+2026-01-16 15:25:03,499 - dq_error_log - INFO - Batch 120: Successfully logged 500 errors
+2026-01-16 15:25:03,499 - dq_error_log - INFO - Progress: 60000/69257 errors processed
+2026-01-16 15:25:03,542 - dq_error_log - INFO - Batch 121: Successfully logged 500 errors
+2026-01-16 15:25:03,591 - dq_error_log - INFO - Batch 122: Successfully logged 500 errors
+2026-01-16 15:25:03,649 - dq_error_log - INFO - Batch 123: Successfully logged 500 errors
+2026-01-16 15:25:03,698 - dq_error_log - INFO - Batch 124: Successfully logged 500 errors
+2026-01-16 15:25:03,744 - dq_error_log - INFO - Batch 125: Successfully logged 500 errors
+2026-01-16 15:25:03,791 - dq_error_log - INFO - Batch 126: Successfully logged 500 errors
+2026-01-16 15:25:03,841 - dq_error_log - INFO - Batch 127: Successfully logged 500 errors
+2026-01-16 15:25:03,900 - dq_error_log - INFO - Batch 128: Successfully logged 500 errors
+2026-01-16 15:25:03,949 - dq_error_log - INFO - Batch 129: Successfully logged 500 errors
+2026-01-16 15:25:03,994 - dq_error_log - INFO - Batch 130: Successfully logged 500 errors
+2026-01-16 15:25:03,995 - dq_error_log - INFO - Progress: 65000/69257 errors processed
+2026-01-16 15:25:04,060 - dq_error_log - INFO - Batch 131: Successfully logged 500 errors
+2026-01-16 15:25:04,105 - dq_error_log - INFO - Batch 132: Successfully logged 500 errors
+2026-01-16 15:25:04,158 - dq_error_log - INFO - Batch 133: Successfully logged 500 errors
+2026-01-16 15:25:04,204 - dq_error_log - INFO - Batch 134: Successfully logged 500 errors
+2026-01-16 15:25:04,256 - dq_error_log - INFO - Batch 135: Successfully logged 500 errors
+2026-01-16 15:25:04,314 - dq_error_log - INFO - Batch 136: Successfully logged 500 errors
+2026-01-16 15:25:04,376 - dq_error_log - INFO - Batch 137: Successfully logged 500 errors
+2026-01-16 15:25:04,425 - dq_error_log - INFO - Batch 138: Successfully logged 500 errors
+2026-01-16 15:25:04,459 - dq_error_log - INFO - Batch 139: Successfully logged 257 errors
+2026-01-16 15:25:04,460 - dq_error_log - INFO - Progress: 69257/69257 errors processed
+2026-01-16 15:25:04,462 - dq_error_log - INFO - COMPLETE: Logged 69257/69257 errors for session ADV_20260116_152449_4628
+2026-01-16 15:25:04,463 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:25:04,463 - dq_audit - INFO - Starting database insertion for advanced...
+2026-01-16 15:25:04,483 - dq_audit - INFO - Inserted advanced record with ID: 718
+2026-01-16 15:25:04,484 - dq_advanced - INFO - Audit record logged with ID: 718
+2026-01-16 15:25:04,834 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260116_152449_4628
+2026-01-16 15:25:05,413 - dq_error_log - INFO - Retrieved summary: 69257 total errors for session ADV_20260116_152449_4628
+2026-01-16 15:25:05,414 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:25:05,435 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_152449_4628
+2026-01-16 15:25:05,435 - dq_advanced - INFO - Advanced checks completed for session ADV_20260116_152449_4628
+2026-01-16 15:25:05,840 - dq_error_log - INFO - Retrieved 200 error logs for session ADV_20260116_152449_4628
+2026-01-16 15:25:06,392 - dq_error_log - INFO - Retrieved summary: 69257 total errors for session ADV_20260116_152449_4628
+2026-01-16 15:25:06,413 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_152449_4628
+2026-01-16 15:25:06,414 - __main__ - INFO - Advanced checks completed for session ADV_20260116_152449_4628
+2026-01-16 15:25:08,864 - __main__ - INFO - Completed with status 200 in 22.949s
+2026-01-16 15:37:55,285 - __main__ - INFO - GET /api/advanced/ - Request started
+2026-01-16 15:37:55,287 - __main__ - WARNING - Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-01-16 15:37:55,288 - __main__ - INFO - Completed with status 404 in 0.003s
+2026-01-16 15:38:22,921 - __main__ - INFO - POST /api/advanced/ - Request started
+2026-01-16 15:38:22,922 - __main__ - WARNING - Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-01-16 15:38:22,923 - __main__ - INFO - Completed with status 404 in 0.002s
+2026-01-16 15:38:54,773 - __main__ - INFO - POST /api/advanced - Request started
+2026-01-16 15:38:54,774 - __main__ - INFO - Advanced checks request received
+2026-01-16 15:38:54,775 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-01-16 15:38:54,776 - __main__ - INFO - DEBUG: Using as-is: []
+2026-01-16 15:38:54,777 - __main__ - INFO - Starting advanced checks for session ADV_20260116_153854_a874a17f
+2026-01-16 15:38:54,777 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-01-16 15:38:54,778 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-01-16 15:38:54,779 - dq_unified - INFO - Prompting user for data source type
+2026-01-16 15:38:54,780 - dq_unified - INFO - UI Data source_type: database
+2026-01-16 15:38:54,780 - dq_unified - INFO - Using source_type from UI data: database
+2026-01-16 15:38:54,781 - dq_unified - INFO - Loading data from DATABASE
+2026-01-16 15:38:54,781 - dq_unified - INFO - Loading large database table: employee
+2026-01-16 15:38:54,782 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-16 15:38:54,815 - dq_unified - INFO - MySQL table employee has 89,999 rows
+2026-01-16 15:38:54,815 - dq_unified - INFO - Loading 89,999 rows from MySQL...
+2026-01-16 15:38:55,454 - dq_unified - INFO - Loaded 89,999 rows from MySQL
+2026-01-16 15:38:56,601 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2026-01-16 15:38:56,602 - dq_unified - INFO - Standardizing data types...
+2026-01-16 15:38:58,242 - dq_unified - INFO - Data type standardization complete
+2026-01-16 15:38:58,425 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 240.3MB total, 18.9MB for dataframe
+2026-01-16 15:38:58,428 - dq_advanced - INFO - Data loaded: 89,999 rows, 12 columns from Database: mysql - Table: employee
+2026-01-16 15:38:58,429 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-16 15:38:58,444 - dq_error_log - INFO - Database connection successful
+2026-01-16 15:38:58,445 - dq_advanced - INFO - Session ID: ADV_20260116_153858_1166
+2026-01-16 15:38:58,445 - dq_advanced - INFO - Starting comprehensive validations on 89,999 rows, 12 columns
+2026-01-16 15:38:58,446 - dq_advanced - INFO - Analyzing 12 columns...
+2026-01-16 15:38:58,461 - dq_advanced - INFO - Analyzed column 'id': numeric with 2 patterns
+2026-01-16 15:38:58,631 - dq_advanced - INFO - Analyzed column 'customer_id': text with 1 patterns
+2026-01-16 15:38:58,824 - dq_advanced - INFO - Analyzed column 'transaction_id': text with 1 patterns
+2026-01-16 15:38:58,924 - dq_advanced - INFO - Analyzed column 'customer_name': text with 0 patterns
+2026-01-16 15:38:59,042 - dq_advanced - INFO - Analyzed column 'email': text with 1 patterns
+2026-01-16 15:38:59,181 - dq_advanced - INFO - Analyzed column 'phone': text with 2 patterns
+2026-01-16 15:38:59,260 - dq_advanced - INFO - Analyzed column 'transaction_date': text with 0 patterns
+2026-01-16 15:38:59,282 - dq_advanced - INFO - Analyzed column 'amount': numeric with 0 patterns
+2026-01-16 15:38:59,296 - dq_advanced - INFO - Analyzed column 'quantity': numeric with 1 patterns
+2026-01-16 15:38:59,313 - dq_advanced - INFO - Analyzed column 'age': numeric with 2 patterns
+2026-01-16 15:38:59,404 - dq_advanced - INFO - Analyzed column 'status': text with 0 patterns
+2026-01-16 15:38:59,515 - dq_advanced - INFO - Analyzed column 'description': text with 0 patterns
+2026-01-16 15:39:07,257 - dq_error_log - INFO - Starting batch logging for 69257 errors, session: ADV_20260116_153858_1166
+2026-01-16 15:39:07,330 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-16 15:39:07,390 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-16 15:39:07,454 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-01-16 15:39:07,514 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-01-16 15:39:07,587 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-01-16 15:39:07,681 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-01-16 15:39:07,741 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-01-16 15:39:07,811 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-01-16 15:39:07,887 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-01-16 15:39:07,968 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-01-16 15:39:07,971 - dq_error_log - INFO - Progress: 5000/69257 errors processed
+2026-01-16 15:39:08,048 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-01-16 15:39:08,114 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-01-16 15:39:08,188 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-01-16 15:39:08,255 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-01-16 15:39:08,331 - dq_error_log - INFO - Batch 15: Successfully logged 500 errors
+2026-01-16 15:39:08,410 - dq_error_log - INFO - Batch 16: Successfully logged 500 errors
+2026-01-16 15:39:08,480 - dq_error_log - INFO - Batch 17: Successfully logged 500 errors
+2026-01-16 15:39:08,548 - dq_error_log - INFO - Batch 18: Successfully logged 500 errors
+2026-01-16 15:39:08,618 - dq_error_log - INFO - Batch 19: Successfully logged 500 errors
+2026-01-16 15:39:08,722 - dq_error_log - INFO - Batch 20: Successfully logged 500 errors
+2026-01-16 15:39:08,723 - dq_error_log - INFO - Progress: 10000/69257 errors processed
+2026-01-16 15:39:08,985 - dq_error_log - INFO - Batch 21: Successfully logged 500 errors
+2026-01-16 15:39:09,079 - dq_error_log - INFO - Batch 22: Successfully logged 500 errors
+2026-01-16 15:39:09,140 - dq_error_log - INFO - Batch 23: Successfully logged 500 errors
+2026-01-16 15:39:09,210 - dq_error_log - INFO - Batch 24: Successfully logged 500 errors
+2026-01-16 15:39:09,274 - dq_error_log - INFO - Batch 25: Successfully logged 500 errors
+2026-01-16 15:39:09,342 - dq_error_log - INFO - Batch 26: Successfully logged 500 errors
+2026-01-16 15:39:09,411 - dq_error_log - INFO - Batch 27: Successfully logged 500 errors
+2026-01-16 15:39:09,477 - dq_error_log - INFO - Batch 28: Successfully logged 500 errors
+2026-01-16 15:39:09,547 - dq_error_log - INFO - Batch 29: Successfully logged 500 errors
+2026-01-16 15:39:09,616 - dq_error_log - INFO - Batch 30: Successfully logged 500 errors
+2026-01-16 15:39:09,616 - dq_error_log - INFO - Progress: 15000/69257 errors processed
+2026-01-16 15:39:09,679 - dq_error_log - INFO - Batch 31: Successfully logged 500 errors
+2026-01-16 15:39:09,747 - dq_error_log - INFO - Batch 32: Successfully logged 500 errors
+2026-01-16 15:39:09,823 - dq_error_log - INFO - Batch 33: Successfully logged 500 errors
+2026-01-16 15:39:09,911 - dq_error_log - INFO - Batch 34: Successfully logged 500 errors
+2026-01-16 15:39:09,980 - dq_error_log - INFO - Batch 35: Successfully logged 500 errors
+2026-01-16 15:39:10,057 - dq_error_log - INFO - Batch 36: Successfully logged 500 errors
+2026-01-16 15:39:10,141 - dq_error_log - INFO - Batch 37: Successfully logged 500 errors
+2026-01-16 15:39:10,216 - dq_error_log - INFO - Batch 38: Successfully logged 500 errors
+2026-01-16 15:39:10,297 - dq_error_log - INFO - Batch 39: Successfully logged 500 errors
+2026-01-16 15:39:10,358 - dq_error_log - INFO - Batch 40: Successfully logged 500 errors
+2026-01-16 15:39:10,359 - dq_error_log - INFO - Progress: 20000/69257 errors processed
+2026-01-16 15:39:10,428 - dq_error_log - INFO - Batch 41: Successfully logged 500 errors
+2026-01-16 15:39:10,492 - dq_error_log - INFO - Batch 42: Successfully logged 500 errors
+2026-01-16 15:39:10,555 - dq_error_log - INFO - Batch 43: Successfully logged 500 errors
+2026-01-16 15:39:10,622 - dq_error_log - INFO - Batch 44: Successfully logged 500 errors
+2026-01-16 15:39:10,689 - dq_error_log - INFO - Batch 45: Successfully logged 500 errors
+2026-01-16 15:39:10,762 - dq_error_log - INFO - Batch 46: Successfully logged 500 errors
+2026-01-16 15:39:10,830 - dq_error_log - INFO - Batch 47: Successfully logged 500 errors
+2026-01-16 15:39:10,908 - dq_error_log - INFO - Batch 48: Successfully logged 500 errors
+2026-01-16 15:39:10,977 - dq_error_log - INFO - Batch 49: Successfully logged 500 errors
+2026-01-16 15:39:11,063 - dq_error_log - INFO - Batch 50: Successfully logged 500 errors
+2026-01-16 15:39:11,065 - dq_error_log - INFO - Progress: 25000/69257 errors processed
+2026-01-16 15:39:11,148 - dq_error_log - INFO - Batch 51: Successfully logged 500 errors
+2026-01-16 15:39:11,207 - dq_error_log - INFO - Batch 52: Successfully logged 500 errors
+2026-01-16 15:39:11,281 - dq_error_log - INFO - Batch 53: Successfully logged 500 errors
+2026-01-16 15:39:11,349 - dq_error_log - INFO - Batch 54: Successfully logged 500 errors
+2026-01-16 15:39:11,419 - dq_error_log - INFO - Batch 55: Successfully logged 500 errors
+2026-01-16 15:39:11,497 - dq_error_log - INFO - Batch 56: Successfully logged 500 errors
+2026-01-16 15:39:11,557 - dq_error_log - INFO - Batch 57: Successfully logged 500 errors
+2026-01-16 15:39:11,635 - dq_error_log - INFO - Batch 58: Successfully logged 500 errors
+2026-01-16 15:39:11,714 - dq_error_log - INFO - Batch 59: Successfully logged 500 errors
+2026-01-16 15:39:11,800 - dq_error_log - INFO - Batch 60: Successfully logged 500 errors
+2026-01-16 15:39:11,802 - dq_error_log - INFO - Progress: 30000/69257 errors processed
+2026-01-16 15:39:11,908 - dq_error_log - INFO - Batch 61: Successfully logged 500 errors
+2026-01-16 15:39:11,990 - dq_error_log - INFO - Batch 62: Successfully logged 500 errors
+2026-01-16 15:39:12,078 - dq_error_log - INFO - Batch 63: Successfully logged 500 errors
+2026-01-16 15:39:12,148 - dq_error_log - INFO - Batch 64: Successfully logged 500 errors
+2026-01-16 15:39:12,219 - dq_error_log - INFO - Batch 65: Successfully logged 500 errors
+2026-01-16 15:39:12,285 - dq_error_log - INFO - Batch 66: Successfully logged 500 errors
+2026-01-16 15:39:12,346 - dq_error_log - INFO - Batch 67: Successfully logged 500 errors
+2026-01-16 15:39:12,410 - dq_error_log - INFO - Batch 68: Successfully logged 500 errors
+2026-01-16 15:39:12,473 - dq_error_log - INFO - Batch 69: Successfully logged 500 errors
+2026-01-16 15:39:12,531 - dq_error_log - INFO - Batch 70: Successfully logged 500 errors
+2026-01-16 15:39:12,532 - dq_error_log - INFO - Progress: 35000/69257 errors processed
+2026-01-16 15:39:12,596 - dq_error_log - INFO - Batch 71: Successfully logged 500 errors
+2026-01-16 15:39:12,657 - dq_error_log - INFO - Batch 72: Successfully logged 500 errors
+2026-01-16 15:39:12,713 - dq_error_log - INFO - Batch 73: Successfully logged 500 errors
+2026-01-16 15:39:12,773 - dq_error_log - INFO - Batch 74: Successfully logged 500 errors
+2026-01-16 15:39:12,869 - dq_error_log - INFO - Batch 75: Successfully logged 500 errors
+2026-01-16 15:39:12,932 - dq_error_log - INFO - Batch 76: Successfully logged 500 errors
+2026-01-16 15:39:13,022 - dq_error_log - INFO - Batch 77: Successfully logged 500 errors
+2026-01-16 15:39:13,091 - dq_error_log - INFO - Batch 78: Successfully logged 500 errors
+2026-01-16 15:39:13,151 - dq_error_log - INFO - Batch 79: Successfully logged 500 errors
+2026-01-16 15:39:13,212 - dq_error_log - INFO - Batch 80: Successfully logged 500 errors
+2026-01-16 15:39:13,213 - dq_error_log - INFO - Progress: 40000/69257 errors processed
+2026-01-16 15:39:13,273 - dq_error_log - INFO - Batch 81: Successfully logged 500 errors
+2026-01-16 15:39:13,329 - dq_error_log - INFO - Batch 82: Successfully logged 500 errors
+2026-01-16 15:39:13,395 - dq_error_log - INFO - Batch 83: Successfully logged 500 errors
+2026-01-16 15:39:13,454 - dq_error_log - INFO - Batch 84: Successfully logged 500 errors
+2026-01-16 15:39:13,512 - dq_error_log - INFO - Batch 85: Successfully logged 500 errors
+2026-01-16 15:39:13,573 - dq_error_log - INFO - Batch 86: Successfully logged 500 errors
+2026-01-16 15:39:13,637 - dq_error_log - INFO - Batch 87: Successfully logged 500 errors
+2026-01-16 15:39:13,699 - dq_error_log - INFO - Batch 88: Successfully logged 500 errors
+2026-01-16 15:39:13,774 - dq_error_log - INFO - Batch 89: Successfully logged 500 errors
+2026-01-16 15:39:13,840 - dq_error_log - INFO - Batch 90: Successfully logged 500 errors
+2026-01-16 15:39:13,841 - dq_error_log - INFO - Progress: 45000/69257 errors processed
+2026-01-16 15:39:13,900 - dq_error_log - INFO - Batch 91: Successfully logged 500 errors
+2026-01-16 15:39:13,967 - dq_error_log - INFO - Batch 92: Successfully logged 500 errors
+2026-01-16 15:39:14,026 - dq_error_log - INFO - Batch 93: Successfully logged 500 errors
+2026-01-16 15:39:14,086 - dq_error_log - INFO - Batch 94: Successfully logged 500 errors
+2026-01-16 15:39:14,147 - dq_error_log - INFO - Batch 95: Successfully logged 500 errors
+2026-01-16 15:39:14,203 - dq_error_log - INFO - Batch 96: Successfully logged 500 errors
+2026-01-16 15:39:14,265 - dq_error_log - INFO - Batch 97: Successfully logged 500 errors
+2026-01-16 15:39:14,323 - dq_error_log - INFO - Batch 98: Successfully logged 500 errors
+2026-01-16 15:39:14,383 - dq_error_log - INFO - Batch 99: Successfully logged 500 errors
+2026-01-16 15:39:14,433 - dq_error_log - INFO - Batch 100: Successfully logged 500 errors
+2026-01-16 15:39:14,434 - dq_error_log - INFO - Progress: 50000/69257 errors processed
+2026-01-16 15:39:14,496 - dq_error_log - INFO - Batch 101: Successfully logged 500 errors
+2026-01-16 15:39:14,558 - dq_error_log - INFO - Batch 102: Successfully logged 500 errors
+2026-01-16 15:39:14,631 - dq_error_log - INFO - Batch 103: Successfully logged 500 errors
+2026-01-16 15:39:14,693 - dq_error_log - INFO - Batch 104: Successfully logged 500 errors
+2026-01-16 15:39:14,753 - dq_error_log - INFO - Batch 105: Successfully logged 500 errors
+2026-01-16 15:39:14,814 - dq_error_log - INFO - Batch 106: Successfully logged 500 errors
+2026-01-16 15:39:14,876 - dq_error_log - INFO - Batch 107: Successfully logged 500 errors
+2026-01-16 15:39:14,938 - dq_error_log - INFO - Batch 108: Successfully logged 500 errors
+2026-01-16 15:39:14,999 - dq_error_log - INFO - Batch 109: Successfully logged 500 errors
+2026-01-16 15:39:15,058 - dq_error_log - INFO - Batch 110: Successfully logged 500 errors
+2026-01-16 15:39:15,060 - dq_error_log - INFO - Progress: 55000/69257 errors processed
+2026-01-16 15:39:15,120 - dq_error_log - INFO - Batch 111: Successfully logged 500 errors
+2026-01-16 15:39:15,185 - dq_error_log - INFO - Batch 112: Successfully logged 500 errors
+2026-01-16 15:39:15,247 - dq_error_log - INFO - Batch 113: Successfully logged 500 errors
+2026-01-16 15:39:15,304 - dq_error_log - INFO - Batch 114: Successfully logged 500 errors
+2026-01-16 15:39:15,359 - dq_error_log - INFO - Batch 115: Successfully logged 500 errors
+2026-01-16 15:39:15,424 - dq_error_log - INFO - Batch 116: Successfully logged 500 errors
+2026-01-16 15:39:15,499 - dq_error_log - INFO - Batch 117: Successfully logged 500 errors
+2026-01-16 15:39:15,557 - dq_error_log - INFO - Batch 118: Successfully logged 500 errors
+2026-01-16 15:39:15,625 - dq_error_log - INFO - Batch 119: Successfully logged 500 errors
+2026-01-16 15:39:15,685 - dq_error_log - INFO - Batch 120: Successfully logged 500 errors
+2026-01-16 15:39:15,686 - dq_error_log - INFO - Progress: 60000/69257 errors processed
+2026-01-16 15:39:15,759 - dq_error_log - INFO - Batch 121: Successfully logged 500 errors
+2026-01-16 15:39:15,830 - dq_error_log - INFO - Batch 122: Successfully logged 500 errors
+2026-01-16 15:39:15,895 - dq_error_log - INFO - Batch 123: Successfully logged 500 errors
+2026-01-16 15:39:15,950 - dq_error_log - INFO - Batch 124: Successfully logged 500 errors
+2026-01-16 15:39:16,010 - dq_error_log - INFO - Batch 125: Successfully logged 500 errors
+2026-01-16 15:39:16,073 - dq_error_log - INFO - Batch 126: Successfully logged 500 errors
+2026-01-16 15:39:16,136 - dq_error_log - INFO - Batch 127: Successfully logged 500 errors
+2026-01-16 15:39:16,202 - dq_error_log - INFO - Batch 128: Successfully logged 500 errors
+2026-01-16 15:39:16,258 - dq_error_log - INFO - Batch 129: Successfully logged 500 errors
+2026-01-16 15:39:16,321 - dq_error_log - INFO - Batch 130: Successfully logged 500 errors
+2026-01-16 15:39:16,322 - dq_error_log - INFO - Progress: 65000/69257 errors processed
+2026-01-16 15:39:16,412 - dq_error_log - INFO - Batch 131: Successfully logged 500 errors
+2026-01-16 15:39:16,471 - dq_error_log - INFO - Batch 132: Successfully logged 500 errors
+2026-01-16 15:39:16,528 - dq_error_log - INFO - Batch 133: Successfully logged 500 errors
+2026-01-16 15:39:16,593 - dq_error_log - INFO - Batch 134: Successfully logged 500 errors
+2026-01-16 15:39:16,654 - dq_error_log - INFO - Batch 135: Successfully logged 500 errors
+2026-01-16 15:39:16,711 - dq_error_log - INFO - Batch 136: Successfully logged 500 errors
+2026-01-16 15:39:16,768 - dq_error_log - INFO - Batch 137: Successfully logged 500 errors
+2026-01-16 15:39:16,822 - dq_error_log - INFO - Batch 138: Successfully logged 500 errors
+2026-01-16 15:39:16,862 - dq_error_log - INFO - Batch 139: Successfully logged 257 errors
+2026-01-16 15:39:16,863 - dq_error_log - INFO - Progress: 69257/69257 errors processed
+2026-01-16 15:39:16,864 - dq_error_log - INFO - COMPLETE: Logged 69257/69257 errors for session ADV_20260116_153858_1166
+2026-01-16 15:39:16,866 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:39:16,867 - dq_audit - INFO - Starting database insertion for advanced...
+2026-01-16 15:39:16,882 - dq_audit - INFO - Inserted advanced record with ID: 719
+2026-01-16 15:39:16,882 - dq_advanced - INFO - Audit record logged with ID: 719
+2026-01-16 15:39:17,461 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260116_153858_1166
+2026-01-16 15:39:18,274 - dq_error_log - INFO - Retrieved summary: 69257 total errors for session ADV_20260116_153858_1166
+2026-01-16 15:39:18,276 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:39:18,311 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_153858_1166
+2026-01-16 15:39:18,312 - dq_advanced - INFO - Advanced checks completed for session ADV_20260116_153858_1166
+2026-01-16 15:39:18,846 - dq_error_log - INFO - Retrieved 200 error logs for session ADV_20260116_153858_1166
+2026-01-16 15:39:19,503 - dq_error_log - INFO - Retrieved summary: 69257 total errors for session ADV_20260116_153858_1166
+2026-01-16 15:39:19,519 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_153858_1166
+2026-01-16 15:39:19,520 - __main__ - INFO - Advanced checks completed for session ADV_20260116_153858_1166
+2026-01-16 15:39:22,177 - __main__ - INFO - Completed with status 200 in 27.404s
+2026-01-16 15:45:30,289 - __main__ - INFO - POST /api/advanced - Request started
+2026-01-16 15:45:30,292 - __main__ - INFO - Advanced checks request received
+2026-01-16 15:45:30,293 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-01-16 15:45:30,296 - __main__ - INFO - DEBUG: Using as-is: []
+2026-01-16 15:45:30,298 - __main__ - INFO - Starting advanced checks for session ADV_20260116_154530_7453f290
+2026-01-16 15:45:30,300 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-01-16 15:45:30,301 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-01-16 15:45:30,303 - dq_unified - INFO - Prompting user for data source type
+2026-01-16 15:45:30,305 - dq_unified - INFO - UI Data source_type: database
+2026-01-16 15:45:30,305 - dq_unified - INFO - Using source_type from UI data: database
+2026-01-16 15:45:30,307 - dq_unified - INFO - Loading data from DATABASE
+2026-01-16 15:45:30,308 - dq_unified - INFO - Loading large database table: customers
+2026-01-16 15:45:30,309 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-16 15:45:30,331 - dq_unified - INFO - MySQL table customers has 15 rows
+2026-01-16 15:45:30,331 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-01-16 15:45:30,341 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-01-16 15:45:30,350 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-16 15:45:30,351 - dq_unified - INFO - Standardizing data types...
+2026-01-16 15:45:30,358 - dq_unified - INFO - Data type standardization complete
+2026-01-16 15:45:30,360 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 242.8MB total, 0.0MB for dataframe
+2026-01-16 15:45:30,362 - dq_advanced - INFO - Data loaded: 15 rows, 10 columns from Database: mysql - Table: customers
+2026-01-16 15:45:30,363 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-16 15:45:30,385 - dq_error_log - INFO - Database connection successful
+2026-01-16 15:45:30,387 - dq_advanced - INFO - Session ID: ADV_20260116_154530_8558
+2026-01-16 15:45:30,389 - dq_advanced - INFO - Starting comprehensive validations on 15 rows, 10 columns
+2026-01-16 15:45:30,390 - dq_advanced - INFO - Analyzing 10 columns...
+2026-01-16 15:45:30,392 - dq_advanced - INFO - Analyzed column 'CustomerName': text with 0 patterns
+2026-01-16 15:45:30,396 - dq_advanced - INFO - Analyzed column 'Email': text with 1 patterns
+2026-01-16 15:45:30,400 - dq_advanced - INFO - Analyzed column 'Phone': numeric with 2 patterns
+2026-01-16 15:45:30,406 - dq_advanced - INFO - Analyzed column 'Salary': numeric with 1 patterns
+2026-01-16 15:45:30,409 - dq_advanced - INFO - Analyzed column 'Department': text with 0 patterns
+2026-01-16 15:45:30,413 - dq_advanced - INFO - Analyzed column 'JoinDate': numeric with 1 patterns
+2026-01-16 15:45:30,416 - dq_advanced - INFO - Analyzed column 'PostalCode': numeric with 1 patterns
+2026-01-16 15:45:30,418 - dq_advanced - INFO - Analyzed column 'City': text with 0 patterns
+2026-01-16 15:45:30,422 - dq_advanced - INFO - Analyzed column 'Country': text with 1 patterns
+2026-01-16 15:45:30,425 - dq_advanced - INFO - Analyzed column 'State': text with 1 patterns
+2026-01-16 15:45:30,428 - dq_error_log - INFO - Starting batch logging for 1 errors, session: ADV_20260116_154530_8558
+2026-01-16 15:45:30,447 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-01-16 15:45:30,448 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-01-16 15:45:30,449 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,450 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:45:30,451 - dq_audit - INFO - Starting database insertion for advanced...
+2026-01-16 15:45:30,471 - dq_audit - INFO - Inserted advanced record with ID: 720
+2026-01-16 15:45:30,472 - dq_advanced - INFO - Audit record logged with ID: 720
+2026-01-16 15:45:30,485 - dq_error_log - INFO - Retrieved 1 error logs for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,499 - dq_error_log - INFO - Retrieved summary: 1 total errors for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,501 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-16 15:45:30,518 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,519 - dq_advanced - INFO - Advanced checks completed for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,533 - dq_error_log - INFO - Retrieved 1 error logs for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,547 - dq_error_log - INFO - Retrieved summary: 1 total errors for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,564 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,565 - __main__ - INFO - Advanced checks completed for session ADV_20260116_154530_8558
+2026-01-16 15:45:30,572 - __main__ - INFO - Completed with status 200 in 0.282s

@@ -1,0 +1,183 @@
+2025-12-16 17:09:25,855 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-16 17:09:26,327 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-16 17:09:26,327 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-16 17:09:26,333 - __main__ - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-16 17:09:26,333 - __main__ - INFO - DQ modules available: True
+2025-12-16 17:09:26,333 - __main__ - INFO - Config file mode: False
+2025-12-16 17:09:26,334 - __main__ - INFO - Database config: localhost/dq_checks
+2025-12-16 17:09:26,477 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-16 17:09:26,477 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-16 17:09:56,003 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-16 17:09:56,007 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-16 17:09:56,011 - dq_unified - INFO - CSV file has 15 rows
+2025-12-16 17:09:56,011 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-16 17:09:56,027 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-16 17:09:56,036 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 17:09:56,037 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 97.9MB total, 0.0MB for dataframe
+2025-12-16 17:09:56,038 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 17:09:56,042 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-16 17:09:56,045 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-16 17:09:56,053 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-16 17:09:56,053 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-16 17:09:56,055 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-16 17:09:56,057 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-16 17:09:56,058 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-16 17:09:56,058 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-16 17:09:56,058 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-16 17:09:56,059 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-16 17:09:56,430 - dq_error_log - INFO - Batch logged 6 errors for session SINGLE_20251216_170956_003759b2
+2025-12-16 17:09:56,431 - dq_unified - INFO - Total empty cells found: 6
+2025-12-16 17:09:56,431 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-16 17:09:56,440 - dq_unified - INFO - No strict duplicate rows found
+2025-12-16 17:09:56,440 - dq_unified - INFO - AUTOMATICALLY DETECTING KEY FIELD DUPLICATES
+2025-12-16 17:09:56,442 - dq_unified - INFO - Detected potential key fields: ['CustomerName', 'Email', 'PostalCode']
+2025-12-16 17:09:56,442 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-16 17:09:56,443 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-16 17:09:56,444 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-16 17:09:56,444 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Total cells: 150
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Duplicates: 0 (weight: 0.5)
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Key field duplicates: 2 (weight: 1.5)
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Mandatory missing: 0 (weight: 1.0)
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Weighted issues: 9.0
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-16 17:09:56,444 - dq_unified - INFO -   Quality score: 96.0%
+2025-12-16 17:09:56,446 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-16 17:09:56,466 - dq_audit - INFO - Inserted single_source record
+2025-12-16 17:09:56,467 - dq_audit - INFO - single_source audit record successfully stored in database
+2025-12-16 17:09:56,467 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 17:09:56] "POST /api/check-single HTTP/1.1" 200 -
+2025-12-16 17:09:58,511 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-16 17:09:58,515 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-16 17:09:58,518 - dq_unified - INFO - CSV file has 15 rows
+2025-12-16 17:09:58,518 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-16 17:09:58,522 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-16 17:09:58,526 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 17:09:58,527 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 105.9MB total, 0.0MB for dataframe
+2025-12-16 17:09:58,527 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 17:09:58,530 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-16 17:09:58,532 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-16 17:09:58,534 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-16 17:09:58,535 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-16 17:09:58,536 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-16 17:09:58,537 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-16 17:09:58,538 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-16 17:09:58,538 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-16 17:09:58,538 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-16 17:09:58,539 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-16 17:09:58,554 - dq_error_log - INFO - Batch logged 6 errors for session SINGLE_20251216_170958_c5dee0bf
+2025-12-16 17:09:58,554 - dq_unified - INFO - Total empty cells found: 6
+2025-12-16 17:09:58,554 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-16 17:09:58,560 - dq_unified - INFO - No strict duplicate rows found
+2025-12-16 17:09:58,560 - dq_unified - INFO - AUTOMATICALLY DETECTING KEY FIELD DUPLICATES
+2025-12-16 17:09:58,561 - dq_unified - INFO - Detected potential key fields: ['CustomerName', 'Email', 'PostalCode']
+2025-12-16 17:09:58,561 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-16 17:09:58,562 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-16 17:09:58,563 - dq_unified - INFO - CHECKING MANDATORY FIELDS
+2025-12-16 17:10:13,692 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2025-12-16 17:10:13,695 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2025-12-16 17:10:13,698 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2025-12-16 17:10:13,698 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2025-12-16 17:10:13,701 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2025-12-16 17:10:13,702 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2025-12-16 17:10:13,703 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2025-12-16 17:10:13,704 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2025-12-16 17:10:13,705 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2025-12-16 17:10:13,706 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2025-12-16 17:10:13,708 - dq_unified - INFO - Mandatory field check completed: 5 columns with issues, 6 total missing values
+2025-12-16 17:10:13,709 - dq_unified - INFO - Skipping automatic format checking (disabled)
+2025-12-16 17:10:13,710 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-16 17:10:13,710 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Total cells: 150
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Duplicates: 0 (weight: 0.5)
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Key field duplicates: 2 (weight: 1.5)
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Mandatory missing: 6 (weight: 1.0)
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Weighted issues: 15.0
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-16 17:10:13,710 - dq_unified - INFO -   Quality score: 93.3%
+2025-12-16 17:10:13,711 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-16 17:10:13,726 - dq_audit - INFO - Inserted single_source record
+2025-12-16 17:10:13,726 - dq_audit - INFO - single_source audit record successfully stored in database
+2025-12-16 17:10:13,727 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 17:10:13] "POST /api/check-single HTTP/1.1" 200 -
+2025-12-16 17:10:15,798 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-16 17:10:15,802 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-16 17:10:15,806 - dq_unified - INFO - CSV file has 15 rows
+2025-12-16 17:10:15,806 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-16 17:10:15,812 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-16 17:10:15,815 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 17:10:15,816 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 106.0MB total, 0.0MB for dataframe
+2025-12-16 17:10:15,817 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 17:10:15,819 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-16 17:10:15,821 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-16 17:10:15,823 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-16 17:10:15,823 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-16 17:10:15,825 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-16 17:10:15,827 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-16 17:10:15,831 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-16 17:10:15,832 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-16 17:10:15,832 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-16 17:10:15,833 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-16 17:10:15,848 - dq_error_log - INFO - Batch logged 6 errors for session SINGLE_20251216_171015_85c55eab
+2025-12-16 17:10:15,848 - dq_unified - INFO - Total empty cells found: 6
+2025-12-16 17:10:15,849 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-16 17:10:15,849 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Total cells: 150
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Duplicates: 0 (weight: 0.5)
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Key field duplicates: 0 (weight: 1.5)
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Mandatory missing: 0 (weight: 1.0)
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Weighted issues: 6.0
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-16 17:10:15,849 - dq_unified - INFO -   Quality score: 97.3%
+2025-12-16 17:10:15,851 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-16 17:10:15,866 - dq_audit - INFO - Inserted single_source record
+2025-12-16 17:10:15,866 - dq_audit - INFO - single_source audit record successfully stored in database
+2025-12-16 17:10:15,866 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 17:10:15] "POST /api/check-single HTTP/1.1" 200 -
+2025-12-16 17:10:17,923 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-16 17:10:17,926 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-16 17:10:17,928 - dq_unified - INFO - CSV file has 15 rows
+2025-12-16 17:10:17,928 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-16 17:10:17,931 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-16 17:10:17,935 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 17:10:17,935 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 106.0MB total, 0.0MB for dataframe
+2025-12-16 17:10:17,936 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 17:10:17,937 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-16 17:10:17,942 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-16 17:10:17,943 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-16 17:10:17,943 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-16 17:10:17,945 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-16 17:10:17,946 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-16 17:10:17,947 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-16 17:10:17,947 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-16 17:10:17,947 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-16 17:10:17,948 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-16 17:10:17,961 - dq_error_log - INFO - Batch logged 6 errors for session SINGLE_20251216_171017_407f27a2
+2025-12-16 17:10:17,962 - dq_unified - INFO - Total empty cells found: 6
+2025-12-16 17:10:17,962 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-16 17:10:17,969 - dq_unified - INFO - No strict duplicate rows found
+2025-12-16 17:10:17,969 - dq_unified - INFO - AUTOMATICALLY DETECTING KEY FIELD DUPLICATES
+2025-12-16 17:10:17,970 - dq_unified - INFO - Detected potential key fields: ['CustomerName', 'Email', 'PostalCode']
+2025-12-16 17:10:17,970 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-16 17:10:17,971 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-16 17:10:17,972 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-16 17:10:17,972 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Total cells: 150
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Duplicates: 0 (weight: 0.5)
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Key field duplicates: 2 (weight: 1.5)
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Mandatory missing: 0 (weight: 1.0)
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Weighted issues: 9.0
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-16 17:10:17,972 - dq_unified - INFO -   Quality score: 96.0%
+2025-12-16 17:10:17,974 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-16 17:10:17,990 - dq_audit - INFO - Inserted single_source record
+2025-12-16 17:10:17,991 - dq_audit - INFO - single_source audit record successfully stored in database
+2025-12-16 17:10:17,991 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 17:10:17] "POST /api/check-single HTTP/1.1" 200 -

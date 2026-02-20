@@ -1,0 +1,191 @@
+2025-12-25 17:44:12,659 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 17:44:12,661 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_174412.log
+2025-12-25 17:44:13,435 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 17:44:13,436 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 17:44:13,438 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 17:44:13,439 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 17:44:13,440 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 17:44:13,447 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 17:44:13,447 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 17:44:13,449 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 17:44:13,450 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 17:44:13,451 - __main__ - INFO -   GET  /              - API status
+2025-12-25 17:44:13,451 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 17:44:13,452 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 17:44:13,452 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 17:44:13,454 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 17:44:13,454 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 17:44:13,454 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 17:44:13,455 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 17:44:13,455 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 17:44:30,836 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 17:44:30,837 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 17:44:32,904 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 17:44:33,406 - __main__ - INFO - Database connection test: MYSQL connection successful
+2025-12-25 17:44:33,407 - __main__ - INFO - Completed with status 200 in 0.503s
+2025-12-25 17:44:35,467 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 17:44:35,470 - __main__ - INFO - Single source analysis request received
+2025-12-25 17:44:35,471 - __main__ - INFO - Starting analysis for session SINGLE_20251225_174435_b3d002df
+2025-12-25 17:44:35,472 - __main__ - INFO - UI Data being passed to dq_unified:
+2025-12-25 17:44:35,474 - __main__ - INFO -   source_type: database
+2025-12-25 17:44:35,474 - __main__ - INFO -   db_config: {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'user': 'root', 'password': 'root', 'table': 'customers'}
+2025-12-25 17:44:35,475 - __main__ - INFO -   mandatory_fields: all
+2025-12-25 17:44:35,476 - dq_unified - INFO - ==================================================
+2025-12-25 17:44:35,478 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2025-12-25 17:44:35,479 - dq_unified - INFO - UI Data received: {'analysis_type': 'single', 'source_type': 'database', 'mandatory_fields': 'all', 'db_config': {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'user': 'root', 'password': 'root', 'table': 'customers'}}
+2025-12-25 17:44:35,480 - dq_unified - INFO - UI Data keys: ['analysis_type', 'source_type', 'mandatory_fields', 'db_config']
+2025-12-25 17:44:35,482 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 17:44:35,483 - dq_unified - INFO - UI Data source_type: database
+2025-12-25 17:44:35,484 - dq_unified - INFO - Using source_type from UI data: database
+2025-12-25 17:44:35,484 - dq_unified - INFO - Loading data from DATABASE
+2025-12-25 17:44:35,486 - dq_unified - INFO - Loading data from DATABASE
+2025-12-25 17:44:35,486 - dq_unified - INFO - Loading large database table: customers
+2025-12-25 17:44:35,505 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-25 17:44:35,506 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-25 17:44:36,951 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-25 17:44:36,965 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-25 17:44:36,967 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 119.7MB total, 0.0MB for dataframe
+2025-12-25 17:44:36,968 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 17:44:36,968 - dq_unified - INFO - API Mode: Created ErrorLogger for session SINGLE_20251225_174436
+2025-12-25 17:44:36,969 - dq_unified - INFO - Checking for empty cells
+2025-12-25 17:44:36,970 - dq_unified - INFO - DEBUG: Checking for 'nan' strings in Email column:
+2025-12-25 17:44:36,971 - dq_unified - INFO -   Row 2: Found string 'nan' in Email
+2025-12-25 17:44:36,972 - dq_unified - INFO - Column 'CustomerID': No empty cells
+2025-12-25 17:44:36,974 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-25 17:44:36,977 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-25 17:44:36,981 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-25 17:44:36,982 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-25 17:44:37,002 - dq_error_log - INFO - Batch logged 2 errors for session SINGLE_20251225_174436
+2025-12-25 17:44:37,004 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-25 17:44:37,007 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-25 17:44:37,008 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-25 17:44:37,012 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-25 17:44:37,013 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-25 17:44:37,016 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-25 17:44:37,018 - dq_unified - INFO - Total empty cells found: 6
+2025-12-25 17:44:37,019 - dq_unified - INFO - Checking for duplicate rows
+2025-12-25 17:44:37,021 - dq_unified - INFO - DEBUG: Data shape: (15, 11)
+2025-12-25 17:44:37,022 - dq_unified - INFO - DEBUG: Checking duplicates on 15 rows
+2025-12-25 17:44:37,022 - dq_unified - INFO - DEBUG: Checking CustomerName values with repr to see whitespace:
+2025-12-25 17:44:37,023 - dq_unified - INFO - DEBUG: Row 0 CustomerName: '   John Doe'
+2025-12-25 17:44:37,025 - dq_unified - INFO - DEBUG: Row 5 CustomerName: 'John Doe        '
+2025-12-25 17:44:37,027 - dq_unified - INFO - DEBUG: Simple duplicate count: 0
+2025-12-25 17:44:37,043 - dq_unified - INFO - DEBUG: All data for duplicate check:
+    CustomerID              CustomerName                 Email       Phone   Salary            Department    JoinDate PostalCode       City Country State
+0            1                  John Doe        john@email.com  1234567890  50000.0       IT               2023-01-15      10001   New York     USA    TS
+1            2           Jane      Smith        jane@email.com  9876543210  60000.0                    HR  2023-02-20      10002    Chicago     USA    AP
+2            3        Bob        Johnson                   nan  5551234567  55000.0               Finance  2023-03-10      10003     Boston     USA    KL
+3            4               Alice Brown       alice@email.com  4445556666  70000.0                    IT  2023-01-15      10004    Seattle     USA    MP
+4            5            Charlie Wilson     charlie@email.com  3334445555  48000.0                    HR  2023-04-05      10005      Miami     USA    KA
+5            6          John Doe                john@email.com  1234567890  50000.0                    IT  2023-01-15      10001   New York     USA    TS
+6            7         David         Lee       david@email.com  2223334444      NaN               Finance  2023-05-12      10006    Atlanta     USA   nan
+7            8         Sarah      Chen         sarah@email.com  1112223333  52000.0                    IT  2023-06-18      10007     Denver     USA    DL
+8            9                Mike Davis         invalid-email  9998887777  58000.0                    HR  2023-07-22     ABC123    Phoenix     USA    JK
+9           10           Lisa       Wang        lisa@email.com  6667778888  62000.0                   nan  2023-08-30      10008     Austin     USA    GJ
+10          11                Tom Wilson  tom@email.com         7778889999  45000.0                 Sales  2023-09-10      10009   Portland     USA    MB
+11          12                       nan       empty@email.com  8889990000  53000.0             Marketing  2023-10-15      10010    Detroit     USA    AR
+12          13              Robert Brown      robert@email.com  9990001111  67000.0                    IT  2023-11-20      10011  Las Vegas     USA    AS
+13          14               Nancy Davis       nancy@email.com     1112222      NaN                    HR  2023-12-05      10012    Orlando     USA    BR
+14          15                 Kevin Lee       kevin@email.com  1112223333  49000.0                 Sales  2024-01-10      10013  San Diego     USA    GA
+2025-12-25 17:44:37,052 - dq_unified - INFO - Business duplicate count after proper trimming: 0
+2025-12-25 17:44:37,053 - dq_unified - INFO - DEBUG: After trimming, Row 0 vs Row 5 comparison:
+2025-12-25 17:44:37,054 - dq_unified - INFO -   CustomerName: Row0='John Doe', Row5='John Doe', Same? True
+2025-12-25 17:44:37,055 - dq_unified - INFO -   Email: Row0='john@email.com', Row5='john@email.com', Same? True
+2025-12-25 17:44:37,057 - dq_unified - INFO -   Department: Row0='IT', Row5='IT', Same? True
+2025-12-25 17:44:37,057 - dq_unified - INFO - DEBUG: Checking ALL columns between Row 0 and Row 5:
+2025-12-25 17:44:37,059 - dq_unified - INFO -   ❌ CustomerID: Row0='np.uint8(1)', Row5='np.uint8(6)'
+2025-12-25 17:44:37,060 - dq_unified - INFO -   ✅ CustomerName: Same
+2025-12-25 17:44:37,061 - dq_unified - INFO -   ✅ Email: Same
+2025-12-25 17:44:37,062 - dq_unified - INFO -   ✅ Phone: Same
+2025-12-25 17:44:37,063 - dq_unified - INFO -   ✅ Salary: Same
+2025-12-25 17:44:37,064 - dq_unified - INFO -   ✅ Department: Same
+2025-12-25 17:44:37,066 - dq_unified - INFO -   ✅ JoinDate: Same
+2025-12-25 17:44:37,069 - dq_unified - INFO -   ✅ PostalCode: Same
+2025-12-25 17:44:37,070 - dq_unified - INFO -   ✅ City: Same
+2025-12-25 17:44:37,072 - dq_unified - INFO -   ✅ Country: Same
+2025-12-25 17:44:37,072 - dq_unified - INFO -   ✅ State: Same
+2025-12-25 17:44:37,074 - dq_unified - INFO - No strict duplicate rows found
+2025-12-25 17:44:37,074 - dq_unified - INFO - Automatically detecting key field duplicates
+2025-12-25 17:44:37,078 - dq_unified - INFO - Detected potential key fields: ['CustomerID', 'CustomerName', 'Email', 'PostalCode']
+2025-12-25 17:44:37,079 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-25 17:44:37,081 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-25 17:44:37,146 - dq_unified - INFO - Checking data formats with intelligent, adaptive detection
+2025-12-25 17:44:37,147 - dq_unified - INFO - Analyzing column 'CustomerID' with 15 non-null values
+2025-12-25 17:44:37,149 - dq_unified - INFO -   ✓ Column 'CustomerID' matches 'numeric' pattern with 100.0% confidence
+2025-12-25 17:44:37,151 - dq_unified - INFO - Analyzing column 'CustomerName' with 15 non-null values
+2025-12-25 17:44:37,152 - dq_unified - INFO - Analyzing column 'Email' with 15 non-null values
+2025-12-25 17:44:37,154 - dq_unified - INFO -   ✓ Column 'Email' matches 'email' pattern with 92.9% confidence
+2025-12-25 17:44:37,156 - dq_unified - WARNING -     Row 9: 'invalid-email...' doesn't match Valid email format (user@domain.com)
+2025-12-25 17:44:37,156 - dq_unified - INFO -     Found 1 format issues in column 'Email'
+2025-12-25 17:44:37,158 - dq_unified - INFO - Analyzing column 'Phone' with 15 non-null values
+2025-12-25 17:44:37,159 - dq_unified - INFO -   ✓ Column 'Phone' matches 'numeric' pattern with 100.0% confidence
+2025-12-25 17:44:37,161 - dq_unified - INFO - Analyzing column 'Salary' with 13 non-null values
+2025-12-25 17:44:37,162 - dq_unified - INFO -   ✓ Column 'Salary' matches 'numeric' pattern with 100.0% confidence
+2025-12-25 17:44:37,164 - dq_unified - INFO - Analyzing column 'Department' with 15 non-null values
+2025-12-25 17:44:37,165 - dq_unified - INFO -   ✓ Column 'Department' matches 'code_id' pattern with 100.0% confidence
+2025-12-25 17:44:37,166 - dq_unified - INFO - Analyzing column 'JoinDate' with 15 non-null values
+2025-12-25 17:44:37,167 - dq_unified - INFO -   ✓ Column 'JoinDate' matches 'phone' pattern with 100.0% confidence
+2025-12-25 17:44:37,169 - dq_unified - INFO - Analyzing column 'PostalCode' with 15 non-null values
+2025-12-25 17:44:37,171 - dq_unified - INFO -   ✓ Column 'PostalCode' matches 'code_id' pattern with 100.0% confidence
+2025-12-25 17:44:37,172 - dq_unified - INFO - Analyzing column 'City' with 15 non-null values
+2025-12-25 17:44:37,174 - dq_unified - INFO - Analyzing column 'Country' with 15 non-null values
+2025-12-25 17:44:37,175 - dq_unified - INFO -   ✓ Column 'Country' matches 'code_id' pattern with 100.0% confidence
+2025-12-25 17:44:37,177 - dq_unified - INFO - Analyzing column 'State' with 15 non-null values
+2025-12-25 17:44:37,178 - dq_unified - INFO -   ✓ Column 'State' matches 'code_id' pattern with 100.0% confidence
+2025-12-25 17:44:37,178 - dq_unified - INFO - Total format issues found: 1
+2025-12-25 17:44:37,194 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251225_174436
+2025-12-25 17:44:37,195 - dq_unified - INFO - Logged 1 format issues to error database
+2025-12-25 17:44:37,198 - dq_unified - INFO - Checking mandatory fields
+2025-12-25 17:44:37,198 - dq_unified - INFO - DEBUG: UI data for mandatory fields: {'analysis_type': 'single', 'source_type': 'database', 'mandatory_fields': 'all', 'db_config': {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'user': 'root', 'password': 'root', 'table': 'customers'}}
+2025-12-25 17:44:37,199 - dq_unified - INFO - Available columns: ['CustomerID', 'CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-25 17:44:37,200 - dq_unified - INFO - Checking ALL columns as mandatory: ['CustomerID', 'CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-25 17:44:37,201 - dq_unified - INFO - Mandatory field 'CustomerID': 100.0% filled
+2025-12-25 17:44:37,202 - dq_unified - INFO - Mandatory field 'CustomerName': 100.0% filled
+2025-12-25 17:44:37,204 - dq_unified - INFO - Mandatory field 'Email': 100.0% filled
+2025-12-25 17:44:37,205 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2025-12-25 17:44:37,207 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2025-12-25 17:44:37,209 - dq_unified - INFO - Mandatory field 'Department': 100.0% filled
+2025-12-25 17:44:37,210 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2025-12-25 17:44:37,211 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2025-12-25 17:44:37,212 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2025-12-25 17:44:37,214 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2025-12-25 17:44:37,216 - dq_unified - INFO - Mandatory field 'State': 100.0% filled
+2025-12-25 17:44:37,217 - dq_unified - INFO - Mandatory field check completed: 1 columns with issues, 2 total missing values
+2025-12-25 17:44:37,249 - dq_unified - INFO - Calculating overall quality score - SIMPLE PERCENTAGE
+2025-12-25 17:44:37,250 - dq_unified - INFO - SIMPLE SCORE CALCULATION (like school marks):
+2025-12-25 17:44:37,251 - dq_unified - INFO -   Total cells: 165
+2025-12-25 17:44:37,252 - dq_unified - INFO -   Total issues: 13
+2025-12-25 17:44:37,253 - dq_unified - INFO -     - Nulls: 6
+2025-12-25 17:44:37,254 - dq_unified - INFO -     - Duplicates: 2
+2025-12-25 17:44:37,255 - dq_unified - INFO -     - Format issues: 1
+2025-12-25 17:44:37,256 - dq_unified - INFO -     - Mandatory missing: 2
+2025-12-25 17:44:37,257 - dq_unified - INFO -     - Key duplicates: 2
+2025-12-25 17:44:37,258 - dq_unified - INFO -   Calculation: (165 - 13) / 165 * 100
+2025-12-25 17:44:37,258 - dq_unified - INFO -   DQ Score: 92.12%
+2025-12-25 17:44:37,260 - dq_unified - INFO - Generating detailed data quality report
+2025-12-25 17:44:37,269 - dq_unified - INFO - Returning JSON report for API, Session: SINGLE_20251225_174436
+2025-12-25 17:44:37,269 - dq_unified - INFO - Starting audit logging for session: SINGLE_20251225_174436
+2025-12-25 17:44:37,270 - dq_unified - INFO - Quality score: 92.12
+2025-12-25 17:44:37,271 - dq_unified - INFO - APP_SETTINGS['audit_enabled'] = True
+2025-12-25 17:44:37,271 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 17:44:37,272 - dq_unified - INFO - Audit logger created
+2025-12-25 17:44:37,273 - dq_unified - INFO - Audit data prepared
+2025-12-25 17:44:37,274 - dq_unified - INFO -    Session: SINGLE_20251225_174436
+2025-12-25 17:44:37,274 - dq_unified - INFO -    Check Type: single_source
+2025-12-25 17:44:37,275 - dq_unified - INFO -    Score: 92.12%
+2025-12-25 17:44:37,277 - dq_unified - INFO - Audit enabled, calling log_audit_record...
+2025-12-25 17:44:37,278 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-25 17:44:37,297 - dq_audit - INFO - Inserted single_source record with ID: 304
+2025-12-25 17:44:37,298 - dq_unified - INFO - Audit record logged with ID: DQ_20251225_174437
+2025-12-25 17:44:37,299 - dq_unified - INFO - Analysis completed successfully for Database: mysql - Table: customers
+2025-12-25 17:44:37,313 - dq_error_log - INFO - Retrieved 9 error logs for session SINGLE_20251225_174436
+2025-12-25 17:44:37,330 - dq_error_log - INFO - Retrieved summary: 9 total errors for session SINGLE_20251225_174436
+2025-12-25 17:44:37,347 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20251225_174436
+2025-12-25 17:44:37,348 - __main__ - INFO - Analysis completed for session SINGLE_20251225_174436
+2025-12-25 17:44:37,349 - __main__ - INFO - Completed with status 200 in 1.882s
+2025-12-25 17:44:39,438 - __main__ - INFO - GET /api/sessions/SINGLE_20251225_174436 - Request started
+2025-12-25 17:44:39,455 - dq_error_log - INFO - Retrieved 9 error logs for session SINGLE_20251225_174436
+2025-12-25 17:44:39,472 - dq_error_log - INFO - Retrieved summary: 9 total errors for session SINGLE_20251225_174436
+2025-12-25 17:44:39,489 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20251225_174436
+2025-12-25 17:44:39,490 - __main__ - INFO - Retrieved data for session SINGLE_20251225_174436
+2025-12-25 17:44:39,493 - __main__ - INFO - Completed with status 200 in 0.055s

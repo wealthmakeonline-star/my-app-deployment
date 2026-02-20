@@ -1,0 +1,268 @@
+2025-12-23 12:20:35,097 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-23 12:20:35,303 - root - INFO - APP_SETTINGS loaded. audit_enabled: True
+2025-12-23 12:20:35,305 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:20:35,305 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:20:35,314 - root - INFO - 🚀 Starting Data Quality Framework API...
+2025-12-23 12:20:35,314 - root - INFO - Config File Mode: DISABLED
+2025-12-23 12:20:35,314 - root - INFO - Set DQ_USE_CONFIG_FILE=true to enable config file mode
+2025-12-23 12:20:35,315 - root - INFO - ✅ DUAL MODE API LAYER:
+2025-12-23 12:20:35,315 - root - INFO - 1. POST /api/check-single      - Single source analysis (CLI & UI)
+2025-12-23 12:20:35,315 - root - INFO - 2. POST /api/compare          - Source-target comparison (CLI & UI)
+2025-12-23 12:20:35,316 - root - INFO - 3. POST /api/advanced         - Advanced data checks (CLI & UI)
+2025-12-23 12:20:35,316 - root - INFO - 4. POST /api/rules            - Business rules validation (CLI & UI)
+2025-12-23 12:20:35,316 - root - INFO - 5. GET  /api/sessions/{id}    - Get complete session data
+2025-12-23 12:20:35,316 - root - INFO - 6. GET  /api/sessions         - List all sessions
+2025-12-23 12:20:35,316 - root - INFO - 7. GET  /api/debug-db         - Debug database status
+2025-12-23 12:20:35,316 - root - INFO - 📊 DUAL MODE SUPPORT:
+2025-12-23 12:20:35,316 - root - INFO -    • ✅ Single Source: READY
+2025-12-23 12:20:35,316 - root - INFO -    • ⏳ Comparison: Update dq_comparison.py
+2025-12-23 12:20:35,316 - root - INFO -    • ⏳ Advanced Checks: Update dq_advanced.py
+2025-12-23 12:20:35,316 - root - INFO -    • ⏳ Business Rules: Update dq_rules.py
+2025-12-23 12:20:35,316 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-23 12:20:35,316 - root - INFO - DQ modules available: True
+2025-12-23 12:20:35,316 - root - INFO - Config file mode: False
+2025-12-23 12:20:35,316 - root - INFO - Database config: localhost/dq_checks
+2025-12-23 12:20:47,942 - root - INFO - Single source analysis request received: dict_keys(['source_type', 'file_path', 'mandatory_fields', 'analysis_type', 'check_completeness', 'check_uniqueness', 'check_consistency', 'check_validity', 'check_accuracy', 'check_timeliness', 'generate_report', 'calculate_kpis'])
+2025-12-23 12:20:47,942 - root - INFO - Starting single source analysis for session SINGLE_20251223_122047_04048bfe
+2025-12-23 12:20:47,943 - root - INFO - Calling run_single_source_analysis_ui() with session: SINGLE_20251223_122047_04048bfe
+2025-12-23 12:20:47,943 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 12:20:47,943 - dq_unified - INFO - User selected source type: 1
+2025-12-23 12:20:47,943 - dq_unified - INFO - Loading data from CSV
+2025-12-23 12:20:47,943 - dq_unified - INFO - Loading data from CSV
+2025-12-23 12:20:47,943 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-23 12:20:47,946 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 12:20:47,946 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 12:20:47,961 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 12:20:47,969 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 12:20:47,970 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 97.8MB total, 0.0MB for dataframe
+2025-12-23 12:20:47,970 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:20:47,970 - dq_unified - INFO - API Mode: Created ErrorLogger for session SINGLE_20251223_122047
+2025-12-23 12:20:47,971 - dq_unified - INFO - Checking for empty cells
+2025-12-23 12:20:47,972 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-23 12:20:48,112 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,114 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-23 12:20:48,131 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,132 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-23 12:20:48,132 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-23 12:20:48,148 - dq_error_log - INFO - Batch logged 2 errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,148 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-23 12:20:48,166 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,167 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-23 12:20:48,168 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-23 12:20:48,169 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-23 12:20:48,169 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-23 12:20:48,169 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-23 12:20:48,189 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,189 - dq_unified - INFO - Total empty cells found: 6
+2025-12-23 12:20:48,189 - dq_unified - INFO - Checking for duplicate rows
+2025-12-23 12:20:48,198 - dq_unified - INFO - No strict duplicate rows found
+2025-12-23 12:20:48,198 - dq_unified - INFO - Automatically detecting key field duplicates
+2025-12-23 12:20:48,204 - dq_unified - INFO - Detected potential key fields: ['CustomerName', 'Email', 'PostalCode']
+2025-12-23 12:20:48,205 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-23 12:20:48,206 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-23 12:20:48,275 - dq_unified - INFO - Skipping automatic format checking (disabled)
+2025-12-23 12:20:48,275 - dq_unified - INFO - Checking mandatory fields
+2025-12-23 12:20:48,275 - dq_unified - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 12:20:48,275 - dq_unified - INFO - Checking ALL columns as mandatory: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 12:20:48,275 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2025-12-23 12:20:48,277 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2025-12-23 12:20:48,278 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2025-12-23 12:20:48,278 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2025-12-23 12:20:48,280 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2025-12-23 12:20:48,280 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2025-12-23 12:20:48,281 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2025-12-23 12:20:48,282 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2025-12-23 12:20:48,282 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2025-12-23 12:20:48,282 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2025-12-23 12:20:48,284 - dq_unified - INFO - Mandatory field check completed: 5 columns with issues, 6 total missing values
+2025-12-23 12:20:48,390 - dq_unified - INFO - Calculating overall quality score
+2025-12-23 12:20:48,390 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-23 12:20:48,390 - dq_unified - INFO -   Total cells: 150
+2025-12-23 12:20:48,390 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-23 12:20:48,390 - dq_unified - INFO -   Duplicates: 2 (weight: 0.5)
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Key field duplicates: 2 (weight: 1.5)
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Mandatory missing: 6 (weight: 1.0)
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Weighted issues: 16.0
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-23 12:20:48,391 - dq_unified - INFO -   Quality score: 92.9%
+2025-12-23 12:20:48,391 - dq_unified - INFO - Generating detailed data quality report
+2025-12-23 12:20:48,399 - dq_unified - INFO - Returning JSON report for API, Session: SINGLE_20251223_122047
+2025-12-23 12:20:48,399 - dq_unified - INFO - Starting audit logging for session: SINGLE_20251223_122047
+2025-12-23 12:20:48,399 - dq_unified - INFO - Quality score: 92.88888888888889
+2025-12-23 12:20:48,399 - dq_unified - INFO - APP_SETTINGS['audit_enabled'] = True
+2025-12-23 12:20:48,400 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:20:48,400 - dq_unified - INFO - Audit logger created
+2025-12-23 12:20:48,400 - dq_unified - INFO - Audit data prepared
+2025-12-23 12:20:48,400 - dq_unified - INFO -    Session: SINGLE_20251223_122047
+2025-12-23 12:20:48,400 - dq_unified - INFO -    Check Type: single_source
+2025-12-23 12:20:48,400 - dq_unified - INFO -    Score: 92.88888888888889%
+2025-12-23 12:20:48,400 - dq_unified - INFO - Audit enabled, calling log_audit_record...
+2025-12-23 12:20:48,401 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-23 12:20:48,422 - dq_audit - INFO - Inserted single_source record with ID: 233
+2025-12-23 12:20:48,422 - dq_unified - INFO - Audit record logged with ID: DQ_20251223_122048
+2025-12-23 12:20:48,422 - dq_unified - INFO - Analysis completed successfully for CSV: sample_data.csv
+2025-12-23 12:20:48,422 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:20:48,436 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20251223_122047
+2025-12-23 12:20:48,452 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20251223_122047
+2025-12-23 12:20:48,453 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:20:48,470 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20251223_122047
+2025-12-23 12:20:48,471 - root - INFO - Completed single source analysis for session SINGLE_20251223_122047
+2025-12-23 12:21:21,790 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:21:21,790 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:21:21,805 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20251223_122047
+2025-12-23 12:21:21,818 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20251223_122047
+2025-12-23 12:21:21,831 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20251223_122047
+2025-12-23 12:21:21,831 - root - INFO - Retrieved session data for SINGLE_20251223_122047
+2025-12-23 12:22:58,429 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns', 'comparison_method', 'allow_tolerance', 'tolerance_percentage', 'ignore_case', 'trim_whitespace', 'check_null_equality', 'generate_comparison_report', 'show_mismatch_details', 'save_comparison_results', 'analysis_name', 'description'])
+2025-12-23 12:22:58,429 - root - INFO - Starting comparison for session CMP_20251223_122258
+2025-12-23 12:22:58,430 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-23 12:23:02,847 - dq_comparison - ERROR - Failed to load source or target data
+2025-12-23 12:23:02,847 - root - ERROR - Comparison error: Failed to load source or target data
+2025-12-23 12:25:34,766 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns', 'comparison_method', 'allow_tolerance', 'tolerance_percentage', 'ignore_case', 'trim_whitespace', 'check_null_equality', 'generate_comparison_report', 'show_mismatch_details', 'save_comparison_results', 'analysis_name', 'description'])
+2025-12-23 12:25:34,766 - root - INFO - Starting comparison for session CMP_20251223_122534
+2025-12-23 12:25:34,766 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-23 12:25:34,776 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-23 12:25:34,776 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-23 12:25:34,776 - dq_comparison - INFO - User column selection input: customerid,first_name,last_name,email,phone,city,country
+2025-12-23 12:25:34,776 - dq_comparison - WARNING - Invalid column selection input, using all common columns. Error: invalid literal for int() with base 10: 'customerid'
+2025-12-23 12:25:34,777 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-23 12:25:34,777 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: CSV: sample_data.csv, Selected columns: 10
+2025-12-23 12:25:34,777 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-23 12:25:34,777 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:25:34,792 - dq_error_log - INFO - Database connection successful
+2025-12-23 12:25:34,792 - dq_comparison - INFO - Session ID: CMP_20251223_122534
+2025-12-23 12:25:34,794 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-23 12:25:34,794 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-23 12:25:34,794 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-23 12:25:34,794 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-23 12:25:34,794 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-23 12:25:34,794 - dq_comparison - INFO - Source columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:25:34,794 - dq_comparison - INFO - Target columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:25:34,794 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-23 12:25:34,803 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-23 12:25:34,809 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-23 12:25:34,809 - dq_comparison - INFO -   • Common rows: 14
+2025-12-23 12:25:34,809 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-23 12:25:34,809 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-23 12:25:34,809 - dq_comparison - INFO - ℹ️  No row-level errors to log (all rows matched by hash)
+2025-12-23 12:25:34,809 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-23 12:25:34,809 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2025-12-23 12:25:34,819 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-23 12:25:34,821 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-23 12:25:34,840 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-23 12:25:34,842 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-23 12:25:34,844 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:25:34,845 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:25:34,864 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251223_122534
+2025-12-23 12:25:34,869 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:25:34,870 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-23 12:25:34,890 - dq_audit - INFO - Inserted comparison record with ID: 234
+2025-12-23 12:25:34,905 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122534
+2025-12-23 12:25:34,921 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122534
+2025-12-23 12:25:34,923 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:25:34,939 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122534
+2025-12-23 12:25:34,946 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-23 12:25:34,946 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:25:34,962 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122534
+2025-12-23 12:25:34,977 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122534
+2025-12-23 12:25:34,989 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122534
+2025-12-23 12:25:34,989 - root - INFO - Completed comparison for session CMP_20251223_122534
+2025-12-23 12:27:41,186 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns', 'comparison_method', 'allow_tolerance', 'tolerance_percentage', 'ignore_case', 'trim_whitespace', 'check_null_equality', 'generate_comparison_report', 'show_mismatch_details', 'save_comparison_results', 'analysis_name', 'description'])
+2025-12-23 12:27:41,186 - root - INFO - Starting comparison for session CMP_20251223_122741
+2025-12-23 12:27:41,186 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-23 12:27:57,351 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-23 12:27:57,351 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-23 12:27:57,351 - dq_comparison - INFO - User column selection input: customerName,first_name,last_name,email,phone,city,country
+2025-12-23 12:27:57,351 - dq_comparison - WARNING - Invalid column selection input, using all common columns. Error: invalid literal for int() with base 10: 'customerName'
+2025-12-23 12:27:57,355 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-23 12:27:57,355 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: CSV: sample_data.csv, Selected columns: 10
+2025-12-23 12:27:57,355 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-23 12:27:57,355 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:27:57,365 - dq_error_log - INFO - Database connection successful
+2025-12-23 12:27:57,366 - dq_comparison - INFO - Session ID: CMP_20251223_122757
+2025-12-23 12:27:57,367 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-23 12:27:57,368 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-23 12:27:57,368 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-23 12:27:57,368 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-23 12:27:57,368 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-23 12:27:57,368 - dq_comparison - INFO - Source columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:27:57,368 - dq_comparison - INFO - Target columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:27:57,368 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-23 12:27:57,370 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-23 12:27:57,372 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-23 12:27:57,372 - dq_comparison - INFO -   • Common rows: 14
+2025-12-23 12:27:57,372 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-23 12:27:57,372 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-23 12:27:57,372 - dq_comparison - INFO - ℹ️  No row-level errors to log (all rows matched by hash)
+2025-12-23 12:27:57,372 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-23 12:27:57,372 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2025-12-23 12:27:57,376 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-23 12:27:57,378 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-23 12:27:57,385 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-23 12:27:57,386 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-23 12:27:57,387 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:27:57,387 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:27:57,401 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251223_122757
+2025-12-23 12:27:57,408 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:27:57,409 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-23 12:27:57,426 - dq_audit - INFO - Inserted comparison record with ID: 235
+2025-12-23 12:27:57,440 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122757
+2025-12-23 12:27:57,456 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122757
+2025-12-23 12:27:57,457 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:27:57,474 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122757
+2025-12-23 12:27:57,480 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-23 12:27:57,480 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:27:57,496 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122757
+2025-12-23 12:27:57,510 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122757
+2025-12-23 12:27:57,523 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122757
+2025-12-23 12:27:57,523 - root - INFO - Completed comparison for session CMP_20251223_122741
+2025-12-23 12:28:55,587 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns', 'comparison_method', 'allow_tolerance', 'tolerance_percentage', 'ignore_case', 'trim_whitespace', 'check_null_equality', 'generate_comparison_report', 'show_mismatch_details', 'save_comparison_results', 'analysis_name', 'description'])
+2025-12-23 12:28:55,588 - root - INFO - Starting comparison for session CMP_20251223_122855
+2025-12-23 12:28:55,588 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-23 12:28:55,604 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-23 12:28:55,604 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-23 12:28:55,605 - dq_comparison - INFO - User column selection input: all
+2025-12-23 12:28:55,605 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-23 12:28:55,605 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-23 12:28:55,605 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: CSV: sample_data.csv, Selected columns: 10
+2025-12-23 12:28:55,605 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-23 12:28:55,605 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 12:28:55,619 - dq_error_log - INFO - Database connection successful
+2025-12-23 12:28:55,620 - dq_comparison - INFO - Session ID: CMP_20251223_122855
+2025-12-23 12:28:55,623 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-23 12:28:55,623 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-23 12:28:55,623 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-23 12:28:55,623 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-23 12:28:55,623 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-23 12:28:55,623 - dq_comparison - INFO - Source columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:28:55,623 - dq_comparison - INFO - Target columns: ['Email', 'PostalCode', 'State', 'Phone', 'Department', 'JoinDate', 'City', 'CustomerName', 'Salary', 'Country']
+2025-12-23 12:28:55,623 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-23 12:28:55,626 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-23 12:28:55,628 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-23 12:28:55,628 - dq_comparison - INFO -   • Common rows: 14
+2025-12-23 12:28:55,628 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-23 12:28:55,629 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-23 12:28:55,629 - dq_comparison - INFO - ℹ️  No row-level errors to log (all rows matched by hash)
+2025-12-23 12:28:55,629 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-23 12:28:55,629 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2025-12-23 12:28:55,635 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-23 12:28:55,640 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-23 12:28:55,650 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-23 12:28:55,652 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-23 12:28:55,653 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:28:55,655 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 12:28:55,666 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251223_122855
+2025-12-23 12:28:55,672 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:28:55,673 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-23 12:28:55,690 - dq_audit - INFO - Inserted comparison record with ID: 236
+2025-12-23 12:28:55,703 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122855
+2025-12-23 12:28:55,717 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122855
+2025-12-23 12:28:55,718 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:28:55,735 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122855
+2025-12-23 12:28:55,746 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-23 12:28:55,746 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 12:28:55,755 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_122855
+2025-12-23 12:28:55,764 - dq_error_log - INFO - Retrieved 0 error logs for session CMP_20251223_122855
+2025-12-23 12:28:55,773 - dq_error_log - INFO - Retrieved summary: 0 total errors for session CMP_20251223_122855
+2025-12-23 12:28:55,773 - root - INFO - Completed comparison for session CMP_20251223_122855

@@ -1,0 +1,91 @@
+2026-01-06 12:33:29,997 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-06 12:33:30,000 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260106_123329.log
+2026-01-06 12:33:30,180 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-06 12:33:30,182 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-06 12:33:30,189 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-06 12:33:30,190 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-06 12:33:30,191 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-06 12:33:30,212 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-06 12:33:30,213 - __main__ - INFO - 📊 Modules available: True
+2026-01-06 12:33:30,215 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-06 12:33:30,216 - __main__ - INFO - 📋 Available endpoints:
+2026-01-06 12:33:30,217 - __main__ - INFO -   GET  /              - API status
+2026-01-06 12:33:30,219 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-06 12:33:30,220 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-06 12:33:30,221 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-06 12:33:30,224 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-06 12:33:30,224 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-06 12:33:30,225 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-06 12:33:30,227 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-06 12:33:30,227 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-06 12:34:22,526 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-06 12:34:22,528 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-01-06 12:34:22,529 - __main__ - INFO - Database: dq_checks
+2026-01-06 12:34:22,533 - __main__ - INFO - Schema: public
+2026-01-06 12:34:22,534 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-06 12:34:22,536 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'user': 'postgres', 'password': 'postgres'}
+2026-01-06 12:34:22,538 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-06 12:34:22,539 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-06 12:34:22,540 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-01-06 12:34:22,753 - database_navigator - INFO - Connection object created: <connection object at 0x00000178DB4EC370; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-01-06 12:34:22,755 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-01-06 12:34:22,757 - __main__ - INFO - Getting tables for database: dq_checks, schema: public
+2026-01-06 12:34:22,862 - database_navigator - INFO - Found 2 tables in schema 'public'
+2026-01-06 12:34:22,864 - __main__ - INFO - Found 2 tables
+2026-01-06 12:34:22,867 - __main__ - INFO - Completed with status 200 in 0.340s
+2026-01-06 12:40:52,193 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-06 12:40:52,195 - __main__ - ERROR - Error getting database hierarchy: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 614, in get_json
+    rv = self.json_module.loads(data)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 188, in loads
+    return json.loads(s, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 119 (char 118)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 648, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting ',' delimiter: line 1 column 119 (char 118)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\run_api.py", line 761, in get_database_hierarchy_api
+    data = request.get_json()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 623, in get_json
+    rv = self.on_json_loading_failed(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 135, in on_json_loading_failed
+    raise BadRequest() from e
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-01-06 12:40:52,246 - __main__ - INFO - Completed with status 500 in 0.053s
+2026-01-06 12:41:34,613 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-06 12:41:34,616 - __main__ - INFO - Getting database hierarchy for mysql
+2026-01-06 12:41:34,618 - __main__ - INFO - Database: Not provided
+2026-01-06 12:41:34,620 - __main__ - INFO - Schema: Not provided
+2026-01-06 12:41:34,622 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-06 12:41:34,624 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-01-06 12:41:34,628 - database_navigator - INFO - Connecting to MYSQL...
+2026-01-06 12:41:35,032 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-01-06 12:41:35,033 - __main__ - INFO - Getting databases list...
+2026-01-06 12:41:35,034 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-01-06 12:41:35,057 - database_navigator - INFO - Found 13 databases
+2026-01-06 12:41:35,060 - __main__ - INFO - Found 13 databases
+2026-01-06 12:41:35,065 - __main__ - INFO - Completed with status 200 in 0.452s

@@ -1,0 +1,98 @@
+2025-12-09 15:04:52,837 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-09 15:04:53,348 - __main__ - INFO - User session started at: 2025-12-09 15:04:53.348234
+2025-12-09 15:04:53,349 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:05:09,926 - __main__ - INFO - User selected option: 4
+2025-12-09 15:05:09,926 - __main__ - INFO - Starting Business Rules Engine module
+2025-12-09 15:05:09,931 - dq_rules - INFO - STARTING BUSINESS RULES VALIDATION
+2025-12-09 15:05:09,932 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-09 15:05:09,933 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:05:15,410 - dq_unified - INFO - User selected source type: 3
+2025-12-09 15:05:15,411 - dq_unified - INFO - GETTING DATABASE CONFIGURATION
+2025-12-09 15:05:17,916 - dq_unified - INFO - User selected database type: 3
+2025-12-09 15:05:23,386 - dq_unified - INFO - Database configuration collected: oracle, Table: employee
+2025-12-09 15:05:23,387 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-09 15:05:23,391 - dq_unified - INFO - Loading large database table: employee
+2025-12-09 15:05:23,663 - dq_unified - INFO - Oracle table has 89,999 rows
+2025-12-09 15:05:23,664 - dq_unified - INFO - Loading 89,999 rows from Oracle...
+2025-12-09 15:05:24,024 - dq_unified - INFO - Loaded 89,999 rows from Oracle
+2025-12-09 15:05:24,538 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2025-12-09 15:05:24,601 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 180.8MB total, 25.7MB for dataframe
+2025-12-09 15:05:24,604 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:05:24,605 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-09 15:05:24,605 - dq_rules - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-09 15:05:55,068 - dq_rules - INFO - User selected rule type: 6
+2025-12-09 15:05:55,070 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-09 15:05:55,071 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-09 15:05:55,073 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-09 15:05:55,113 - dq_rules - INFO - Available string columns: ['id', 'customer_id', 'transaction_id', 'phone', 'amount']
+2025-12-09 15:06:29,465 - dq_rules - WARNING - Column 'email' not found in string columns
+2025-12-09 15:06:29,467 - dq_rules - INFO - RANGE RULES SETUP
+2025-12-09 15:06:29,468 - dq_rules - INFO - NULL CHECK RULES SETUP
+2025-12-09 15:06:35,795 - dq_rules - INFO - Checking for columns with null values...
+2025-12-09 15:06:35,812 - dq_rules - INFO - Found 3510 null values in 'customer_name'
+2025-12-09 15:06:35,812 - dq_rules - INFO - Created null check rule for customer_name
+2025-12-09 15:06:35,813 - dq_rules - INFO - Found 1516 null values in 'email'
+2025-12-09 15:06:35,814 - dq_rules - INFO - Created null check rule for email
+2025-12-09 15:06:35,819 - dq_rules - INFO - Found 1280 null values in 'phone'
+2025-12-09 15:06:35,819 - dq_rules - INFO - Created null check rule for phone
+2025-12-09 15:06:35,825 - dq_rules - INFO - Found 1133 null values in 'amount'
+2025-12-09 15:06:35,825 - dq_rules - INFO - Created null check rule for amount
+2025-12-09 15:06:35,826 - dq_rules - INFO - KPI THRESHOLD RULES SETUP
+2025-12-09 15:06:55,032 - dq_rules - INFO - Current row count: 89,999
+2025-12-09 15:07:09,678 - dq_rules - INFO - Created KPI rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:07:09,680 - dq_rules - INFO - Created comprehensive rule set with 5 rules
+2025-12-09 15:07:09,681 - dq_rules - INFO - Defined 5 business rules
+2025-12-09 15:07:09,681 - dq_rules - INFO - EXECUTING 5 BUSINESS RULES
+2025-12-09 15:07:09,682 - dq_rules - INFO - Executing rule: customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:07:09,683 - dq_rules - INFO - Executing threshold rule: customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:07:09,684 - dq_rules - INFO - Threshold rule 'customer_name should have no null values (currently 3510 nulls)': 0 violations found
+2025-12-09 15:07:09,686 - dq_rules - INFO - No violations found
+2025-12-09 15:07:09,687 - dq_rules - INFO - Rule 'customer_name should have no null values (currently 3510 nulls)' completed with status: PASS
+2025-12-09 15:07:09,687 - dq_rules - INFO - Executing rule: email should have no null values (currently 1516 nulls)
+2025-12-09 15:07:09,688 - dq_rules - INFO - Executing threshold rule: email should have no null values (currently 1516 nulls)
+2025-12-09 15:07:09,688 - dq_rules - INFO - Threshold rule 'email should have no null values (currently 1516 nulls)': 0 violations found
+2025-12-09 15:07:09,689 - dq_rules - INFO - No violations found
+2025-12-09 15:07:09,689 - dq_rules - INFO - Rule 'email should have no null values (currently 1516 nulls)' completed with status: PASS
+2025-12-09 15:07:09,690 - dq_rules - INFO - Executing rule: phone should have no null values (currently 1280 nulls)
+2025-12-09 15:07:09,690 - dq_rules - INFO - Executing threshold rule: phone should have no null values (currently 1280 nulls)
+2025-12-09 15:07:09,697 - dq_rules - INFO - Threshold rule 'phone should have no null values (currently 1280 nulls)': 0 violations found
+2025-12-09 15:07:09,698 - dq_rules - INFO - No violations found
+2025-12-09 15:07:09,698 - dq_rules - INFO - Rule 'phone should have no null values (currently 1280 nulls)' completed with status: PASS
+2025-12-09 15:07:09,699 - dq_rules - INFO - Executing rule: amount should have no null values (currently 1133 nulls)
+2025-12-09 15:07:09,699 - dq_rules - INFO - Executing threshold rule: amount should have no null values (currently 1133 nulls)
+2025-12-09 15:07:09,704 - dq_rules - INFO - Threshold rule 'amount should have no null values (currently 1133 nulls)': 0 violations found
+2025-12-09 15:07:09,705 - dq_rules - INFO - No violations found
+2025-12-09 15:07:09,705 - dq_rules - INFO - Rule 'amount should have no null values (currently 1133 nulls)' completed with status: PASS
+2025-12-09 15:07:09,706 - dq_rules - INFO - Executing rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:07:09,706 - dq_rules - INFO - Executing KPI threshold rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:07:09,712 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 15:07:09,847 - dq_rules - INFO - KPI within acceptable limits. Current value: 89,999.00, Threshold: 98,998.90
+2025-12-09 15:07:09,847 - dq_rules - INFO - Rule 'KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%' completed with status: PASS
+2025-12-09 15:07:09,848 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 0
+2025-12-09 15:07:09,850 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-09 15:07:09,850 - dq_rules - INFO - Report for: Database: oracle - Table: employee, Records: 89999, Columns: 12
+2025-12-09 15:07:09,850 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:07:09,850 - dq_rules - INFO - Rules compliance score: 100.0% (Passed: 5, Failed: 0, Errors: 0)
+2025-12-09 15:07:09,851 - dq_rules - INFO - RULES SUMMARY: Total Rules: 5, Passed: 5, Failed: 0, Errors: 0, Total Violations: 0
+2025-12-09 15:07:09,851 - dq_rules - INFO - DETAILED RESULTS:
+2025-12-09 15:07:09,851 - dq_rules - INFO - PASS customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:07:09,852 - dq_rules - INFO - PASS email should have no null values (currently 1516 nulls)
+2025-12-09 15:07:09,852 - dq_rules - INFO - PASS phone should have no null values (currently 1280 nulls)
+2025-12-09 15:07:09,852 - dq_rules - INFO - PASS amount should have no null values (currently 1133 nulls)
+2025-12-09 15:07:09,853 - dq_rules - INFO - PASS KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:07:09,853 - dq_rules - INFO - Current Value: 89,999.00
+2025-12-09 15:07:09,853 - dq_rules - INFO - Threshold: 98,998.90
+2025-12-09 15:07:09,853 - dq_rules - INFO - RECOMMENDATIONS:
+2025-12-09 15:07:09,853 - dq_rules - INFO - All business rules are compliant!
+2025-12-09 15:07:09,854 - dq_rules - INFO - ERROR LOGGING: Session ID: RULES_20251209_150709, Total errors logged: 0
+2025-12-09 15:07:09,854 - dq_rules - INFO - Check dq_error_logs table for details
+2025-12-09 15:07:09,854 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 15:07:09,855 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-09 15:07:09,867 - dq_audit - INFO - Inserted rules record
+2025-12-09 15:07:09,868 - dq_audit - INFO - rules audit record successfully stored in database
+2025-12-09 15:25:18,576 - dq_rules - INFO - Business rules validation completed successfully
+2025-12-09 15:25:18,618 - __main__ - INFO - Business Rules Engine completed successfully
+2025-12-09 15:25:18,619 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:25:20,718 - __main__ - INFO - User selected option: 6
+2025-12-09 15:25:20,719 - __main__ - INFO - User session ended. Duration: 0:20:27.371429
+2025-12-09 15:25:20,719 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

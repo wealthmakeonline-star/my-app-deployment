@@ -1,0 +1,148 @@
+2025-12-18 15:31:07,423 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-18 15:31:08,072 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 15:31:08,072 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 15:31:08,078 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-18 15:31:08,078 - root - INFO - DQ modules available: True
+2025-12-18 15:31:08,078 - root - INFO - Config file mode: False
+2025-12-18 15:31:08,078 - root - INFO - Database config: localhost/dq_checks
+2025-12-18 15:31:09,252 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-18 15:31:09,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 15:31:35,147 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 15:31:35] "GET /api/health HTTP/1.1" 200 -
+2025-12-18 15:31:37,197 - root - INFO - Business rules request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'rule_type', 'rules_config'])
+2025-12-18 15:31:37,197 - root - INFO - Starting business rules validation for session RULES_20251218_153137_dc4d2cf5
+2025-12-18 15:31:37,197 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-18 15:31:37,197 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 15:31:37,197 - dq_unified - INFO - User selected source type: 1
+2025-12-18 15:31:37,197 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 15:31:37,198 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-18 15:31:37,201 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 15:31:37,202 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 15:31:37,212 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 15:31:37,215 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 15:31:37,215 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 100.0MB total, 0.0MB for dataframe
+2025-12-18 15:31:37,216 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 15:31:37,216 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-18 15:31:37,216 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 15:31:37,216 - dq_rules - INFO - User selected rule type: 6
+2025-12-18 15:31:37,216 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-18 15:31:37,218 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-18 15:31:37,219 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-18 15:31:37,220 - dq_rules - INFO - Creating threshold rule for: Phone
+2025-12-18 15:31:37,220 - dq_rules - INFO - Current stats - Min: 1112222.00, Max: 9998887777.00, Median: 4445556666.00
+2025-12-18 15:31:37,220 - dq_rules - INFO - Created: Phone should be above median value (4445556666.00)
+2025-12-18 15:31:37,221 - dq_rules - INFO - Creating threshold rule for: Salary
+2025-12-18 15:31:37,221 - dq_rules - INFO - Current stats - Min: 45000.00, Max: 70000.00, Median: 53000.00
+2025-12-18 15:31:37,222 - dq_rules - INFO - Created: Salary should be above median value (53000.00)
+2025-12-18 15:31:37,222 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-18 15:31:37,223 - dq_rules - INFO - Available string columns: ['CustomerName', 'Email', 'JoinDate', 'PostalCode', 'City', 'State']
+2025-12-18 15:31:37,223 - dq_rules - ERROR - Error in business rules validation: Required field 'pattern_columns' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 2576, in run_business_rules_ui
+    rules = define_custom_rules(df, session_id, ui_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 108, in define_custom_rules
+    rules = create_all_rules(df, session_id, ui_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 339, in create_all_rules
+    col_input = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'pattern_columns' not provided in UI mode
+2025-12-18 15:31:37,230 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 15:31:37] "[31m[1mPOST /api/rules HTTP/1.1[0m" 400 -
+2025-12-18 15:31:39,279 - root - INFO - Business rules request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'rule_type', 'rules_config'])
+2025-12-18 15:31:39,280 - root - INFO - Starting business rules validation for session RULES_20251218_153139_54b7a521
+2025-12-18 15:31:39,280 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-18 15:31:39,280 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 15:31:39,280 - dq_unified - INFO - User selected source type: 1
+2025-12-18 15:31:39,280 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 15:31:39,283 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-18 15:31:39,287 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 15:31:39,287 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 15:31:39,291 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 15:31:39,295 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 15:31:39,295 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 100.4MB total, 0.0MB for dataframe
+2025-12-18 15:31:39,297 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 15:31:39,297 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-18 15:31:39,297 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 15:31:39,298 - dq_rules - INFO - User selected rule type: 1
+2025-12-18 15:31:39,298 - dq_rules - INFO - CREATING THRESHOLD RULE
+2025-12-18 15:31:39,298 - dq_rules - ERROR - Error in business rules validation: Required field 'threshold_column' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 2576, in run_business_rules_ui
+    rules = define_custom_rules(df, session_id, ui_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 93, in define_custom_rules
+    rule = create_threshold_rule(df, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 1011, in create_threshold_rule
+    column_input = get_input(
+                   ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'threshold_column' not provided in UI mode
+2025-12-18 15:31:39,299 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 15:31:39] "[31m[1mPOST /api/rules HTTP/1.1[0m" 400 -
+2025-12-18 15:31:41,352 - root - INFO - Business rules request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'rule_type', 'rules_config'])
+2025-12-18 15:31:41,352 - root - INFO - Starting business rules validation for session RULES_20251218_153141_ce157733
+2025-12-18 15:31:41,352 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-18 15:31:41,352 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 15:31:41,352 - dq_unified - INFO - User selected source type: 1
+2025-12-18 15:31:41,352 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 15:31:41,356 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-18 15:31:41,358 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 15:31:41,359 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 15:31:41,362 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 15:31:41,366 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 15:31:41,367 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 100.4MB total, 0.0MB for dataframe
+2025-12-18 15:31:41,368 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 15:31:41,369 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-18 15:31:41,369 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 15:31:41,370 - dq_rules - INFO - User selected rule type: 2
+2025-12-18 15:31:41,370 - dq_rules - INFO - CREATING PATTERN RULE
+2025-12-18 15:31:41,370 - dq_rules - ERROR - Error in business rules validation: Required field 'pattern_column' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 2576, in run_business_rules_ui
+    rules = define_custom_rules(df, session_id, ui_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 96, in define_custom_rules
+    rule = create_pattern_rule(df, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 1550, in create_pattern_rule
+    column_input = get_input(
+                   ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'pattern_column' not provided in UI mode
+2025-12-18 15:31:41,371 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 15:31:41] "[31m[1mPOST /api/rules HTTP/1.1[0m" 400 -
+2025-12-18 15:31:43,416 - root - INFO - Business rules request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'rule_type', 'run_text_comparison', 'rules_config'])
+2025-12-18 15:31:43,416 - root - INFO - Starting business rules validation for session RULES_20251218_153143_c73345ee
+2025-12-18 15:31:43,416 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-18 15:31:43,416 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 15:31:43,416 - dq_unified - INFO - User selected source type: 1
+2025-12-18 15:31:43,416 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 15:31:43,420 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-18 15:31:43,423 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 15:31:43,424 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 15:31:43,427 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 15:31:43,431 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 15:31:43,432 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 100.4MB total, 0.0MB for dataframe
+2025-12-18 15:31:43,434 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 15:31:43,435 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-18 15:31:43,435 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 15:31:43,436 - dq_rules - INFO - User selected rule type: custom
+2025-12-18 15:31:43,436 - dq_rules - WARNING - Invalid rule type selected: custom
+2025-12-18 15:31:43,436 - dq_rules - INFO - Defined 0 business rules
+2025-12-18 15:31:43,437 - dq_rules - WARNING - No rules defined for validation
+2025-12-18 15:31:43,437 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 15:31:43] "[31m[1mPOST /api/rules HTTP/1.1[0m" 400 -

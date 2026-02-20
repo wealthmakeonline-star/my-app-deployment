@@ -1,0 +1,1787 @@
+2026-02-17 13:44:16,904 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-02-17 13:44:16,905 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260217_134416.log
+2026-02-17 13:44:17,059 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-02-17 13:44:17,060 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-02-17 13:44:17,061 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 13:44:17,062 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:44:17,062 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-02-17 13:44:17,069 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-02-17 13:44:17,070 - __main__ - INFO - 📊 Modules available: True
+2026-02-17 13:44:17,071 - __main__ - INFO - 🔧 Config file mode: False
+2026-02-17 13:44:17,071 - __main__ - INFO - 📋 Available endpoints:
+2026-02-17 13:44:17,072 - __main__ - INFO -   GET  /              - API status
+2026-02-17 13:44:17,073 - __main__ - INFO -   GET  /api/health    - Health check
+2026-02-17 13:44:17,073 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-02-17 13:44:17,074 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-02-17 13:44:17,075 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-02-17 13:44:17,075 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-02-17 13:44:17,076 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-02-17 13:44:17,077 - __main__ - INFO -   POST /api/upload    - File upload
+2026-02-17 13:44:17,078 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-02-17 13:44:17,079 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-02-17 13:44:17,080 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-02-17 13:44:17,080 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-02-17 13:44:40,851 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:44:40,852 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:44:40,853 - __main__ - INFO - Database: Not provided
+2026-02-17 13:44:40,853 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:44:40,854 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:44:40,854 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:44:40,855 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:44:41,049 - mysql.connector - INFO - package: mysql.connector.plugins
+2026-02-17 13:44:41,050 - mysql.connector - INFO - plugin_name: caching_sha2_password
+2026-02-17 13:44:41,051 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2026-02-17 13:44:41,052 - mysql.connector - INFO - package: mysql.connector.plugins
+2026-02-17 13:44:41,053 - mysql.connector - INFO - plugin_name: mysql_native_password
+2026-02-17 13:44:41,064 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2026-02-17 13:44:41,066 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:44:41,067 - __main__ - INFO - Getting databases list...
+2026-02-17 13:44:41,068 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 13:44:41,075 - database_navigator - INFO - Found 7 databases
+2026-02-17 13:44:41,076 - __main__ - INFO - Found 7 databases
+2026-02-17 13:44:41,077 - __main__ - INFO - Completed with status 200 in 0.226s
+2026-02-17 13:44:43,257 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:44:43,261 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:44:43,263 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:44:43,264 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:44:43,265 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:44:43,266 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:44:43,267 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:44:43,332 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:44:43,332 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:44:43,333 - database_navigator - INFO - Found 1 schemas
+2026-02-17 13:44:43,334 - __main__ - INFO - Found 1 schemas
+2026-02-17 13:44:43,335 - __main__ - INFO - Completed with status 200 in 0.079s
+2026-02-17 13:44:45,170 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:44:45,171 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:44:45,172 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:44:45,172 - __main__ - INFO - Schema: dq_checks
+2026-02-17 13:44:45,173 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:44:45,173 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:44:45,174 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:44:45,233 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:44:45,234 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 13:44:45,248 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 13:44:45,249 - __main__ - INFO - Found 28 tables
+2026-02-17 13:44:45,250 - __main__ - INFO - Completed with status 200 in 0.080s
+2026-02-17 13:44:50,760 - __main__ - INFO - POST /api/check-single - Request started
+2026-02-17 13:44:50,761 - __main__ - INFO - Single source analysis request received
+2026-02-17 13:44:50,762 - __main__ - INFO - Starting analysis for session SINGLE_20260217_134450_40221f9e
+2026-02-17 13:44:50,762 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-02-17 13:44:50,763 - __main__ - INFO -   source_type: database
+2026-02-17 13:44:50,763 - __main__ - INFO -   db_config: {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'schema': 'dq_checks', 'table': 'single10000', 'user': 'root', 'password': 'root'}
+2026-02-17 13:44:50,764 - __main__ - INFO -   mandatory_fields: None
+2026-02-17 13:44:50,764 - dq_unified - INFO - ==================================================
+2026-02-17 13:44:50,765 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-02-17 13:44:50,765 - dq_unified - INFO - Prompting user for data source type
+2026-02-17 13:44:50,766 - dq_unified - INFO - UI Data source_type: database
+2026-02-17 13:44:50,766 - dq_unified - INFO - Using source_type from UI data: database
+2026-02-17 13:44:50,767 - dq_unified - INFO - Loading data from DATABASE...
+2026-02-17 13:44:50,769 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:44:50,770 - dq_unified - INFO - Loading large database table: single10000
+2026-02-17 13:44:50,770 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-17 13:44:50,874 - dq_unified - INFO - MySQL table single10000 has 10,100 rows
+2026-02-17 13:44:50,875 - dq_unified - INFO - Loading 10,100 rows from MySQL...
+2026-02-17 13:44:52,777 - dq_unified - INFO - Loaded 10,100 rows from MySQL
+2026-02-17 13:44:52,815 - dq_unified - INFO - Memory optimization: 4.8MB -> 2.3MB (Saved: 2.5MB)
+2026-02-17 13:44:52,819 - dq_unified - INFO - Loaded 10,100 rows, 9 columns. Memory: 132.8MB total, 2.3MB for dataframe
+2026-02-17 13:44:52,820 - dq_unified - INFO - Data loaded: 10,100 rows, 9 columns
+2026-02-17 13:44:52,820 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 13:44:52,820 - dq_unified - INFO - Session ID: SINGLE_20260217_134452
+2026-02-17 13:44:52,821 - dq_unified - INFO - Column data types collected: 9 columns
+2026-02-17 13:44:52,821 - dq_unified - INFO - ==================================================
+2026-02-17 13:44:52,821 - dq_unified - INFO - Starting quality checks...
+2026-02-17 13:44:52,822 - dq_unified - INFO - ==================================================
+2026-02-17 13:44:52,822 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-02-17 13:44:52,822 - dq_unified - INFO - Checking for null/empty values
+2026-02-17 13:44:52,823 - dq_unified - INFO - DataFrame shape: (10100, 9)
+2026-02-17 13:44:52,823 - dq_unified - INFO - Columns: ['transaction_id', 'account_id', 'customer_email', 'transaction_date', 'amount', 'currency', 'country', 'status', 'remarks']
+2026-02-17 13:44:52,823 - dq_unified - INFO - Data source: Database: mysql - Table: single10000
+2026-02-17 13:44:52,824 - dq_unified - INFO - DataFrame dtypes: {'transaction_id': dtype('O'), 'account_id': dtype('O'), 'customer_email': dtype('O'), 'transaction_date': CategoricalDtype(categories=['', '1/1/2024', '2024/31/12', '31-12-2024'], ordered=False, categories_dtype=object), 'amount': dtype('O'), 'currency': CategoricalDtype(categories=['', 'USD'], ordered=False, categories_dtype=object), 'country': CategoricalDtype(categories=['', 'US'], ordered=False, categories_dtype=object), 'status': CategoricalDtype(categories=['', 'SUCCESS'], ordered=False, categories_dtype=object), 'remarks': CategoricalDtype(categories=['', '\r', 'OK', 'OK\r'], ordered=False, categories_dtype=object)}
+2026-02-17 13:44:52,824 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-02-17 13:44:52,825 - dq_unified - INFO -   Row 0: {'transaction_id': "''", 'account_id': "'AC000001'", 'customer_email': "'user1@bank.com'"}
+2026-02-17 13:44:52,826 - dq_unified - INFO -   Row 1: {'transaction_id': "'TXN2'", 'account_id': "'AC000002'", 'customer_email': "'user2@bank.com'"}
+2026-02-17 13:44:52,872 - dq_unified - INFO -   Missing samples: ["''", "''", 'None']
+2026-02-17 13:44:52,873 - dq_unified - INFO -   Not missing samples: ["'TXN2'", "'TXN3'", "'TXN4'"]
+2026-02-17 13:44:52,873 - dq_unified - WARNING - Column 'transaction_id': 3 missing cells (0.0%)
+2026-02-17 13:44:52,874 - dq_unified - WARNING - Column 'transaction_id': 3 missing cells (0.0%)
+2026-02-17 13:44:52,875 - dq_error_log - INFO - Starting batch logging for 3 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:52,971 - dq_error_log - INFO - Batch 1: Successfully logged 3 errors
+2026-02-17 13:44:52,972 - dq_error_log - INFO - Progress: 3/3 errors processed
+2026-02-17 13:44:52,973 - dq_error_log - INFO - COMPLETE: Logged 3/3 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,015 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,015 - dq_unified - INFO -   Not missing samples: ["'AC000001'", "'AC000002'", "'AC000003'"]
+2026-02-17 13:44:53,016 - dq_unified - WARNING - Column 'account_id': 1 missing cells (0.0%)
+2026-02-17 13:44:53,016 - dq_unified - WARNING - Column 'account_id': 1 missing cells (0.0%)
+2026-02-17 13:44:53,017 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,080 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,081 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,081 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,124 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,125 - dq_unified - INFO -   Not missing samples: ["'user1@bank.com'", "'user2@bank.com'", "'bademail.com'"]
+2026-02-17 13:44:53,125 - dq_unified - WARNING - Column 'customer_email': 1 missing cells (0.0%)
+2026-02-17 13:44:53,125 - dq_unified - WARNING - Column 'customer_email': 1 missing cells (0.0%)
+2026-02-17 13:44:53,126 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,189 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,190 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,190 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,224 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,225 - dq_unified - INFO -   Not missing samples: ["'1/1/2024'", "'1/1/2024'", "'1/1/2024'"]
+2026-02-17 13:44:53,225 - dq_unified - WARNING - Column 'transaction_date': 1 missing cells (0.0%)
+2026-02-17 13:44:53,226 - dq_unified - WARNING - Column 'transaction_date': 1 missing cells (0.0%)
+2026-02-17 13:44:53,226 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,290 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,291 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,291 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,333 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,334 - dq_unified - INFO -   Not missing samples: ["'1000'", "'1001'", "'1002'"]
+2026-02-17 13:44:53,334 - dq_unified - WARNING - Column 'amount': 1 missing cells (0.0%)
+2026-02-17 13:44:53,334 - dq_unified - WARNING - Column 'amount': 1 missing cells (0.0%)
+2026-02-17 13:44:53,335 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,397 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,398 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,398 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,432 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,433 - dq_unified - INFO -   Not missing samples: ["'USD'", "'USD'", "'USD'"]
+2026-02-17 13:44:53,433 - dq_unified - WARNING - Column 'currency': 1 missing cells (0.0%)
+2026-02-17 13:44:53,434 - dq_unified - WARNING - Column 'currency': 1 missing cells (0.0%)
+2026-02-17 13:44:53,434 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,495 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,496 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,497 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,532 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,532 - dq_unified - INFO -   Not missing samples: ["'US'", "'US'", "'US'"]
+2026-02-17 13:44:53,533 - dq_unified - WARNING - Column 'country': 1 missing cells (0.0%)
+2026-02-17 13:44:53,533 - dq_unified - WARNING - Column 'country': 1 missing cells (0.0%)
+2026-02-17 13:44:53,534 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,597 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,598 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,598 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,632 - dq_unified - INFO -   Missing samples: ["''"]
+2026-02-17 13:44:53,633 - dq_unified - INFO -   Not missing samples: ["'SUCCESS'", "'SUCCESS'", "'SUCCESS'"]
+2026-02-17 13:44:53,633 - dq_unified - WARNING - Column 'status': 1 missing cells (0.0%)
+2026-02-17 13:44:53,634 - dq_unified - WARNING - Column 'status': 1 missing cells (0.0%)
+2026-02-17 13:44:53,634 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,695 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-17 13:44:53,696 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-17 13:44:53,697 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,734 - dq_unified - INFO -   Missing samples: ["'\\r'", "'\\r'", "''"]
+2026-02-17 13:44:53,735 - dq_unified - INFO -   Not missing samples: ["'OK\\r'", "'OK\\r'", "'OK\\r'"]
+2026-02-17 13:44:53,735 - dq_unified - WARNING - Column 'remarks': 3 missing cells (0.0%)
+2026-02-17 13:44:53,736 - dq_unified - WARNING - Column 'remarks': 3 missing cells (0.0%)
+2026-02-17 13:44:53,736 - dq_error_log - INFO - Starting batch logging for 3 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,798 - dq_error_log - INFO - Batch 1: Successfully logged 3 errors
+2026-02-17 13:44:53,800 - dq_error_log - INFO - Progress: 3/3 errors processed
+2026-02-17 13:44:53,800 - dq_error_log - INFO - COMPLETE: Logged 3/3 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,801 - dq_unified - INFO - Total missing cells found: 13
+2026-02-17 13:44:53,801 - dq_unified - INFO - === Analyzing MySQL database ===
+2026-02-17 13:44:53,802 - dq_unified - INFO - First column 'transaction_id' samples: ["''", "'TXN2'", "'TXN3'"]
+2026-02-17 13:44:53,803 - dq_unified - INFO - ============================================================
+2026-02-17 13:44:53,803 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-02-17 13:44:53,803 - dq_unified - INFO - ============================================================
+2026-02-17 13:44:53,803 - dq_unified - INFO - transaction_id: 3 missing (0.0%)
+2026-02-17 13:44:53,804 - dq_unified - INFO - account_id: 1 missing (0.0%)
+2026-02-17 13:44:53,804 - dq_unified - INFO - customer_email: 1 missing (0.0%)
+2026-02-17 13:44:53,804 - dq_unified - INFO - transaction_date: 1 missing (0.0%)
+2026-02-17 13:44:53,805 - dq_unified - INFO - amount: 1 missing (0.0%)
+2026-02-17 13:44:53,805 - dq_unified - INFO - currency: 1 missing (0.0%)
+2026-02-17 13:44:53,805 - dq_unified - INFO - country: 1 missing (0.0%)
+2026-02-17 13:44:53,806 - dq_unified - INFO - status: 1 missing (0.0%)
+2026-02-17 13:44:53,806 - dq_unified - INFO - remarks: 3 missing (0.0%)
+2026-02-17 13:44:53,806 - dq_unified - INFO - ============================================================
+2026-02-17 13:44:53,806 - dq_unified - INFO -    Found 13 empty cells
+2026-02-17 13:44:53,807 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-02-17 13:44:53,807 - dq_unified - INFO - Checking for duplicate rows
+2026-02-17 13:44:53,807 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-02-17 13:44:53,810 - dq_unified - INFO - Columns after cleaning: ['transaction_id', 'account_id', 'customer_email', 'transaction_date', 'amount', 'currency', 'country', 'status', 'remarks']
+2026-02-17 13:44:53,862 - dq_unified - INFO - Sample of first column after cleaning: ''
+2026-02-17 13:44:53,864 - dq_unified - INFO - Sample of row 6 first column: 'TXN6'
+2026-02-17 13:44:53,864 - dq_unified - INFO - Total rows to check: 10100
+2026-02-17 13:44:53,865 - dq_unified - INFO - Checking first column 'transaction_id' for serial numbers
+2026-02-17 13:44:53,865 - dq_unified - INFO - First 5 values: ['', 'TXN2', 'TXN3', 'TXN4', 'TXN5']
+2026-02-17 13:44:53,865 - dq_unified - INFO -   Row 1: '' → Not numeric
+2026-02-17 13:44:53,866 - dq_unified - INFO -   Row 2: 'TXN2' → Not numeric
+2026-02-17 13:44:53,866 - dq_unified - INFO -   Row 3: 'TXN3' → Not numeric
+2026-02-17 13:44:53,866 - dq_unified - INFO - Not enough numeric values to be serial: []
+2026-02-17 13:44:53,867 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-02-17 13:44:53,867 - dq_unified - INFO - First few rows for comparison:
+2026-02-17 13:44:53,867 - dq_unified - INFO -   Row 0: {'transaction_id': '', 'account_id': 'AC000001', 'customer_email': 'user1@bank.com'}
+2026-02-17 13:44:53,868 - dq_unified - INFO -   Row 1: {'transaction_id': 'TXN2', 'account_id': 'AC000002', 'customer_email': 'user2@bank.com'}
+2026-02-17 13:44:53,868 - dq_unified - INFO -   Row 2: {'transaction_id': 'TXN3', 'account_id': 'AC000003', 'customer_email': 'bademail.com'}
+2026-02-17 13:44:53,874 - dq_unified - INFO - Duplicate mask found 196 rows
+2026-02-17 13:44:53,874 - dq_unified - INFO - Found 196 potential duplicate rows
+2026-02-17 13:44:53,877 - dq_unified - INFO - Unique duplicate groups: 98
+2026-02-17 13:44:53,877 - dq_unified - INFO - Duplicate groups found:
+2026-02-17 13:44:53,878 - dq_unified - INFO -   Group sample: Pandas(Index=1, transaction_id='TXN2', account_id='AC000002', customer_email='user2@bank.com', transaction_date='1/1/2024', amount='1001', currency='USD', country='US', status='SUCCESS', remarks='')
+2026-02-17 13:44:53,878 - dq_unified - INFO -   Group sample: Pandas(Index=2, transaction_id='TXN3', account_id='AC000003', customer_email='bademail.com', transaction_date='1/1/2024', amount='1002', currency='USD', country='US', status='SUCCESS', remarks='OK')
+2026-02-17 13:44:53,878 - dq_unified - INFO -   Group sample: Pandas(Index=3, transaction_id='TXN4', account_id='AC000004', customer_email='user4@bank.com', transaction_date='2024/31/12', amount='1003', currency='USD', country='US', status='SUCCESS', remarks='OK')
+2026-02-17 13:44:53,878 - dq_unified - INFO - Processing 196 duplicate indices
+2026-02-17 13:44:53,883 - dq_unified - INFO - FINAL RESULT: Found 196 duplicate groups
+2026-02-17 13:44:53,883 - dq_error_log - INFO - Starting batch logging for 196 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:53,983 - dq_error_log - INFO - Batch 1: Successfully logged 196 errors
+2026-02-17 13:44:53,984 - dq_error_log - INFO - Progress: 196/196 errors processed
+2026-02-17 13:44:53,984 - dq_error_log - INFO - COMPLETE: Logged 196/196 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:53,986 - dq_unified - INFO -    Found 196 duplicate rows
+2026-02-17 13:44:53,986 - dq_unified - INFO - 3. Checking data formats...
+2026-02-17 13:44:53,987 - dq_unified - INFO - Checking data formats
+2026-02-17 13:44:53,994 - dq_unified - INFO - Detected customer_email as email type
+2026-02-17 13:44:53,995 - dq_unified - WARNING -   Row 3: 'bademail.com...' doesn't match Valid email format (user@domain.com)
+2026-02-17 13:44:54,007 - dq_unified - WARNING -   Row 10004: 'bademail.com...' doesn't match Valid email format (user@domain.com)
+2026-02-17 13:44:54,012 - dq_unified - INFO - Detected amount as numeric type
+2026-02-17 13:44:54,012 - dq_unified - WARNING -   Row 5: '12,000$...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-17 13:44:54,026 - dq_unified - WARNING -   Row 10006: '12,000$...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-17 13:44:54,035 - dq_unified - INFO - Total format issues found: 4
+2026-02-17 13:44:54,035 - dq_error_log - INFO - Starting batch logging for 4 errors, session: SINGLE_20260217_134452
+2026-02-17 13:44:54,100 - dq_error_log - INFO - Batch 1: Successfully logged 4 errors
+2026-02-17 13:44:54,101 - dq_error_log - INFO - Progress: 4/4 errors processed
+2026-02-17 13:44:54,101 - dq_error_log - INFO - COMPLETE: Logged 4/4 errors for session SINGLE_20260217_134452
+2026-02-17 13:44:54,102 - dq_unified - INFO -    Found 4 format issues
+2026-02-17 13:44:54,102 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-02-17 13:44:54,102 - dq_unified - INFO - Checking mandatory fields
+2026-02-17 13:44:54,102 - dq_unified - INFO - Available columns: ['transaction_id', 'account_id', 'customer_email', 'transaction_date', 'amount', 'currency', 'country', 'status', 'remarks']
+2026-02-17 13:44:54,103 - dq_unified - INFO - Mandatory field check completed: 0 columns with issues, 0 total missing values
+2026-02-17 13:44:54,103 - dq_unified - INFO -    Found 0 missing mandatory values
+2026-02-17 13:44:54,103 - dq_unified - INFO - 5. Calculating quality score...
+2026-02-17 13:44:54,104 - dq_unified - INFO - Calculating quality score
+2026-02-17 13:44:54,104 - dq_unified - INFO - Quality Score Calculation:
+2026-02-17 13:44:54,104 - dq_unified - INFO -   Total rows: 10,100
+2026-02-17 13:44:54,104 - dq_unified - INFO -   Bad Rows: 199
+2026-02-17 13:44:54,105 - dq_unified - INFO -   Good rows (no issues): 9,901
+2026-02-17 13:44:54,105 - dq_unified - INFO -   Quality Score: 98.03%
+2026-02-17 13:44:54,180 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260217_134452
+2026-02-17 13:44:54,246 - dq_error_log - INFO - Retrieved summary: 213 total errors for session SINGLE_20260217_134452
+2026-02-17 13:44:54,247 - dq_unified - INFO - Added 200 error logs to results
+2026-02-17 13:44:54,248 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:44:54,248 - dq_audit - INFO - Starting database insertion for single_source...
+2026-02-17 13:44:54,316 - dq_audit - INFO - Inserted single_source record with ID: 739
+2026-02-17 13:44:54,379 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260217_134452
+2026-02-17 13:44:54,381 - dq_unified - INFO - Added 1 audit logs to results
+2026-02-17 13:44:54,381 - dq_unified - INFO - Analysis completed successfully for Database: mysql - Table: single10000
+2026-02-17 13:44:54,382 - dq_unified - INFO - Final quality score: 98.03%
+2026-02-17 13:44:54,482 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260217_134452
+2026-02-17 13:44:54,546 - dq_error_log - INFO - Retrieved summary: 213 total errors for session SINGLE_20260217_134452
+2026-02-17 13:44:54,609 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260217_134452
+2026-02-17 13:44:54,610 - __main__ - INFO - Analysis completed for session SINGLE_20260217_134452
+2026-02-17 13:44:54,621 - __main__ - INFO - Completed with status 200 in 3.861s
+2026-02-17 13:44:54,994 - __main__ - INFO - GET /api/single/SINGLE_20260217_134452/errors - Request started
+2026-02-17 13:44:54,996 - __main__ - INFO - Completed with status 200 in 0.002s
+2026-02-17 13:44:55,266 - __main__ - INFO - GET /api/single/SINGLE_20260217_134452/errors - Request started
+2026-02-17 13:44:55,267 - __main__ - INFO - Completed with status 200 in 0.001s
+2026-02-17 13:45:04,708 - __main__ - INFO - GET /api/single/SINGLE_20260217_134452/errors - Request started
+2026-02-17 13:45:04,710 - __main__ - INFO - Completed with status 200 in 0.002s
+2026-02-17 13:50:01,893 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:50:01,894 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:50:01,895 - __main__ - INFO - Database: Not provided
+2026-02-17 13:50:01,898 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:50:01,901 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:50:01,902 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:50:01,903 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:50:01,967 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:50:01,968 - __main__ - INFO - Getting databases list...
+2026-02-17 13:50:01,968 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 13:50:01,972 - database_navigator - INFO - Found 7 databases
+2026-02-17 13:50:01,972 - __main__ - INFO - Found 7 databases
+2026-02-17 13:50:01,973 - __main__ - INFO - Completed with status 200 in 0.081s
+2026-02-17 13:50:04,477 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:50:04,479 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:50:04,480 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:50:04,481 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:50:04,482 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:50:04,483 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:50:04,483 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:50:04,541 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:50:04,543 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:50:04,544 - database_navigator - INFO - Found 1 schemas
+2026-02-17 13:50:04,545 - __main__ - INFO - Found 1 schemas
+2026-02-17 13:50:04,546 - __main__ - INFO - Completed with status 200 in 0.069s
+2026-02-17 13:50:06,025 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:50:06,028 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:50:06,029 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:50:06,031 - __main__ - INFO - Schema: dq_checks
+2026-02-17 13:50:06,031 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:50:06,032 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:50:06,033 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:50:06,093 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:50:06,094 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 13:50:06,102 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 13:50:06,103 - __main__ - INFO - Found 28 tables
+2026-02-17 13:50:06,104 - __main__ - INFO - Completed with status 200 in 0.079s
+2026-02-17 13:50:10,353 - __main__ - INFO - POST /api/advanced - Request started
+2026-02-17 13:50:10,354 - __main__ - INFO - Advanced checks request received
+2026-02-17 13:50:10,355 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-02-17 13:50:10,355 - __main__ - INFO - DEBUG: Using as-is: []
+2026-02-17 13:50:10,355 - __main__ - INFO - Starting advanced checks for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:10,356 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-02-17 13:50:10,356 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-02-17 13:50:10,356 - dq_unified - INFO - Prompting user for data source type
+2026-02-17 13:50:10,357 - dq_unified - INFO - UI Data source_type: database
+2026-02-17 13:50:10,357 - dq_unified - INFO - Using source_type from UI data: database
+2026-02-17 13:50:10,357 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:50:10,357 - dq_unified - INFO - Loading large database table: advanced10000
+2026-02-17 13:50:10,358 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-17 13:50:10,432 - dq_unified - INFO - MySQL table advanced10000 has 10,060 rows
+2026-02-17 13:50:10,433 - dq_unified - INFO - Loading 10,060 rows from MySQL...
+2026-02-17 13:50:11,263 - dq_unified - INFO - Loaded 10,060 rows from MySQL
+2026-02-17 13:50:11,295 - dq_unified - INFO - Memory optimization: 5.5MB -> 3.6MB (Saved: 1.9MB)
+2026-02-17 13:50:11,303 - dq_unified - INFO - Loaded 10,060 rows, 10 columns. Memory: 144.1MB total, 3.6MB for dataframe
+2026-02-17 13:50:11,303 - dq_advanced - INFO - Data loaded: 10,060 rows, 10 columns from Database: mysql - Table: advanced10000
+2026-02-17 13:50:11,304 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 13:50:11,365 - dq_error_log - INFO - Database connection successful
+2026-02-17 13:50:11,366 - dq_advanced - INFO - Using provided Session ID: ADV_20260217_135010_3690d71c
+2026-02-17 13:50:11,367 - dq_advanced - INFO - Starting comprehensive validations on 10,060 rows, 10 columns
+2026-02-17 13:50:11,374 - dq_advanced - INFO - Memory: 3787MB available, 0.0005MB/row, Optimal batch: 50000 rows
+2026-02-17 13:50:11,374 - dq_advanced - INFO - Auto-calculated batch size: 50000 rows
+2026-02-17 13:50:11,375 - dq_advanced - INFO - Analyzing 10 columns...
+2026-02-17 13:50:11,382 - dq_advanced - INFO - Analyzed column 'transaction_id': numeric with 1 patterns
+2026-02-17 13:50:11,390 - dq_advanced - INFO - Analyzed column 'account_number': numeric with 2 patterns
+2026-02-17 13:50:11,396 - dq_advanced - INFO - Analyzed column 'customer_name': text with 0 patterns
+2026-02-17 13:50:11,404 - dq_advanced - INFO - Analyzed column 'email': text with 1 patterns
+2026-02-17 13:50:11,411 - dq_advanced - INFO - Analyzed column 'transaction_date': date with 2 patterns
+2026-02-17 13:50:11,420 - dq_advanced - INFO - Analyzed column 'amount': numeric with 0 patterns
+2026-02-17 13:50:11,424 - dq_advanced - INFO - Analyzed column 'currency': text with 1 patterns
+2026-02-17 13:50:11,431 - dq_advanced - INFO - Analyzed column 'balance': numeric with 0 patterns
+2026-02-17 13:50:11,435 - dq_advanced - INFO - Analyzed column 'status': text with 0 patterns
+2026-02-17 13:50:11,439 - dq_advanced - INFO - Analyzed column 'remarks': text with 0 patterns
+2026-02-17 13:50:13,443 - dq_error_log - INFO - Starting batch logging for 30394 errors, session: ADV_20260217_135010_3690d71c
+2026-02-17 13:50:13,601 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-17 13:50:13,711 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-17 13:50:13,814 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-17 13:50:13,922 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-17 13:50:14,042 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-02-17 13:50:14,153 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-02-17 13:50:14,265 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-02-17 13:50:14,398 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-02-17 13:50:14,509 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-02-17 13:50:14,621 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-02-17 13:50:14,622 - dq_error_log - INFO - Progress: 5000/30394 errors processed
+2026-02-17 13:50:14,727 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-02-17 13:50:14,839 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-02-17 13:50:15,010 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-02-17 13:50:15,153 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-02-17 13:50:15,257 - dq_error_log - INFO - Batch 15: Successfully logged 500 errors
+2026-02-17 13:50:15,364 - dq_error_log - INFO - Batch 16: Successfully logged 500 errors
+2026-02-17 13:50:15,486 - dq_error_log - INFO - Batch 17: Successfully logged 500 errors
+2026-02-17 13:50:15,592 - dq_error_log - INFO - Batch 18: Successfully logged 500 errors
+2026-02-17 13:50:15,697 - dq_error_log - INFO - Batch 19: Successfully logged 500 errors
+2026-02-17 13:50:15,802 - dq_error_log - INFO - Batch 20: Successfully logged 500 errors
+2026-02-17 13:50:15,804 - dq_error_log - INFO - Progress: 10000/30394 errors processed
+2026-02-17 13:50:15,919 - dq_error_log - INFO - Batch 21: Successfully logged 500 errors
+2026-02-17 13:50:16,029 - dq_error_log - INFO - Batch 22: Successfully logged 500 errors
+2026-02-17 13:50:16,131 - dq_error_log - INFO - Batch 23: Successfully logged 500 errors
+2026-02-17 13:50:16,254 - dq_error_log - INFO - Batch 24: Successfully logged 500 errors
+2026-02-17 13:50:16,359 - dq_error_log - INFO - Batch 25: Successfully logged 500 errors
+2026-02-17 13:50:16,469 - dq_error_log - INFO - Batch 26: Successfully logged 500 errors
+2026-02-17 13:50:16,580 - dq_error_log - INFO - Batch 27: Successfully logged 500 errors
+2026-02-17 13:50:16,687 - dq_error_log - INFO - Batch 28: Successfully logged 500 errors
+2026-02-17 13:50:16,842 - dq_error_log - INFO - Batch 29: Successfully logged 500 errors
+2026-02-17 13:50:17,257 - dq_error_log - INFO - Batch 30: Successfully logged 500 errors
+2026-02-17 13:50:17,258 - dq_error_log - INFO - Progress: 15000/30394 errors processed
+2026-02-17 13:50:17,370 - dq_error_log - INFO - Batch 31: Successfully logged 500 errors
+2026-02-17 13:50:17,475 - dq_error_log - INFO - Batch 32: Successfully logged 500 errors
+2026-02-17 13:50:17,595 - dq_error_log - INFO - Batch 33: Successfully logged 500 errors
+2026-02-17 13:50:17,702 - dq_error_log - INFO - Batch 34: Successfully logged 500 errors
+2026-02-17 13:50:17,811 - dq_error_log - INFO - Batch 35: Successfully logged 500 errors
+2026-02-17 13:50:17,919 - dq_error_log - INFO - Batch 36: Successfully logged 500 errors
+2026-02-17 13:50:18,023 - dq_error_log - INFO - Batch 37: Successfully logged 500 errors
+2026-02-17 13:50:18,128 - dq_error_log - INFO - Batch 38: Successfully logged 500 errors
+2026-02-17 13:50:18,232 - dq_error_log - INFO - Batch 39: Successfully logged 500 errors
+2026-02-17 13:50:18,336 - dq_error_log - INFO - Batch 40: Successfully logged 500 errors
+2026-02-17 13:50:18,337 - dq_error_log - INFO - Progress: 20000/30394 errors processed
+2026-02-17 13:50:18,458 - dq_error_log - INFO - Batch 41: Successfully logged 500 errors
+2026-02-17 13:50:18,567 - dq_error_log - INFO - Batch 42: Successfully logged 500 errors
+2026-02-17 13:50:18,672 - dq_error_log - INFO - Batch 43: Successfully logged 500 errors
+2026-02-17 13:50:18,793 - dq_error_log - INFO - Batch 44: Successfully logged 500 errors
+2026-02-17 13:50:18,947 - dq_error_log - INFO - Batch 45: Successfully logged 500 errors
+2026-02-17 13:50:19,066 - dq_error_log - INFO - Batch 46: Successfully logged 500 errors
+2026-02-17 13:50:19,169 - dq_error_log - INFO - Batch 47: Successfully logged 500 errors
+2026-02-17 13:50:19,274 - dq_error_log - INFO - Batch 48: Successfully logged 500 errors
+2026-02-17 13:50:19,399 - dq_error_log - INFO - Batch 49: Successfully logged 500 errors
+2026-02-17 13:50:19,502 - dq_error_log - INFO - Batch 50: Successfully logged 500 errors
+2026-02-17 13:50:19,503 - dq_error_log - INFO - Progress: 25000/30394 errors processed
+2026-02-17 13:50:19,611 - dq_error_log - INFO - Batch 51: Successfully logged 500 errors
+2026-02-17 13:50:19,713 - dq_error_log - INFO - Batch 52: Successfully logged 500 errors
+2026-02-17 13:50:19,821 - dq_error_log - INFO - Batch 53: Successfully logged 500 errors
+2026-02-17 13:50:19,928 - dq_error_log - INFO - Batch 54: Successfully logged 500 errors
+2026-02-17 13:50:20,045 - dq_error_log - INFO - Batch 55: Successfully logged 500 errors
+2026-02-17 13:50:20,168 - dq_error_log - INFO - Batch 56: Successfully logged 500 errors
+2026-02-17 13:50:20,271 - dq_error_log - INFO - Batch 57: Successfully logged 500 errors
+2026-02-17 13:50:20,396 - dq_error_log - INFO - Batch 58: Successfully logged 500 errors
+2026-02-17 13:50:20,513 - dq_error_log - INFO - Batch 59: Successfully logged 500 errors
+2026-02-17 13:50:20,620 - dq_error_log - INFO - Batch 60: Successfully logged 500 errors
+2026-02-17 13:50:20,622 - dq_error_log - INFO - Progress: 30000/30394 errors processed
+2026-02-17 13:50:20,718 - dq_error_log - INFO - Batch 61: Successfully logged 394 errors
+2026-02-17 13:50:20,719 - dq_error_log - INFO - Progress: 30394/30394 errors processed
+2026-02-17 13:50:20,719 - dq_error_log - INFO - COMPLETE: Logged 30394/30394 errors for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:20,721 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:50:20,721 - dq_audit - INFO - Starting database insertion for advanced...
+2026-02-17 13:50:20,786 - dq_audit - INFO - Inserted advanced record with ID: 740
+2026-02-17 13:50:20,787 - dq_advanced - INFO - Audit record logged with ID: 740
+2026-02-17 13:50:21,109 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:21,368 - dq_error_log - INFO - Retrieved summary: 30394 total errors for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:21,370 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:50:21,431 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:21,432 - dq_advanced - INFO - Advanced checks completed for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:21,708 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:21,961 - dq_error_log - INFO - Retrieved summary: 30394 total errors for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:22,023 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:22,024 - __main__ - INFO - Advanced checks completed for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:22,070 - __main__ - INFO - Completed with status 200 in 11.717s
+2026-02-17 13:50:22,122 - __main__ - INFO - GET /api/advanced/ADV_20260217_135010_3690d71c - Request started
+2026-02-17 13:50:25,861 - dq_error_log - INFO - Retrieved 30394 error logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:25,879 - __main__ - INFO - Completed with status 200 in 3.757s
+2026-02-17 13:50:26,205 - __main__ - INFO - GET /api/advanced/ADV_20260217_135010_3690d71c - Request started
+2026-02-17 13:50:29,653 - dq_error_log - INFO - Retrieved 30394 error logs for session ADV_20260217_135010_3690d71c
+2026-02-17 13:50:29,668 - __main__ - INFO - Completed with status 200 in 3.463s
+2026-02-17 13:54:20,288 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:20,289 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:54:20,290 - __main__ - INFO - Database: Not provided
+2026-02-17 13:54:20,290 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:54:20,291 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:20,291 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:54:20,292 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:54:20,346 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:54:20,347 - __main__ - INFO - Getting databases list...
+2026-02-17 13:54:20,347 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 13:54:20,354 - database_navigator - INFO - Found 7 databases
+2026-02-17 13:54:20,355 - __main__ - INFO - Found 7 databases
+2026-02-17 13:54:20,356 - __main__ - INFO - Completed with status 200 in 0.068s
+2026-02-17 13:54:20,968 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:20,969 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:54:20,970 - __main__ - INFO - Database: Not provided
+2026-02-17 13:54:20,971 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:54:20,971 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:20,972 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:54:20,973 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:54:20,974 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:54:20,974 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:54:21,278 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:54:21,293 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:54:21,293 - __main__ - INFO - Getting databases list...
+2026-02-17 13:54:21,294 - database_navigator - INFO - get_databases() called. db_type: postgresql, connection exists: True
+2026-02-17 13:54:21,444 - database_navigator - INFO - Raw rows: [('dq_checks',), ('postgres',), ('test',)]
+2026-02-17 13:54:21,445 - database_navigator - INFO - Found 3 databases
+2026-02-17 13:54:21,445 - __main__ - INFO - Found 3 databases
+2026-02-17 13:54:21,446 - __main__ - INFO - Completed with status 200 in 0.478s
+2026-02-17 13:54:23,720 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:23,721 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:54:23,721 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:54:23,722 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:54:23,722 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:23,723 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:54:23,723 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:54:23,777 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:54:23,778 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:54:23,779 - database_navigator - INFO - Found 1 schemas
+2026-02-17 13:54:23,780 - __main__ - INFO - Found 1 schemas
+2026-02-17 13:54:23,782 - __main__ - INFO - Completed with status 200 in 0.062s
+2026-02-17 13:54:24,683 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:24,684 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:54:24,685 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:54:24,685 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:54:24,686 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:24,687 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:54:24,687 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:54:24,688 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:54:24,688 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:54:24,896 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:54:24,897 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:54:24,898 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:54:24,898 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-02-17 13:54:24,899 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:54:24,899 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:54:24,901 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-02-17 13:54:25,136 - database_navigator - INFO - Connection object created: <connection object at 0x0000027418B00BF0; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-02-17 13:54:25,153 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-02-17 13:54:25,327 - database_navigator - INFO - Found 4 schemas
+2026-02-17 13:54:25,328 - __main__ - INFO - Found 4 schemas
+2026-02-17 13:54:25,328 - __main__ - INFO - Completed with status 200 in 0.645s
+2026-02-17 13:54:26,594 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:26,595 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:54:26,596 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:54:26,596 - __main__ - INFO - Schema: dq_checks
+2026-02-17 13:54:26,597 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:26,597 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:54:26,598 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:54:26,654 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:54:26,655 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 13:54:26,663 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 13:54:26,664 - __main__ - INFO - Found 28 tables
+2026-02-17 13:54:26,665 - __main__ - INFO - Completed with status 200 in 0.071s
+2026-02-17 13:54:28,005 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:54:28,006 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:54:28,007 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:54:28,007 - __main__ - INFO - Schema: public
+2026-02-17 13:54:28,008 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:54:28,010 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:54:28,011 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:54:28,012 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:54:28,013 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:54:28,227 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:54:28,228 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:54:28,229 - __main__ - INFO - Getting tables for database: dq_checks, schema: public
+2026-02-17 13:54:28,229 - database_navigator - INFO - Ensuring connection to database: dq_checks for table list
+2026-02-17 13:54:28,230 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-02-17 13:54:28,231 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:54:28,231 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:54:28,232 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-02-17 13:54:28,467 - database_navigator - INFO - Connection object created: <connection object at 0x0000027418B00D00; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-02-17 13:54:28,469 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-02-17 13:54:28,480 - database_navigator - INFO - Connected to database: dq_checks, schema: public
+2026-02-17 13:54:28,590 - database_navigator - INFO - Found 20 tables in dq_checks.public: ['advanced100', 'advanced1000', 'advanced10000', 'advanced100000', 'advanced15', 'customers', 'employee', 'rulesdata', 'single100', 'single1000', 'single10000', 'single100000', 'single15', 'target13', 'target90', 'target900', 'target9000', 'target90000', 'testadv', 'testadv_stage']
+2026-02-17 13:54:28,591 - database_navigator - INFO - Found 20 tables in schema 'public'
+2026-02-17 13:54:28,591 - __main__ - INFO - Found 20 tables
+2026-02-17 13:54:28,593 - __main__ - INFO - Completed with status 200 in 0.588s
+2026-02-17 13:54:42,286 - __main__ - INFO - POST /api/compare - Request started
+2026-02-17 13:54:42,287 - __main__ - INFO - Comparison request - Source: database, Target: database
+2026-02-17 13:54:42,287 - __main__ - INFO - Comparison analysis request received
+2026-02-17 13:54:42,288 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'schema': 'dq_checks', 'table': 'source15', 'user': 'root', 'password': 'root'}
+2026-02-17 13:54:42,288 - __main__ - INFO - Starting comparison for session CMP_20260217_135442
+2026-02-17 13:54:42,289 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-02-17 13:54:42,289 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-02-17 13:54:42,289 - dq_comparison - INFO - 
+==================================================
+2026-02-17 13:54:42,290 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-02-17 13:54:42,290 - dq_comparison - INFO - ==================================================
+2026-02-17 13:54:42,290 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-02-17 13:54:42,291 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 13:54:42,291 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-02-17 13:54:42,292 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:54:42,292 - dq_unified - INFO - Loading large database table: source15
+2026-02-17 13:54:42,293 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-17 13:54:42,365 - dq_unified - INFO - MySQL table source15 has 15 rows
+2026-02-17 13:54:42,366 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-02-17 13:54:42,371 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-02-17 13:54:42,376 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-02-17 13:54:42,377 - dq_unified - INFO - Loaded 15 rows, 8 columns. Memory: 156.3MB total, 0.0MB for dataframe
+2026-02-17 13:54:42,377 - dq_comparison - INFO - SOURCE database loaded: 15 rows, 8 columns
+2026-02-17 13:54:42,377 - dq_comparison - INFO - 
+==================================================
+2026-02-17 13:54:42,378 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-02-17 13:54:42,378 - dq_comparison - INFO - ==================================================
+2026-02-17 13:54:42,378 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-02-17 13:54:42,379 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 13:54:42,379 - dq_comparison - INFO - Converted db_type to numeric code: 1
+2026-02-17 13:54:42,379 - dq_comparison - INFO - Selected database type code: postgresql
+2026-02-17 13:54:42,379 - dq_unified - INFO - Getting database config from config file
+2026-02-17 13:54:42,380 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2026-02-17 13:54:42,380 - dq_unified - INFO - Database configuration from config file: postgresql, Table: target13
+2026-02-17 13:54:42,380 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:54:42,381 - dq_unified - INFO - Loading large database table: target13
+2026-02-17 13:54:42,381 - dq_unified - INFO - Normalized DB config with schema: public
+2026-02-17 13:54:42,644 - dq_unified - INFO - PostgreSQL table public.target13 has 13 rows
+2026-02-17 13:54:42,645 - dq_unified - INFO - Loading 13 rows from PostgreSQL...
+2026-02-17 13:54:42,647 - dq_unified - INFO - Loaded 13 rows from PostgreSQL
+2026-02-17 13:54:42,651 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-02-17 13:54:42,652 - dq_unified - INFO - Loaded 13 rows, 8 columns. Memory: 156.4MB total, 0.0MB for dataframe
+2026-02-17 13:54:42,652 - dq_comparison - INFO - TARGET database loaded: 13 rows, 8 columns
+2026-02-17 13:54:42,653 - dq_comparison - INFO - Source data loaded: 15 rows, 8 columns
+2026-02-17 13:54:42,653 - dq_comparison - INFO - Target data loaded: 13 rows, 8 columns
+2026-02-17 13:54:42,653 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-02-17 13:54:42,654 - dq_comparison - INFO - Source columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:54:42,654 - dq_comparison - INFO - Target columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:54:42,654 - dq_comparison - INFO - Common columns lowercased: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:54:42,654 - dq_comparison - INFO - Found 8 common columns between source and target (case-insensitive)
+2026-02-17 13:54:42,654 - dq_comparison - INFO - User column selection input: all
+2026-02-17 13:54:42,654 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-02-17 13:54:42,656 - dq_comparison - INFO - Selected 8 columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date']...
+2026-02-17 13:54:42,656 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-02-17 13:54:42,656 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.source15, Target: Database: postgresql - dq_checks.target13, Selected columns: 8
+2026-02-17 13:54:42,656 - dq_comparison - INFO - Initializing Error Logger...
+2026-02-17 13:54:42,656 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 13:54:42,714 - dq_error_log - INFO - Database connection successful
+2026-02-17 13:54:42,715 - dq_comparison - INFO - Session ID: CMP_20260217_135442
+2026-02-17 13:54:42,716 - dq_comparison - WARNING - ❌ Row count mismatch: Source=15, Target=13, Difference=2
+2026-02-17 13:54:42,717 - dq_comparison - WARNING -    Missing in target: 2 rows
+2026-02-17 13:54:42,717 - dq_comparison - INFO - Comparing column structures...
+2026-02-17 13:54:42,718 - dq_comparison - INFO - Column structure comparison complete. Match: True
+2026-02-17 13:54:42,718 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-02-17 13:54:42,718 - dq_comparison - INFO - Auto-detecting key fields from data...
+2026-02-17 13:54:42,721 - dq_comparison - INFO - Auto-detected common key fields: ['account_id', 'transaction_id', 'amount', 'transaction_date']
+2026-02-17 13:54:42,723 - dq_comparison - INFO - Primary key validation passed for fields: ['account_id', 'transaction_id', 'amount', 'transaction_date']
+2026-02-17 13:54:42,724 - dq_comparison - INFO - Primary key validation complete. Status: VALIDATION_PASSED
+2026-02-17 13:54:42,724 - dq_comparison - INFO - Comparing table-level metadata...
+2026-02-17 13:54:42,729 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-02-17 13:54:42,729 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-02-17 13:54:42,769 - dq_comparison - INFO - Starting comparison of 28 total rows...
+2026-02-17 13:54:42,770 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-02-17 13:54:42,770 - dq_comparison - INFO - Column: transaction_id
+2026-02-17 13:54:42,771 - dq_comparison - INFO -   Source type: <class 'str'>, value: TXN0000001
+2026-02-17 13:54:42,771 - dq_comparison - INFO -   Target type: <class 'str'>, value: TXN0000001
+2026-02-17 13:54:42,772 - dq_comparison - INFO -   Normalized: 'txn0000001' vs 'txn0000001'
+2026-02-17 13:54:42,772 - dq_comparison - INFO -   Match: True
+2026-02-17 13:54:42,773 - dq_comparison - INFO - Column: status
+2026-02-17 13:54:42,773 - dq_comparison - INFO -   Source type: <class 'str'>, value: COMPLETED
+2026-02-17 13:54:42,773 - dq_comparison - INFO -   Target type: <class 'str'>, value: COMPLETED
+2026-02-17 13:54:42,774 - dq_comparison - INFO -   Normalized: 'completed' vs 'completed'
+2026-02-17 13:54:42,774 - dq_comparison - INFO -   Match: True
+2026-02-17 13:54:42,774 - dq_comparison - INFO - Column: amount
+2026-02-17 13:54:42,775 - dq_comparison - INFO -   Source type: <class 'numpy.float32'>, value: 1001.25
+2026-02-17 13:54:42,775 - dq_comparison - INFO -   Target type: <class 'numpy.float32'>, value: 1001.25
+2026-02-17 13:54:42,775 - dq_comparison - INFO -   Normalized: '1001.25' vs '1001.25'
+2026-02-17 13:54:42,776 - dq_comparison - INFO -   Match: True
+2026-02-17 13:54:42,776 - dq_comparison - INFO - Source DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:54:42,776 - dq_comparison - INFO - Target DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:54:42,776 - dq_comparison - INFO - Selected columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:54:42,777 - dq_comparison - INFO - Using 8 common columns for hash comparison
+2026-02-17 13:54:42,777 - dq_comparison - INFO - Source columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:54:42,777 - dq_comparison - INFO - Target columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:54:42,777 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-02-17 13:54:42,781 - dq_comparison - INFO -    Hashing source data: 10.7% complete (3/28 rows)
+2026-02-17 13:54:42,783 - dq_comparison - INFO -    Hashing source data: 21.4% complete (6/28 rows)
+2026-02-17 13:54:42,785 - dq_comparison - INFO -    Hashing source data: 32.1% complete (9/28 rows)
+2026-02-17 13:54:42,787 - dq_comparison - INFO -    Hashing source data: 42.9% complete (12/28 rows)
+2026-02-17 13:54:42,789 - dq_comparison - INFO -    Hashing source data: 53.6% complete (15/28 rows)
+2026-02-17 13:54:42,790 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-02-17 13:54:42,790 - dq_comparison - INFO - Hash 1: 148f67f683ba1d3b... (sample row 0)
+2026-02-17 13:54:42,791 - dq_comparison - INFO - Hash 2: c1c062b35b0c8ff6... (sample row 1)
+2026-02-17 13:54:42,791 - dq_comparison - INFO - Hash 3: e38a4ce12b005f06... (sample row 2)
+2026-02-17 13:54:42,791 - dq_comparison - INFO - Generating hashes for target data (13 rows)...
+2026-02-17 13:54:42,793 - dq_comparison - INFO -    Hashing target data: 64.3% complete (18/28 rows)
+2026-02-17 13:54:42,795 - dq_comparison - INFO -    Hashing target data: 75.0% complete (21/28 rows)
+2026-02-17 13:54:42,797 - dq_comparison - INFO -    Hashing target data: 85.7% complete (24/28 rows)
+2026-02-17 13:54:42,799 - dq_comparison - INFO -    Hashing target data: 96.4% complete (27/28 rows)
+2026-02-17 13:54:42,800 - dq_comparison - INFO - 
+======================================================================
+2026-02-17 13:54:42,801 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-02-17 13:54:42,801 - dq_comparison - INFO - ======================================================================
+2026-02-17 13:54:42,801 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-02-17 13:54:42,802 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:54:42,802 - dq_comparison - INFO -   Source: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 13:54:42,802 - dq_comparison - INFO -   Target: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 13:54:42,803 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,803 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:54:42,803 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,804 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,804 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,804 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:54:42,805 - dq_comparison - INFO -   Source: '1001.25' (type: float32) → '1001.25'
+2026-02-17 13:54:42,805 - dq_comparison - INFO -   Target: '1001.25' (type: float32) → '1001.25'
+2026-02-17 13:54:42,805 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,805 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:54:42,806 - dq_comparison - INFO -   Source: '1' (type: uint8) → '1'
+2026-02-17 13:54:42,806 - dq_comparison - INFO -   Target: '1' (type: uint8) → '1'
+2026-02-17 13:54:42,806 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,807 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:54:42,807 - dq_comparison - INFO -   Source: '2024-01-02 00:00:00' (type: Timestamp) → '2024-02-01'
+2026-02-17 13:54:42,808 - dq_comparison - INFO -   Target: '2024-01-02 00:00:00' (type: Timestamp) → '2024-02-01'
+2026-02-17 13:54:42,808 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,808 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-02-17 13:54:42,809 - dq_comparison - INFO - Source hash string start: txn0000001|completed|1001.25...
+2026-02-17 13:54:42,809 - dq_comparison - INFO - Target hash string start: txn0000001|completed|1001.25...
+2026-02-17 13:54:42,809 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:54:42,810 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-02-17 13:54:42,810 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:54:42,811 - dq_comparison - INFO -   Source: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 13:54:42,811 - dq_comparison - INFO -   Target: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 13:54:42,811 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,811 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:54:42,812 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,812 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,812 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,813 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:54:42,813 - dq_comparison - INFO -   Source: '1002.5' (type: float32) → '1002.5'
+2026-02-17 13:54:42,814 - dq_comparison - INFO -   Target: '1002.5' (type: float32) → '1002.5'
+2026-02-17 13:54:42,814 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,814 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:54:42,815 - dq_comparison - INFO -   Source: '2' (type: uint8) → '2'
+2026-02-17 13:54:42,815 - dq_comparison - INFO -   Target: '2' (type: uint8) → '2'
+2026-02-17 13:54:42,815 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,816 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:54:42,816 - dq_comparison - INFO -   Source: '2024-01-03 00:00:00' (type: Timestamp) → '2024-03-01'
+2026-02-17 13:54:42,817 - dq_comparison - INFO -   Target: '2024-01-03 00:00:00' (type: Timestamp) → '2024-03-01'
+2026-02-17 13:54:42,817 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,817 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-02-17 13:54:42,818 - dq_comparison - INFO - Source hash string start: txn0000002|completed|1002.5...
+2026-02-17 13:54:42,818 - dq_comparison - INFO - Target hash string start: txn0000002|completed|1002.5...
+2026-02-17 13:54:42,818 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:54:42,818 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-02-17 13:54:42,819 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:54:42,819 - dq_comparison - INFO -   Source: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 13:54:42,820 - dq_comparison - INFO -   Target: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 13:54:42,820 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,820 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:54:42,821 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,821 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:54:42,821 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,821 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:54:42,822 - dq_comparison - INFO -   Source: '1003.75' (type: float32) → '1003.75'
+2026-02-17 13:54:42,822 - dq_comparison - INFO -   Target: '1003.75' (type: float32) → '1003.75'
+2026-02-17 13:54:42,822 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,823 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:54:42,823 - dq_comparison - INFO -   Source: '3' (type: uint8) → '3'
+2026-02-17 13:54:42,823 - dq_comparison - INFO -   Target: '3' (type: uint8) → '3'
+2026-02-17 13:54:42,823 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,824 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:54:42,825 - dq_comparison - INFO -   Source: '2024-01-04 00:00:00' (type: Timestamp) → '2024-04-01'
+2026-02-17 13:54:42,825 - dq_comparison - INFO -   Target: '2024-01-04 00:00:00' (type: Timestamp) → '2024-04-01'
+2026-02-17 13:54:42,825 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:54:42,826 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-02-17 13:54:42,826 - dq_comparison - INFO - Source hash string start: txn0000003|completed|1003.75...
+2026-02-17 13:54:42,826 - dq_comparison - INFO - Target hash string start: txn0000003|completed|1003.75...
+2026-02-17 13:54:42,827 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:54:42,827 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-02-17 13:54:42,827 - dq_comparison - INFO - Column 1: 'transaction_id' (object) ↔ 'transaction_id' (object)
+2026-02-17 13:54:42,827 - dq_comparison - INFO -   Sample: Source='TXN0000001', Target='TXN0000001'
+2026-02-17 13:54:42,828 - dq_comparison - INFO - Column 2: 'status' (category) ↔ 'status' (category)
+2026-02-17 13:54:42,828 - dq_comparison - INFO -   Sample: Source='COMPLETED', Target='COMPLETED'
+2026-02-17 13:54:42,829 - dq_comparison - INFO - Column 3: 'amount' (float32) ↔ 'amount' (float32)
+2026-02-17 13:54:42,829 - dq_comparison - INFO -   Sample: Source='1001.25', Target='1001.25'
+2026-02-17 13:54:42,829 - dq_comparison - INFO - Column 4: 'account_id' (uint8) ↔ 'account_id' (uint8)
+2026-02-17 13:54:42,829 - dq_comparison - INFO -   Sample: Source='1', Target='1'
+2026-02-17 13:54:42,830 - dq_comparison - INFO - Column 5: 'transaction_date' (datetime64[ns]) ↔ 'transaction_date' (datetime64[ns])
+2026-02-17 13:54:42,830 - dq_comparison - INFO -   Sample: Source='2024-01-02 00:00:00', Target='2024-01-02 00:00:00'
+2026-02-17 13:54:42,830 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-02-17 13:54:42,831 - dq_comparison - INFO - Found 6 total mismatches
+2026-02-17 13:54:42,831 - dq_comparison - INFO - Will process detailed comparisons for first 6 rows
+2026-02-17 13:54:43,081 - dq_comparison - INFO - 
+================================================================================
+2026-02-17 13:54:43,082 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-02-17 13:54:43,082 - dq_comparison - INFO -   Total mismatches found: 4
+2026-02-17 13:54:43,082 - dq_comparison - INFO -   Detailed comparisons logged: 4
+2026-02-17 13:54:43,083 - dq_comparison - INFO -   First 10 rows displayed above
+2026-02-17 13:54:43,083 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-02-17 13:54:43,083 - dq_comparison - INFO - ================================================================================
+2026-02-17 13:54:43,084 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-02-17 13:54:43,084 - dq_comparison - INFO -   • Unique source hashes: 15
+2026-02-17 13:54:43,084 - dq_comparison - INFO -   • Unique target hashes: 13
+2026-02-17 13:54:43,085 - dq_comparison - INFO -   • Common hashes: 11
+2026-02-17 13:54:43,085 - dq_comparison - INFO -   • Common rows (counting duplicates): 11
+2026-02-17 13:54:43,085 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 4
+2026-02-17 13:54:43,085 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 2
+2026-02-17 13:54:43,086 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-02-17 13:54:43,087 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-02-17 13:54:43,087 - dq_comparison - INFO -   Common rows: 11
+2026-02-17 13:54:43,087 - dq_comparison - INFO -   Unique to source: 4
+2026-02-17 13:54:43,088 - dq_comparison - INFO -   Unique to target: 2
+2026-02-17 13:54:43,088 - dq_comparison - INFO -   Value mismatches: 48
+2026-02-17 13:54:43,088 - dq_comparison - INFO -   Missing rows: 4
+2026-02-17 13:54:43,089 - dq_comparison - INFO -   Extra rows: 2
+2026-02-17 13:54:43,089 - dq_comparison - INFO - 
+========================================================================================================================
+COMPARISON: Mysql Database vs Postgresql Database
+========================================================================================================================
+Row   | Diff Count | Source (Sample)                          | Target (Sample)                         
+------------------------------------------------------------------------------------------------------------------------
+13    | 2          | transaction_id: TXN0000012               | transaction_id: TXN0000012              
+14    | 2          | transaction_id: TXN0000013               | transaction_id: TXN0000013              
+15    | 8          | transaction_id: TXN0000014               | transaction_id: NULL                    
+16    | 8          | transaction_id: TXN0000015               | transaction_id: NULL                    
+------------------------------------------------------------------------------------------------------------------------
+Showing all 4 mismatched rows.
+========================================================================================================================
+2026-02-17 13:54:43,089 - dq_comparison - INFO - Returning enhanced mismatch structure with 4 detailed mismatches
+2026-02-17 13:54:43,090 - dq_comparison - INFO - New structure: 4 detailed mismatches
+2026-02-17 13:54:43,090 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-02-17 13:54:43,106 - dq_comparison - INFO - Null values - Source: 0 (0.00%), Target: 0 (0.00%)
+2026-02-17 13:54:43,107 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-02-17 13:54:43,164 - dq_error_log - INFO - Retrieved 4 error logs for session CMP_20260217_135442
+2026-02-17 13:54:43,166 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-02-17 13:54:43,166 - dq_comparison - INFO -   Source rows: 15
+2026-02-17 13:54:43,167 - dq_comparison - INFO -   Common rows (matched): 11
+2026-02-17 13:54:43,167 - dq_comparison - INFO -   Calculation: (11 / 15) * 100 = 73.33%
+2026-02-17 13:54:43,167 - dq_comparison - INFO -   Explanation: 11 matched rows out of 15 total source rows
+2026-02-17 13:54:43,168 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-02-17 13:54:43,168 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-02-17 13:54:43,168 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:54:43,168 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260217_135442
+2026-02-17 13:54:43,169 - dq_audit - INFO - Starting database insertion for comparison...
+2026-02-17 13:54:43,236 - dq_audit - INFO - Inserted comparison record with ID: 741
+2026-02-17 13:54:43,237 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 741)
+2026-02-17 13:54:43,297 - dq_error_log - INFO - Retrieved 4 error logs for session CMP_20260217_135442
+2026-02-17 13:54:43,357 - dq_error_log - INFO - Retrieved summary: 4 total errors for session CMP_20260217_135442
+2026-02-17 13:54:43,358 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:54:43,417 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_135442
+2026-02-17 13:54:43,418 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-02-17 13:54:43,418 - dq_comparison - INFO -    Session ID: CMP_20260217_135442
+2026-02-17 13:54:43,419 - dq_comparison - INFO -    DQ Score (Simple %): 73.33%
+2026-02-17 13:54:43,419 - dq_comparison - INFO -    Source rows: 15
+2026-02-17 13:54:43,419 - dq_comparison - INFO -    Matched rows: 11
+2026-02-17 13:54:43,419 - dq_comparison - INFO -    Calculation: (11 / 15) * 100
+2026-02-17 13:54:43,420 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-02-17 13:54:43,476 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_135442
+2026-02-17 13:54:43,536 - dq_error_log - INFO - Retrieved 4 error logs for session CMP_20260217_135442
+2026-02-17 13:54:43,593 - dq_error_log - INFO - Retrieved summary: 4 total errors for session CMP_20260217_135442
+2026-02-17 13:54:43,596 - __main__ - INFO - Completed with status 200 in 1.309s
+2026-02-17 13:54:43,611 - __main__ - INFO - GET /api/compare/CMP_20260217_135442/mismatches - Request started
+2026-02-17 13:54:43,730 - __main__ - INFO - Completed with status 200 in 0.119s
+2026-02-17 13:54:44,056 - __main__ - INFO - GET /api/compare/CMP_20260217_135442/mismatches - Request started
+2026-02-17 13:54:44,175 - __main__ - INFO - Completed with status 200 in 0.118s
+2026-02-17 13:55:23,887 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:23,887 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:55:23,888 - __main__ - INFO - Database: Not provided
+2026-02-17 13:55:23,888 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:55:23,889 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:23,889 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:55:23,890 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:55:23,946 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:55:23,947 - __main__ - INFO - Getting databases list...
+2026-02-17 13:55:23,947 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 13:55:23,954 - database_navigator - INFO - Found 7 databases
+2026-02-17 13:55:23,954 - __main__ - INFO - Found 7 databases
+2026-02-17 13:55:23,955 - __main__ - INFO - Completed with status 200 in 0.068s
+2026-02-17 13:55:24,353 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:24,354 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:55:24,354 - __main__ - INFO - Database: Not provided
+2026-02-17 13:55:24,355 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:55:24,356 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:24,356 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:55:24,357 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:55:24,357 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:55:24,357 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:55:24,555 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:55:24,556 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:55:24,556 - __main__ - INFO - Getting databases list...
+2026-02-17 13:55:24,558 - database_navigator - INFO - get_databases() called. db_type: postgresql, connection exists: True
+2026-02-17 13:55:24,565 - database_navigator - INFO - Raw rows: [('dq_checks',), ('postgres',), ('test',)]
+2026-02-17 13:55:24,567 - database_navigator - INFO - Found 3 databases
+2026-02-17 13:55:24,568 - __main__ - INFO - Found 3 databases
+2026-02-17 13:55:24,568 - __main__ - INFO - Completed with status 200 in 0.215s
+2026-02-17 13:55:27,505 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:27,506 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:55:27,507 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:55:27,507 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:55:27,508 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:27,508 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:55:27,509 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:55:27,565 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:55:27,565 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:55:27,567 - database_navigator - INFO - Found 1 schemas
+2026-02-17 13:55:27,567 - __main__ - INFO - Found 1 schemas
+2026-02-17 13:55:27,568 - __main__ - INFO - Completed with status 200 in 0.064s
+2026-02-17 13:55:28,443 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:28,445 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:55:28,447 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:55:28,447 - __main__ - INFO - Schema: Not provided
+2026-02-17 13:55:28,448 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:28,449 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:55:28,449 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:55:28,449 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:55:28,450 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:55:28,660 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:55:28,661 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:55:28,662 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 13:55:28,663 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-02-17 13:55:28,663 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:55:28,664 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:55:28,664 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-02-17 13:55:28,972 - database_navigator - INFO - Connection object created: <connection object at 0x0000027418B01E00; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-02-17 13:55:28,973 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-02-17 13:55:28,993 - database_navigator - INFO - Found 4 schemas
+2026-02-17 13:55:28,993 - __main__ - INFO - Found 4 schemas
+2026-02-17 13:55:28,994 - __main__ - INFO - Completed with status 200 in 0.551s
+2026-02-17 13:55:30,421 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:30,422 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 13:55:30,422 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:55:30,423 - __main__ - INFO - Schema: dq_checks
+2026-02-17 13:55:30,423 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:30,424 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 13:55:30,424 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 13:55:30,484 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 13:55:30,485 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 13:55:30,493 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 13:55:30,494 - __main__ - INFO - Found 28 tables
+2026-02-17 13:55:30,495 - __main__ - INFO - Completed with status 200 in 0.074s
+2026-02-17 13:55:31,901 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 13:55:31,901 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-02-17 13:55:31,902 - __main__ - INFO - Database: dq_checks
+2026-02-17 13:55:31,902 - __main__ - INFO - Schema: public
+2026-02-17 13:55:31,903 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 13:55:31,904 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-02-17 13:55:31,904 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:55:31,905 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:55:31,905 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-02-17 13:55:32,107 - database_navigator - INFO - Connection object created: <connection object at 0x0000027416D25030; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-02-17 13:55:32,109 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-02-17 13:55:32,109 - __main__ - INFO - Getting tables for database: dq_checks, schema: public
+2026-02-17 13:55:32,110 - database_navigator - INFO - Ensuring connection to database: dq_checks for table list
+2026-02-17 13:55:32,111 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-02-17 13:55:32,111 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-02-17 13:55:32,112 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-02-17 13:55:32,112 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-02-17 13:55:32,318 - database_navigator - INFO - Connection object created: <connection object at 0x0000027418B02790; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-02-17 13:55:32,320 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-02-17 13:55:32,321 - database_navigator - INFO - Connected to database: dq_checks, schema: public
+2026-02-17 13:55:32,354 - database_navigator - INFO - Found 20 tables in dq_checks.public: ['advanced100', 'advanced1000', 'advanced10000', 'advanced100000', 'advanced15', 'customers', 'employee', 'rulesdata', 'single100', 'single1000', 'single10000', 'single100000', 'single15', 'target13', 'target90', 'target900', 'target9000', 'target90000', 'testadv', 'testadv_stage']
+2026-02-17 13:55:32,355 - database_navigator - INFO - Found 20 tables in schema 'public'
+2026-02-17 13:55:32,355 - __main__ - INFO - Found 20 tables
+2026-02-17 13:55:32,356 - __main__ - INFO - Completed with status 200 in 0.455s
+2026-02-17 13:55:44,620 - __main__ - INFO - POST /api/compare - Request started
+2026-02-17 13:55:44,620 - __main__ - INFO - Comparison request - Source: database, Target: database
+2026-02-17 13:55:44,621 - __main__ - INFO - Comparison analysis request received
+2026-02-17 13:55:44,621 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'schema': 'dq_checks', 'table': 'source10000', 'user': 'root', 'password': 'root'}
+2026-02-17 13:55:44,622 - __main__ - INFO - Starting comparison for session CMP_20260217_135544
+2026-02-17 13:55:44,622 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-02-17 13:55:44,623 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-02-17 13:55:44,623 - dq_comparison - INFO - 
+==================================================
+2026-02-17 13:55:44,623 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-02-17 13:55:44,624 - dq_comparison - INFO - ==================================================
+2026-02-17 13:55:44,624 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-02-17 13:55:44,624 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 13:55:44,624 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-02-17 13:55:44,625 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:55:44,625 - dq_unified - INFO - Loading large database table: source10000
+2026-02-17 13:55:44,625 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-17 13:55:44,709 - dq_unified - INFO - MySQL table source10000 has 10,000 rows
+2026-02-17 13:55:44,709 - dq_unified - INFO - Loading 10,000 rows from MySQL...
+2026-02-17 13:55:45,584 - dq_unified - INFO - Loaded 10,000 rows from MySQL
+2026-02-17 13:55:45,608 - dq_unified - INFO - Memory optimization: 4.3MB -> 2.2MB (Saved: 2.1MB)
+2026-02-17 13:55:45,613 - dq_unified - INFO - Loaded 10,000 rows, 8 columns. Memory: 160.2MB total, 2.2MB for dataframe
+2026-02-17 13:55:45,613 - dq_comparison - INFO - SOURCE database loaded: 10,000 rows, 8 columns
+2026-02-17 13:55:45,614 - dq_comparison - INFO - 
+==================================================
+2026-02-17 13:55:45,614 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-02-17 13:55:45,614 - dq_comparison - INFO - ==================================================
+2026-02-17 13:55:45,614 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-02-17 13:55:45,615 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 13:55:45,615 - dq_comparison - INFO - Converted db_type to numeric code: 1
+2026-02-17 13:55:45,615 - dq_comparison - INFO - Selected database type code: postgresql
+2026-02-17 13:55:45,615 - dq_unified - INFO - Getting database config from config file
+2026-02-17 13:55:45,616 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2026-02-17 13:55:45,616 - dq_unified - INFO - Database configuration from config file: postgresql, Table: target9000
+2026-02-17 13:55:45,616 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 13:55:45,617 - dq_unified - INFO - Loading large database table: target9000
+2026-02-17 13:55:45,617 - dq_unified - INFO - Normalized DB config with schema: public
+2026-02-17 13:55:45,839 - dq_unified - INFO - PostgreSQL table public.target9000 has 9,000 rows
+2026-02-17 13:55:45,840 - dq_unified - INFO - Loading 9,000 rows from PostgreSQL...
+2026-02-17 13:55:45,855 - dq_unified - INFO - Loaded 9,000 rows from PostgreSQL
+2026-02-17 13:55:45,874 - dq_unified - INFO - Memory optimization: 3.9MB -> 2.0MB (Saved: 1.9MB)
+2026-02-17 13:55:45,879 - dq_unified - INFO - Loaded 9,000 rows, 8 columns. Memory: 161.8MB total, 2.0MB for dataframe
+2026-02-17 13:55:45,879 - dq_comparison - INFO - TARGET database loaded: 9,000 rows, 8 columns
+2026-02-17 13:55:45,879 - dq_comparison - INFO - Source data loaded: 10000 rows, 8 columns
+2026-02-17 13:55:45,880 - dq_comparison - INFO - Target data loaded: 9000 rows, 8 columns
+2026-02-17 13:55:45,880 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-02-17 13:55:45,880 - dq_comparison - INFO - Source columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:55:45,880 - dq_comparison - INFO - Target columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:55:45,881 - dq_comparison - INFO - Common columns lowercased: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:55:45,881 - dq_comparison - INFO - Found 8 common columns between source and target (case-insensitive)
+2026-02-17 13:55:45,881 - dq_comparison - INFO - User column selection input: all
+2026-02-17 13:55:45,881 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-02-17 13:55:45,882 - dq_comparison - INFO - Selected 8 columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date']...
+2026-02-17 13:55:45,882 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-02-17 13:55:45,882 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.source10000, Target: Database: postgresql - dq_checks.target9000, Selected columns: 8
+2026-02-17 13:55:45,882 - dq_comparison - INFO - Initializing Error Logger...
+2026-02-17 13:55:45,883 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 13:55:45,940 - dq_error_log - INFO - Database connection successful
+2026-02-17 13:55:45,941 - dq_comparison - INFO - Session ID: CMP_20260217_135545
+2026-02-17 13:55:45,942 - dq_comparison - WARNING - ❌ Row count mismatch: Source=10,000, Target=9,000, Difference=1,000
+2026-02-17 13:55:45,942 - dq_comparison - WARNING -    Missing in target: 1,000 rows
+2026-02-17 13:55:45,943 - dq_comparison - INFO - Comparing column structures...
+2026-02-17 13:55:45,943 - dq_comparison - INFO - Column structure comparison complete. Match: True
+2026-02-17 13:55:45,944 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-02-17 13:55:45,944 - dq_comparison - INFO - Auto-detecting key fields from data...
+2026-02-17 13:55:45,961 - dq_comparison - INFO - Auto-detected common key fields: ['transaction_id', 'account_id', 'transaction_date', 'amount']
+2026-02-17 13:55:45,967 - dq_comparison - INFO - Primary key validation passed for fields: ['transaction_id', 'account_id', 'transaction_date', 'amount']
+2026-02-17 13:55:45,968 - dq_comparison - INFO - Primary key validation complete. Status: VALIDATION_PASSED
+2026-02-17 13:55:45,968 - dq_comparison - INFO - Comparing table-level metadata...
+2026-02-17 13:55:46,013 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-02-17 13:55:46,014 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-02-17 13:55:46,015 - dq_comparison - INFO - Starting comparison of 19,000 total rows...
+2026-02-17 13:55:46,016 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-02-17 13:55:46,016 - dq_comparison - INFO - Column: transaction_id
+2026-02-17 13:55:46,016 - dq_comparison - INFO -   Source type: <class 'str'>, value: TXN0000001
+2026-02-17 13:55:46,016 - dq_comparison - INFO -   Target type: <class 'str'>, value: TXN0000001
+2026-02-17 13:55:46,017 - dq_comparison - INFO -   Normalized: 'txn0000001' vs 'txn0000001'
+2026-02-17 13:55:46,017 - dq_comparison - INFO -   Match: True
+2026-02-17 13:55:46,017 - dq_comparison - INFO - Column: status
+2026-02-17 13:55:46,018 - dq_comparison - INFO -   Source type: <class 'str'>, value: COMPLETED
+2026-02-17 13:55:46,018 - dq_comparison - INFO -   Target type: <class 'str'>, value: COMPLETED
+2026-02-17 13:55:46,018 - dq_comparison - INFO -   Normalized: 'completed' vs 'completed'
+2026-02-17 13:55:46,018 - dq_comparison - INFO -   Match: True
+2026-02-17 13:55:46,019 - dq_comparison - INFO - Column: amount
+2026-02-17 13:55:46,019 - dq_comparison - INFO -   Source type: <class 'str'>, value: 1001.25
+2026-02-17 13:55:46,019 - dq_comparison - INFO -   Target type: <class 'str'>, value: 1001.25
+2026-02-17 13:55:46,019 - dq_comparison - INFO -   Normalized: '1001.25' vs '1001.25'
+2026-02-17 13:55:46,020 - dq_comparison - INFO -   Match: True
+2026-02-17 13:55:46,020 - dq_comparison - INFO - Source DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:55:46,020 - dq_comparison - INFO - Target DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 13:55:46,020 - dq_comparison - INFO - Selected columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:55:46,021 - dq_comparison - INFO - Using 8 common columns for hash comparison
+2026-02-17 13:55:46,021 - dq_comparison - INFO - Source columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:55:46,021 - dq_comparison - INFO - Target columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 13:55:46,021 - dq_comparison - INFO - Generating hashes for source data (10000 rows)...
+2026-02-17 13:55:46,722 - dq_comparison - INFO -    Hashing source data: 10.0% complete (1,900/19,000 rows)
+2026-02-17 13:55:47,455 - dq_comparison - INFO -    Hashing source data: 20.0% complete (3,800/19,000 rows)
+2026-02-17 13:55:48,174 - dq_comparison - INFO -    Hashing source data: 30.0% complete (5,700/19,000 rows)
+2026-02-17 13:55:48,913 - dq_comparison - INFO -    Hashing source data: 40.0% complete (7,600/19,000 rows)
+2026-02-17 13:55:49,692 - dq_comparison - INFO -    Hashing source data: 50.0% complete (9,500/19,000 rows)
+2026-02-17 13:55:49,896 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-02-17 13:55:49,897 - dq_comparison - INFO - Hash 1: b717418a41b66285... (sample row 0)
+2026-02-17 13:55:49,897 - dq_comparison - INFO - Hash 2: 58eea40222201017... (sample row 1)
+2026-02-17 13:55:49,897 - dq_comparison - INFO - Hash 3: 672bf16ad8afdad1... (sample row 2)
+2026-02-17 13:55:49,898 - dq_comparison - INFO - Generating hashes for target data (9000 rows)...
+2026-02-17 13:55:50,459 - dq_comparison - INFO -    Hashing target data: 60.0% complete (11,400/19,000 rows)
+2026-02-17 13:55:51,268 - dq_comparison - INFO -    Hashing target data: 70.0% complete (13,300/19,000 rows)
+2026-02-17 13:55:52,027 - dq_comparison - INFO -    Hashing target data: 80.0% complete (15,200/19,000 rows)
+2026-02-17 13:55:52,828 - dq_comparison - INFO -    Hashing target data: 90.0% complete (17,100/19,000 rows)
+2026-02-17 13:55:53,610 - dq_comparison - INFO -    Hashing target data: 100.0% complete (19,000/19,000 rows)
+2026-02-17 13:55:53,611 - dq_comparison - INFO - 
+======================================================================
+2026-02-17 13:55:53,611 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-02-17 13:55:53,612 - dq_comparison - INFO - ======================================================================
+2026-02-17 13:55:53,612 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-02-17 13:55:53,612 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:55:53,613 - dq_comparison - INFO -   Source: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 13:55:53,613 - dq_comparison - INFO -   Target: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 13:55:53,614 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,614 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:55:53,614 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,614 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,615 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,615 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:55:53,615 - dq_comparison - INFO -   Source: '1001.25' (type: str) → '1001.25'
+2026-02-17 13:55:53,616 - dq_comparison - INFO -   Target: '1001.25' (type: str) → '1001.25'
+2026-02-17 13:55:53,616 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,616 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:55:53,617 - dq_comparison - INFO -   Source: 'ACC000001' (type: str) → 'acc000001'
+2026-02-17 13:55:53,617 - dq_comparison - INFO -   Target: 'ACC000001' (type: str) → 'acc000001'
+2026-02-17 13:55:53,617 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,618 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:55:53,618 - dq_comparison - INFO -   Source: '1/2/2024' (type: str) → '2024-02-01'
+2026-02-17 13:55:53,619 - dq_comparison - INFO -   Target: '1/2/2024' (type: str) → '2024-02-01'
+2026-02-17 13:55:53,619 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,619 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-02-17 13:55:53,620 - dq_comparison - INFO - Source hash string start: txn0000001|completed|1001.25...
+2026-02-17 13:55:53,620 - dq_comparison - INFO - Target hash string start: txn0000001|completed|1001.25...
+2026-02-17 13:55:53,620 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:55:53,621 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-02-17 13:55:53,621 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:55:53,621 - dq_comparison - INFO -   Source: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 13:55:53,622 - dq_comparison - INFO -   Target: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 13:55:53,622 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,622 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:55:53,623 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,623 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,624 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,624 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:55:53,624 - dq_comparison - INFO -   Source: '1002.5' (type: str) → '1002.5'
+2026-02-17 13:55:53,624 - dq_comparison - INFO -   Target: '1002.5' (type: str) → '1002.5'
+2026-02-17 13:55:53,625 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,625 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:55:53,625 - dq_comparison - INFO -   Source: 'ACC000002' (type: str) → 'acc000002'
+2026-02-17 13:55:53,626 - dq_comparison - INFO -   Target: 'ACC000002' (type: str) → 'acc000002'
+2026-02-17 13:55:53,626 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,627 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:55:53,627 - dq_comparison - INFO -   Source: '1/3/2024' (type: str) → '2024-03-01'
+2026-02-17 13:55:53,628 - dq_comparison - INFO -   Target: '1/3/2024' (type: str) → '2024-03-01'
+2026-02-17 13:55:53,628 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,628 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-02-17 13:55:53,629 - dq_comparison - INFO - Source hash string start: txn0000002|completed|1002.5...
+2026-02-17 13:55:53,629 - dq_comparison - INFO - Target hash string start: txn0000002|completed|1002.5...
+2026-02-17 13:55:53,629 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:55:53,629 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-02-17 13:55:53,630 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 13:55:53,630 - dq_comparison - INFO -   Source: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 13:55:53,631 - dq_comparison - INFO -   Target: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 13:55:53,631 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,631 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 13:55:53,632 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,632 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 13:55:53,632 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,632 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 13:55:53,633 - dq_comparison - INFO -   Source: '1003.75' (type: str) → '1003.75'
+2026-02-17 13:55:53,633 - dq_comparison - INFO -   Target: '1003.75' (type: str) → '1003.75'
+2026-02-17 13:55:53,633 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,634 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 13:55:53,634 - dq_comparison - INFO -   Source: 'ACC000003' (type: str) → 'acc000003'
+2026-02-17 13:55:53,634 - dq_comparison - INFO -   Target: 'ACC000003' (type: str) → 'acc000003'
+2026-02-17 13:55:53,635 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,636 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 13:55:53,636 - dq_comparison - INFO -   Source: '1/4/2024' (type: str) → '2024-04-01'
+2026-02-17 13:55:53,636 - dq_comparison - INFO -   Target: '1/4/2024' (type: str) → '2024-04-01'
+2026-02-17 13:55:53,637 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 13:55:53,637 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-02-17 13:55:53,637 - dq_comparison - INFO - Source hash string start: txn0000003|completed|1003.75...
+2026-02-17 13:55:53,638 - dq_comparison - INFO - Target hash string start: txn0000003|completed|1003.75...
+2026-02-17 13:55:53,638 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 13:55:53,638 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-02-17 13:55:53,639 - dq_comparison - INFO - Column 1: 'transaction_id' (object) ↔ 'transaction_id' (object)
+2026-02-17 13:55:53,639 - dq_comparison - INFO -   Sample: Source='TXN0000001', Target='TXN0000001'
+2026-02-17 13:55:53,639 - dq_comparison - INFO - Column 2: 'status' (category) ↔ 'status' (category)
+2026-02-17 13:55:53,640 - dq_comparison - INFO -   Sample: Source='COMPLETED', Target='COMPLETED'
+2026-02-17 13:55:53,640 - dq_comparison - INFO - Column 3: 'amount' (object) ↔ 'amount' (object)
+2026-02-17 13:55:53,640 - dq_comparison - INFO -   Sample: Source='1001.25', Target='1001.25'
+2026-02-17 13:55:53,641 - dq_comparison - INFO - Column 4: 'account_id' (object) ↔ 'account_id' (object)
+2026-02-17 13:55:53,641 - dq_comparison - INFO -   Sample: Source='ACC000001', Target='ACC000001'
+2026-02-17 13:55:53,641 - dq_comparison - INFO - Column 5: 'transaction_date' (object) ↔ 'transaction_date' (object)
+2026-02-17 13:55:53,642 - dq_comparison - INFO -   Sample: Source='1/2/2024', Target='1/2/2024'
+2026-02-17 13:55:53,642 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-02-17 13:55:53,643 - dq_comparison - INFO - Found 1,004 total mismatches
+2026-02-17 13:55:53,644 - dq_comparison - INFO - Will process detailed comparisons for first 1,004 rows
+2026-02-17 13:56:29,153 - dq_comparison - INFO - Progress: 500/1,004 rows (35.5s)
+2026-02-17 13:57:05,711 - dq_comparison - INFO - Progress: 1,000/1,004 rows (72.1s)
+2026-02-17 13:57:05,898 - dq_comparison - INFO - 
+================================================================================
+2026-02-17 13:57:05,898 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-02-17 13:57:05,899 - dq_comparison - INFO -   Total mismatches found: 1002
+2026-02-17 13:57:05,899 - dq_comparison - INFO -   Detailed comparisons logged: 1002
+2026-02-17 13:57:05,899 - dq_comparison - INFO -   First 10 rows displayed above
+2026-02-17 13:57:05,900 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-02-17 13:57:05,900 - dq_comparison - INFO -   Use API to retrieve all 1002 mismatches
+2026-02-17 13:57:05,901 - dq_comparison - INFO - ================================================================================
+2026-02-17 13:57:05,903 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-02-17 13:57:05,904 - dq_comparison - INFO -   • Unique source hashes: 10000
+2026-02-17 13:57:05,904 - dq_comparison - INFO -   • Unique target hashes: 9000
+2026-02-17 13:57:05,905 - dq_comparison - INFO -   • Common hashes: 8998
+2026-02-17 13:57:05,905 - dq_comparison - INFO -   • Common rows (counting duplicates): 8,998
+2026-02-17 13:57:05,905 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 1,002
+2026-02-17 13:57:05,905 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 2
+2026-02-17 13:57:05,909 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-02-17 13:57:05,909 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-02-17 13:57:05,909 - dq_comparison - INFO -   Common rows: 8,998
+2026-02-17 13:57:05,910 - dq_comparison - INFO -   Unique to source: 1,002
+2026-02-17 13:57:05,911 - dq_comparison - INFO -   Unique to target: 2
+2026-02-17 13:57:05,913 - dq_comparison - INFO -   Value mismatches: 8032
+2026-02-17 13:57:05,913 - dq_comparison - INFO -   Missing rows: 1,002
+2026-02-17 13:57:05,914 - dq_comparison - INFO -   Extra rows: 2
+2026-02-17 13:57:05,914 - dq_comparison - INFO - 
+========================================================================================================================
+COMPARISON: Mysql Database vs Postgresql Database
+========================================================================================================================
+Row   | Diff Count | Source (Sample)                          | Target (Sample)                         
+------------------------------------------------------------------------------------------------------------------------
+9000  | 2          | transaction_id: TXN0008999               | transaction_id: TXN0008999              
+9001  | 2          | transaction_id: TXN0009000               | transaction_id: TXN0009000              
+9002  | 8          | transaction_id: TXN0009001               | transaction_id: NULL                    
+9003  | 8          | transaction_id: TXN0009002               | transaction_id: NULL                    
+9004  | 8          | transaction_id: TXN0009003               | transaction_id: NULL                    
+9005  | 8          | transaction_id: TXN0009004               | transaction_id: NULL                    
+9006  | 8          | transaction_id: TXN0009005               | transaction_id: NULL                    
+9007  | 8          | transaction_id: TXN0009006               | transaction_id: NULL                    
+9008  | 8          | transaction_id: TXN0009007               | transaction_id: NULL                    
+9009  | 8          | transaction_id: TXN0009008               | transaction_id: NULL                    
+------------------------------------------------------------------------------------------------------------------------
+Showing 1-10 of 1002 mismatched rows. Use API for complete data.
+========================================================================================================================
+2026-02-17 13:57:05,915 - dq_comparison - INFO - Returning enhanced mismatch structure with 1002 detailed mismatches
+2026-02-17 13:57:05,918 - dq_comparison - INFO - New structure: 100 detailed mismatches
+2026-02-17 13:57:05,919 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-02-17 13:57:10,996 - dq_comparison - INFO - Null values - Source: 0 (0.00%), Target: 0 (0.00%)
+2026-02-17 13:57:11,004 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-02-17 13:57:11,086 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260217_135545
+2026-02-17 13:57:11,088 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-02-17 13:57:11,088 - dq_comparison - INFO -   Source rows: 10000
+2026-02-17 13:57:11,089 - dq_comparison - INFO -   Common rows (matched): 8998
+2026-02-17 13:57:11,089 - dq_comparison - INFO -   Calculation: (8998 / 10000) * 100 = 89.98%
+2026-02-17 13:57:11,089 - dq_comparison - INFO -   Explanation: 8998 matched rows out of 10000 total source rows
+2026-02-17 13:57:11,090 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-02-17 13:57:11,090 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-02-17 13:57:11,091 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:57:11,091 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260217_135545
+2026-02-17 13:57:11,092 - dq_audit - INFO - Starting database insertion for comparison...
+2026-02-17 13:57:11,157 - dq_audit - INFO - Inserted comparison record with ID: 742
+2026-02-17 13:57:11,158 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 742)
+2026-02-17 13:57:11,236 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260217_135545
+2026-02-17 13:57:11,307 - dq_error_log - INFO - Retrieved summary: 1002 total errors for session CMP_20260217_135545
+2026-02-17 13:57:11,309 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 13:57:11,370 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_135545
+2026-02-17 13:57:11,371 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-02-17 13:57:11,372 - dq_comparison - INFO -    Session ID: CMP_20260217_135545
+2026-02-17 13:57:11,372 - dq_comparison - INFO -    DQ Score (Simple %): 89.98%
+2026-02-17 13:57:11,373 - dq_comparison - INFO -    Source rows: 10000
+2026-02-17 13:57:11,373 - dq_comparison - INFO -    Matched rows: 8998
+2026-02-17 13:57:11,374 - dq_comparison - INFO -    Calculation: (8998 / 10000) * 100
+2026-02-17 13:57:11,375 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-02-17 13:57:11,440 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_135545
+2026-02-17 13:57:11,529 - dq_error_log - INFO - Retrieved 200 error logs for session CMP_20260217_135545
+2026-02-17 13:57:11,594 - dq_error_log - INFO - Retrieved summary: 1002 total errors for session CMP_20260217_135545
+2026-02-17 13:57:11,607 - __main__ - INFO - Completed with status 200 in 86.987s
+2026-02-17 13:57:11,965 - __main__ - INFO - GET /api/compare/CMP_20260217_135544/mismatches - Request started
+2026-02-17 13:57:12,087 - __main__ - INFO - Completed with status 200 in 0.122s
+2026-02-17 13:57:12,230 - __main__ - INFO - GET /api/compare/CMP_20260217_135544/mismatches - Request started
+2026-02-17 13:57:12,345 - __main__ - INFO - Completed with status 200 in 0.115s
+2026-02-17 14:03:02,154 - __main__ - INFO - POST /api/compare - Request started
+2026-02-17 14:03:02,155 - __main__ - INFO - Comparison request - Source: database, Target: database
+2026-02-17 14:03:02,156 - __main__ - INFO - Comparison analysis request received
+2026-02-17 14:03:02,157 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'schema': 'dq_checks', 'table': 'source1000', 'user': 'root', 'password': 'root'}
+2026-02-17 14:03:02,158 - __main__ - INFO - Starting comparison for session CMP_20260217_140302
+2026-02-17 14:03:02,159 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-02-17 14:03:02,161 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-02-17 14:03:02,161 - dq_comparison - INFO - 
+==================================================
+2026-02-17 14:03:02,162 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-02-17 14:03:02,162 - dq_comparison - INFO - ==================================================
+2026-02-17 14:03:02,163 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-02-17 14:03:02,163 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 14:03:02,163 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-02-17 14:03:02,164 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 14:03:02,165 - dq_unified - INFO - Loading large database table: source1000
+2026-02-17 14:03:02,166 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-17 14:03:02,243 - dq_unified - INFO - MySQL table source1000 has 1,000 rows
+2026-02-17 14:03:02,244 - dq_unified - INFO - Loading 1,000 rows from MySQL...
+2026-02-17 14:03:02,324 - dq_unified - INFO - Loaded 1,000 rows from MySQL
+2026-02-17 14:03:02,330 - dq_unified - INFO - Memory optimization: 0.4MB -> 0.2MB (Saved: 0.2MB)
+2026-02-17 14:03:02,331 - dq_unified - INFO - Loaded 1,000 rows, 8 columns. Memory: 165.3MB total, 0.2MB for dataframe
+2026-02-17 14:03:02,332 - dq_comparison - INFO - SOURCE database loaded: 1,000 rows, 8 columns
+2026-02-17 14:03:02,332 - dq_comparison - INFO - 
+==================================================
+2026-02-17 14:03:02,332 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-02-17 14:03:02,332 - dq_comparison - INFO - ==================================================
+2026-02-17 14:03:02,333 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-02-17 14:03:02,333 - dq_comparison - INFO - ----------------------------------------
+2026-02-17 14:03:02,333 - dq_comparison - INFO - Converted db_type to numeric code: 1
+2026-02-17 14:03:02,334 - dq_comparison - INFO - Selected database type code: postgresql
+2026-02-17 14:03:02,334 - dq_unified - INFO - Getting database config from config file
+2026-02-17 14:03:02,334 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2026-02-17 14:03:02,334 - dq_unified - INFO - Database configuration from config file: postgresql, Table: target900
+2026-02-17 14:03:02,335 - dq_unified - INFO - Loading data from DATABASE
+2026-02-17 14:03:02,335 - dq_unified - INFO - Loading large database table: target900
+2026-02-17 14:03:02,335 - dq_unified - INFO - Normalized DB config with schema: public
+2026-02-17 14:03:02,554 - dq_unified - INFO - PostgreSQL table public.target900 has 900 rows
+2026-02-17 14:03:02,554 - dq_unified - INFO - Loading 900 rows from PostgreSQL...
+2026-02-17 14:03:02,561 - dq_unified - INFO - Loaded 900 rows from PostgreSQL
+2026-02-17 14:03:02,566 - dq_unified - INFO - Memory optimization: 0.4MB -> 0.2MB (Saved: 0.2MB)
+2026-02-17 14:03:02,567 - dq_unified - INFO - Loaded 900 rows, 8 columns. Memory: 165.3MB total, 0.2MB for dataframe
+2026-02-17 14:03:02,568 - dq_comparison - INFO - TARGET database loaded: 900 rows, 8 columns
+2026-02-17 14:03:02,568 - dq_comparison - INFO - Source data loaded: 1000 rows, 8 columns
+2026-02-17 14:03:02,568 - dq_comparison - INFO - Target data loaded: 900 rows, 8 columns
+2026-02-17 14:03:02,569 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-02-17 14:03:02,569 - dq_comparison - INFO - Source columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 14:03:02,569 - dq_comparison - INFO - Target columns (original): ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 14:03:02,569 - dq_comparison - INFO - Common columns lowercased: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 14:03:02,570 - dq_comparison - INFO - Found 8 common columns between source and target (case-insensitive)
+2026-02-17 14:03:02,570 - dq_comparison - INFO - User column selection input: all
+2026-02-17 14:03:02,570 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-02-17 14:03:02,570 - dq_comparison - INFO - Selected 8 columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date']...
+2026-02-17 14:03:02,570 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-02-17 14:03:02,571 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.source1000, Target: Database: postgresql - dq_checks.target900, Selected columns: 8
+2026-02-17 14:03:02,571 - dq_comparison - INFO - Initializing Error Logger...
+2026-02-17 14:03:02,571 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:03:02,631 - dq_error_log - INFO - Database connection successful
+2026-02-17 14:03:02,632 - dq_comparison - INFO - Session ID: CMP_20260217_140302
+2026-02-17 14:03:02,633 - dq_comparison - WARNING - ❌ Row count mismatch: Source=1,000, Target=900, Difference=100
+2026-02-17 14:03:02,633 - dq_comparison - WARNING -    Missing in target: 100 rows
+2026-02-17 14:03:02,633 - dq_comparison - INFO - Comparing column structures...
+2026-02-17 14:03:02,634 - dq_comparison - INFO - Column structure comparison complete. Match: True
+2026-02-17 14:03:02,634 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-02-17 14:03:02,634 - dq_comparison - INFO - Auto-detecting key fields from data...
+2026-02-17 14:03:02,638 - dq_comparison - INFO - Auto-detected common key fields: ['transaction_id', 'account_id', 'transaction_date', 'amount']
+2026-02-17 14:03:02,641 - dq_comparison - INFO - Primary key validation passed for fields: ['transaction_id', 'account_id', 'transaction_date', 'amount']
+2026-02-17 14:03:02,641 - dq_comparison - INFO - Primary key validation complete. Status: VALIDATION_PASSED
+2026-02-17 14:03:02,642 - dq_comparison - INFO - Comparing table-level metadata...
+2026-02-17 14:03:02,651 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-02-17 14:03:02,651 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-02-17 14:03:02,653 - dq_comparison - INFO - Starting comparison of 1,900 total rows...
+2026-02-17 14:03:02,653 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-02-17 14:03:02,654 - dq_comparison - INFO - Column: transaction_id
+2026-02-17 14:03:02,654 - dq_comparison - INFO -   Source type: <class 'str'>, value: TXN0000001
+2026-02-17 14:03:02,654 - dq_comparison - INFO -   Target type: <class 'str'>, value: TXN0000001
+2026-02-17 14:03:02,655 - dq_comparison - INFO -   Normalized: 'txn0000001' vs 'txn0000001'
+2026-02-17 14:03:02,655 - dq_comparison - INFO -   Match: True
+2026-02-17 14:03:02,655 - dq_comparison - INFO - Column: status
+2026-02-17 14:03:02,656 - dq_comparison - INFO -   Source type: <class 'str'>, value: COMPLETED
+2026-02-17 14:03:02,656 - dq_comparison - INFO -   Target type: <class 'str'>, value: COMPLETED
+2026-02-17 14:03:02,657 - dq_comparison - INFO -   Normalized: 'completed' vs 'completed'
+2026-02-17 14:03:02,657 - dq_comparison - INFO -   Match: True
+2026-02-17 14:03:02,657 - dq_comparison - INFO - Column: amount
+2026-02-17 14:03:02,657 - dq_comparison - INFO -   Source type: <class 'str'>, value: 1001.25
+2026-02-17 14:03:02,658 - dq_comparison - INFO -   Target type: <class 'str'>, value: 1001.25
+2026-02-17 14:03:02,658 - dq_comparison - INFO -   Normalized: '1001.25' vs '1001.25'
+2026-02-17 14:03:02,658 - dq_comparison - INFO -   Match: True
+2026-02-17 14:03:02,659 - dq_comparison - INFO - Source DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 14:03:02,659 - dq_comparison - INFO - Target DF columns: ['transaction_id', 'account_id', 'transaction_date', 'transaction_type', 'amount', 'currency', 'status', 'source_system']
+2026-02-17 14:03:02,659 - dq_comparison - INFO - Selected columns for comparison: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 14:03:02,659 - dq_comparison - INFO - Using 8 common columns for hash comparison
+2026-02-17 14:03:02,660 - dq_comparison - INFO - Source columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 14:03:02,660 - dq_comparison - INFO - Target columns: ['transaction_id', 'status', 'amount', 'account_id', 'transaction_date', 'currency', 'source_system', 'transaction_type']
+2026-02-17 14:03:02,660 - dq_comparison - INFO - Generating hashes for source data (1000 rows)...
+2026-02-17 14:03:02,735 - dq_comparison - INFO -    Hashing source data: 10.0% complete (190/1,900 rows)
+2026-02-17 14:03:02,809 - dq_comparison - INFO -    Hashing source data: 20.0% complete (380/1,900 rows)
+2026-02-17 14:03:02,883 - dq_comparison - INFO -    Hashing source data: 30.0% complete (570/1,900 rows)
+2026-02-17 14:03:02,960 - dq_comparison - INFO -    Hashing source data: 40.0% complete (760/1,900 rows)
+2026-02-17 14:03:03,032 - dq_comparison - INFO -    Hashing source data: 50.0% complete (950/1,900 rows)
+2026-02-17 14:03:03,054 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-02-17 14:03:03,054 - dq_comparison - INFO - Hash 1: b717418a41b66285... (sample row 0)
+2026-02-17 14:03:03,055 - dq_comparison - INFO - Hash 2: 58eea40222201017... (sample row 1)
+2026-02-17 14:03:03,055 - dq_comparison - INFO - Hash 3: 672bf16ad8afdad1... (sample row 2)
+2026-02-17 14:03:03,055 - dq_comparison - INFO - Generating hashes for target data (900 rows)...
+2026-02-17 14:03:03,109 - dq_comparison - INFO -    Hashing target data: 60.0% complete (1,140/1,900 rows)
+2026-02-17 14:03:03,188 - dq_comparison - INFO -    Hashing target data: 70.0% complete (1,330/1,900 rows)
+2026-02-17 14:03:03,266 - dq_comparison - INFO -    Hashing target data: 80.0% complete (1,520/1,900 rows)
+2026-02-17 14:03:03,346 - dq_comparison - INFO -    Hashing target data: 90.0% complete (1,710/1,900 rows)
+2026-02-17 14:03:03,421 - dq_comparison - INFO -    Hashing target data: 100.0% complete (1,900/1,900 rows)
+2026-02-17 14:03:03,422 - dq_comparison - INFO - 
+======================================================================
+2026-02-17 14:03:03,422 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-02-17 14:03:03,423 - dq_comparison - INFO - ======================================================================
+2026-02-17 14:03:03,423 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-02-17 14:03:03,424 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 14:03:03,424 - dq_comparison - INFO -   Source: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 14:03:03,424 - dq_comparison - INFO -   Target: 'TXN0000001' (type: str) → 'txn0000001'
+2026-02-17 14:03:03,425 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,425 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 14:03:03,426 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,426 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,426 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,427 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 14:03:03,427 - dq_comparison - INFO -   Source: '1001.25' (type: str) → '1001.25'
+2026-02-17 14:03:03,427 - dq_comparison - INFO -   Target: '1001.25' (type: str) → '1001.25'
+2026-02-17 14:03:03,428 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,428 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 14:03:03,428 - dq_comparison - INFO -   Source: 'ACC000001' (type: str) → 'acc000001'
+2026-02-17 14:03:03,429 - dq_comparison - INFO -   Target: 'ACC000001' (type: str) → 'acc000001'
+2026-02-17 14:03:03,429 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,430 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 14:03:03,430 - dq_comparison - INFO -   Source: '1/2/2024' (type: str) → '2024-02-01'
+2026-02-17 14:03:03,431 - dq_comparison - INFO -   Target: '1/2/2024' (type: str) → '2024-02-01'
+2026-02-17 14:03:03,431 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,431 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-02-17 14:03:03,432 - dq_comparison - INFO - Source hash string start: txn0000001|completed|1001.25...
+2026-02-17 14:03:03,432 - dq_comparison - INFO - Target hash string start: txn0000001|completed|1001.25...
+2026-02-17 14:03:03,432 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 14:03:03,432 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-02-17 14:03:03,433 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 14:03:03,433 - dq_comparison - INFO -   Source: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 14:03:03,434 - dq_comparison - INFO -   Target: 'TXN0000002' (type: str) → 'txn0000002'
+2026-02-17 14:03:03,434 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,434 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 14:03:03,435 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,435 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,435 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,436 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 14:03:03,436 - dq_comparison - INFO -   Source: '1002.5' (type: str) → '1002.5'
+2026-02-17 14:03:03,436 - dq_comparison - INFO -   Target: '1002.5' (type: str) → '1002.5'
+2026-02-17 14:03:03,437 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,437 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 14:03:03,437 - dq_comparison - INFO -   Source: 'ACC000002' (type: str) → 'acc000002'
+2026-02-17 14:03:03,438 - dq_comparison - INFO -   Target: 'ACC000002' (type: str) → 'acc000002'
+2026-02-17 14:03:03,438 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,439 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 14:03:03,440 - dq_comparison - INFO -   Source: '1/3/2024' (type: str) → '2024-03-01'
+2026-02-17 14:03:03,441 - dq_comparison - INFO -   Target: '1/3/2024' (type: str) → '2024-03-01'
+2026-02-17 14:03:03,441 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,441 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-02-17 14:03:03,442 - dq_comparison - INFO - Source hash string start: txn0000002|completed|1002.5...
+2026-02-17 14:03:03,442 - dq_comparison - INFO - Target hash string start: txn0000002|completed|1002.5...
+2026-02-17 14:03:03,443 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 14:03:03,443 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-02-17 14:03:03,444 - dq_comparison - INFO - Column 'transaction_id' → 'transaction_id':
+2026-02-17 14:03:03,444 - dq_comparison - INFO -   Source: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 14:03:03,445 - dq_comparison - INFO -   Target: 'TXN0000003' (type: str) → 'txn0000003'
+2026-02-17 14:03:03,445 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,445 - dq_comparison - INFO - Column 'status' → 'status':
+2026-02-17 14:03:03,446 - dq_comparison - INFO -   Source: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,446 - dq_comparison - INFO -   Target: 'COMPLETED' (type: str) → 'completed'
+2026-02-17 14:03:03,446 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,447 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-02-17 14:03:03,447 - dq_comparison - INFO -   Source: '1003.75' (type: str) → '1003.75'
+2026-02-17 14:03:03,447 - dq_comparison - INFO -   Target: '1003.75' (type: str) → '1003.75'
+2026-02-17 14:03:03,447 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,448 - dq_comparison - INFO - Column 'account_id' → 'account_id':
+2026-02-17 14:03:03,449 - dq_comparison - INFO -   Source: 'ACC000003' (type: str) → 'acc000003'
+2026-02-17 14:03:03,449 - dq_comparison - INFO -   Target: 'ACC000003' (type: str) → 'acc000003'
+2026-02-17 14:03:03,449 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,450 - dq_comparison - INFO - Column 'transaction_date' → 'transaction_date':
+2026-02-17 14:03:03,451 - dq_comparison - INFO -   Source: '1/4/2024' (type: str) → '2024-04-01'
+2026-02-17 14:03:03,451 - dq_comparison - INFO -   Target: '1/4/2024' (type: str) → '2024-04-01'
+2026-02-17 14:03:03,451 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-02-17 14:03:03,451 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-02-17 14:03:03,452 - dq_comparison - INFO - Source hash string start: txn0000003|completed|1003.75...
+2026-02-17 14:03:03,452 - dq_comparison - INFO - Target hash string start: txn0000003|completed|1003.75...
+2026-02-17 14:03:03,452 - dq_comparison - INFO - Same? ✅ YES
+2026-02-17 14:03:03,453 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-02-17 14:03:03,453 - dq_comparison - INFO - Column 1: 'transaction_id' (object) ↔ 'transaction_id' (object)
+2026-02-17 14:03:03,453 - dq_comparison - INFO -   Sample: Source='TXN0000001', Target='TXN0000001'
+2026-02-17 14:03:03,454 - dq_comparison - INFO - Column 2: 'status' (category) ↔ 'status' (category)
+2026-02-17 14:03:03,454 - dq_comparison - INFO -   Sample: Source='COMPLETED', Target='COMPLETED'
+2026-02-17 14:03:03,455 - dq_comparison - INFO - Column 3: 'amount' (object) ↔ 'amount' (object)
+2026-02-17 14:03:03,455 - dq_comparison - INFO -   Sample: Source='1001.25', Target='1001.25'
+2026-02-17 14:03:03,455 - dq_comparison - INFO - Column 4: 'account_id' (object) ↔ 'account_id' (object)
+2026-02-17 14:03:03,456 - dq_comparison - INFO -   Sample: Source='ACC000001', Target='ACC000001'
+2026-02-17 14:03:03,456 - dq_comparison - INFO - Column 5: 'transaction_date' (object) ↔ 'transaction_date' (object)
+2026-02-17 14:03:03,457 - dq_comparison - INFO -   Sample: Source='1/2/2024', Target='1/2/2024'
+2026-02-17 14:03:03,457 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-02-17 14:03:03,457 - dq_comparison - INFO - Found 104 total mismatches
+2026-02-17 14:03:03,458 - dq_comparison - INFO - Will process detailed comparisons for first 104 rows
+2026-02-17 14:03:09,809 - dq_comparison - INFO - 
+================================================================================
+2026-02-17 14:03:09,809 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-02-17 14:03:09,810 - dq_comparison - INFO -   Total mismatches found: 102
+2026-02-17 14:03:09,810 - dq_comparison - INFO -   Detailed comparisons logged: 102
+2026-02-17 14:03:09,810 - dq_comparison - INFO -   First 10 rows displayed above
+2026-02-17 14:03:09,811 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-02-17 14:03:09,811 - dq_comparison - INFO -   Use API to retrieve all 102 mismatches
+2026-02-17 14:03:09,811 - dq_comparison - INFO - ================================================================================
+2026-02-17 14:03:09,812 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-02-17 14:03:09,812 - dq_comparison - INFO -   • Unique source hashes: 1000
+2026-02-17 14:03:09,812 - dq_comparison - INFO -   • Unique target hashes: 900
+2026-02-17 14:03:09,813 - dq_comparison - INFO -   • Common hashes: 898
+2026-02-17 14:03:09,813 - dq_comparison - INFO -   • Common rows (counting duplicates): 898
+2026-02-17 14:03:09,813 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 102
+2026-02-17 14:03:09,813 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 2
+2026-02-17 14:03:09,815 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-02-17 14:03:09,815 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-02-17 14:03:09,816 - dq_comparison - INFO -   Common rows: 898
+2026-02-17 14:03:09,816 - dq_comparison - INFO -   Unique to source: 102
+2026-02-17 14:03:09,816 - dq_comparison - INFO -   Unique to target: 2
+2026-02-17 14:03:09,816 - dq_comparison - INFO -   Value mismatches: 832
+2026-02-17 14:03:09,817 - dq_comparison - INFO -   Missing rows: 102
+2026-02-17 14:03:09,817 - dq_comparison - INFO -   Extra rows: 2
+2026-02-17 14:03:09,817 - dq_comparison - INFO - 
+========================================================================================================================
+COMPARISON: Mysql Database vs Postgresql Database
+========================================================================================================================
+Row   | Diff Count | Source (Sample)                          | Target (Sample)                         
+------------------------------------------------------------------------------------------------------------------------
+900   | 2          | transaction_id: TXN0000899               | transaction_id: TXN0000899              
+901   | 2          | transaction_id: TXN0000900               | transaction_id: TXN0000900              
+902   | 8          | transaction_id: TXN0000901               | transaction_id: NULL                    
+903   | 8          | transaction_id: TXN0000902               | transaction_id: NULL                    
+904   | 8          | transaction_id: TXN0000903               | transaction_id: NULL                    
+905   | 8          | transaction_id: TXN0000904               | transaction_id: NULL                    
+906   | 8          | transaction_id: TXN0000905               | transaction_id: NULL                    
+907   | 8          | transaction_id: TXN0000906               | transaction_id: NULL                    
+908   | 8          | transaction_id: TXN0000907               | transaction_id: NULL                    
+909   | 8          | transaction_id: TXN0000908               | transaction_id: NULL                    
+------------------------------------------------------------------------------------------------------------------------
+Showing 1-10 of 102 mismatched rows. Use API for complete data.
+========================================================================================================================
+2026-02-17 14:03:09,818 - dq_comparison - INFO - Returning enhanced mismatch structure with 102 detailed mismatches
+2026-02-17 14:03:09,818 - dq_comparison - INFO - New structure: 100 detailed mismatches
+2026-02-17 14:03:09,819 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-02-17 14:03:10,260 - dq_comparison - INFO - Null values - Source: 0 (0.00%), Target: 0 (0.00%)
+2026-02-17 14:03:10,262 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-02-17 14:03:10,334 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260217_140302
+2026-02-17 14:03:10,335 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-02-17 14:03:10,336 - dq_comparison - INFO -   Source rows: 1000
+2026-02-17 14:03:10,336 - dq_comparison - INFO -   Common rows (matched): 898
+2026-02-17 14:03:10,337 - dq_comparison - INFO -   Calculation: (898 / 1000) * 100 = 89.80%
+2026-02-17 14:03:10,337 - dq_comparison - INFO -   Explanation: 898 matched rows out of 1000 total source rows
+2026-02-17 14:03:10,337 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-02-17 14:03:10,338 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-02-17 14:03:10,338 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:03:10,338 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260217_140302
+2026-02-17 14:03:10,338 - dq_audit - INFO - Starting database insertion for comparison...
+2026-02-17 14:03:10,403 - dq_audit - INFO - Inserted comparison record with ID: 743
+2026-02-17 14:03:10,404 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 743)
+2026-02-17 14:03:10,475 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260217_140302
+2026-02-17 14:03:10,544 - dq_error_log - INFO - Retrieved summary: 102 total errors for session CMP_20260217_140302
+2026-02-17 14:03:10,545 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:03:10,619 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_140302
+2026-02-17 14:03:10,620 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-02-17 14:03:10,621 - dq_comparison - INFO -    Session ID: CMP_20260217_140302
+2026-02-17 14:03:10,621 - dq_comparison - INFO -    DQ Score (Simple %): 89.80%
+2026-02-17 14:03:10,622 - dq_comparison - INFO -    Source rows: 1000
+2026-02-17 14:03:10,622 - dq_comparison - INFO -    Matched rows: 898
+2026-02-17 14:03:10,622 - dq_comparison - INFO -    Calculation: (898 / 1000) * 100
+2026-02-17 14:03:10,623 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-02-17 14:03:10,685 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260217_140302
+2026-02-17 14:03:10,758 - dq_error_log - INFO - Retrieved 102 error logs for session CMP_20260217_140302
+2026-02-17 14:03:10,820 - dq_error_log - INFO - Retrieved summary: 102 total errors for session CMP_20260217_140302
+2026-02-17 14:03:10,828 - __main__ - INFO - Completed with status 200 in 8.674s
+2026-02-17 14:03:10,852 - __main__ - INFO - GET /api/compare/CMP_20260217_140302/mismatches - Request started
+2026-02-17 14:03:10,980 - __main__ - INFO - Completed with status 200 in 0.128s
+2026-02-17 14:04:19,956 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:04:19,957 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:04:19,958 - __main__ - INFO - Database: Not provided
+2026-02-17 14:04:19,958 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:04:19,959 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:04:19,959 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:04:19,960 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:04:20,021 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:04:20,021 - __main__ - INFO - Getting databases list...
+2026-02-17 14:04:20,022 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 14:04:20,027 - database_navigator - INFO - Found 7 databases
+2026-02-17 14:04:20,029 - __main__ - INFO - Found 7 databases
+2026-02-17 14:04:20,031 - __main__ - INFO - Completed with status 200 in 0.075s
+2026-02-17 14:04:22,672 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:04:22,673 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:04:22,675 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:04:22,677 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:04:22,680 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:04:22,682 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:04:22,683 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:04:22,751 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:04:22,752 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 14:04:22,753 - database_navigator - INFO - Found 1 schemas
+2026-02-17 14:04:22,753 - __main__ - INFO - Found 1 schemas
+2026-02-17 14:04:22,755 - __main__ - INFO - Completed with status 200 in 0.083s
+2026-02-17 14:04:24,622 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:04:24,623 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:04:24,624 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:04:24,625 - __main__ - INFO - Schema: dq_checks
+2026-02-17 14:04:24,628 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:04:24,630 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:04:24,631 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:04:24,695 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:04:24,696 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 14:04:24,704 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 14:04:24,705 - __main__ - INFO - Found 28 tables
+2026-02-17 14:04:24,706 - __main__ - INFO - Completed with status 200 in 0.084s
+2026-02-17 14:04:30,923 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:04:30,924 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:04:30,925 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:04:30,997 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:04:30,998 - __main__ - INFO - Completed with status 200 in 0.075s
+2026-02-17 14:04:31,310 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:04:31,310 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:04:31,312 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:04:31,373 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:04:31,374 - __main__ - INFO - Completed with status 200 in 0.064s
+2026-02-17 14:07:00,360 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:00,361 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:00,361 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:00,425 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:00,426 - __main__ - INFO - Completed with status 500 in 0.066s
+2026-02-17 14:07:05,744 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:05,746 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:05,747 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:05,808 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:05,810 - __main__ - INFO - Completed with status 500 in 0.065s
+2026-02-17 14:07:23,056 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:23,057 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:23,057 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:23,125 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:23,126 - __main__ - INFO - Completed with status 500 in 0.070s
+2026-02-17 14:07:24,635 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:24,636 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:24,637 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:24,701 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:24,703 - __main__ - INFO - Completed with status 500 in 0.068s
+2026-02-17 14:07:25,725 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:25,725 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:25,727 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:25,790 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:25,792 - __main__ - INFO - Completed with status 500 in 0.067s
+2026-02-17 14:07:29,796 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:07:29,797 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:07:29,799 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:07:29,873 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:07:29,876 - __main__ - INFO - Completed with status 500 in 0.081s
+2026-02-17 14:12:05,161 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:12:05,162 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:12:05,162 - __main__ - INFO - Database: Not provided
+2026-02-17 14:12:05,163 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:12:05,164 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:12:05,165 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:12:05,165 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:12:05,226 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:12:05,227 - __main__ - INFO - Getting databases list...
+2026-02-17 14:12:05,227 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 14:12:05,232 - database_navigator - INFO - Found 7 databases
+2026-02-17 14:12:05,232 - __main__ - INFO - Found 7 databases
+2026-02-17 14:12:05,234 - __main__ - INFO - Completed with status 200 in 0.073s
+2026-02-17 14:12:07,228 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:12:07,229 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:12:07,230 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:12:07,231 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:12:07,231 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:12:07,232 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:12:07,233 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:12:07,330 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:12:07,331 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 14:12:07,332 - database_navigator - INFO - Found 1 schemas
+2026-02-17 14:12:07,333 - __main__ - INFO - Found 1 schemas
+2026-02-17 14:12:07,335 - __main__ - INFO - Completed with status 200 in 0.107s
+2026-02-17 14:12:09,431 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:12:09,432 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:12:09,433 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:12:09,433 - __main__ - INFO - Schema: dq_checks
+2026-02-17 14:12:09,434 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:12:09,434 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:12:09,435 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:12:09,504 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:12:09,505 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 14:12:09,513 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 14:12:09,513 - __main__ - INFO - Found 28 tables
+2026-02-17 14:12:09,514 - __main__ - INFO - Completed with status 200 in 0.083s
+2026-02-17 14:12:13,412 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:12:13,413 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:12:13,413 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:12:13,487 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:12:13,488 - __main__ - INFO - Completed with status 200 in 0.076s
+2026-02-17 14:12:13,802 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:12:13,803 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:12:13,803 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:12:13,865 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:12:13,867 - __main__ - INFO - Completed with status 200 in 0.065s
+2026-02-17 14:12:48,507 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:12:48,507 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:12:48,508 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:12:48,566 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:12:48,567 - __main__ - INFO - Completed with status 500 in 0.060s
+2026-02-17 14:13:21,334 - __main__ - INFO - POST /api/upload - Request started
+2026-02-17 14:13:21,382 - __main__ - INFO - File uploaded: 20260217_141321_rulse.csv (csv)
+2026-02-17 14:13:21,382 - __main__ - INFO - Completed with status 200 in 0.048s
+2026-02-17 14:13:21,400 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:13:21,401 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:21,401 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:21,470 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:13:21,471 - __main__ - INFO - Completed with status 200 in 0.071s
+2026-02-17 14:13:21,480 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:13:21,481 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:21,481 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:21,549 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:13:21,550 - __main__ - INFO - Completed with status 200 in 0.070s
+2026-02-17 14:13:39,277 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:13:39,278 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:39,278 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:39,339 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:13:39,340 - __main__ - INFO - Completed with status 500 in 0.064s
+2026-02-17 14:13:40,591 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:13:40,592 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:40,592 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:40,655 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:13:40,657 - __main__ - INFO - Completed with status 500 in 0.066s
+2026-02-17 14:13:45,730 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:13:45,731 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:45,731 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:45,798 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:13:45,799 - __main__ - INFO - Completed with status 500 in 0.069s
+2026-02-17 14:13:50,213 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:13:50,215 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:50,216 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:50,276 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:13:50,278 - __main__ - INFO - Completed with status 500 in 0.065s
+2026-02-17 14:13:54,675 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:13:54,676 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:13:54,677 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:13:54,733 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:13:54,735 - __main__ - INFO - Completed with status 500 in 0.061s
+2026-02-17 14:15:01,323 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:15:01,323 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:15:01,324 - __main__ - INFO - Database: Not provided
+2026-02-17 14:15:01,324 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:15:01,325 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:15:01,325 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:15:01,326 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:15:01,386 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:15:01,386 - __main__ - INFO - Getting databases list...
+2026-02-17 14:15:01,387 - database_navigator - INFO - get_databases() called. db_type: mysql, connection exists: True
+2026-02-17 14:15:01,390 - database_navigator - INFO - Found 7 databases
+2026-02-17 14:15:01,391 - __main__ - INFO - Found 7 databases
+2026-02-17 14:15:01,392 - __main__ - INFO - Completed with status 200 in 0.069s
+2026-02-17 14:15:02,756 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:15:02,757 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:15:02,760 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:15:02,761 - __main__ - INFO - Schema: Not provided
+2026-02-17 14:15:02,764 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:15:02,766 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:15:02,769 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:15:02,829 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:15:02,830 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-02-17 14:15:02,833 - database_navigator - INFO - Found 1 schemas
+2026-02-17 14:15:02,834 - __main__ - INFO - Found 1 schemas
+2026-02-17 14:15:02,836 - __main__ - INFO - Completed with status 200 in 0.080s
+2026-02-17 14:15:04,401 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-02-17 14:15:04,403 - __main__ - INFO - Getting database hierarchy for mysql
+2026-02-17 14:15:04,404 - __main__ - INFO - Database: dq_checks
+2026-02-17 14:15:04,404 - __main__ - INFO - Schema: dq_checks
+2026-02-17 14:15:04,405 - database_navigator - INFO - DatabaseNavigator initialized
+2026-02-17 14:15:04,407 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 3306, 'user': 'root', 'password': 'root'}
+2026-02-17 14:15:04,407 - database_navigator - INFO - Connecting to MYSQL...
+2026-02-17 14:15:04,467 - database_navigator - INFO - Successfully connected to MYSQL!
+2026-02-17 14:15:04,468 - __main__ - INFO - Getting tables for database: dq_checks, schema: dq_checks
+2026-02-17 14:15:04,476 - database_navigator - INFO - Found 28 tables in schema 'dq_checks'
+2026-02-17 14:15:04,477 - __main__ - INFO - Found 28 tables
+2026-02-17 14:15:04,479 - __main__ - INFO - Completed with status 200 in 0.078s
+2026-02-17 14:15:09,648 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:15:09,649 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:09,650 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:09,722 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:15:09,724 - __main__ - INFO - Completed with status 200 in 0.076s
+2026-02-17 14:15:09,732 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:15:09,733 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:09,733 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:09,794 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:15:09,795 - __main__ - INFO - Completed with status 200 in 0.063s
+2026-02-17 14:15:47,738 - __main__ - INFO - PUT /api/rules/84 - Request started
+2026-02-17 14:15:47,739 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:47,739 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:47,805 - dq_rules - INFO - Updated rule 84: 1 rows affected
+2026-02-17 14:15:47,806 - __main__ - INFO - Completed with status 200 in 0.068s
+2026-02-17 14:15:47,991 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:15:47,993 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:47,993 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:48,059 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:15:48,061 - __main__ - INFO - Completed with status 200 in 0.070s
+2026-02-17 14:15:55,903 - __main__ - INFO - POST /api/rules/execute - Request started
+2026-02-17 14:15:55,907 - dq_rules - INFO - Starting business rules analysis in UI/API mode
+2026-02-17 14:15:55,976 - dq_rules - INFO - Business rules tables created/verified successfully
+2026-02-17 14:15:55,977 - dq_rules - INFO - Loading database data: dq_checks.rulesdata
+2026-02-17 14:15:56,043 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:56,044 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:56,045 - dq_rules - INFO - BusinessRuleEngine session set to: RULES_20260217_141556_6400
+2026-02-17 14:15:56,045 - dq_rules - INFO - Session ID: RULES_20260217_141556_6400
+2026-02-17 14:15:56,109 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:15:56,110 - dq_rules - INFO - Executing specific rules: [84]
+2026-02-17 14:15:56,111 - dq_rules - INFO - Executing rule: Email_Validation_Pattern (pattern)
+2026-02-17 14:15:56,175 - dq_rules - INFO - Logged 1 rule executions to database
+2026-02-17 14:15:56,175 - dq_error_log - INFO - Starting batch logging for 3 errors, session: RULES_20260217_141556_6400
+2026-02-17 14:15:56,235 - dq_error_log - INFO - Batch 1: Successfully logged 3 errors
+2026-02-17 14:15:56,237 - dq_error_log - INFO - Progress: 3/3 errors processed
+2026-02-17 14:15:56,237 - dq_error_log - INFO - COMPLETE: Logged 3/3 errors for session RULES_20260217_141556_6400
+2026-02-17 14:15:56,298 - dq_rules - INFO - Inserted 3 into dq_rule_violations
+2026-02-17 14:15:56,299 - dq_rules - INFO - Logged 3 rule violations to error logs
+2026-02-17 14:15:56,299 - dq_rules - INFO - Rule execution completed: 1 rules, 3 violations, DQ Score: 85.0%
+2026-02-17 14:15:56,300 - dq_audit - INFO - Starting database insertion for business_rules...
+2026-02-17 14:15:56,360 - dq_audit - INFO - Inserted business_rules record with ID: 744
+2026-02-17 14:15:56,361 - dq_rules - INFO - Audit record logged for business rules session: RULES_20260217_141556_6400
+2026-02-17 14:15:56,429 - dq_error_log - INFO - Retrieved 3 error logs for session RULES_20260217_141556_6400
+2026-02-17 14:15:56,488 - dq_error_log - INFO - Retrieved summary: 3 total errors for session RULES_20260217_141556_6400
+2026-02-17 14:15:56,550 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20260217_141556_6400
+2026-02-17 14:15:56,552 - dq_rules - INFO - Business rules analysis completed for session RULES_20260217_141556_6400
+2026-02-17 14:15:56,553 - __main__ - INFO - Completed with status 200 in 0.649s
+2026-02-17 14:15:56,878 - __main__ - INFO - GET /api/rules/violations/RULES_20260217_141556_6400 - Request started
+2026-02-17 14:15:56,879 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:15:56,880 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:15:56,946 - __main__ - INFO - Completed with status 200 in 0.067s
+2026-02-17 14:22:35,055 - __main__ - INFO - POST /api/upload - Request started
+2026-02-17 14:22:35,069 - __main__ - INFO - File uploaded: 20260217_142235_rulse.csv (csv)
+2026-02-17 14:22:35,071 - __main__ - INFO - Completed with status 200 in 0.016s
+2026-02-17 14:22:35,301 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:22:35,301 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:22:35,303 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:22:35,369 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:22:35,370 - __main__ - INFO - Completed with status 200 in 0.069s
+2026-02-17 14:22:35,394 - __main__ - INFO - GET /api/rules - Request started
+2026-02-17 14:22:35,395 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:22:35,395 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:22:35,460 - dq_rules - INFO - Retrieved 14 business rules
+2026-02-17 14:22:35,461 - __main__ - INFO - Completed with status 200 in 0.067s
+2026-02-17 14:22:50,197 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:22:50,198 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:22:50,198 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:22:50,262 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:22:50,263 - __main__ - INFO - Completed with status 500 in 0.066s
+2026-02-17 14:22:52,057 - __main__ - INFO - POST /api/rules - Request started
+2026-02-17 14:22:52,058 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-17 14:22:52,059 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-17 14:22:52,115 - dq_rules - ERROR - Error creating rule: 1054 (42S22): Unknown column 'operator_type' in 'field list'
+2026-02-17 14:22:52,117 - __main__ - INFO - Completed with status 500 in 0.060s

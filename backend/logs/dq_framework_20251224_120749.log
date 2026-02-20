@@ -1,0 +1,64 @@
+2025-12-24 12:07:49,365 - root - INFO - CLI Mode Logging Initialized
+2025-12-24 12:07:49,366 - root - INFO - CLI logs will be saved to: logs/dq_framework_20251224_120749.log
+2025-12-24 12:07:49,366 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-24 12:07:49,367 - __main__ - INFO - Starting system resource check
+2025-12-24 12:07:49,374 - __main__ - INFO - Total RAM: 15.7 GB
+2025-12-24 12:07:49,375 - __main__ - INFO - Available RAM: 3.9 GB
+2025-12-24 12:07:49,375 - __main__ - INFO - Memory used: 75.5%
+2025-12-24 12:07:49,375 - __main__ - INFO - Memory status: OK
+2025-12-24 12:07:49,379 - __main__ - INFO - Free disk space: 261.5 GB
+2025-12-24 12:07:49,379 - __main__ - INFO - Disk used: 45.1%
+2025-12-24 12:07:49,379 - __main__ - INFO - Disk space: OK
+2025-12-24 12:07:49,880 - __main__ - INFO - CPU cores: 8
+2025-12-24 12:07:49,880 - __main__ - INFO - CPU usage: 8.9%
+2025-12-24 12:07:49,881 - __main__ - INFO - Python version: 3.12.4
+2025-12-24 12:07:49,881 - __main__ - INFO - System platform: win32
+2025-12-24 12:07:49,882 - __main__ - INFO - User session started at: 2025-12-24 12:07:49.882708
+2025-12-24 12:07:49,882 - __main__ - INFO - Displaying main menu options to user
+2025-12-24 12:07:51,641 - __main__ - INFO - User selected option: 1
+2025-12-24 12:07:51,642 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-24 12:07:51,645 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-24 12:07:51,645 - dq_unified - INFO - Prompting user for data source type
+2025-12-24 12:07:53,899 - dq_unified - INFO - User selected source type: 3
+2025-12-24 12:07:53,901 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-24 12:08:12,723 - dq_unified - INFO - Getting database config from config file
+2025-12-24 12:08:15,720 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2025-12-24 12:08:21,163 - dq_unified - INFO - Database configuration from config file: postgresql, Table: employee
+2025-12-24 12:08:21,164 - dq_unified - INFO - Loading data from DATABASE
+2025-12-24 12:08:21,165 - dq_unified - INFO - Loading data from DATABASE
+2025-12-24 12:08:21,166 - dq_unified - INFO - Loading large database table: employee
+2025-12-24 12:08:21,371 - dq_unified - ERROR - Error loading large database: syntax error at or near "'employee'"
+LINE 1: SELECT COUNT(*) FROM 'employee'
+                             ^
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 226, in load_large_database
+    return LargeDatasetHandler._load_large_postgresql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 261, in _load_large_postgresql
+    cursor.execute("SELECT COUNT(*) FROM %s", (table_name,))
+psycopg2.errors.SyntaxError: syntax error at or near "'employee'"
+LINE 1: SELECT COUNT(*) FROM 'employee'
+                             ^
+
+2025-12-24 12:08:21,375 - dq_unified - ERROR - Error loading data from database: syntax error at or near "'employee'"
+LINE 1: SELECT COUNT(*) FROM 'employee'
+                             ^
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1098, in load_data_from_source
+    df = LargeDatasetHandler.load_large_database(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 226, in load_large_database
+    return LargeDatasetHandler._load_large_postgresql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 261, in _load_large_postgresql
+    cursor.execute("SELECT COUNT(*) FROM %s", (table_name,))
+psycopg2.errors.SyntaxError: syntax error at or near "'employee'"
+LINE 1: SELECT COUNT(*) FROM 'employee'
+                             ^
+
+2025-12-24 12:08:21,377 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-24 12:08:21,377 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-24 12:08:21,378 - __main__ - INFO - Displaying main menu options to user
+2025-12-24 12:09:54,051 - __main__ - INFO - User selected option: 6
+2025-12-24 12:09:54,052 - __main__ - INFO - User session ended. Duration: 0:02:04.169610
+2025-12-24 12:09:54,052 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

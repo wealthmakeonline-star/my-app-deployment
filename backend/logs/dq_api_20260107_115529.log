@@ -1,0 +1,365 @@
+2026-01-07 11:55:29,567 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-07 11:55:29,568 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260107_115529.log
+2026-01-07 11:55:29,814 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-07 11:55:29,815 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-07 11:55:29,818 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-07 11:55:29,819 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-07 11:55:29,820 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-07 11:55:29,834 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-07 11:55:29,834 - __main__ - INFO - 📊 Modules available: True
+2026-01-07 11:55:29,836 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-07 11:55:29,837 - __main__ - INFO - 📋 Available endpoints:
+2026-01-07 11:55:29,838 - __main__ - INFO -   GET  /              - API status
+2026-01-07 11:55:29,838 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-07 11:55:29,839 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-07 11:55:29,840 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-07 11:55:29,840 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-07 11:55:29,842 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-07 11:55:29,842 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-07 11:55:29,843 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-07 11:55:29,844 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-07 11:56:03,417 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-07 11:56:03,418 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-01-07 11:56:03,419 - __main__ - INFO - Database: Not provided
+2026-01-07 11:56:03,420 - __main__ - INFO - Schema: Not provided
+2026-01-07 11:56:03,421 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-07 11:56:03,422 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postges'}
+2026-01-07 11:56:03,422 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:03,423 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:03,423 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-01-07 11:56:03,541 - database_navigator - ERROR - ❌ PostgreSQL connection failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\database_navigator.py", line 302, in connect_to_database
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2026-01-07 11:56:03,549 - __main__ - INFO - Completed with status 500 in 0.132s
+2026-01-07 11:56:18,730 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-07 11:56:18,732 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-01-07 11:56:18,735 - __main__ - INFO - Database: Not provided
+2026-01-07 11:56:18,736 - __main__ - INFO - Schema: Not provided
+2026-01-07 11:56:18,737 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-07 11:56:18,738 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-01-07 11:56:18,739 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:18,741 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:18,742 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-01-07 11:56:18,855 - database_navigator - INFO - Connection object created: <connection object at 0x000002AD91717890; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-01-07 11:56:18,858 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-01-07 11:56:18,859 - __main__ - INFO - Getting databases list...
+2026-01-07 11:56:18,860 - database_navigator - INFO - get_databases() called. db_type: postgresql, connection exists: True
+2026-01-07 11:56:18,885 - database_navigator - INFO - Raw rows: [('dq_checks',), ('finewise-testdb',), ('postgres',)]
+2026-01-07 11:56:18,887 - database_navigator - INFO - Found 3 databases
+2026-01-07 11:56:18,888 - __main__ - INFO - Found 3 databases
+2026-01-07 11:56:18,889 - __main__ - INFO - Completed with status 200 in 0.159s
+2026-01-07 11:56:22,113 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-07 11:56:22,113 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-01-07 11:56:22,114 - __main__ - INFO - Database: dq_checks
+2026-01-07 11:56:22,116 - __main__ - INFO - Schema: Not provided
+2026-01-07 11:56:22,117 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-07 11:56:22,118 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-01-07 11:56:22,118 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:22,120 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:22,120 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-01-07 11:56:22,339 - database_navigator - INFO - Connection object created: <connection object at 0x000002AD91717890; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-01-07 11:56:22,340 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-01-07 11:56:22,341 - __main__ - INFO - Getting schemas for database: dq_checks
+2026-01-07 11:56:22,343 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-01-07 11:56:22,344 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:22,345 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:22,346 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-01-07 11:56:22,464 - database_navigator - INFO - Connection object created: <connection object at 0x000002AD917179A0; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-01-07 11:56:22,468 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-01-07 11:56:22,512 - database_navigator - INFO - Found 4 schemas
+2026-01-07 11:56:22,513 - __main__ - INFO - Found 4 schemas
+2026-01-07 11:56:22,514 - __main__ - INFO - Completed with status 200 in 0.401s
+2026-01-07 11:56:23,915 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-07 11:56:23,917 - __main__ - INFO - Getting database hierarchy for postgresql
+2026-01-07 11:56:23,919 - __main__ - INFO - Database: dq_checks
+2026-01-07 11:56:23,920 - __main__ - INFO - Schema: public
+2026-01-07 11:56:23,922 - database_navigator - INFO - DatabaseNavigator initialized
+2026-01-07 11:56:23,923 - __main__ - INFO - Connecting with config: {'host': 'localhost', 'port': 5432, 'user': 'postgres', 'password': 'postgres'}
+2026-01-07 11:56:23,924 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:23,924 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:23,926 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=postgres, user=postgres
+2026-01-07 11:56:24,031 - database_navigator - INFO - Connection object created: <connection object at 0x000002AD917179A0; dsn: 'user=postgres password=xxx dbname=postgres host=localhost port=5432', closed: 0>
+2026-01-07 11:56:24,032 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: postgres
+2026-01-07 11:56:24,035 - __main__ - INFO - Getting tables for database: dq_checks, schema: public
+2026-01-07 11:56:24,036 - database_navigator - INFO - Ensuring connection to database: dq_checks for table list
+2026-01-07 11:56:24,038 - database_navigator - INFO - Reconnecting to PostgreSQL database: dq_checks
+2026-01-07 11:56:24,039 - database_navigator - INFO - Connecting to POSTGRESQL...
+2026-01-07 11:56:24,040 - database_navigator - INFO - Connecting to PostgreSQL...
+2026-01-07 11:56:24,040 - database_navigator - INFO - Connecting to PostgreSQL: host=localhost, port=5432, database=dq_checks, user=postgres
+2026-01-07 11:56:24,165 - database_navigator - INFO - Connection object created: <connection object at 0x000002AD91717CD0; dsn: 'user=postgres password=xxx dbname=dq_checks host=localhost port=5432', closed: 0>
+2026-01-07 11:56:24,167 - database_navigator - INFO - ✅ PostgreSQL connection successful to database: dq_checks
+2026-01-07 11:56:24,169 - database_navigator - INFO - Connected to database: dq_checks, schema: public
+2026-01-07 11:56:24,233 - database_navigator - INFO - Found 2 tables in dq_checks.public: ['customers', 'employee']
+2026-01-07 11:56:24,234 - database_navigator - INFO - Found 2 tables in schema 'public'
+2026-01-07 11:56:24,236 - __main__ - INFO - Found 2 tables
+2026-01-07 11:56:24,238 - __main__ - INFO - Completed with status 200 in 0.323s
+2026-01-07 11:56:29,140 - __main__ - INFO - POST /api/check-single - Request started
+2026-01-07 11:56:29,141 - __main__ - INFO - Single source analysis request received
+2026-01-07 11:56:29,144 - __main__ - INFO - Starting analysis for session SINGLE_20260107_115629_ee79c16e
+2026-01-07 11:56:29,145 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-01-07 11:56:29,146 - __main__ - INFO -   source_type: database
+2026-01-07 11:56:29,147 - __main__ - INFO -   db_config: {'type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'schema': 'public', 'table': 'employee', 'user': 'postgres', 'password': 'postgres'}
+2026-01-07 11:56:29,148 - __main__ - INFO -   mandatory_fields: all
+2026-01-07 11:56:29,149 - dq_unified - INFO - ==================================================
+2026-01-07 11:56:29,150 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-01-07 11:56:29,151 - dq_unified - INFO - Prompting user for data source type
+2026-01-07 11:56:29,151 - dq_unified - INFO - UI Data source_type: database
+2026-01-07 11:56:29,152 - dq_unified - INFO - Using source_type from UI data: database
+2026-01-07 11:56:29,154 - dq_unified - INFO - Loading data from DATABASE...
+2026-01-07 11:56:29,155 - dq_unified - INFO - Loading data from DATABASE
+2026-01-07 11:56:29,156 - dq_unified - INFO - Loading large database table: employee
+2026-01-07 11:56:29,157 - dq_unified - INFO - Normalized DB config with schema: public
+2026-01-07 11:56:29,309 - dq_unified - INFO - PostgreSQL table public.employee has 89,999 rows
+2026-01-07 11:56:29,310 - dq_unified - INFO - Loading 89,999 rows from PostgreSQL...
+2026-01-07 11:56:29,671 - dq_unified - INFO - Loaded 89,999 rows from PostgreSQL
+2026-01-07 11:56:30,573 - dq_unified - INFO - Memory optimization: 60.9MB -> 25.8MB (Saved: 35.1MB)
+2026-01-07 11:56:30,575 - dq_unified - INFO - Standardizing data types...
+2026-01-07 11:56:31,832 - dq_unified - INFO - Data type standardization complete
+2026-01-07 11:56:31,948 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 183.5MB total, 18.9MB for dataframe
+2026-01-07 11:56:31,948 - dq_unified - INFO - Data loaded: 89,999 rows, 12 columns
+2026-01-07 11:56:31,949 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-07 11:56:31,950 - dq_unified - INFO - Session ID: SINGLE_20260107_115631
+2026-01-07 11:56:31,951 - dq_unified - INFO - ==================================================
+2026-01-07 11:56:31,953 - dq_unified - INFO - Starting quality checks...
+2026-01-07 11:56:31,953 - dq_unified - INFO - ==================================================
+2026-01-07 11:56:31,954 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-01-07 11:56:31,955 - dq_unified - INFO - Checking for null/empty values
+2026-01-07 11:56:31,956 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2026-01-07 11:56:31,957 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-07 11:56:31,957 - dq_unified - INFO - Data source: Database: postgresql - Table: employee
+2026-01-07 11:56:31,959 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('int64'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'NaN', 'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float64'), 'quantity': dtype('int64'), 'age': dtype('int64'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2026-01-07 11:56:31,959 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-01-07 11:56:31,962 - dq_unified - INFO -   Row 0: {'id': 'np.int64(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2026-01-07 11:56:31,963 - dq_unified - INFO -   Row 1: {'id': 'np.int64(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2026-01-07 11:56:33,039 - dq_unified - INFO - Column 'id': No missing cells
+2026-01-07 11:56:34,145 - dq_unified - INFO - Column 'customer_id': No missing cells
+2026-01-07 11:56:35,242 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2026-01-07 11:56:35,853 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2026-01-07 11:56:35,853 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2026-01-07 11:56:35,854 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-01-07 11:56:35,855 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-01-07 11:57:17,036 - dq_error_log - INFO - Starting batch logging for 3510 errors, session: SINGLE_20260107_115631
+2026-01-07 11:57:17,246 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:57:17,316 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-07 11:57:17,370 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-01-07 11:57:17,429 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-01-07 11:57:17,476 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-01-07 11:57:17,522 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-01-07 11:57:17,565 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-01-07 11:57:17,578 - dq_error_log - INFO - Batch 8: Successfully logged 10 errors
+2026-01-07 11:57:17,579 - dq_error_log - INFO - Progress: 3510/3510 errors processed
+2026-01-07 11:57:17,580 - dq_error_log - INFO - COMPLETE: Logged 3510/3510 errors for session SINGLE_20260107_115631
+2026-01-07 11:57:18,136 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2026-01-07 11:57:18,136 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2026-01-07 11:57:18,136 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-01-07 11:57:18,138 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-01-07 11:57:41,555 - dq_error_log - INFO - Starting batch logging for 1516 errors, session: SINGLE_20260107_115631
+2026-01-07 11:57:41,652 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:57:41,704 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-07 11:57:41,761 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-01-07 11:57:41,777 - dq_error_log - INFO - Batch 4: Successfully logged 16 errors
+2026-01-07 11:57:41,778 - dq_error_log - INFO - Progress: 1516/1516 errors processed
+2026-01-07 11:57:41,779 - dq_error_log - INFO - COMPLETE: Logged 1516/1516 errors for session SINGLE_20260107_115631
+2026-01-07 11:57:43,063 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2026-01-07 11:57:43,063 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2026-01-07 11:57:43,065 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-01-07 11:57:43,066 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-01-07 11:58:01,624 - dq_error_log - INFO - Starting batch logging for 1280 errors, session: SINGLE_20260107_115631
+2026-01-07 11:58:01,679 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:58:01,739 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-07 11:58:01,775 - dq_error_log - INFO - Batch 3: Successfully logged 280 errors
+2026-01-07 11:58:01,776 - dq_error_log - INFO - Progress: 1280/1280 errors processed
+2026-01-07 11:58:01,777 - dq_error_log - INFO - COMPLETE: Logged 1280/1280 errors for session SINGLE_20260107_115631
+2026-01-07 11:58:02,461 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2026-01-07 11:58:03,419 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-01-07 11:58:03,420 - dq_unified - INFO -   Not missing samples: ['8653.56', '1948.44', '237.49']
+2026-01-07 11:58:03,421 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-01-07 11:58:03,422 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-01-07 11:58:16,661 - dq_error_log - INFO - Starting batch logging for 1133 errors, session: SINGLE_20260107_115631
+2026-01-07 11:58:16,710 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:58:16,761 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-07 11:58:16,783 - dq_error_log - INFO - Batch 3: Successfully logged 133 errors
+2026-01-07 11:58:16,784 - dq_error_log - INFO - Progress: 1133/1133 errors processed
+2026-01-07 11:58:16,784 - dq_error_log - INFO - COMPLETE: Logged 1133/1133 errors for session SINGLE_20260107_115631
+2026-01-07 11:58:17,732 - dq_unified - INFO - Column 'quantity': No missing cells
+2026-01-07 11:58:18,413 - dq_unified - INFO - Column 'age': No missing cells
+2026-01-07 11:58:18,973 - dq_unified - INFO - Column 'status': No missing cells
+2026-01-07 11:58:19,592 - dq_unified - INFO - Column 'description': No missing cells
+2026-01-07 11:58:19,593 - dq_unified - INFO - Total missing cells found: 7,439
+2026-01-07 11:58:19,593 - dq_unified - INFO - === Analyzing PostgreSQL database ===
+2026-01-07 11:58:19,594 - dq_unified - INFO - First column 'id' samples: ['78303', '66465', '93228']
+2026-01-07 11:58:19,595 - dq_unified - INFO - ============================================================
+2026-01-07 11:58:19,595 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-01-07 11:58:19,596 - dq_unified - INFO - ============================================================
+2026-01-07 11:58:19,597 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2026-01-07 11:58:19,597 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2026-01-07 11:58:19,599 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2026-01-07 11:58:19,600 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2026-01-07 11:58:19,600 - dq_unified - INFO - ============================================================
+2026-01-07 11:58:19,601 - dq_unified - INFO -    Found 7,439 empty cells
+2026-01-07 11:58:19,601 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-01-07 11:58:19,602 - dq_unified - INFO - Checking for duplicate rows
+2026-01-07 11:58:19,602 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-01-07 11:58:19,613 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-07 11:58:21,890 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2026-01-07 11:58:21,891 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2026-01-07 11:58:21,892 - dq_unified - INFO - Total rows to check: 89999
+2026-01-07 11:58:21,893 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2026-01-07 11:58:21,893 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2026-01-07 11:58:21,894 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2026-01-07 11:58:21,894 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2026-01-07 11:58:21,895 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2026-01-07 11:58:21,895 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2026-01-07 11:58:21,896 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-01-07 11:58:21,896 - dq_unified - INFO - First few rows for comparison:
+2026-01-07 11:58:21,898 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2026-01-07 11:58:21,898 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2026-01-07 11:58:21,900 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2026-01-07 11:58:22,096 - dq_unified - INFO - Duplicate mask found 406 rows
+2026-01-07 11:58:22,097 - dq_unified - INFO - Found 406 potential duplicate rows
+2026-01-07 11:58:22,146 - dq_unified - INFO - Unique duplicate groups: 203
+2026-01-07 11:58:22,147 - dq_unified - INFO - Duplicate groups found:
+2026-01-07 11:58:22,149 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2026-01-07 11:58:22,150 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='NaN', phone='NaN', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2026-01-07 11:58:22,150 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2026-01-07 11:58:22,151 - dq_unified - INFO - Processing 406 duplicate indices
+2026-01-07 11:58:22,187 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2026-01-07 11:58:22,189 - dq_error_log - INFO - Starting batch logging for 406 errors, session: SINGLE_20260107_115631
+2026-01-07 11:58:22,234 - dq_error_log - INFO - Batch 1: Successfully logged 406 errors
+2026-01-07 11:58:22,234 - dq_error_log - INFO - Progress: 406/406 errors processed
+2026-01-07 11:58:22,235 - dq_error_log - INFO - COMPLETE: Logged 406/406 errors for session SINGLE_20260107_115631
+2026-01-07 11:58:22,254 - dq_unified - INFO -    Found 406 duplicate rows
+2026-01-07 11:58:22,255 - dq_unified - INFO - 3. Checking data formats...
+2026-01-07 11:58:22,255 - dq_unified - INFO - Checking data formats
+2026-01-07 11:58:22,263 - dq_unified - INFO - Detected id as numeric type
+2026-01-07 11:58:22,665 - dq_unified - INFO - Detected email as email type
+2026-01-07 11:58:22,667 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2026-01-07 11:58:22,669 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2026-01-07 11:58:22,670 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2026-01-07 11:58:22,671 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2026-01-07 11:58:22,672 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2026-01-07 11:58:23,030 - dq_unified - INFO - Detected phone as phone type
+2026-01-07 11:58:23,425 - dq_unified - INFO - Detected transaction_date as date type
+2026-01-07 11:58:24,077 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-01-07 11:58:24,078 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-01-07 11:58:24,693 - dq_unified - INFO - Detected amount as numeric type
+2026-01-07 11:58:25,051 - dq_unified - INFO - Detected quantity as numeric type
+2026-01-07 11:58:25,427 - dq_unified - INFO - Detected age as numeric type
+2026-01-07 11:58:26,898 - dq_unified - INFO - Total format issues found: 727
+2026-01-07 11:58:26,900 - dq_error_log - INFO - Starting batch logging for 727 errors, session: SINGLE_20260107_115631
+2026-01-07 11:58:26,971 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:58:27,016 - dq_error_log - INFO - Batch 2: Successfully logged 227 errors
+2026-01-07 11:58:27,017 - dq_error_log - INFO - Progress: 727/727 errors processed
+2026-01-07 11:58:27,018 - dq_error_log - INFO - COMPLETE: Logged 727/727 errors for session SINGLE_20260107_115631
+2026-01-07 11:58:27,019 - dq_unified - INFO -    Found 727 format issues
+2026-01-07 11:58:27,020 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-01-07 11:58:27,021 - dq_unified - INFO - Checking mandatory fields
+2026-01-07 11:58:27,022 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-07 11:58:27,023 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-07 11:58:27,906 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2026-01-07 11:58:29,115 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2026-01-07 11:58:30,286 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2026-01-07 11:58:31,041 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2026-01-07 11:58:31,841 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2026-01-07 11:58:33,097 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2026-01-07 11:58:33,864 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2026-01-07 11:58:34,880 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2026-01-07 11:58:35,721 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2026-01-07 11:58:36,873 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2026-01-07 11:58:37,700 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2026-01-07 11:58:38,455 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2026-01-07 11:58:50,145 - dq_error_log - INFO - Starting batch logging for 7439 errors, session: SINGLE_20260107_115631
+2026-01-07 11:58:50,197 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-01-07 11:58:50,249 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-01-07 11:58:50,299 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-01-07 11:58:50,349 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-01-07 11:58:50,401 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-01-07 11:58:50,457 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-01-07 11:58:50,504 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-01-07 11:58:50,560 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-01-07 11:58:50,613 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-01-07 11:58:50,713 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-01-07 11:58:50,714 - dq_error_log - INFO - Progress: 5000/7439 errors processed
+2026-01-07 11:58:50,778 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-01-07 11:58:50,837 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-01-07 11:58:50,915 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-01-07 11:58:50,973 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-01-07 11:58:51,032 - dq_error_log - INFO - Batch 15: Successfully logged 439 errors
+2026-01-07 11:58:51,034 - dq_error_log - INFO - Progress: 7439/7439 errors processed
+2026-01-07 11:58:51,035 - dq_error_log - INFO - COMPLETE: Logged 7439/7439 errors for session SINGLE_20260107_115631
+2026-01-07 11:58:51,037 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2026-01-07 11:58:51,040 - dq_unified - INFO -    Found 6,012 missing mandatory values
+2026-01-07 11:58:51,041 - dq_unified - INFO - 5. Calculating quality score...
+2026-01-07 11:58:51,043 - dq_unified - INFO - Calculating quality score
+2026-01-07 11:58:51,050 - dq_unified - INFO - Quality Score Calculation:
+2026-01-07 11:58:51,052 - dq_unified - INFO -   Total rows: 89,999
+2026-01-07 11:58:51,052 - dq_unified - INFO -   Bad Rows: 6,784
+2026-01-07 11:58:51,053 - dq_unified - INFO -   Good rows (no issues): 83,215
+2026-01-07 11:58:51,054 - dq_unified - INFO -   Quality Score: 92.46%
+2026-01-07 11:58:51,201 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260107_115631
+2026-01-07 11:58:51,417 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260107_115631
+2026-01-07 11:58:51,418 - dq_unified - INFO - Added 200 error logs to results
+2026-01-07 11:58:51,420 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-07 11:58:51,421 - dq_audit - INFO - Starting database insertion for single_source...
+2026-01-07 11:58:51,445 - dq_audit - INFO - Inserted single_source record with ID: 527
+2026-01-07 11:58:51,499 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260107_115631
+2026-01-07 11:58:51,501 - dq_unified - INFO - Added 1 audit logs to results
+2026-01-07 11:58:51,502 - dq_unified - INFO - Analysis completed successfully for Database: postgresql - Table: employee
+2026-01-07 11:58:51,502 - dq_unified - INFO - Final quality score: 92.46%
+2026-01-07 11:58:51,689 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260107_115631
+2026-01-07 11:58:51,846 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260107_115631
+2026-01-07 11:58:51,865 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260107_115631
+2026-01-07 11:58:51,866 - __main__ - INFO - Analysis completed for session SINGLE_20260107_115631
+2026-01-07 11:58:52,050 - __main__ - INFO - Completed with status 200 in 142.910s

@@ -1,0 +1,65 @@
+2025-12-29 12:49:27,962 - root - INFO - CLI Mode Logging Initialized
+2025-12-29 12:49:27,962 - root - INFO - CLI logs will be saved to: logs/dq_framework_20251229_124927.log
+2025-12-29 12:49:27,962 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-29 12:49:27,963 - __main__ - INFO - Starting system resource check
+2025-12-29 12:49:27,971 - __main__ - INFO - Total RAM: 15.7 GB
+2025-12-29 12:49:27,972 - __main__ - INFO - Available RAM: 3.6 GB
+2025-12-29 12:49:27,972 - __main__ - INFO - Memory used: 77.2%
+2025-12-29 12:49:27,972 - __main__ - INFO - Memory status: OK
+2025-12-29 12:49:27,972 - __main__ - INFO - Free disk space: 263.4 GB
+2025-12-29 12:49:27,972 - __main__ - INFO - Disk used: 44.7%
+2025-12-29 12:49:27,973 - __main__ - INFO - Disk space: OK
+2025-12-29 12:49:28,474 - __main__ - INFO - CPU cores: 8
+2025-12-29 12:49:28,474 - __main__ - INFO - CPU usage: 20.2%
+2025-12-29 12:49:28,475 - __main__ - INFO - Python version: 3.12.4
+2025-12-29 12:49:28,475 - __main__ - INFO - System platform: win32
+2025-12-29 12:49:28,475 - __main__ - INFO - User session started at: 2025-12-29 12:49:28.475501
+2025-12-29 12:49:28,475 - __main__ - INFO - Displaying main menu options to user
+2025-12-29 12:49:29,903 - __main__ - INFO - User selected option: 1
+2025-12-29 12:49:29,905 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-29 12:49:29,914 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-29 12:49:29,917 - dq_unified - INFO - Prompting user for data source type
+2025-12-29 12:49:29,918 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-29 12:49:32,157 - dq_unified - INFO - User selected source type: 3
+2025-12-29 12:49:32,160 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-29 12:49:45,805 - dq_unified - INFO - Getting database config from config file
+2025-12-29 12:49:50,915 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2025-12-29 12:51:25,788 - dq_unified - INFO - Database configuration from config file: postgresql, Table: employee
+2025-12-29 12:51:25,789 - dq_unified - INFO - Loading data from DATABASE
+2025-12-29 12:51:25,790 - dq_unified - INFO - Loading data from DATABASE
+2025-12-29 12:51:25,793 - dq_unified - INFO - Loading large database table: employee
+2025-12-29 12:51:26,236 - dq_unified - ERROR - Error loading large database: relation "employee" does not exist
+LINE 1: SELECT COUNT(*) FROM employee
+                             ^
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 181, in load_large_database
+    return LargeDatasetHandler._load_large_postgresql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 211, in _load_large_postgresql
+    cursor.execute(f"SELECT COUNT(*) FROM {db_config['table']}")
+psycopg2.errors.UndefinedTable: relation "employee" does not exist
+LINE 1: SELECT COUNT(*) FROM employee
+                             ^
+
+2025-12-29 12:51:26,241 - dq_unified - ERROR - Error loading data from database: relation "employee" does not exist
+LINE 1: SELECT COUNT(*) FROM employee
+                             ^
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1053, in load_data_from_source
+    df = LargeDatasetHandler.load_large_database(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 181, in load_large_database
+    return LargeDatasetHandler._load_large_postgresql(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 211, in _load_large_postgresql
+    cursor.execute(f"SELECT COUNT(*) FROM {db_config['table']}")
+psycopg2.errors.UndefinedTable: relation "employee" does not exist
+LINE 1: SELECT COUNT(*) FROM employee
+                             ^
+
+2025-12-29 12:51:26,246 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-29 12:51:26,247 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-29 12:51:26,247 - __main__ - INFO - Displaying main menu options to user
+2025-12-29 12:52:52,475 - __main__ - INFO - User selected option: 6
+2025-12-29 12:52:52,475 - __main__ - INFO - User session ended. Duration: 0:03:23.999878
+2025-12-29 12:52:52,476 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

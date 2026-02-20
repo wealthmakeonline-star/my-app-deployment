@@ -1,0 +1,445 @@
+2026-01-09 17:49:48,786 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-09 17:49:48,787 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260109_174948.log
+2026-01-09 17:49:48,915 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-09 17:49:48,915 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-09 17:49:48,918 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 17:49:48,919 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 17:49:48,919 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-09 17:49:48,927 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-09 17:49:48,928 - __main__ - INFO - 📊 Modules available: True
+2026-01-09 17:49:48,928 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-09 17:49:48,929 - __main__ - INFO - 📋 Available endpoints:
+2026-01-09 17:49:48,929 - __main__ - INFO -   GET  /              - API status
+2026-01-09 17:49:48,931 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-09 17:49:48,931 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-09 17:49:48,932 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-09 17:49:48,932 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-09 17:49:48,933 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-09 17:49:48,933 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-09 17:49:48,935 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-09 17:49:48,936 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-09 17:50:02,927 - __main__ - INFO - POST /api/compare - Request started
+2026-01-09 17:50:02,929 - __main__ - INFO - Comparison request - Source: csv, Target: None
+2026-01-09 17:50:02,930 - __main__ - INFO - Comparison analysis request received
+2026-01-09 17:50:02,932 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'csv', 'source_file_path': 'C:\\\\Users\\\\003160\\\\OneDrive - wisseninfotech.com\\\\Documents\\\\DQ-Checks-Shashi\\\\API_Test_Scrips\\\\sorce-target\\\\test_target.csv'}
+2026-01-09 17:50:02,932 - __main__ - INFO - Starting comparison for session CMP_20260109_175002
+2026-01-09 17:50:02,934 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-09 17:50:02,934 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-09 17:50:02,934 - dq_comparison - INFO - 
+==================================================
+2026-01-09 17:50:02,935 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-09 17:50:02,936 - dq_comparison - INFO - ==================================================
+2026-01-09 17:50:02,937 - dq_comparison - INFO - DEBUG load_csv_source called for SOURCE
+2026-01-09 17:50:02,938 - dq_comparison - INFO - DEBUG: Using file_path from 'file_path': C:\\Users\\003160\\OneDrive - wisseninfotech.com\\Documents\\DQ-Checks-Shashi\\API_Test_Scrips\\sorce-target\\test_target.csv
+2026-01-09 17:50:02,950 - dq_comparison - INFO - SOURCE CSV loaded: 50 rows, 8 columns
+2026-01-09 17:50:02,951 - dq_comparison - INFO - 
+==================================================
+2026-01-09 17:50:02,952 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-09 17:50:02,953 - dq_comparison - INFO - ==================================================
+2026-01-09 17:50:02,954 - dq_comparison - INFO - DEBUG load_excel_source called for TARGET
+2026-01-09 17:50:02,954 - dq_comparison - INFO - DEBUG ui_data: {'target_type': 'excel', 'target_file_path': 'C:\\\\Users\\\\003160\\\\OneDrive - wisseninfotech.com\\\\Documents\\\\DQ-Checks-Shashi\\\\API_Test_Scrips\\\\sorce-target\\\\test_source.xlsx'}
+2026-01-09 17:50:02,956 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-09 17:50:02,956 - dq_comparison - INFO - DEBUG Found target_file_path in ui_data: C:\\Users\\003160\\OneDrive - wisseninfotech.com\\Documents\\DQ-Checks-Shashi\\API_Test_Scrips\\sorce-target\\test_source.xlsx
+2026-01-09 17:50:04,160 - dq_comparison - INFO - TARGET Excel loaded: 50 rows, 8 columns
+2026-01-09 17:50:04,161 - dq_comparison - INFO - Source data loaded: 50 rows, 8 columns
+2026-01-09 17:50:04,162 - dq_comparison - INFO - Target data loaded: 50 rows, 8 columns
+2026-01-09 17:50:04,164 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-09 17:50:04,166 - dq_comparison - INFO - Source columns (original): ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-09 17:50:04,166 - dq_comparison - INFO - Target columns (original): ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-09 17:50:04,167 - dq_comparison - INFO - Common columns lowercased: ['customerid', 'phonenumber', 'email', 'salary', 'firstname', 'joindate', 'address', 'lastname']
+2026-01-09 17:50:04,169 - dq_comparison - INFO - Found 8 common columns between source and target (case-insensitive)
+2026-01-09 17:50:04,170 - dq_comparison - INFO - User column selection input: all
+2026-01-09 17:50:04,171 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-09 17:50:04,172 - dq_comparison - INFO - Selected 8 columns for comparison: ['CustomerID', 'PhoneNumber', 'Email', 'Salary', 'FirstName']...
+2026-01-09 17:50:04,173 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-09 17:50:04,174 - dq_comparison - INFO - Report details - Source: CSV: test_target.csv, Target: Excel: test_source.xlsx (Sheet1), Selected columns: 8
+2026-01-09 17:50:04,175 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-09 17:50:04,176 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 17:50:04,312 - dq_error_log - INFO - Database connection successful
+2026-01-09 17:50:04,313 - dq_comparison - INFO - Session ID: CMP_20260109_175004
+2026-01-09 17:50:04,313 - dq_comparison - INFO - ✅ Row counts match: 50 rows
+2026-01-09 17:50:04,314 - dq_comparison - INFO - Comparing column structures...
+2026-01-09 17:50:04,315 - dq_comparison - WARNING - Found 1 incompatible data type mismatches
+2026-01-09 17:50:04,315 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-09 17:50:04,327 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-09 17:50:04,327 - dq_comparison - INFO - Checking key fields: ['CustomerID', 'CustomerID']
+2026-01-09 17:50:04,329 - dq_comparison - INFO - Primary key validation complete. Passed: True
+2026-01-09 17:50:04,330 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-09 17:50:04,351 - dq_comparison - INFO - Table metadata comparison complete. Match: True
+2026-01-09 17:50:04,353 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-09 17:50:04,389 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-09 17:50:04,390 - dq_comparison - INFO - Column: CustomerID
+2026-01-09 17:50:04,391 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: 1
+2026-01-09 17:50:04,391 - dq_comparison - INFO -   Target type: <class 'numpy.int64'>, value: 1
+2026-01-09 17:50:04,392 - dq_comparison - INFO -   Normalized: '1' vs '1'
+2026-01-09 17:50:04,393 - dq_comparison - INFO -   Match: True
+2026-01-09 17:50:04,393 - dq_comparison - INFO - Column: PhoneNumber
+2026-01-09 17:50:04,394 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: -6089
+2026-01-09 17:50:04,394 - dq_comparison - INFO -   Target type: <class 'str'>, value: +1-486-229-5375
+2026-01-09 17:50:04,395 - dq_comparison - INFO -   Normalized: '6089' vs '14862295375'
+2026-01-09 17:50:04,396 - dq_comparison - INFO -   Match: False
+2026-01-09 17:50:04,396 - dq_comparison - INFO - Column: Email
+2026-01-09 17:50:04,397 - dq_comparison - INFO -   Source type: <class 'str'>, value: mark.morris@example.com
+2026-01-09 17:50:04,397 - dq_comparison - INFO -   Target type: <class 'str'>, value: mark.morris@example.com
+2026-01-09 17:50:04,398 - dq_comparison - INFO -   Normalized: 'mark.morris@example.com' vs 'mark.morris@example.com'
+2026-01-09 17:50:04,398 - dq_comparison - INFO -   Match: True
+2026-01-09 17:50:04,399 - dq_comparison - INFO - Source DF columns: ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-09 17:50:04,399 - dq_comparison - INFO - Target DF columns: ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-09 17:50:04,400 - dq_comparison - INFO - Selected columns for comparison: ['CustomerID', 'PhoneNumber', 'Email', 'Salary', 'FirstName', 'JoinDate', 'Address', 'LastName']
+2026-01-09 17:50:04,400 - dq_comparison - INFO - Using 8 common columns for hash comparison
+2026-01-09 17:50:04,401 - dq_comparison - INFO - Source columns: ['CustomerID', 'PhoneNumber', 'Email', 'Salary', 'FirstName', 'JoinDate', 'Address', 'LastName']
+2026-01-09 17:50:04,401 - dq_comparison - INFO - Target columns: ['CustomerID', 'PhoneNumber', 'Email', 'Salary', 'FirstName', 'JoinDate', 'Address', 'LastName']
+2026-01-09 17:50:04,402 - dq_comparison - INFO - Generating hashes for source data (50 rows)...
+2026-01-09 17:50:04,403 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '1' -> '1' | PhoneNumber: '-6089' -> '6089' | Email: 'mark.morris@example.com' -> 'mark.morris@example.com' | Salary: '111916' -> '111916' | FirstName: 'Mark' -> 'mark'
+2026-01-09 17:50:04,403 - dq_comparison - INFO - DEBUG HASH STRING: 1|6089|mark.morris@example.com|111916|mark...
+2026-01-09 17:50:04,404 - dq_comparison - INFO - DEBUG HASH RESULT: e7372d77...
+2026-01-09 17:50:04,405 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '2' -> '2' | PhoneNumber: '-3294' -> '3294' | Email: 'dennis.owens@example.com' -> 'dennis.owens@example.com' | Salary: '39264' -> '39264' | FirstName: 'Dennis' -> 'dennis'
+2026-01-09 17:50:04,405 - dq_comparison - INFO - DEBUG HASH STRING: 2|3294|dennis.owens@example.com|39264|dennis...
+2026-01-09 17:50:04,407 - dq_comparison - INFO - DEBUG HASH RESULT: 4bd8b5c8...
+2026-01-09 17:50:04,407 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '3' -> '3' | PhoneNumber: '-10861' -> '10861' | Email: 'felicia.hatfield@example.com' -> 'felicia.hatfield@example.com' | Salary: '41191' -> '41191' | FirstName: 'Felicia' -> 'felicia'
+2026-01-09 17:50:04,407 - dq_comparison - INFO - DEBUG HASH STRING: 3|10861|felicia.hatfield@example.com|41191|felicia...
+2026-01-09 17:50:04,408 - dq_comparison - INFO - DEBUG HASH RESULT: d3976629...
+2026-01-09 17:50:04,409 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '4' -> '4' | PhoneNumber: '-10469' -> '10469' | Email: 'michael.jenkins@example.com' -> 'michael.jenkins@example.com' | Salary: '116934' -> '116934' | FirstName: 'Michael' -> 'michael'
+2026-01-09 17:50:04,409 - dq_comparison - INFO - DEBUG HASH STRING: 4|10469|michael.jenkins@example.com|116934|michael...
+2026-01-09 17:50:04,410 - dq_comparison - INFO - DEBUG HASH RESULT: 66490aa4...
+2026-01-09 17:50:04,410 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '5' -> '5' | PhoneNumber: '-6209' -> '6209' | Email: 'nicholas.smith@example.com' -> 'nicholas.smith@example.com' | Salary: '46558' -> '46558' | FirstName: 'Nicholas' -> 'nicholas'
+2026-01-09 17:50:04,411 - dq_comparison - INFO - DEBUG HASH STRING: 5|6209|nicholas.smith@example.com|46558|nicholas...
+2026-01-09 17:50:04,411 - dq_comparison - INFO - DEBUG HASH RESULT: 6e8b38ba...
+2026-01-09 17:50:04,412 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '6' -> '6' | PhoneNumber: '-5301' -> '5301' | Email: 'joseph.guerra@example.com' -> 'joseph.guerra@example.com' | Salary: '79928' -> '79928' | FirstName: 'Joseph' -> 'joseph'
+2026-01-09 17:50:04,413 - dq_comparison - INFO - DEBUG HASH STRING: 6|5301|joseph.guerra@example.com|79928|joseph...
+2026-01-09 17:50:04,413 - dq_comparison - INFO - DEBUG HASH RESULT: 10e7ed9e...
+2026-01-09 17:50:04,414 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '7' -> '7' | PhoneNumber: '-3679' -> '3679' | Email: 'gabrielle.bell@example.com' -> 'gabrielle.bell@example.com' | Salary: '85292' -> '85292' | FirstName: 'Gabrielle' -> 'gabrielle'
+2026-01-09 17:50:04,414 - dq_comparison - INFO - DEBUG HASH STRING: 7|3679|gabrielle.bell@example.com|85292|gabrielle...
+2026-01-09 17:50:04,415 - dq_comparison - INFO - DEBUG HASH RESULT: 7e1002a9...
+2026-01-09 17:50:04,416 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '8' -> '8' | PhoneNumber: '-9013' -> '9013' | Email: 'joel.barber@example.com' -> 'joel.barber@example.com' | Salary: '50803' -> '50803' | FirstName: 'Joel' -> 'joel'
+2026-01-09 17:50:04,417 - dq_comparison - INFO - DEBUG HASH STRING: 8|9013|joel.barber@example.com|50803|joel...
+2026-01-09 17:50:04,417 - dq_comparison - INFO - DEBUG HASH RESULT: 6b97c079...
+2026-01-09 17:50:04,418 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '9' -> '9' | PhoneNumber: '-2926' -> '2926' | Email: 'autumn.flores@example.com' -> 'autumn.flores@example.com' | Salary: '84264' -> '84264' | FirstName: 'Autumn' -> 'autumn'
+2026-01-09 17:50:04,419 - dq_comparison - INFO - DEBUG HASH STRING: 9|2926|autumn.flores@example.com|84264|autumn...
+2026-01-09 17:50:04,419 - dq_comparison - INFO - DEBUG HASH RESULT: cef668e4...
+2026-01-09 17:50:04,420 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '10' -> '10' | PhoneNumber: '-6066' -> '6066' | Email: 'jared.andrews@example.com' -> 'jared.andrews@example.com' | Salary: '119153' -> '119153' | FirstName: 'Jared' -> 'jared'
+2026-01-09 17:50:04,420 - dq_comparison - INFO - DEBUG HASH STRING: 10|6066|jared.andrews@example.com|119153|jared...
+2026-01-09 17:50:04,421 - dq_comparison - INFO - DEBUG HASH RESULT: 5f7ba110...
+2026-01-09 17:50:04,421 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '11' -> '11' | PhoneNumber: '-8404' -> '8404' | Email: 'jason.kim@example.com' -> 'jason.kim@example.com' | Salary: '39331' -> '39331' | FirstName: 'Jason' -> 'jason'
+2026-01-09 17:50:04,422 - dq_comparison - INFO - DEBUG HASH STRING: 11|8404|jason.kim@example.com|39331|jason...
+2026-01-09 17:50:04,422 - dq_comparison - INFO - DEBUG HASH RESULT: a65da86a...
+2026-01-09 17:50:04,424 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '12' -> '12' | PhoneNumber: '-6989' -> '6989' | Email: 'ryan.barton@example.com' -> 'ryan.barton@example.com' | Salary: '48099' -> '48099' | FirstName: 'Ryan' -> 'ryan'
+2026-01-09 17:50:04,424 - dq_comparison - INFO - DEBUG HASH STRING: 12|6989|ryan.barton@example.com|48099|ryan...
+2026-01-09 17:50:04,425 - dq_comparison - INFO - DEBUG HASH RESULT: e769e158...
+2026-01-09 17:50:04,426 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '13' -> '13' | PhoneNumber: '-2739' -> '2739' | Email: 'michael.williams@example.com' -> 'michael.williams@example.com' | Salary: '95775' -> '95775' | FirstName: 'Michael' -> 'michael'
+2026-01-09 17:50:04,426 - dq_comparison - INFO - DEBUG HASH STRING: 13|2739|michael.williams@example.com|95775|michael...
+2026-01-09 17:50:04,427 - dq_comparison - INFO - DEBUG HASH RESULT: 7f87c92b...
+2026-01-09 17:50:04,427 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '14' -> '14' | PhoneNumber: '-5970' -> '5970' | Email: 'jennifer.white@example.com' -> 'jennifer.white@example.com' | Salary: '83452' -> '83452' | FirstName: 'Jennifer' -> 'jennifer'
+2026-01-09 17:50:04,428 - dq_comparison - INFO - DEBUG HASH STRING: 14|5970|jennifer.white@example.com|83452|jennifer...
+2026-01-09 17:50:04,428 - dq_comparison - INFO - DEBUG HASH RESULT: e060a0f3...
+2026-01-09 17:50:04,429 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '15' -> '15' | PhoneNumber: '-3211' -> '3211' | Email: 'shawn.park@example.com' -> 'shawn.park@example.com' | Salary: '98946' -> '98946' | FirstName: 'Shawn' -> 'shawn'
+2026-01-09 17:50:04,429 - dq_comparison - INFO - DEBUG HASH STRING: 15|3211|shawn.park@example.com|98946|shawn...
+2026-01-09 17:50:04,430 - dq_comparison - INFO - DEBUG HASH RESULT: 8eac5a55...
+2026-01-09 17:50:04,430 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '16' -> '16' | PhoneNumber: '-6509' -> '6509' | Email: 'jill.robertson@example.com' -> 'jill.robertson@example.com' | Salary: '49573' -> '49573' | FirstName: 'Jill' -> 'jill'
+2026-01-09 17:50:04,431 - dq_comparison - INFO - DEBUG HASH STRING: 16|6509|jill.robertson@example.com|49573|jill...
+2026-01-09 17:50:04,431 - dq_comparison - INFO - DEBUG HASH RESULT: 8223aab6...
+2026-01-09 17:50:04,432 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '17' -> '17' | PhoneNumber: '-6587' -> '6587' | Email: 'robert.lyons@example.com' -> 'robert.lyons@example.com' | Salary: '36536' -> '36536' | FirstName: 'Robert' -> 'robert'
+2026-01-09 17:50:04,432 - dq_comparison - INFO - DEBUG HASH STRING: 17|6587|robert.lyons@example.com|36536|robert...
+2026-01-09 17:50:04,433 - dq_comparison - INFO - DEBUG HASH RESULT: 2a7212b7...
+2026-01-09 17:50:04,434 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '18' -> '18' | PhoneNumber: '-7685' -> '7685' | Email: 'jacob.acevedo@example.com' -> 'jacob.acevedo@example.com' | Salary: '34641' -> '34641' | FirstName: 'Jacob' -> 'jacob'
+2026-01-09 17:50:04,434 - dq_comparison - INFO - DEBUG HASH STRING: 18|7685|jacob.acevedo@example.com|34641|jacob...
+2026-01-09 17:50:04,435 - dq_comparison - INFO - DEBUG HASH RESULT: 40becfc2...
+2026-01-09 17:50:04,437 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '19' -> '19' | PhoneNumber: '-10790' -> '10790' | Email: 'christina.park@example.com' -> 'christina.park@example.com' | Salary: '106994' -> '106994' | FirstName: 'Christina' -> 'christina'
+2026-01-09 17:50:04,437 - dq_comparison - INFO - DEBUG HASH STRING: 19|10790|christina.park@example.com|106994|christina...
+2026-01-09 17:50:04,437 - dq_comparison - INFO - DEBUG HASH RESULT: 0e2a2617...
+2026-01-09 17:50:04,438 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '20' -> '20' | PhoneNumber: '-5015' -> '5015' | Email: 'barbara.morgan@example.com' -> 'barbara.morgan@example.com' | Salary: '38187' -> '38187' | FirstName: 'Barbara' -> 'barbara'
+2026-01-09 17:50:04,439 - dq_comparison - INFO - DEBUG HASH STRING: 20|5015|barbara.morgan@example.com|38187|barbara...
+2026-01-09 17:50:04,439 - dq_comparison - INFO - DEBUG HASH RESULT: 0a5e98ea...
+2026-01-09 17:50:04,440 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '21' -> '21' | PhoneNumber: '403564312' -> '403564312' | Email: 'april.lee@example.com' -> 'april.lee@example.com' | Salary: '71935' -> '71935' | FirstName: 'April' -> 'april'
+2026-01-09 17:50:04,440 - dq_comparison - INFO - DEBUG HASH STRING: 21|403564312|april.lee@example.com|71935|april...
+2026-01-09 17:50:04,441 - dq_comparison - INFO - DEBUG HASH RESULT: add5db5d...
+2026-01-09 17:50:04,442 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '22' -> '22' | PhoneNumber: '596727654' -> '596727654' | Email: 'christina.morrison@example.com' -> 'christina.morrison@example.com' | Salary: '100357' -> '100357' | FirstName: 'Christina' -> 'christina'
+2026-01-09 17:50:04,442 - dq_comparison - INFO - DEBUG HASH STRING: 22|596727654|christina.morrison@example.com|100357|christina...
+2026-01-09 17:50:04,442 - dq_comparison - INFO - DEBUG HASH RESULT: 60bfffcf...
+2026-01-09 17:50:04,444 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '23' -> '23' | PhoneNumber: '669882738' -> '669882738' | Email: 'jennifer.morgan@example.com' -> 'jennifer.morgan@example.com' | Salary: '74962' -> '74962' | FirstName: 'Jennifer' -> 'jennifer'
+2026-01-09 17:50:04,444 - dq_comparison - INFO - DEBUG HASH STRING: 23|669882738|jennifer.morgan@example.com|74962|jennifer...
+2026-01-09 17:50:04,444 - dq_comparison - INFO - DEBUG HASH RESULT: c42d86bc...
+2026-01-09 17:50:04,446 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '24' -> '24' | PhoneNumber: '706194796' -> '706194796' | Email: 'david.duran@example.com' -> 'david.duran@example.com' | Salary: '98121' -> '98121' | FirstName: 'David' -> 'david'
+2026-01-09 17:50:04,446 - dq_comparison - INFO - DEBUG HASH STRING: 24|706194796|david.duran@example.com|98121|david...
+2026-01-09 17:50:04,446 - dq_comparison - INFO - DEBUG HASH RESULT: 7a01af78...
+2026-01-09 17:50:04,447 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '25' -> '25' | PhoneNumber: '971341309' -> '971341309' | Email: 'jordan.wood@example.com' -> 'jordan.wood@example.com' | Salary: '45422' -> '45422' | FirstName: 'Jordan' -> 'jordan'
+2026-01-09 17:50:04,447 - dq_comparison - INFO - DEBUG HASH STRING: 25|971341309|jordan.wood@example.com|45422|jordan...
+2026-01-09 17:50:04,447 - dq_comparison - INFO - DEBUG HASH RESULT: de310c59...
+2026-01-09 17:50:04,448 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '26' -> '26' | PhoneNumber: '899898226' -> '899898226' | Email: 'jeffrey.freeman@example.com' -> 'jeffrey.freeman@example.com' | Salary: '111634' -> '111634' | FirstName: 'Jeffrey' -> 'jeffrey'
+2026-01-09 17:50:04,449 - dq_comparison - INFO - DEBUG HASH STRING: 26|899898226|jeffrey.freeman@example.com|111634|jeffrey...
+2026-01-09 17:50:04,450 - dq_comparison - INFO - DEBUG HASH RESULT: 5ccfbe5e...
+2026-01-09 17:50:04,451 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '27' -> '27' | PhoneNumber: '622773601' -> '622773601' | Email: 'elizabeth.wright@example.com' -> 'elizabeth.wright@example.com' | Salary: '99097' -> '99097' | FirstName: 'Elizabeth' -> 'elizabeth'
+2026-01-09 17:50:04,452 - dq_comparison - INFO - DEBUG HASH STRING: 27|622773601|elizabeth.wright@example.com|99097|elizabeth...
+2026-01-09 17:50:04,452 - dq_comparison - INFO - DEBUG HASH RESULT: 2a7cd2f5...
+2026-01-09 17:50:04,453 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '28' -> '28' | PhoneNumber: '399227427' -> '399227427' | Email: 'martin.reed@example.com' -> 'martin.reed@example.com' | Salary: '114429' -> '114429' | FirstName: 'Martin' -> 'martin'
+2026-01-09 17:50:04,453 - dq_comparison - INFO - DEBUG HASH STRING: 28|399227427|martin.reed@example.com|114429|martin...
+2026-01-09 17:50:04,453 - dq_comparison - INFO - DEBUG HASH RESULT: c64a3f95...
+2026-01-09 17:50:04,454 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '29' -> '29' | PhoneNumber: '219444645' -> '219444645' | Email: 'elizabeth.lane@example.com' -> 'elizabeth.lane@example.com' | Salary: '93270' -> '93270' | FirstName: 'Elizabeth' -> 'elizabeth'
+2026-01-09 17:50:04,454 - dq_comparison - INFO - DEBUG HASH STRING: 29|219444645|elizabeth.lane@example.com|93270|elizabeth...
+2026-01-09 17:50:04,455 - dq_comparison - INFO - DEBUG HASH RESULT: 4b63c140...
+2026-01-09 17:50:04,455 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '30' -> '30' | PhoneNumber: '195605788' -> '195605788' | Email: 'michael.jordan@example.com' -> 'michael.jordan@example.com' | Salary: '76901' -> '76901' | FirstName: 'Michael' -> 'michael'
+2026-01-09 17:50:04,456 - dq_comparison - INFO - DEBUG HASH STRING: 30|195605788|michael.jordan@example.com|76901|michael...
+2026-01-09 17:50:04,457 - dq_comparison - INFO - DEBUG HASH RESULT: 643f585b...
+2026-01-09 17:50:04,458 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '31' -> '31' | PhoneNumber: '-10910' -> '10910' | Email: 'edward.ramirez@example.com' -> 'edward.ramirez@example.com' | Salary: '40447' -> '40447' | FirstName: 'Edward' -> 'edward'
+2026-01-09 17:50:04,458 - dq_comparison - INFO - DEBUG HASH STRING: 31|10910|edward.ramirez@example.com|40447|edward...
+2026-01-09 17:50:04,459 - dq_comparison - INFO - DEBUG HASH RESULT: f25b2be6...
+2026-01-09 17:50:04,459 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '32' -> '32' | PhoneNumber: '-7479' -> '7479' | Email: 'linda.melendez@example.com' -> 'linda.melendez@example.com' | Salary: '117596' -> '117596' | FirstName: 'Linda' -> 'linda'
+2026-01-09 17:50:04,460 - dq_comparison - INFO - DEBUG HASH STRING: 32|7479|linda.melendez@example.com|117596|linda...
+2026-01-09 17:50:04,461 - dq_comparison - INFO - DEBUG HASH RESULT: 5eafc4cf...
+2026-01-09 17:50:04,462 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '33' -> '33' | PhoneNumber: '-3980' -> '3980' | Email: 'douglas.smith@example.com' -> 'douglas.smith@example.com' | Salary: '44106' -> '44106' | FirstName: 'Douglas' -> 'douglas'
+2026-01-09 17:50:04,462 - dq_comparison - INFO - DEBUG HASH STRING: 33|3980|douglas.smith@example.com|44106|douglas...
+2026-01-09 17:50:04,463 - dq_comparison - INFO - DEBUG HASH RESULT: 0438b1e6...
+2026-01-09 17:50:04,464 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '34' -> '34' | PhoneNumber: '-9634' -> '9634' | Email: 'nathaniel.white@example.com' -> 'nathaniel.white@example.com' | Salary: '85426' -> '85426' | FirstName: 'Nathaniel' -> 'nathaniel'
+2026-01-09 17:50:04,464 - dq_comparison - INFO - DEBUG HASH STRING: 34|9634|nathaniel.white@example.com|85426|nathaniel...
+2026-01-09 17:50:04,465 - dq_comparison - INFO - DEBUG HASH RESULT: fd118d67...
+2026-01-09 17:50:04,466 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '35' -> '35' | PhoneNumber: '-5759' -> '5759' | Email: 'connie.nguyen@example.com' -> 'connie.nguyen@example.com' | Salary: '88819' -> '88819' | FirstName: 'Connie' -> 'connie'
+2026-01-09 17:50:04,466 - dq_comparison - INFO - DEBUG HASH STRING: 35|5759|connie.nguyen@example.com|88819|connie...
+2026-01-09 17:50:04,467 - dq_comparison - INFO - DEBUG HASH RESULT: 1269554b...
+2026-01-09 17:50:04,468 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '36' -> '36' | PhoneNumber: '-8942' -> '8942' | Email: 'lisa.woods@example.com' -> 'lisa.woods@example.com' | Salary: '61162' -> '61162' | FirstName: 'Lisa' -> 'lisa'
+2026-01-09 17:50:04,468 - dq_comparison - INFO - DEBUG HASH STRING: 36|8942|lisa.woods@example.com|61162|lisa...
+2026-01-09 17:50:04,469 - dq_comparison - INFO - DEBUG HASH RESULT: 47c6a673...
+2026-01-09 17:50:04,470 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '37' -> '37' | PhoneNumber: '-2948' -> '2948' | Email: 'jeanne.nichols@example.com' -> 'jeanne.nichols@example.com' | Salary: '98239' -> '98239' | FirstName: 'Jeanne' -> 'jeanne'
+2026-01-09 17:50:04,470 - dq_comparison - INFO - DEBUG HASH STRING: 37|2948|jeanne.nichols@example.com|98239|jeanne...
+2026-01-09 17:50:04,471 - dq_comparison - INFO - DEBUG HASH RESULT: 02faa0ba...
+2026-01-09 17:50:04,473 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '38' -> '38' | PhoneNumber: '-3785' -> '3785' | Email: 'logan.gross@example.com' -> 'logan.gross@example.com' | Salary: '60926' -> '60926' | FirstName: 'Logan' -> 'logan'
+2026-01-09 17:50:04,473 - dq_comparison - INFO - DEBUG HASH STRING: 38|3785|logan.gross@example.com|60926|logan...
+2026-01-09 17:50:04,473 - dq_comparison - INFO - DEBUG HASH RESULT: 5380e58c...
+2026-01-09 17:50:04,474 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '39' -> '39' | PhoneNumber: '-5948' -> '5948' | Email: 'kevin.yates@example.com' -> 'kevin.yates@example.com' | Salary: '111507' -> '111507' | FirstName: 'Kevin' -> 'kevin'
+2026-01-09 17:50:04,475 - dq_comparison - INFO - DEBUG HASH STRING: 39|5948|kevin.yates@example.com|111507|kevin...
+2026-01-09 17:50:04,475 - dq_comparison - INFO - DEBUG HASH RESULT: 3cd1baa3...
+2026-01-09 17:50:04,476 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '40' -> '40' | PhoneNumber: '-8441' -> '8441' | Email: 'lisa.moore@example.com' -> 'lisa.moore@example.com' | Salary: '34060' -> '34060' | FirstName: 'Lisa' -> 'lisa'
+2026-01-09 17:50:04,476 - dq_comparison - INFO - DEBUG HASH STRING: 40|8441|lisa.moore@example.com|34060|lisa...
+2026-01-09 17:50:04,477 - dq_comparison - INFO - DEBUG HASH RESULT: ab72ad06...
+2026-01-09 17:50:04,478 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '41' -> '41' | PhoneNumber: '-7453' -> '7453' | Email: 'scott.ashley@example.com' -> 'scott.ashley@example.com' | Salary: '113363' -> '113363' | FirstName: 'Scott' -> 'scott'
+2026-01-09 17:50:04,478 - dq_comparison - INFO - DEBUG HASH STRING: 41|7453|scott.ashley@example.com|113363|scott...
+2026-01-09 17:50:04,479 - dq_comparison - INFO - DEBUG HASH RESULT: 5b25eaf0...
+2026-01-09 17:50:04,479 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '42' -> '42' | PhoneNumber: '-11032' -> '11032' | Email: 'david.baker@example.com' -> 'david.baker@example.com' | Salary: '93681' -> '93681' | FirstName: 'David' -> 'david'
+2026-01-09 17:50:04,480 - dq_comparison - INFO - DEBUG HASH STRING: 42|11032|david.baker@example.com|93681|david...
+2026-01-09 17:50:04,480 - dq_comparison - INFO - DEBUG HASH RESULT: e62fbb39...
+2026-01-09 17:50:04,482 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '43' -> '43' | PhoneNumber: '-3543' -> '3543' | Email: 'rachel.rodriguez@example.com' -> 'rachel.rodriguez@example.com' | Salary: '77279' -> '77279' | FirstName: 'Rachel' -> 'rachel'
+2026-01-09 17:50:04,482 - dq_comparison - INFO - DEBUG HASH STRING: 43|3543|rachel.rodriguez@example.com|77279|rachel...
+2026-01-09 17:50:04,482 - dq_comparison - INFO - DEBUG HASH RESULT: 341c974a...
+2026-01-09 17:50:04,483 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '44' -> '44' | PhoneNumber: '-10449' -> '10449' | Email: 'jonathan.brown@example.com' -> 'jonathan.brown@example.com' | Salary: '84295' -> '84295' | FirstName: 'Jonathan' -> 'jonathan'
+2026-01-09 17:50:04,483 - dq_comparison - INFO - DEBUG HASH STRING: 44|10449|jonathan.brown@example.com|84295|jonathan...
+2026-01-09 17:50:04,484 - dq_comparison - INFO - DEBUG HASH RESULT: 3020c9fc...
+2026-01-09 17:50:04,484 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '45' -> '45' | PhoneNumber: '-4190' -> '4190' | Email: 'stephanie.jordan@example.com' -> 'stephanie.jordan@example.com' | Salary: '62444' -> '62444' | FirstName: 'Stephanie' -> 'stephanie'
+2026-01-09 17:50:04,485 - dq_comparison - INFO - DEBUG HASH STRING: 45|4190|stephanie.jordan@example.com|62444|stephanie...
+2026-01-09 17:50:04,485 - dq_comparison - INFO - DEBUG HASH RESULT: f99ea7a0...
+2026-01-09 17:50:04,486 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '46' -> '46' | PhoneNumber: '-4947' -> '4947' | Email: 'kathleen.medina@example.com' -> 'kathleen.medina@example.com' | Salary: '108150' -> '108150' | FirstName: 'Kathleen' -> 'kathleen'
+2026-01-09 17:50:04,487 - dq_comparison - INFO - DEBUG HASH STRING: 46|4947|kathleen.medina@example.com|108150|kathleen...
+2026-01-09 17:50:04,487 - dq_comparison - INFO - DEBUG HASH RESULT: 81f39a09...
+2026-01-09 17:50:04,488 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '47' -> '47' | PhoneNumber: '-10213' -> '10213' | Email: 'donna.melton@example.com' -> 'donna.melton@example.com' | Salary: '55606' -> '55606' | FirstName: 'Donna' -> 'donna'
+2026-01-09 17:50:04,488 - dq_comparison - INFO - DEBUG HASH STRING: 47|10213|donna.melton@example.com|55606|donna...
+2026-01-09 17:50:04,489 - dq_comparison - INFO - DEBUG HASH RESULT: c5297964...
+2026-01-09 17:50:04,490 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '48' -> '48' | PhoneNumber: '-9672' -> '9672' | Email: 'connor.hull@example.com' -> 'connor.hull@example.com' | Salary: '65948' -> '65948' | FirstName: 'Connor' -> 'connor'
+2026-01-09 17:50:04,490 - dq_comparison - INFO - DEBUG HASH STRING: 48|9672|connor.hull@example.com|65948|connor...
+2026-01-09 17:50:04,491 - dq_comparison - INFO - DEBUG HASH RESULT: 7fa8e818...
+2026-01-09 17:50:04,492 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '49' -> '49' | PhoneNumber: '-6568' -> '6568' | Email: 'stacey.jacobs@example.com' -> 'stacey.jacobs@example.com' | Salary: '38311' -> '38311' | FirstName: 'Stacey' -> 'stacey'
+2026-01-09 17:50:04,492 - dq_comparison - INFO - DEBUG HASH STRING: 49|6568|stacey.jacobs@example.com|38311|stacey...
+2026-01-09 17:50:04,493 - dq_comparison - INFO - DEBUG HASH RESULT: 6c4729f9...
+2026-01-09 17:50:04,493 - dq_comparison - INFO - DEBUG HASH ROW: CustomerID: '50' -> '50' | PhoneNumber: '-3462' -> '3462' | Email: 'mark.lester@example.com' -> 'mark.lester@example.com' | Salary: '37605' -> '37605' | FirstName: 'Mark' -> 'mark'
+2026-01-09 17:50:04,494 - dq_comparison - INFO - DEBUG HASH STRING: 50|3462|mark.lester@example.com|37605|mark...
+2026-01-09 17:50:04,494 - dq_comparison - INFO - DEBUG HASH RESULT: 5bc9f44e...
+2026-01-09 17:50:04,495 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-09 17:50:04,495 - dq_comparison - INFO - Hash 1: e7372d77bb38078e... (sample row 0)
+2026-01-09 17:50:04,496 - dq_comparison - INFO - Hash 2: 4bd8b5c8dc104763... (sample row 1)
+2026-01-09 17:50:04,496 - dq_comparison - INFO - Hash 3: d397662937c9bf12... (sample row 2)
+2026-01-09 17:50:04,497 - dq_comparison - INFO - Generating hashes for target data (50 rows)...
+2026-01-09 17:50:04,507 - dq_comparison - INFO - 
+======================================================================
+2026-01-09 17:50:04,508 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-09 17:50:04,508 - dq_comparison - INFO - ======================================================================
+2026-01-09 17:50:04,509 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-09 17:50:04,510 - dq_comparison - INFO - Column 'CustomerID' → 'CustomerID':
+2026-01-09 17:50:04,511 - dq_comparison - INFO -   Source: '1' (type: int64) → '1'
+2026-01-09 17:50:04,511 - dq_comparison - INFO -   Target: '1' (type: int64) → '1'
+2026-01-09 17:50:04,513 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,514 - dq_comparison - INFO - Column 'PhoneNumber' → 'PhoneNumber':
+2026-01-09 17:50:04,514 - dq_comparison - INFO -   Source: '-6089' (type: int64) → '6089'
+2026-01-09 17:50:04,515 - dq_comparison - INFO -   Target: '+1-486-229-5375' (type: str) → '14862295375'
+2026-01-09 17:50:04,516 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-09 17:50:04,516 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-09 17:50:04,517 - dq_comparison - INFO -   Source: 'mark.morris@example.com' (type: str) → 'mark.morris@example.com'
+2026-01-09 17:50:04,517 - dq_comparison - INFO -   Target: 'mark.morris@example.com' (type: str) → 'mark.morris@example.com'
+2026-01-09 17:50:04,518 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,519 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-09 17:50:04,519 - dq_comparison - INFO -   Source: '111916' (type: int64) → '111916'
+2026-01-09 17:50:04,519 - dq_comparison - INFO -   Target: '111916' (type: int64) → '111916'
+2026-01-09 17:50:04,520 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,520 - dq_comparison - INFO - Column 'FirstName' → 'FirstName':
+2026-01-09 17:50:04,521 - dq_comparison - INFO -   Source: 'Mark' (type: str) → 'mark'
+2026-01-09 17:50:04,522 - dq_comparison - INFO -   Target: 'Mark' (type: str) → 'mark'
+2026-01-09 17:50:04,523 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,523 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-09 17:50:04,524 - dq_comparison - INFO - Source hash string start: 1|6089|mark.morris@example.com...
+2026-01-09 17:50:04,525 - dq_comparison - INFO - Target hash string start: 1|14862295375|mark.morris@example.com...
+2026-01-09 17:50:04,526 - dq_comparison - INFO - Same? ❌ NO
+2026-01-09 17:50:04,526 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-09 17:50:04,528 - dq_comparison - INFO - Column 'CustomerID' → 'CustomerID':
+2026-01-09 17:50:04,528 - dq_comparison - INFO -   Source: '2' (type: int64) → '2'
+2026-01-09 17:50:04,529 - dq_comparison - INFO -   Target: '2' (type: int64) → '2'
+2026-01-09 17:50:04,530 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,531 - dq_comparison - INFO - Column 'PhoneNumber' → 'PhoneNumber':
+2026-01-09 17:50:04,532 - dq_comparison - INFO -   Source: '-3294' (type: int64) → '3294'
+2026-01-09 17:50:04,532 - dq_comparison - INFO -   Target: '+1-844-558-1893' (type: str) → '18445581893'
+2026-01-09 17:50:04,533 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-09 17:50:04,533 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-09 17:50:04,533 - dq_comparison - INFO -   Source: 'dennis.owens@example.com' (type: str) → 'dennis.owens@example.com'
+2026-01-09 17:50:04,535 - dq_comparison - INFO -   Target: 'dennis.owens@example.com' (type: str) → 'dennis.owens@example.com'
+2026-01-09 17:50:04,535 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,536 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-09 17:50:04,537 - dq_comparison - INFO -   Source: '39264' (type: int64) → '39264'
+2026-01-09 17:50:04,537 - dq_comparison - INFO -   Target: '39264' (type: int64) → '39264'
+2026-01-09 17:50:04,538 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,538 - dq_comparison - INFO - Column 'FirstName' → 'FirstName':
+2026-01-09 17:50:04,538 - dq_comparison - INFO -   Source: 'Dennis' (type: str) → 'dennis'
+2026-01-09 17:50:04,539 - dq_comparison - INFO -   Target: 'Dennis' (type: str) → 'dennis'
+2026-01-09 17:50:04,540 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,540 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-09 17:50:04,541 - dq_comparison - INFO - Source hash string start: 2|3294|dennis.owens@example.com...
+2026-01-09 17:50:04,542 - dq_comparison - INFO - Target hash string start: 2|18445581893|dennis.owens@example.com...
+2026-01-09 17:50:04,543 - dq_comparison - INFO - Same? ❌ NO
+2026-01-09 17:50:04,543 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-09 17:50:04,544 - dq_comparison - INFO - Column 'CustomerID' → 'CustomerID':
+2026-01-09 17:50:04,545 - dq_comparison - INFO -   Source: '3' (type: int64) → '3'
+2026-01-09 17:50:04,546 - dq_comparison - INFO -   Target: '3' (type: int64) → '3'
+2026-01-09 17:50:04,546 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,546 - dq_comparison - INFO - Column 'PhoneNumber' → 'PhoneNumber':
+2026-01-09 17:50:04,548 - dq_comparison - INFO -   Source: '-10861' (type: int64) → '10861'
+2026-01-09 17:50:04,549 - dq_comparison - INFO -   Target: '+1-910-312-9640' (type: str) → '19103129640'
+2026-01-09 17:50:04,549 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-09 17:50:04,550 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-09 17:50:04,551 - dq_comparison - INFO -   Source: 'felicia.hatfield@example.com' (type: str) → 'felicia.hatfield@example.com'
+2026-01-09 17:50:04,552 - dq_comparison - INFO -   Target: 'felicia.hatfield@example.com' (type: str) → 'felicia.hatfield@example.com'
+2026-01-09 17:50:04,553 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,554 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-09 17:50:04,555 - dq_comparison - INFO -   Source: '41191' (type: int64) → '41191'
+2026-01-09 17:50:04,555 - dq_comparison - INFO -   Target: '41191' (type: int64) → '41191'
+2026-01-09 17:50:04,556 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,557 - dq_comparison - INFO - Column 'FirstName' → 'FirstName':
+2026-01-09 17:50:04,558 - dq_comparison - INFO -   Source: 'Felicia' (type: str) → 'felicia'
+2026-01-09 17:50:04,559 - dq_comparison - INFO -   Target: 'Felicia' (type: str) → 'felicia'
+2026-01-09 17:50:04,560 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 17:50:04,560 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-09 17:50:04,561 - dq_comparison - INFO - Source hash string start: 3|10861|felicia.hatfield@example.com...
+2026-01-09 17:50:04,562 - dq_comparison - INFO - Target hash string start: 3|19103129640|felicia.hatfield@example.com...
+2026-01-09 17:50:04,563 - dq_comparison - INFO - Same? ❌ NO
+2026-01-09 17:50:04,564 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-09 17:50:04,564 - dq_comparison - INFO - Column 1: 'CustomerID' (int64) ↔ 'CustomerID' (int64)
+2026-01-09 17:50:04,565 - dq_comparison - INFO -   Sample: Source='1', Target='1'
+2026-01-09 17:50:04,566 - dq_comparison - INFO - Column 2: 'PhoneNumber' (int64) ↔ 'PhoneNumber' (object)
+2026-01-09 17:50:04,567 - dq_comparison - INFO -   Sample: Source='-6089', Target='+1-486-229-5375'
+2026-01-09 17:50:04,568 - dq_comparison - INFO - Column 3: 'Email' (object) ↔ 'Email' (object)
+2026-01-09 17:50:04,568 - dq_comparison - INFO -   Sample: Source='mark.morris@example.com', Target='mark.morris@example.com'
+2026-01-09 17:50:04,569 - dq_comparison - INFO - Column 4: 'Salary' (int64) ↔ 'Salary' (int64)
+2026-01-09 17:50:04,570 - dq_comparison - INFO -   Sample: Source='111916', Target='111916'
+2026-01-09 17:50:04,571 - dq_comparison - INFO - Column 5: 'FirstName' (object) ↔ 'FirstName' (object)
+2026-01-09 17:50:04,572 - dq_comparison - INFO -   Sample: Source='Mark', Target='Mark'
+2026-01-09 17:50:04,572 - dq_comparison - INFO - === DEBUG: DIRECT ROW COMPARISON ===
+2026-01-09 17:50:04,572 - dq_comparison - INFO - --- Comparing Row 0 ---
+2026-01-09 17:50:04,573 - dq_comparison - INFO -   ✅ CustomerID: '1' → '1' vs '1' → '1'
+2026-01-09 17:50:04,574 - dq_comparison - INFO -   ❌ PhoneNumber: '-6089' → '6089' vs '+1-486-229-5375' → '14862295375'
+2026-01-09 17:50:04,575 - dq_comparison - INFO -     Mismatch type: <class 'numpy.int64'> vs <class 'str'>
+2026-01-09 17:50:04,575 - dq_comparison - INFO -   ✅ Email: 'mark.morris@example.com' → 'mark.morris@example.com' vs 'mark.morris@example.com' → 'mark.morris@example.com'
+2026-01-09 17:50:04,577 - dq_comparison - INFO -   ✅ Salary: '111916' → '111916' vs '111916' → '111916'
+2026-01-09 17:50:04,577 - dq_comparison - INFO -   ✅ FirstName: 'Mark' → 'mark' vs 'Mark' → 'mark'
+2026-01-09 17:50:04,577 - dq_comparison - INFO - --- Comparing Row 1 ---
+2026-01-09 17:50:04,578 - dq_comparison - INFO -   ✅ CustomerID: '2' → '2' vs '2' → '2'
+2026-01-09 17:50:04,579 - dq_comparison - INFO -   ❌ PhoneNumber: '-3294' → '3294' vs '+1-844-558-1893' → '18445581893'
+2026-01-09 17:50:04,580 - dq_comparison - INFO -     Mismatch type: <class 'numpy.int64'> vs <class 'str'>
+2026-01-09 17:50:04,580 - dq_comparison - INFO -   ✅ Email: 'dennis.owens@example.com' → 'dennis.owens@example.com' vs 'dennis.owens@example.com' → 'dennis.owens@example.com'
+2026-01-09 17:50:04,581 - dq_comparison - INFO -   ✅ Salary: '39264' → '39264' vs '39264' → '39264'
+2026-01-09 17:50:04,581 - dq_comparison - INFO -   ✅ FirstName: 'Dennis' → 'dennis' vs 'Dennis' → 'dennis'
+2026-01-09 17:50:04,583 - dq_comparison - INFO - --- Comparing Row 2 ---
+2026-01-09 17:50:04,584 - dq_comparison - INFO -   ✅ CustomerID: '3' → '3' vs '3' → '3'
+2026-01-09 17:50:04,584 - dq_comparison - INFO -   ❌ PhoneNumber: '-10861' → '10861' vs '+1-910-312-9640' → '19103129640'
+2026-01-09 17:50:04,585 - dq_comparison - INFO -     Mismatch type: <class 'numpy.int64'> vs <class 'str'>
+2026-01-09 17:50:04,585 - dq_comparison - INFO -   ✅ Email: 'felicia.hatfield@example.com' → 'felicia.hatfield@example.com' vs 'felicia.hatfield@example.com' → 'felicia.hatfield@example.com'
+2026-01-09 17:50:04,586 - dq_comparison - INFO -   ✅ Salary: '41191' → '41191' vs '41191' → '41191'
+2026-01-09 17:50:04,586 - dq_comparison - INFO -   ✅ FirstName: 'Felicia' → 'felicia' vs 'Felicia' → 'felicia'
+2026-01-09 17:50:04,587 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-09 17:50:04,588 - dq_comparison - INFO -   • Unique source hashes: 50
+2026-01-09 17:50:04,588 - dq_comparison - INFO -   • Unique target hashes: 50
+2026-01-09 17:50:04,589 - dq_comparison - INFO -   • Common hashes: 10
+2026-01-09 17:50:04,590 - dq_comparison - INFO -   • Common rows (counting duplicates): 10
+2026-01-09 17:50:04,590 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 40
+2026-01-09 17:50:04,591 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 40
+2026-01-09 17:50:04,592 - dq_comparison - INFO - Found 40 rows missing in target
+2026-01-09 17:50:04,645 - dq_comparison - INFO - Found 40 extra rows in target
+2026-01-09 17:50:04,692 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-09 17:50:04,692 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-09 17:50:04,693 - dq_comparison - INFO -   Common rows: 10
+2026-01-09 17:50:04,693 - dq_comparison - INFO -   Unique to source: 40
+2026-01-09 17:50:04,693 - dq_comparison - INFO -   Unique to target: 40
+2026-01-09 17:50:04,694 - dq_comparison - INFO -   Value mismatches: 640
+2026-01-09 17:50:04,695 - dq_comparison - INFO -   Missing rows: 40
+2026-01-09 17:50:04,695 - dq_comparison - INFO -   Extra rows: 40
+2026-01-09 17:50:04,696 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-09 17:50:04,715 - dq_comparison - INFO - Null values - Source: 5 (1.25%), Target: 5 (1.25%)
+2026-01-09 17:50:04,720 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-01-09 17:50:04,735 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_175004
+2026-01-09 17:50:04,737 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-09 17:50:04,738 - dq_comparison - INFO -   Source rows: 50
+2026-01-09 17:50:04,739 - dq_comparison - INFO -   Common rows (matched): 10
+2026-01-09 17:50:04,740 - dq_comparison - INFO -   Calculation: (10 / 50) * 100 = 20.00%
+2026-01-09 17:50:04,741 - dq_comparison - INFO -   Explanation: 10 matched rows out of 50 total source rows
+2026-01-09 17:50:04,742 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-09 17:50:04,743 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-09 17:50:04,744 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 17:50:04,746 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260109_175004
+2026-01-09 17:50:04,746 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-09 17:50:04,765 - dq_audit - INFO - Inserted comparison record with ID: 578
+2026-01-09 17:50:04,766 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 578)
+2026-01-09 17:50:04,776 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_175004
+2026-01-09 17:50:04,788 - dq_error_log - INFO - Retrieved summary: 11 total errors for session CMP_20260109_175004
+2026-01-09 17:50:04,789 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 17:50:04,800 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_175004
+2026-01-09 17:50:04,801 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-09 17:50:04,802 - dq_comparison - INFO -    Session ID: CMP_20260109_175004
+2026-01-09 17:50:04,802 - dq_comparison - INFO -    DQ Score (Simple %): 20.00%
+2026-01-09 17:50:04,803 - dq_comparison - INFO -    Source rows: 50
+2026-01-09 17:50:04,803 - dq_comparison - INFO -    Matched rows: 10
+2026-01-09 17:50:04,804 - dq_comparison - INFO -    Calculation: (10 / 50) * 100
+2026-01-09 17:50:04,805 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-09 17:50:04,817 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_175004
+2026-01-09 17:50:04,827 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_175004
+2026-01-09 17:50:04,835 - dq_error_log - INFO - Retrieved summary: 11 total errors for session CMP_20260109_175004
+2026-01-09 17:50:04,836 - __main__ - INFO - Comparison completed for session CMP_20260109_175002
+2026-01-09 17:50:04,838 - __main__ - ERROR - Error in comparison: keys must be str, int, float, bool or None, not Timestamp
+2026-01-09 17:50:04,838 - __main__ - ERROR - Error in comparison endpoint: keys must be str, int, float, bool or None, not Timestamp
+2026-01-09 17:50:04,858 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\run_api.py", line 1282, in source_target_comparison
+    return jsonify({
+           ^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+TypeError: keys must be str, int, float, bool or None, not Timestamp
+
+2026-01-09 17:50:04,860 - __main__ - INFO - Completed with status 500 in 1.933s

@@ -1,0 +1,267 @@
+2025-12-18 17:24:15,786 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-18 17:24:16,680 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:24:16,681 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:24:16,692 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-18 17:24:16,692 - root - INFO - DQ modules available: True
+2025-12-18 17:24:16,693 - root - INFO - Config file mode: False
+2025-12-18 17:24:16,693 - root - INFO - Database config: localhost/dq_checks
+2025-12-18 17:24:18,011 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-18 17:24:18,011 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 17:25:02,239 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:02] "GET /api/health HTTP/1.1" 200 -
+2025-12-18 17:25:11,238 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-18 17:25:11,240 - root - INFO - Starting comparison for session CMP_20251218_172511_bfc33ac2
+2025-12-18 17:25:11,240 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:11,266 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:11,267 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-18 17:25:11,267 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:11,267 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:11,267 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:11,267 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: CSV: sample_data.csv, Selected columns: 10
+2025-12-18 17:25:11,267 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:11,267 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:11,385 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:11,385 - dq_comparison - INFO - Session ID: CMP_20251218_172511
+2025-12-18 17:25:11,389 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:11,390 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:11,390 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:11,390 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:11,390 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-18 17:25:11,391 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:11,391 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:11,391 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:11,395 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:11,398 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:11,398 - dq_comparison - INFO -   • Common rows: 14
+2025-12-18 17:25:11,398 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:11,398 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:11,398 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:11,403 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:11,404 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:11,414 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-18 17:25:11,416 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-18 17:25:11,418 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:11,419 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:11,435 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172511
+2025-12-18 17:25:11,467 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:11,483 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:11,530 - root - INFO - Completed comparison for session CMP_20251218_172511_bfc33ac2
+2025-12-18 17:25:11,531 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:11] "POST /api/compare HTTP/1.1" 200 -
+2025-12-18 17:25:13,607 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'target_sheet_name', 'selected_columns'])
+2025-12-18 17:25:13,619 - root - INFO - Starting comparison for session CMP_20251218_172513_5b4e5475
+2025-12-18 17:25:13,619 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:15,645 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:15,645 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-18 17:25:15,645 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:15,645 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:15,645 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:15,645 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Excel: sample_data.xlsx (sample_data), Selected columns: 10
+2025-12-18 17:25:15,645 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:15,645 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:15,660 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:15,660 - dq_comparison - INFO - Session ID: CMP_20251218_172515
+2025-12-18 17:25:15,662 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:15,662 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:15,662 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:15,662 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:15,662 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-18 17:25:15,663 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:15,663 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:15,663 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:15,666 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:15,669 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:15,669 - dq_comparison - INFO -   • Common rows: 14
+2025-12-18 17:25:15,669 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:15,669 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:15,669 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:15,675 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:15,676 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:15,686 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-18 17:25:15,689 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-18 17:25:15,689 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:15,690 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:15,705 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172515
+2025-12-18 17:25:15,729 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:15,740 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:15,777 - root - INFO - Completed comparison for session CMP_20251218_172513_5b4e5475
+2025-12-18 17:25:15,777 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:15] "POST /api/compare HTTP/1.1" 200 -
+2025-12-18 17:25:17,854 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'source_sheet_name', 'target_source_type', 'target_file_path', 'target_sheet_name', 'selected_columns'])
+2025-12-18 17:25:17,873 - root - INFO - Starting comparison for session CMP_20251218_172517_c7de31a7
+2025-12-18 17:25:17,873 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:17,993 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:17,994 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-18 17:25:17,994 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:17,994 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:17,994 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:17,994 - dq_comparison - INFO - Report details - Source: Excel: sample_data.xlsx (sample_data), Target: Excel: sample_data.xlsx (sample_data), Selected columns: 10
+2025-12-18 17:25:17,994 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:17,994 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:18,015 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:18,016 - dq_comparison - INFO - Session ID: CMP_20251218_172518
+2025-12-18 17:25:18,018 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:18,018 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:18,018 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:18,018 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:18,018 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-18 17:25:18,018 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:18,018 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:18,018 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:18,023 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:18,027 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:18,027 - dq_comparison - INFO -   • Common rows: 14
+2025-12-18 17:25:18,027 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:18,027 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:18,027 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:18,035 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:18,036 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:18,049 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-18 17:25:18,052 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-18 17:25:18,053 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:18,055 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:18,067 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172518
+2025-12-18 17:25:18,093 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:18,106 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:18,154 - root - INFO - Completed comparison for session CMP_20251218_172517_c7de31a7
+2025-12-18 17:25:18,155 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:18] "POST /api/compare HTTP/1.1" 200 -
+2025-12-18 17:25:20,235 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_db_type', 'target_host', 'target_port', 'target_database', 'target_user', 'target_password', 'target_table', 'selected_columns'])
+2025-12-18 17:25:20,269 - root - INFO - Starting comparison for session CMP_20251218_172520_546e8e9c
+2025-12-18 17:25:20,269 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:20,286 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-18 17:25:20,292 - dq_unified - INFO - Loading large database table: customers
+2025-12-18 17:25:20,309 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-18 17:25:20,310 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-18 17:25:21,756 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-18 17:25:21,763 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 17:25:21,764 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 130.5MB total, 0.0MB for dataframe
+2025-12-18 17:25:21,767 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:21,767 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-18 17:25:21,767 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:21,767 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:21,767 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:21,767 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Database: mysql - dq_checks.customers, Selected columns: 10
+2025-12-18 17:25:21,767 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:21,767 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:21,781 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:21,782 - dq_comparison - INFO - Session ID: CMP_20251218_172521
+2025-12-18 17:25:21,786 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:21,786 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:21,786 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:21,786 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:21,786 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-18 17:25:21,786 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:21,786 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:21,786 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:21,791 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:21,794 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:21,794 - dq_comparison - INFO -   • Common rows: 14
+2025-12-18 17:25:21,794 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:21,794 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:21,794 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:21,801 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:21,802 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:21,812 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-18 17:25:21,813 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-18 17:25:21,814 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:21,815 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:21,827 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172521
+2025-12-18 17:25:21,854 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:21,866 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:21,909 - root - INFO - Completed comparison for session CMP_20251218_172520_546e8e9c
+2025-12-18 17:25:21,909 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:21] "POST /api/compare HTTP/1.1" 200 -
+2025-12-18 17:25:23,978 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'db_type', 'host', 'port', 'database', 'user', 'password', 'table', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-18 17:25:24,007 - root - INFO - Starting comparison for session CMP_20251218_172524_13af133e
+2025-12-18 17:25:24,007 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:24,019 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-18 17:25:24,026 - dq_unified - INFO - Loading large database table: customers
+2025-12-18 17:25:24,046 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-18 17:25:24,046 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-18 17:25:24,054 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-18 17:25:24,059 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 17:25:24,060 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 130.7MB total, 0.0MB for dataframe
+2025-12-18 17:25:24,071 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:24,071 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-18 17:25:24,071 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:24,071 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:24,072 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:24,072 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.customers, Target: CSV: sample_data.csv, Selected columns: 10
+2025-12-18 17:25:24,072 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:24,072 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:24,088 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:24,089 - dq_comparison - INFO - Session ID: CMP_20251218_172524
+2025-12-18 17:25:24,095 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:24,095 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:24,095 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:24,096 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:24,096 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-18 17:25:24,096 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:24,096 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:24,096 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:24,102 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:24,107 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:24,107 - dq_comparison - INFO -   • Common rows: 14
+2025-12-18 17:25:24,107 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:24,107 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:24,107 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:24,113 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:24,113 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:24,133 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-18 17:25:24,137 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-18 17:25:24,138 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:24,139 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-18 17:25:24,154 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172524
+2025-12-18 17:25:24,182 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:24,197 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:24,243 - root - INFO - Completed comparison for session CMP_20251218_172524_13af133e
+2025-12-18 17:25:24,244 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:24] "POST /api/compare HTTP/1.1" 200 -
+2025-12-18 17:25:26,321 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'db_type', 'host', 'port', 'database', 'user', 'password', 'table', 'target_source_type', 'target_db_type', 'target_host', 'target_port', 'target_database', 'target_user', 'target_password', 'target_table', 'selected_columns'])
+2025-12-18 17:25:26,333 - root - INFO - Starting comparison for session CMP_20251218_172526_cab26d50
+2025-12-18 17:25:26,335 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 17:25:26,343 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-18 17:25:26,345 - dq_unified - INFO - Loading large database table: customers
+2025-12-18 17:25:26,367 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-18 17:25:26,367 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-18 17:25:26,376 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-18 17:25:26,384 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 17:25:26,384 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 130.9MB total, 0.0MB for dataframe
+2025-12-18 17:25:26,392 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-18 17:25:26,401 - dq_unified - INFO - Loading large database table: customers
+2025-12-18 17:25:26,425 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-18 17:25:26,425 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-18 17:25:26,432 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-18 17:25:26,438 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 17:25:26,439 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 130.9MB total, 0.0MB for dataframe
+2025-12-18 17:25:26,443 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-18 17:25:26,443 - dq_comparison - INFO - Found 11 common columns between source and target (case-insensitive)
+2025-12-18 17:25:26,443 - dq_comparison - INFO - User column selection input: all
+2025-12-18 17:25:26,443 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-18 17:25:26,443 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-18 17:25:26,443 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.customers, Target: Database: mysql - dq_checks.customers, Selected columns: 11
+2025-12-18 17:25:26,444 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-18 17:25:26,444 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 17:25:26,463 - dq_error_log - INFO - Database connection successful
+2025-12-18 17:25:26,464 - dq_comparison - INFO - Session ID: CMP_20251218_172526
+2025-12-18 17:25:26,465 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-18 17:25:26,466 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-18 17:25:26,466 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-18 17:25:26,466 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-18 17:25:26,466 - dq_comparison - INFO - Using 11 common columns for hash comparison
+2025-12-18 17:25:26,466 - dq_comparison - INFO - Source columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'CustomerID', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:26,466 - dq_comparison - INFO - Target columns: ['Country', 'Email', 'JoinDate', 'City', 'Phone', 'CustomerID', 'State', 'PostalCode', 'CustomerName', 'Department', 'Salary']
+2025-12-18 17:25:26,466 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-18 17:25:26,471 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-18 17:25:26,475 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-18 17:25:26,476 - dq_comparison - INFO -   • Common rows: 15
+2025-12-18 17:25:26,476 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-18 17:25:26,476 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-18 17:25:26,476 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-18 17:25:26,483 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-18 17:25:26,484 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-18 17:25:26,497 - dq_comparison - INFO - Null values - Source: 6 (3.64%), Target: 6 (3.64%)
+2025-12-18 17:25:26,499 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2025-12-18 17:25:26,513 - dq_error_log - INFO - Retrieved 0 errors for session CMP_20251218_172526
+2025-12-18 17:25:26,539 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 17:25:26,553 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-18 17:25:26,595 - root - INFO - Completed comparison for session CMP_20251218_172526_cab26d50
+2025-12-18 17:25:26,595 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 17:25:26] "POST /api/compare HTTP/1.1" 200 -

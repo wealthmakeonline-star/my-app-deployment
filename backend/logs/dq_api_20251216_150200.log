@@ -1,0 +1,39 @@
+2025-12-16 15:02:00,983 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-16 15:02:01,125 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-16 15:02:01,125 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-16 15:02:01,128 - __main__ - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-16 15:02:01,128 - __main__ - INFO - DQ modules available: True
+2025-12-16 15:02:01,128 - __main__ - INFO - Config file mode: False
+2025-12-16 15:02:01,128 - __main__ - INFO - Database config: localhost/dq_checks
+2025-12-16 15:02:01,176 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-16 15:02:01,176 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-16 15:02:10,860 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 15:02:10] "GET /api/health HTTP/1.1" 200 -
+2025-12-16 15:02:12,906 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 15:02:12] "GET /api/database-types HTTP/1.1" 200 -
+2025-12-16 15:02:15,084 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 15:02:15] "POST /api/test-db-connection HTTP/1.1" 200 -
+2025-12-16 15:02:17,146 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 15:02:17] "POST /api/get-db-metadata HTTP/1.1" 200 -
+2025-12-16 15:02:19,185 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-16 15:02:19,186 - dq_unified - INFO - Loading large database table: customers
+2025-12-16 15:02:19,214 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-16 15:02:19,214 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-16 15:02:20,009 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-16 15:02:20,019 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 15:02:20,020 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 117.2MB total, 0.0MB for dataframe
+2025-12-16 15:02:20,021 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 15:02:20,022 - dq_unified - INFO - Column 'CustomerID': No empty cells
+2025-12-16 15:02:20,022 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-16 15:02:20,026 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-16 15:02:20,028 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-16 15:02:20,029 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-16 15:02:20,031 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-16 15:02:20,033 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-16 15:02:20,035 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-16 15:02:20,036 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-16 15:02:20,037 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-16 15:02:20,038 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-16 15:02:20,039 - dq_unified - INFO - Total empty cells found: 6
+2025-12-16 15:02:20,039 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-16 15:02:20,046 - dq_unified - INFO - No strict duplicate rows found
+2025-12-16 15:02:20,050 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 15:02:20] "[35m[1mPOST /api/check-single HTTP/1.1[0m" 500 -

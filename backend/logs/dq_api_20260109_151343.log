@@ -1,0 +1,947 @@
+2026-01-09 15:13:43,277 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-09 15:13:43,278 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260109_151343.log
+2026-01-09 15:13:43,447 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-09 15:13:43,448 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-09 15:13:43,451 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 15:13:43,451 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:13:43,452 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-09 15:13:43,460 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-09 15:13:43,461 - __main__ - INFO - 📊 Modules available: True
+2026-01-09 15:13:43,462 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-09 15:13:43,463 - __main__ - INFO - 📋 Available endpoints:
+2026-01-09 15:13:43,464 - __main__ - INFO -   GET  /              - API status
+2026-01-09 15:13:43,465 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-09 15:13:43,466 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-09 15:13:43,467 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-09 15:13:43,467 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-09 15:13:43,468 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-09 15:13:43,469 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-09 15:13:43,470 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-09 15:13:43,471 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-09 15:13:48,796 - __main__ - INFO - POST /api/compare - Request started
+2026-01-09 15:13:48,797 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'customers', 'user': 'root', 'password': 'root'}, 'target': {'source_type': 'csv', 'target_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv'}, 'selected_columns': 'all'}
+2026-01-09 15:13:48,799 - __main__ - INFO - DEBUG: source_type: None
+2026-01-09 15:13:48,800 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-09 15:13:48,801 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-09 15:13:48,802 - __main__ - INFO - Comparison analysis request received
+2026-01-09 15:13:48,803 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'customers', 'user': 'root', 'password': 'root'}
+2026-01-09 15:13:48,805 - __main__ - INFO - Starting comparison for session CMP_20260109_151348
+2026-01-09 15:13:48,806 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-09 15:13:48,808 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-09 15:13:48,809 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:13:48,810 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-09 15:13:48,812 - dq_comparison - INFO - ==================================================
+2026-01-09 15:13:48,813 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-01-09 15:13:48,814 - dq_comparison - INFO - ----------------------------------------
+2026-01-09 15:13:48,815 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-01-09 15:13:48,816 - dq_unified - INFO - Loading data from DATABASE
+2026-01-09 15:13:48,817 - dq_unified - INFO - Loading large database table: customers
+2026-01-09 15:13:48,818 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-09 15:13:49,042 - dq_unified - INFO - MySQL table customers has 15 rows
+2026-01-09 15:13:49,044 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-01-09 15:13:49,974 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-01-09 15:13:49,999 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-09 15:13:50,000 - dq_unified - INFO - Standardizing data types...
+2026-01-09 15:13:50,007 - dq_unified - INFO - Data type standardization complete
+2026-01-09 15:13:50,012 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 121.9MB total, 0.0MB for dataframe
+2026-01-09 15:13:50,014 - dq_comparison - INFO - SOURCE database loaded: 15 rows, 10 columns
+2026-01-09 15:13:50,015 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:13:50,016 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-09 15:13:50,017 - dq_comparison - INFO - ==================================================
+2026-01-09 15:13:50,019 - dq_comparison - INFO - DEBUG load_csv_source called for TARGET
+2026-01-09 15:13:50,020 - dq_comparison - INFO - DEBUG: Using file_path from 'target_file_path': C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2026-01-09 15:13:50,035 - dq_comparison - INFO - TARGET CSV loaded: 15 rows, 10 columns
+2026-01-09 15:13:50,036 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2026-01-09 15:13:50,037 - dq_comparison - INFO - Target data loaded: 15 rows, 10 columns
+2026-01-09 15:13:50,039 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-09 15:13:50,040 - dq_comparison - INFO - Source columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:13:50,043 - dq_comparison - INFO - Target columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:13:50,044 - dq_comparison - INFO - Common columns lowercased: ['joindate', 'customername', 'department', 'postalcode', 'phone', 'country', 'city', 'salary', 'email', 'state']
+2026-01-09 15:13:50,045 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2026-01-09 15:13:50,045 - dq_comparison - INFO - User column selection input: all
+2026-01-09 15:13:50,046 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-09 15:13:50,047 - dq_comparison - INFO - Selected 10 columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone']...
+2026-01-09 15:13:50,048 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-09 15:13:50,049 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.customers, Target: CSV: sample_data.csv, Selected columns: 10
+2026-01-09 15:13:50,050 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-09 15:13:50,051 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 15:13:50,077 - dq_error_log - INFO - Database connection successful
+2026-01-09 15:13:50,079 - dq_comparison - INFO - Session ID: CMP_20260109_151350
+2026-01-09 15:13:50,081 - dq_comparison - INFO - ✅ Row counts match: 15 rows
+2026-01-09 15:13:50,083 - dq_comparison - INFO - Comparing column structures...
+2026-01-09 15:13:50,086 - dq_comparison - WARNING - Found 6 incompatible data type mismatches
+2026-01-09 15:13:50,088 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-09 15:13:50,223 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-09 15:13:50,225 - dq_comparison - INFO - Checking key fields: ['PostalCode']
+2026-01-09 15:13:50,229 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in source: 2 rows
+2026-01-09 15:13:50,231 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in target: 2 rows
+2026-01-09 15:13:50,232 - dq_comparison - INFO - Primary key validation complete. Passed: False
+2026-01-09 15:13:50,277 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-09 15:13:50,312 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-09 15:13:50,314 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-09 15:13:50,347 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-09 15:13:50,347 - dq_comparison - INFO - Column: JoinDate
+2026-01-09 15:13:50,349 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: 1673740800000000000
+2026-01-09 15:13:50,351 - dq_comparison - INFO -   Target type: <class 'str'>, value: 15-01-2023
+2026-01-09 15:13:50,354 - dq_comparison - INFO -   Normalized: '2023-01-15' vs '2023-01-15'
+2026-01-09 15:13:50,354 - dq_comparison - INFO -   Match: True
+2026-01-09 15:13:50,355 - dq_comparison - INFO - Column: CustomerName
+2026-01-09 15:13:50,357 - dq_comparison - INFO -   Source type: <class 'str'>, value: John Doe
+2026-01-09 15:13:50,358 - dq_comparison - INFO -   Target type: <class 'str'>, value:    John Doe
+2026-01-09 15:13:50,360 - dq_comparison - INFO -   Normalized: 'john doe' vs 'john doe'
+2026-01-09 15:13:50,361 - dq_comparison - INFO -   Match: True
+2026-01-09 15:13:50,362 - dq_comparison - INFO - Column: Department
+2026-01-09 15:13:50,363 - dq_comparison - INFO -   Source type: <class 'str'>, value: IT
+2026-01-09 15:13:50,364 - dq_comparison - INFO -   Target type: <class 'str'>, value: IT             
+2026-01-09 15:13:50,365 - dq_comparison - INFO -   Normalized: 'it' vs 'it'
+2026-01-09 15:13:50,366 - dq_comparison - INFO -   Match: True
+2026-01-09 15:13:50,367 - dq_comparison - INFO - Source DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:13:50,368 - dq_comparison - INFO - Target DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:13:50,369 - dq_comparison - INFO - Selected columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:13:50,370 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2026-01-09 15:13:50,371 - dq_comparison - INFO - Source columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:13:50,372 - dq_comparison - INFO - Target columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:13:50,373 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-01-09 15:13:50,377 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'John Doe' -> 'john doe' | Department: 'IT' -> 'it' | PostalCode: '10001.0' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:13:50,379 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:13:50,381 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:13:50,383 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1676851200000000000' -> '2023-02-20' | CustomerName: 'Jane Smith' -> 'jane smith' | Department: 'HR' -> 'hr' | PostalCode: '10002.0' -> '10002' | Phone: '9876543210' -> '9876543210'
+2026-01-09 15:13:50,384 - dq_comparison - INFO - DEBUG HASH STRING: 2023-02-20|jane smith|hr|10002|9876543210...
+2026-01-09 15:13:50,386 - dq_comparison - INFO - DEBUG HASH RESULT: 1c4a9538...
+2026-01-09 15:13:50,388 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1678406400000000000' -> '2023-03-10' | CustomerName: 'Bob Johnson' -> 'bob johnson' | Department: 'Finance' -> 'finance' | PostalCode: '10003.0' -> '10003' | Phone: '5551234567' -> '5551234567'
+2026-01-09 15:13:50,388 - dq_comparison - INFO - DEBUG HASH STRING: 2023-03-10|bob johnson|finance|10003|5551234567...
+2026-01-09 15:13:50,389 - dq_comparison - INFO - DEBUG HASH RESULT: e6ea30e5...
+2026-01-09 15:13:50,391 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'Alice Brown' -> 'alice brown' | Department: 'IT' -> 'it' | PostalCode: '10004.0' -> '10004' | Phone: '4445556666' -> '4445556666'
+2026-01-09 15:13:50,392 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|alice brown|it|10004|4445556666...
+2026-01-09 15:13:50,393 - dq_comparison - INFO - DEBUG HASH RESULT: 9d895e9e...
+2026-01-09 15:13:50,394 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1680652800000000000' -> '2023-04-05' | CustomerName: 'Charlie Wilson' -> 'charlie wilson' | Department: 'HR' -> 'hr' | PostalCode: '10005.0' -> '10005' | Phone: '3334445555' -> '3334445555'
+2026-01-09 15:13:50,395 - dq_comparison - INFO - DEBUG HASH STRING: 2023-04-05|charlie wilson|hr|10005|3334445555...
+2026-01-09 15:13:50,396 - dq_comparison - INFO - DEBUG HASH RESULT: 5a9cf379...
+2026-01-09 15:13:50,398 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'John Doe' -> 'john doe' | Department: 'IT' -> 'it' | PostalCode: '10001.0' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:13:50,399 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:13:50,400 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:13:50,402 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1683849600000000000' -> '2023-05-12' | CustomerName: 'David Lee' -> 'david lee' | Department: 'Finance' -> 'finance' | PostalCode: '10006.0' -> '10006' | Phone: '2223334444' -> '2223334444'
+2026-01-09 15:13:50,402 - dq_comparison - INFO - DEBUG HASH STRING: 2023-05-12|david lee|finance|10006|2223334444...
+2026-01-09 15:13:50,403 - dq_comparison - INFO - DEBUG HASH RESULT: a35c6262...
+2026-01-09 15:13:50,405 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1687046400000000000' -> '2023-06-18' | CustomerName: 'Sarah Chen' -> 'sarah chen' | Department: 'IT' -> 'it' | PostalCode: '10007.0' -> '10007' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:13:50,406 - dq_comparison - INFO - DEBUG HASH STRING: 2023-06-18|sarah chen|it|10007|1112223333...
+2026-01-09 15:13:50,407 - dq_comparison - INFO - DEBUG HASH RESULT: bc3a360a...
+2026-01-09 15:13:50,409 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1689984000000000000' -> '2023-07-22' | CustomerName: 'Mike Davis' -> 'mike davis' | Department: 'HR' -> 'hr' | PostalCode: 'nan' -> 'NULL' | Phone: '9998887777' -> '9998887777'
+2026-01-09 15:13:50,410 - dq_comparison - INFO - DEBUG HASH STRING: 2023-07-22|mike davis|hr|NULL|9998887777...
+2026-01-09 15:13:50,411 - dq_comparison - INFO - DEBUG HASH RESULT: 65d987d6...
+2026-01-09 15:13:50,412 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1693353600000000000' -> '2023-08-30' | CustomerName: 'Lisa Wang' -> 'lisa wang' | Department: 'nan' -> 'NULL' | PostalCode: '10008.0' -> '10008' | Phone: '6667778888' -> '6667778888'
+2026-01-09 15:13:50,413 - dq_comparison - INFO - DEBUG HASH STRING: 2023-08-30|lisa wang|NULL|10008|6667778888...
+2026-01-09 15:13:50,414 - dq_comparison - INFO - DEBUG HASH RESULT: c0e7c955...
+2026-01-09 15:13:50,416 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1694304000000000000' -> '2023-09-10' | CustomerName: 'Tom Wilson' -> 'tom wilson' | Department: 'Sales' -> 'sales' | PostalCode: '10009.0' -> '10009' | Phone: '7778889999' -> '7778889999'
+2026-01-09 15:13:50,419 - dq_comparison - INFO - DEBUG HASH STRING: 2023-09-10|tom wilson|sales|10009|7778889999...
+2026-01-09 15:13:50,421 - dq_comparison - INFO - DEBUG HASH RESULT: 190c6c34...
+2026-01-09 15:13:50,424 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1697328000000000000' -> '2023-10-15' | CustomerName: 'None' -> 'NULL' | Department: 'Marketing' -> 'marketing' | PostalCode: '10010.0' -> '10010' | Phone: '8889990000' -> '8889990000'
+2026-01-09 15:13:50,426 - dq_comparison - INFO - DEBUG HASH STRING: 2023-10-15|NULL|marketing|10010|8889990000...
+2026-01-09 15:13:50,427 - dq_comparison - INFO - DEBUG HASH RESULT: 8e5434d0...
+2026-01-09 15:13:50,429 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1700438400000000000' -> '2023-11-20' | CustomerName: 'Robert Brown' -> 'robert brown' | Department: 'IT' -> 'it' | PostalCode: '10011.0' -> '10011' | Phone: '9990001111' -> '9990001111'
+2026-01-09 15:13:50,430 - dq_comparison - INFO - DEBUG HASH STRING: 2023-11-20|robert brown|it|10011|9990001111...
+2026-01-09 15:13:50,431 - dq_comparison - INFO - DEBUG HASH RESULT: bac201dc...
+2026-01-09 15:13:50,432 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1701734400000000000' -> '2023-12-05' | CustomerName: 'Nancy Davis' -> 'nancy davis' | Department: 'HR' -> 'hr' | PostalCode: '10012.0' -> '10012' | Phone: '1112222' -> '1112222'
+2026-01-09 15:13:50,433 - dq_comparison - INFO - DEBUG HASH STRING: 2023-12-05|nancy davis|hr|10012|1112222...
+2026-01-09 15:13:50,435 - dq_comparison - INFO - DEBUG HASH RESULT: 01e1a1c5...
+2026-01-09 15:13:50,436 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1704844800000000000' -> '2024-01-10' | CustomerName: 'Kevin Lee' -> 'kevin lee' | Department: 'Sales' -> 'sales' | PostalCode: '10013.0' -> '10013' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:13:50,438 - dq_comparison - INFO - DEBUG HASH STRING: 2024-01-10|kevin lee|sales|10013|1112223333...
+2026-01-09 15:13:50,439 - dq_comparison - INFO - DEBUG HASH RESULT: 05f55239...
+2026-01-09 15:13:50,440 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-09 15:13:50,441 - dq_comparison - INFO - Hash 1: 7f8697a85d06de5f... (sample row 0)
+2026-01-09 15:13:50,443 - dq_comparison - INFO - Hash 2: 1c4a953828734582... (sample row 1)
+2026-01-09 15:13:50,444 - dq_comparison - INFO - Hash 3: e6ea30e55432e60e... (sample row 2)
+2026-01-09 15:13:50,444 - dq_comparison - INFO - Generating hashes for target data (15 rows)...
+2026-01-09 15:13:50,454 - dq_comparison - INFO - 
+======================================================================
+2026-01-09 15:13:50,456 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-09 15:13:50,457 - dq_comparison - INFO - ======================================================================
+2026-01-09 15:13:50,458 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-09 15:13:50,460 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:13:50,462 - dq_comparison - INFO -   Source: '1673740800000000000' (type: int64) → '2023-01-15'
+2026-01-09 15:13:50,464 - dq_comparison - INFO -   Target: '15-01-2023' (type: str) → '2023-01-15'
+2026-01-09 15:13:50,465 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,468 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:13:50,470 - dq_comparison - INFO -   Source: 'John Doe' (type: str) → 'john doe'
+2026-01-09 15:13:50,471 - dq_comparison - INFO -   Target: '   John Doe' (type: str) → 'john doe'
+2026-01-09 15:13:50,471 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,472 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:13:50,473 - dq_comparison - INFO -   Source: 'IT' (type: str) → 'it'
+2026-01-09 15:13:50,474 - dq_comparison - INFO -   Target: 'IT             ' (type: str) → 'it'
+2026-01-09 15:13:50,476 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,477 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:13:50,478 - dq_comparison - INFO -   Source: '10001.0' (type: float64) → '10001'
+2026-01-09 15:13:50,479 - dq_comparison - INFO -   Target: '10001' (type: str) → '10001'
+2026-01-09 15:13:50,481 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,482 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:13:50,483 - dq_comparison - INFO -   Source: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:13:50,484 - dq_comparison - INFO -   Target: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:13:50,485 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,486 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-09 15:13:50,487 - dq_comparison - INFO - Source hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:13:50,488 - dq_comparison - INFO - Target hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:13:50,489 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:13:50,492 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-09 15:13:50,501 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:13:50,503 - dq_comparison - INFO -   Source: '1676851200000000000' (type: int64) → '2023-02-20'
+2026-01-09 15:13:50,504 - dq_comparison - INFO -   Target: '20-02-2023' (type: str) → '2023-02-20'
+2026-01-09 15:13:50,506 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,507 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:13:50,508 - dq_comparison - INFO -   Source: 'Jane Smith' (type: str) → 'jane smith'
+2026-01-09 15:13:50,510 - dq_comparison - INFO -   Target: 'Jane      Smith' (type: str) → 'jane smith'
+2026-01-09 15:13:50,511 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,512 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:13:50,513 - dq_comparison - INFO -   Source: 'HR' (type: str) → 'hr'
+2026-01-09 15:13:50,514 - dq_comparison - INFO -   Target: '       HR' (type: str) → 'hr'
+2026-01-09 15:13:50,515 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,516 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:13:50,519 - dq_comparison - INFO -   Source: '10002.0' (type: float64) → '10002'
+2026-01-09 15:13:50,520 - dq_comparison - INFO -   Target: '10002' (type: str) → '10002'
+2026-01-09 15:13:50,522 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,522 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:13:50,523 - dq_comparison - INFO -   Source: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:13:50,524 - dq_comparison - INFO -   Target: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:13:50,525 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,526 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-09 15:13:50,527 - dq_comparison - INFO - Source hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:13:50,528 - dq_comparison - INFO - Target hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:13:50,529 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:13:50,530 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-09 15:13:50,534 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:13:50,535 - dq_comparison - INFO -   Source: '1678406400000000000' (type: int64) → '2023-03-10'
+2026-01-09 15:13:50,536 - dq_comparison - INFO -   Target: '10-03-2023' (type: str) → '2023-03-10'
+2026-01-09 15:13:50,537 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,538 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:13:50,538 - dq_comparison - INFO -   Source: 'Bob Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:13:50,539 - dq_comparison - INFO -   Target: 'Bob        Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:13:50,540 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,542 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:13:50,543 - dq_comparison - INFO -   Source: 'Finance' (type: str) → 'finance'
+2026-01-09 15:13:50,544 - dq_comparison - INFO -   Target: 'Finance' (type: str) → 'finance'
+2026-01-09 15:13:50,545 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,546 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:13:50,547 - dq_comparison - INFO -   Source: '10003.0' (type: float64) → '10003'
+2026-01-09 15:13:50,547 - dq_comparison - INFO -   Target: '10003' (type: str) → '10003'
+2026-01-09 15:13:50,549 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,551 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:13:50,552 - dq_comparison - INFO -   Source: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:13:50,552 - dq_comparison - INFO -   Target: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:13:50,554 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:13:50,555 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-09 15:13:50,556 - dq_comparison - INFO - Source hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:13:50,558 - dq_comparison - INFO - Target hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:13:50,559 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:13:50,561 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-09 15:13:50,562 - dq_comparison - INFO - Column 1: 'JoinDate' (int64) ↔ 'JoinDate' (object)
+2026-01-09 15:13:50,565 - dq_comparison - INFO -   Sample: Source='1673740800000000000', Target='15-01-2023'
+2026-01-09 15:13:50,566 - dq_comparison - INFO - Column 2: 'CustomerName' (object) ↔ 'CustomerName' (object)
+2026-01-09 15:13:50,567 - dq_comparison - INFO -   Sample: Source='John Doe', Target='   John Doe'
+2026-01-09 15:13:50,567 - dq_comparison - INFO - Column 3: 'Department' (category) ↔ 'Department' (object)
+2026-01-09 15:13:50,569 - dq_comparison - INFO -   Sample: Source='IT', Target='IT             '
+2026-01-09 15:13:50,570 - dq_comparison - INFO - Column 4: 'PostalCode' (float64) ↔ 'PostalCode' (object)
+2026-01-09 15:13:50,571 - dq_comparison - INFO -   Sample: Source='10001.0', Target='10001'
+2026-01-09 15:13:50,575 - dq_comparison - INFO - Column 5: 'Phone' (int64) ↔ 'Phone' (int64)
+2026-01-09 15:13:50,577 - dq_comparison - INFO -   Sample: Source='1234567890', Target='1234567890'
+2026-01-09 15:13:50,578 - dq_comparison - INFO - === DEBUG: DIRECT ROW COMPARISON ===
+2026-01-09 15:13:50,580 - dq_comparison - INFO - --- Comparing Row 0 ---
+2026-01-09 15:13:50,581 - dq_comparison - INFO -   ✅ JoinDate: '1673740800000000000' → '2023-01-15' vs '15-01-2023' → '2023-01-15'
+2026-01-09 15:13:50,582 - dq_comparison - INFO -   ✅ CustomerName: 'John Doe' → 'john doe' vs '   John Doe' → 'john doe'
+2026-01-09 15:13:50,583 - dq_comparison - INFO -   ✅ Department: 'IT' → 'it' vs 'IT             ' → 'it'
+2026-01-09 15:13:50,584 - dq_comparison - INFO -   ✅ PostalCode: '10001.0' → '10001' vs '10001' → '10001'
+2026-01-09 15:13:50,586 - dq_comparison - INFO -   ✅ Phone: '1234567890' → '1234567890' vs '1234567890' → '1234567890'
+2026-01-09 15:13:50,588 - dq_comparison - INFO - --- Comparing Row 1 ---
+2026-01-09 15:13:50,591 - dq_comparison - INFO -   ✅ JoinDate: '1676851200000000000' → '2023-02-20' vs '20-02-2023' → '2023-02-20'
+2026-01-09 15:13:50,593 - dq_comparison - INFO -   ✅ CustomerName: 'Jane Smith' → 'jane smith' vs 'Jane      Smith' → 'jane smith'
+2026-01-09 15:13:50,594 - dq_comparison - INFO -   ✅ Department: 'HR' → 'hr' vs '       HR' → 'hr'
+2026-01-09 15:13:50,595 - dq_comparison - INFO -   ✅ PostalCode: '10002.0' → '10002' vs '10002' → '10002'
+2026-01-09 15:13:50,596 - dq_comparison - INFO -   ✅ Phone: '9876543210' → '9876543210' vs '9876543210' → '9876543210'
+2026-01-09 15:13:50,597 - dq_comparison - INFO - --- Comparing Row 2 ---
+2026-01-09 15:13:50,599 - dq_comparison - INFO -   ✅ JoinDate: '1678406400000000000' → '2023-03-10' vs '10-03-2023' → '2023-03-10'
+2026-01-09 15:13:50,600 - dq_comparison - INFO -   ✅ CustomerName: 'Bob Johnson' → 'bob johnson' vs 'Bob        Johnson' → 'bob johnson'
+2026-01-09 15:13:50,601 - dq_comparison - INFO -   ✅ Department: 'Finance' → 'finance' vs 'Finance' → 'finance'
+2026-01-09 15:13:50,602 - dq_comparison - INFO -   ✅ PostalCode: '10003.0' → '10003' vs '10003' → '10003'
+2026-01-09 15:13:50,602 - dq_comparison - INFO -   ✅ Phone: '5551234567' → '5551234567' vs '5551234567' → '5551234567'
+2026-01-09 15:13:50,603 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-09 15:13:50,604 - dq_comparison - INFO -   • Unique source hashes: 14
+2026-01-09 15:13:50,605 - dq_comparison - INFO -   • Unique target hashes: 14
+2026-01-09 15:13:50,608 - dq_comparison - INFO -   • Common hashes: 13
+2026-01-09 15:13:50,609 - dq_comparison - INFO -   • Common rows (counting duplicates): 14
+2026-01-09 15:13:50,610 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 1
+2026-01-09 15:13:50,611 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 1
+2026-01-09 15:13:50,612 - dq_comparison - INFO - Found 1 rows missing in target
+2026-01-09 15:13:50,636 - dq_comparison - INFO - Found 1 extra rows in target
+2026-01-09 15:13:50,659 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-09 15:13:50,660 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-09 15:13:50,661 - dq_comparison - INFO -   Common rows: 14
+2026-01-09 15:13:50,662 - dq_comparison - INFO -   Unique to source: 1
+2026-01-09 15:13:50,662 - dq_comparison - INFO -   Unique to target: 1
+2026-01-09 15:13:50,664 - dq_comparison - INFO -   Value mismatches: 20
+2026-01-09 15:13:50,665 - dq_comparison - INFO -   Missing rows: 1
+2026-01-09 15:13:50,666 - dq_comparison - INFO -   Extra rows: 1
+2026-01-09 15:13:50,668 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-09 15:13:50,696 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2026-01-09 15:13:50,702 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2026-01-09 15:13:50,707 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:13:50,712 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:13:50,733 - dq_error_log - INFO - Retrieved 10 error logs for session CMP_20260109_151350
+2026-01-09 15:13:50,734 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-09 15:13:50,735 - dq_comparison - INFO -   Source rows: 15
+2026-01-09 15:13:50,736 - dq_comparison - INFO -   Common rows (matched): 14
+2026-01-09 15:13:50,738 - dq_comparison - INFO -   Calculation: (14 / 15) * 100 = 93.33%
+2026-01-09 15:13:50,740 - dq_comparison - INFO -   Explanation: 14 matched rows out of 15 total source rows
+2026-01-09 15:13:50,741 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-09 15:13:50,743 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-09 15:13:50,746 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:13:50,747 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260109_151350
+2026-01-09 15:13:50,748 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-09 15:13:50,774 - dq_audit - INFO - Inserted comparison record with ID: 568
+2026-01-09 15:13:50,776 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 568)
+2026-01-09 15:13:50,797 - dq_error_log - INFO - Retrieved 10 error logs for session CMP_20260109_151350
+2026-01-09 15:13:50,820 - dq_error_log - INFO - Retrieved summary: 10 total errors for session CMP_20260109_151350
+2026-01-09 15:13:50,822 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:13:50,845 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151350
+2026-01-09 15:13:50,846 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-09 15:13:50,849 - dq_comparison - INFO -    Session ID: CMP_20260109_151350
+2026-01-09 15:13:50,850 - dq_comparison - INFO -    DQ Score (Simple %): 93.33%
+2026-01-09 15:13:50,852 - dq_comparison - INFO -    Source rows: 15
+2026-01-09 15:13:50,853 - dq_comparison - INFO -    Matched rows: 14
+2026-01-09 15:13:50,854 - dq_comparison - INFO -    Calculation: (14 / 15) * 100
+2026-01-09 15:13:50,855 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-09 15:13:50,880 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151350
+2026-01-09 15:13:50,899 - dq_error_log - INFO - Retrieved 10 error logs for session CMP_20260109_151350
+2026-01-09 15:13:50,923 - dq_error_log - INFO - Retrieved summary: 10 total errors for session CMP_20260109_151350
+2026-01-09 15:13:50,924 - __main__ - INFO - Comparison completed for session CMP_20260109_151348
+2026-01-09 15:13:50,933 - __main__ - INFO - Completed with status 200 in 2.138s
+2026-01-09 15:16:44,376 - __main__ - INFO - POST /api/compare - Request started
+2026-01-09 15:16:44,378 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'csv', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv'}, 'target': {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'customers', 'user': 'root', 'password': 'root'}, 'selected_columns': 'all'}
+2026-01-09 15:16:44,380 - __main__ - INFO - DEBUG: source_type: None
+2026-01-09 15:16:44,383 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-09 15:16:44,384 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-09 15:16:44,387 - __main__ - INFO - Comparison analysis request received
+2026-01-09 15:16:44,390 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'csv', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv'}
+2026-01-09 15:16:44,394 - __main__ - INFO - Starting comparison for session CMP_20260109_151644
+2026-01-09 15:16:44,396 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-09 15:16:44,397 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-09 15:16:44,398 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:16:44,399 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-09 15:16:44,400 - dq_comparison - INFO - ==================================================
+2026-01-09 15:16:44,402 - dq_comparison - INFO - DEBUG load_csv_source called for SOURCE
+2026-01-09 15:16:44,404 - dq_comparison - INFO - DEBUG: Using file_path from 'file_path': C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2026-01-09 15:16:44,415 - dq_comparison - INFO - SOURCE CSV loaded: 15 rows, 10 columns
+2026-01-09 15:16:44,415 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:16:44,417 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-09 15:16:44,419 - dq_comparison - INFO - ==================================================
+2026-01-09 15:16:44,420 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-01-09 15:16:44,421 - dq_comparison - INFO - ----------------------------------------
+2026-01-09 15:16:44,423 - dq_comparison - INFO - Converted db_type to numeric code: 2
+2026-01-09 15:16:44,424 - dq_comparison - INFO - Selected database type code: mysql
+2026-01-09 15:16:44,426 - dq_unified - INFO - Getting database config from config file
+2026-01-09 15:16:44,428 - dq_unified - INFO - Using MYSQL configuration from config file
+2026-01-09 15:16:44,429 - dq_unified - INFO - Database configuration from config file: mysql, Table: customers
+2026-01-09 15:16:44,430 - dq_unified - INFO - Loading data from DATABASE
+2026-01-09 15:16:44,431 - dq_unified - INFO - Loading large database table: customers
+2026-01-09 15:16:44,432 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-09 15:16:44,459 - dq_unified - INFO - MySQL table customers has 15 rows
+2026-01-09 15:16:44,460 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-01-09 15:16:44,470 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-01-09 15:16:44,480 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-09 15:16:44,482 - dq_unified - INFO - Standardizing data types...
+2026-01-09 15:16:44,489 - dq_unified - INFO - Data type standardization complete
+2026-01-09 15:16:44,492 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 123.2MB total, 0.0MB for dataframe
+2026-01-09 15:16:44,493 - dq_comparison - INFO - TARGET database loaded: 15 rows, 10 columns
+2026-01-09 15:16:44,495 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2026-01-09 15:16:44,496 - dq_comparison - INFO - Target data loaded: 15 rows, 10 columns
+2026-01-09 15:16:44,498 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-09 15:16:44,500 - dq_comparison - INFO - Source columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:16:44,502 - dq_comparison - INFO - Target columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:16:44,503 - dq_comparison - INFO - Common columns lowercased: ['joindate', 'customername', 'department', 'postalcode', 'phone', 'country', 'city', 'salary', 'email', 'state']
+2026-01-09 15:16:44,505 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2026-01-09 15:16:44,505 - dq_comparison - INFO - User column selection input: all
+2026-01-09 15:16:44,508 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-09 15:16:44,509 - dq_comparison - INFO - Selected 10 columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone']...
+2026-01-09 15:16:44,511 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-09 15:16:44,514 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Database: mysql - dq_checks.customers, Selected columns: 10
+2026-01-09 15:16:44,516 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-09 15:16:44,517 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 15:16:44,541 - dq_error_log - INFO - Database connection successful
+2026-01-09 15:16:44,542 - dq_comparison - INFO - Session ID: CMP_20260109_151644
+2026-01-09 15:16:44,544 - dq_comparison - INFO - ✅ Row counts match: 15 rows
+2026-01-09 15:16:44,545 - dq_comparison - INFO - Comparing column structures...
+2026-01-09 15:16:44,548 - dq_comparison - WARNING - Found 8 incompatible data type mismatches
+2026-01-09 15:16:44,550 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-09 15:16:44,707 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-09 15:16:44,709 - dq_comparison - INFO - Checking key fields: ['PostalCode']
+2026-01-09 15:16:44,711 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in source: 2 rows
+2026-01-09 15:16:44,712 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in target: 2 rows
+2026-01-09 15:16:44,713 - dq_comparison - INFO - Primary key validation complete. Passed: False
+2026-01-09 15:16:44,757 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-09 15:16:44,788 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-09 15:16:44,790 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-09 15:16:44,795 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-09 15:16:44,797 - dq_comparison - INFO - Column: JoinDate
+2026-01-09 15:16:44,798 - dq_comparison - INFO -   Source type: <class 'str'>, value: 15-01-2023
+2026-01-09 15:16:44,799 - dq_comparison - INFO -   Target type: <class 'numpy.int64'>, value: 1673740800000000000
+2026-01-09 15:16:44,800 - dq_comparison - INFO -   Normalized: '2023-01-15' vs '2023-01-15'
+2026-01-09 15:16:44,801 - dq_comparison - INFO -   Match: True
+2026-01-09 15:16:44,803 - dq_comparison - INFO - Column: CustomerName
+2026-01-09 15:16:44,805 - dq_comparison - INFO -   Source type: <class 'str'>, value:    John Doe
+2026-01-09 15:16:44,807 - dq_comparison - INFO -   Target type: <class 'str'>, value: John Doe
+2026-01-09 15:16:44,808 - dq_comparison - INFO -   Normalized: 'john doe' vs 'john doe'
+2026-01-09 15:16:44,808 - dq_comparison - INFO -   Match: True
+2026-01-09 15:16:44,809 - dq_comparison - INFO - Column: Department
+2026-01-09 15:16:44,810 - dq_comparison - INFO -   Source type: <class 'str'>, value: IT             
+2026-01-09 15:16:44,811 - dq_comparison - INFO -   Target type: <class 'str'>, value: IT
+2026-01-09 15:16:44,812 - dq_comparison - INFO -   Normalized: 'it' vs 'it'
+2026-01-09 15:16:44,814 - dq_comparison - INFO -   Match: True
+2026-01-09 15:16:44,815 - dq_comparison - INFO - Source DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:16:44,817 - dq_comparison - INFO - Target DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:16:44,817 - dq_comparison - INFO - Selected columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:16:44,820 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2026-01-09 15:16:44,821 - dq_comparison - INFO - Source columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:16:44,823 - dq_comparison - INFO - Target columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:16:44,824 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-01-09 15:16:44,826 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '15-01-2023' -> '2023-01-15' | CustomerName: '   John Doe' -> 'john doe' | Department: 'IT             ' -> 'it' | PostalCode: '10001' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:16:44,827 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:16:44,828 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:16:44,830 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '20-02-2023' -> '2023-02-20' | CustomerName: 'Jane      Smith' -> 'jane smith' | Department: '       HR' -> 'hr' | PostalCode: '10002' -> '10002' | Phone: '9876543210' -> '9876543210'
+2026-01-09 15:16:44,831 - dq_comparison - INFO - DEBUG HASH STRING: 2023-02-20|jane smith|hr|10002|9876543210...
+2026-01-09 15:16:44,832 - dq_comparison - INFO - DEBUG HASH RESULT: 1c4a9538...
+2026-01-09 15:16:44,835 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '10-03-2023' -> '2023-03-10' | CustomerName: 'Bob        Johnson' -> 'bob johnson' | Department: 'Finance' -> 'finance' | PostalCode: '10003' -> '10003' | Phone: '5551234567' -> '5551234567'
+2026-01-09 15:16:44,836 - dq_comparison - INFO - DEBUG HASH STRING: 2023-03-10|bob johnson|finance|10003|5551234567...
+2026-01-09 15:16:44,837 - dq_comparison - INFO - DEBUG HASH RESULT: e6ea30e5...
+2026-01-09 15:16:44,839 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '15-01-2023' -> '2023-01-15' | CustomerName: 'Alice Brown' -> 'alice brown' | Department: 'IT' -> 'it' | PostalCode: '10004' -> '10004' | Phone: '4445556666' -> '4445556666'
+2026-01-09 15:16:44,840 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|alice brown|it|10004|4445556666...
+2026-01-09 15:16:44,842 - dq_comparison - INFO - DEBUG HASH RESULT: 9d895e9e...
+2026-01-09 15:16:44,844 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '05-04-2023' -> '2023-04-05' | CustomerName: 'Charlie Wilson' -> 'charlie wilson' | Department: 'HR' -> 'hr' | PostalCode: '10005' -> '10005' | Phone: '3334445555' -> '3334445555'
+2026-01-09 15:16:44,846 - dq_comparison - INFO - DEBUG HASH STRING: 2023-04-05|charlie wilson|hr|10005|3334445555...
+2026-01-09 15:16:44,847 - dq_comparison - INFO - DEBUG HASH RESULT: 5a9cf379...
+2026-01-09 15:16:44,848 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '15-01-2023' -> '2023-01-15' | CustomerName: 'John Doe        ' -> 'john doe' | Department: 'IT' -> 'it' | PostalCode: '10001' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:16:44,849 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:16:44,851 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:16:44,853 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '12-05-2023' -> '2023-05-12' | CustomerName: 'David         Lee' -> 'david lee' | Department: 'Finance' -> 'finance' | PostalCode: '10006' -> '10006' | Phone: '2223334444' -> '2223334444'
+2026-01-09 15:16:44,854 - dq_comparison - INFO - DEBUG HASH STRING: 2023-05-12|david lee|finance|10006|2223334444...
+2026-01-09 15:16:44,856 - dq_comparison - INFO - DEBUG HASH RESULT: a35c6262...
+2026-01-09 15:16:44,858 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '18-06-2023' -> '2023-06-18' | CustomerName: '  Sarah      Chen  ' -> 'sarah chen' | Department: 'IT' -> 'it' | PostalCode: '10007' -> '10007' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:16:44,859 - dq_comparison - INFO - DEBUG HASH STRING: 2023-06-18|sarah chen|it|10007|1112223333...
+2026-01-09 15:16:44,860 - dq_comparison - INFO - DEBUG HASH RESULT: bc3a360a...
+2026-01-09 15:16:44,864 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '22-07-2023' -> '2023-07-22' | CustomerName: 'Mike Davis' -> 'mike davis' | Department: 'HR' -> 'hr' | PostalCode: 'ABC123' -> 'ABC123' | Phone: '9998887777' -> '9998887777'
+2026-01-09 15:16:44,865 - dq_comparison - INFO - DEBUG HASH STRING: 2023-07-22|mike davis|hr|ABC123|9998887777...
+2026-01-09 15:16:44,867 - dq_comparison - INFO - DEBUG HASH RESULT: f9cc719e...
+2026-01-09 15:16:44,869 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '30-08-2023' -> '2023-08-30' | CustomerName: 'Lisa       Wang' -> 'lisa wang' | Department: 'nan' -> 'NULL' | PostalCode: '10008' -> '10008' | Phone: '6667778888' -> '6667778888'
+2026-01-09 15:16:44,870 - dq_comparison - INFO - DEBUG HASH STRING: 2023-08-30|lisa wang|NULL|10008|6667778888...
+2026-01-09 15:16:44,871 - dq_comparison - INFO - DEBUG HASH RESULT: c0e7c955...
+2026-01-09 15:16:44,873 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '10-09-2023' -> '2023-09-10' | CustomerName: 'Tom Wilson' -> 'tom wilson' | Department: 'Sales' -> 'sales' | PostalCode: '10009' -> '10009' | Phone: '7778889999' -> '7778889999'
+2026-01-09 15:16:44,874 - dq_comparison - INFO - DEBUG HASH STRING: 2023-09-10|tom wilson|sales|10009|7778889999...
+2026-01-09 15:16:44,876 - dq_comparison - INFO - DEBUG HASH RESULT: 190c6c34...
+2026-01-09 15:16:44,878 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '15-10-2023' -> '2023-10-15' | CustomerName: 'nan' -> 'NULL' | Department: '           Marketing' -> 'marketing' | PostalCode: '10010' -> '10010' | Phone: '8889990000' -> '8889990000'
+2026-01-09 15:16:44,879 - dq_comparison - INFO - DEBUG HASH STRING: 2023-10-15|NULL|marketing|10010|8889990000...
+2026-01-09 15:16:44,881 - dq_comparison - INFO - DEBUG HASH RESULT: 8e5434d0...
+2026-01-09 15:16:44,883 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '20-11-2023' -> '2023-11-20' | CustomerName: '            Robert Brown' -> 'robert brown' | Department: 'IT' -> 'it' | PostalCode: '10011' -> '10011' | Phone: '9990001111' -> '9990001111'
+2026-01-09 15:16:44,884 - dq_comparison - INFO - DEBUG HASH STRING: 2023-11-20|robert brown|it|10011|9990001111...
+2026-01-09 15:16:44,887 - dq_comparison - INFO - DEBUG HASH RESULT: bac201dc...
+2026-01-09 15:16:44,888 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '05-12-2023' -> '2023-12-05' | CustomerName: 'Nancy Davis' -> 'nancy davis' | Department: 'HR' -> 'hr' | PostalCode: '10012' -> '10012' | Phone: '1112222' -> '1112222'
+2026-01-09 15:16:44,889 - dq_comparison - INFO - DEBUG HASH STRING: 2023-12-05|nancy davis|hr|10012|1112222...
+2026-01-09 15:16:44,890 - dq_comparison - INFO - DEBUG HASH RESULT: 01e1a1c5...
+2026-01-09 15:16:44,892 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '10-01-2024' -> '2024-01-10' | CustomerName: 'Kevin Lee' -> 'kevin lee' | Department: 'Sales' -> 'sales' | PostalCode: '10013' -> '10013' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:16:44,893 - dq_comparison - INFO - DEBUG HASH STRING: 2024-01-10|kevin lee|sales|10013|1112223333...
+2026-01-09 15:16:44,894 - dq_comparison - INFO - DEBUG HASH RESULT: 05f55239...
+2026-01-09 15:16:44,895 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-09 15:16:44,896 - dq_comparison - INFO - Hash 1: 7f8697a85d06de5f... (sample row 0)
+2026-01-09 15:16:44,898 - dq_comparison - INFO - Hash 2: 1c4a953828734582... (sample row 1)
+2026-01-09 15:16:44,899 - dq_comparison - INFO - Hash 3: e6ea30e55432e60e... (sample row 2)
+2026-01-09 15:16:44,902 - dq_comparison - INFO - Generating hashes for target data (15 rows)...
+2026-01-09 15:16:44,911 - dq_comparison - INFO - 
+======================================================================
+2026-01-09 15:16:44,912 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-09 15:16:44,913 - dq_comparison - INFO - ======================================================================
+2026-01-09 15:16:44,915 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-09 15:16:44,916 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:16:44,918 - dq_comparison - INFO -   Source: '15-01-2023' (type: str) → '2023-01-15'
+2026-01-09 15:16:44,919 - dq_comparison - INFO -   Target: '1673740800000000000' (type: int64) → '2023-01-15'
+2026-01-09 15:16:44,920 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,922 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:16:44,922 - dq_comparison - INFO -   Source: '   John Doe' (type: str) → 'john doe'
+2026-01-09 15:16:44,923 - dq_comparison - INFO -   Target: 'John Doe' (type: str) → 'john doe'
+2026-01-09 15:16:44,925 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,926 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:16:44,928 - dq_comparison - INFO -   Source: 'IT             ' (type: str) → 'it'
+2026-01-09 15:16:44,929 - dq_comparison - INFO -   Target: 'IT' (type: str) → 'it'
+2026-01-09 15:16:44,930 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,932 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:16:44,933 - dq_comparison - INFO -   Source: '10001' (type: str) → '10001'
+2026-01-09 15:16:44,934 - dq_comparison - INFO -   Target: '10001.0' (type: float64) → '10001'
+2026-01-09 15:16:44,936 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,937 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:16:44,938 - dq_comparison - INFO -   Source: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:16:44,939 - dq_comparison - INFO -   Target: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:16:44,940 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,941 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-09 15:16:44,942 - dq_comparison - INFO - Source hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:16:44,944 - dq_comparison - INFO - Target hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:16:44,946 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:16:44,947 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-09 15:16:44,950 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:16:44,951 - dq_comparison - INFO -   Source: '20-02-2023' (type: str) → '2023-02-20'
+2026-01-09 15:16:44,952 - dq_comparison - INFO -   Target: '1676851200000000000' (type: int64) → '2023-02-20'
+2026-01-09 15:16:44,953 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,955 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:16:44,956 - dq_comparison - INFO -   Source: 'Jane      Smith' (type: str) → 'jane smith'
+2026-01-09 15:16:44,957 - dq_comparison - INFO -   Target: 'Jane Smith' (type: str) → 'jane smith'
+2026-01-09 15:16:44,958 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,959 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:16:44,960 - dq_comparison - INFO -   Source: '       HR' (type: str) → 'hr'
+2026-01-09 15:16:44,961 - dq_comparison - INFO -   Target: 'HR' (type: str) → 'hr'
+2026-01-09 15:16:44,962 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,963 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:16:44,965 - dq_comparison - INFO -   Source: '10002' (type: str) → '10002'
+2026-01-09 15:16:44,966 - dq_comparison - INFO -   Target: '10002.0' (type: float64) → '10002'
+2026-01-09 15:16:44,967 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,969 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:16:44,970 - dq_comparison - INFO -   Source: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:16:44,972 - dq_comparison - INFO -   Target: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:16:44,972 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,974 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-09 15:16:44,975 - dq_comparison - INFO - Source hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:16:44,976 - dq_comparison - INFO - Target hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:16:44,978 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:16:44,979 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-09 15:16:44,981 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:16:44,982 - dq_comparison - INFO -   Source: '10-03-2023' (type: str) → '2023-03-10'
+2026-01-09 15:16:44,984 - dq_comparison - INFO -   Target: '1678406400000000000' (type: int64) → '2023-03-10'
+2026-01-09 15:16:44,985 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,986 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:16:44,987 - dq_comparison - INFO -   Source: 'Bob        Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:16:44,988 - dq_comparison - INFO -   Target: 'Bob Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:16:44,989 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,990 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:16:44,992 - dq_comparison - INFO -   Source: 'Finance' (type: str) → 'finance'
+2026-01-09 15:16:44,993 - dq_comparison - INFO -   Target: 'Finance' (type: str) → 'finance'
+2026-01-09 15:16:44,995 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:44,995 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:16:44,996 - dq_comparison - INFO -   Source: '10003' (type: str) → '10003'
+2026-01-09 15:16:44,998 - dq_comparison - INFO -   Target: '10003.0' (type: float64) → '10003'
+2026-01-09 15:16:44,999 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:45,000 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:16:45,001 - dq_comparison - INFO -   Source: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:16:45,003 - dq_comparison - INFO -   Target: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:16:45,005 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:16:45,006 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-09 15:16:45,008 - dq_comparison - INFO - Source hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:16:45,009 - dq_comparison - INFO - Target hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:16:45,011 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:16:45,012 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-09 15:16:45,014 - dq_comparison - INFO - Column 1: 'JoinDate' (object) ↔ 'JoinDate' (int64)
+2026-01-09 15:16:45,016 - dq_comparison - INFO -   Sample: Source='15-01-2023', Target='1673740800000000000'
+2026-01-09 15:16:45,017 - dq_comparison - INFO - Column 2: 'CustomerName' (object) ↔ 'CustomerName' (object)
+2026-01-09 15:16:45,018 - dq_comparison - INFO -   Sample: Source='   John Doe', Target='John Doe'
+2026-01-09 15:16:45,020 - dq_comparison - INFO - Column 3: 'Department' (object) ↔ 'Department' (category)
+2026-01-09 15:16:45,021 - dq_comparison - INFO -   Sample: Source='IT             ', Target='IT'
+2026-01-09 15:16:45,023 - dq_comparison - INFO - Column 4: 'PostalCode' (object) ↔ 'PostalCode' (float64)
+2026-01-09 15:16:45,024 - dq_comparison - INFO -   Sample: Source='10001', Target='10001.0'
+2026-01-09 15:16:45,026 - dq_comparison - INFO - Column 5: 'Phone' (int64) ↔ 'Phone' (int64)
+2026-01-09 15:16:45,027 - dq_comparison - INFO -   Sample: Source='1234567890', Target='1234567890'
+2026-01-09 15:16:45,029 - dq_comparison - INFO - === DEBUG: DIRECT ROW COMPARISON ===
+2026-01-09 15:16:45,030 - dq_comparison - INFO - --- Comparing Row 0 ---
+2026-01-09 15:16:45,033 - dq_comparison - INFO -   ✅ JoinDate: '15-01-2023' → '2023-01-15' vs '1673740800000000000' → '2023-01-15'
+2026-01-09 15:16:45,034 - dq_comparison - INFO -   ✅ CustomerName: '   John Doe' → 'john doe' vs 'John Doe' → 'john doe'
+2026-01-09 15:16:45,036 - dq_comparison - INFO -   ✅ Department: 'IT             ' → 'it' vs 'IT' → 'it'
+2026-01-09 15:16:45,037 - dq_comparison - INFO -   ✅ PostalCode: '10001' → '10001' vs '10001.0' → '10001'
+2026-01-09 15:16:45,039 - dq_comparison - INFO -   ✅ Phone: '1234567890' → '1234567890' vs '1234567890' → '1234567890'
+2026-01-09 15:16:45,040 - dq_comparison - INFO - --- Comparing Row 1 ---
+2026-01-09 15:16:45,042 - dq_comparison - INFO -   ✅ JoinDate: '20-02-2023' → '2023-02-20' vs '1676851200000000000' → '2023-02-20'
+2026-01-09 15:16:45,044 - dq_comparison - INFO -   ✅ CustomerName: 'Jane      Smith' → 'jane smith' vs 'Jane Smith' → 'jane smith'
+2026-01-09 15:16:45,045 - dq_comparison - INFO -   ✅ Department: '       HR' → 'hr' vs 'HR' → 'hr'
+2026-01-09 15:16:45,047 - dq_comparison - INFO -   ✅ PostalCode: '10002' → '10002' vs '10002.0' → '10002'
+2026-01-09 15:16:45,048 - dq_comparison - INFO -   ✅ Phone: '9876543210' → '9876543210' vs '9876543210' → '9876543210'
+2026-01-09 15:16:45,049 - dq_comparison - INFO - --- Comparing Row 2 ---
+2026-01-09 15:16:45,051 - dq_comparison - INFO -   ✅ JoinDate: '10-03-2023' → '2023-03-10' vs '1678406400000000000' → '2023-03-10'
+2026-01-09 15:16:45,051 - dq_comparison - INFO -   ✅ CustomerName: 'Bob        Johnson' → 'bob johnson' vs 'Bob Johnson' → 'bob johnson'
+2026-01-09 15:16:45,053 - dq_comparison - INFO -   ✅ Department: 'Finance' → 'finance' vs 'Finance' → 'finance'
+2026-01-09 15:16:45,055 - dq_comparison - INFO -   ✅ PostalCode: '10003' → '10003' vs '10003.0' → '10003'
+2026-01-09 15:16:45,057 - dq_comparison - INFO -   ✅ Phone: '5551234567' → '5551234567' vs '5551234567' → '5551234567'
+2026-01-09 15:16:45,058 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-09 15:16:45,058 - dq_comparison - INFO -   • Unique source hashes: 14
+2026-01-09 15:16:45,060 - dq_comparison - INFO -   • Unique target hashes: 14
+2026-01-09 15:16:45,062 - dq_comparison - INFO -   • Common hashes: 13
+2026-01-09 15:16:45,063 - dq_comparison - INFO -   • Common rows (counting duplicates): 14
+2026-01-09 15:16:45,064 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 1
+2026-01-09 15:16:45,064 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 1
+2026-01-09 15:16:45,065 - dq_comparison - INFO - Found 1 rows missing in target
+2026-01-09 15:16:45,093 - dq_comparison - INFO - Found 1 extra rows in target
+2026-01-09 15:16:45,112 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-09 15:16:45,113 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-09 15:16:45,114 - dq_comparison - INFO -   Common rows: 14
+2026-01-09 15:16:45,116 - dq_comparison - INFO -   Unique to source: 1
+2026-01-09 15:16:45,117 - dq_comparison - INFO -   Unique to target: 1
+2026-01-09 15:16:45,120 - dq_comparison - INFO -   Value mismatches: 20
+2026-01-09 15:16:45,120 - dq_comparison - INFO -   Missing rows: 1
+2026-01-09 15:16:45,122 - dq_comparison - INFO -   Extra rows: 1
+2026-01-09 15:16:45,124 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-09 15:16:45,151 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2026-01-09 15:16:45,155 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2026-01-09 15:16:45,159 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:16:45,162 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:16:45,179 - dq_error_log - INFO - Retrieved 12 error logs for session CMP_20260109_151644
+2026-01-09 15:16:45,180 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-09 15:16:45,182 - dq_comparison - INFO -   Source rows: 15
+2026-01-09 15:16:45,183 - dq_comparison - INFO -   Common rows (matched): 14
+2026-01-09 15:16:45,185 - dq_comparison - INFO -   Calculation: (14 / 15) * 100 = 93.33%
+2026-01-09 15:16:45,185 - dq_comparison - INFO -   Explanation: 14 matched rows out of 15 total source rows
+2026-01-09 15:16:45,186 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-09 15:16:45,188 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-09 15:16:45,189 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:16:45,190 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260109_151644
+2026-01-09 15:16:45,192 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-09 15:16:45,215 - dq_audit - INFO - Inserted comparison record with ID: 569
+2026-01-09 15:16:45,216 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 569)
+2026-01-09 15:16:45,239 - dq_error_log - INFO - Retrieved 12 error logs for session CMP_20260109_151644
+2026-01-09 15:16:45,264 - dq_error_log - INFO - Retrieved summary: 12 total errors for session CMP_20260109_151644
+2026-01-09 15:16:45,266 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:16:45,291 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151644
+2026-01-09 15:16:45,293 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-09 15:16:45,295 - dq_comparison - INFO -    Session ID: CMP_20260109_151644
+2026-01-09 15:16:45,297 - dq_comparison - INFO -    DQ Score (Simple %): 93.33%
+2026-01-09 15:16:45,299 - dq_comparison - INFO -    Source rows: 15
+2026-01-09 15:16:45,301 - dq_comparison - INFO -    Matched rows: 14
+2026-01-09 15:16:45,303 - dq_comparison - INFO -    Calculation: (14 / 15) * 100
+2026-01-09 15:16:45,306 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-09 15:16:45,332 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151644
+2026-01-09 15:16:45,356 - dq_error_log - INFO - Retrieved 12 error logs for session CMP_20260109_151644
+2026-01-09 15:16:45,382 - dq_error_log - INFO - Retrieved summary: 12 total errors for session CMP_20260109_151644
+2026-01-09 15:16:45,385 - __main__ - INFO - Comparison completed for session CMP_20260109_151644
+2026-01-09 15:16:45,394 - __main__ - INFO - Completed with status 200 in 1.018s
+2026-01-09 15:17:08,059 - __main__ - INFO - POST /api/compare - Request started
+2026-01-09 15:17:08,061 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'customers', 'user': 'root', 'password': 'root'}, 'target': {'source_type': 'excel', 'target_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}, 'selected_columns': 'all'}
+2026-01-09 15:17:08,064 - __main__ - INFO - DEBUG: source_type: None
+2026-01-09 15:17:08,066 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-09 15:17:08,068 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-09 15:17:08,070 - __main__ - INFO - Comparison analysis request received
+2026-01-09 15:17:08,074 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'customers', 'user': 'root', 'password': 'root'}
+2026-01-09 15:17:08,078 - __main__ - INFO - Starting comparison for session CMP_20260109_151708
+2026-01-09 15:17:08,080 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-09 15:17:08,081 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-09 15:17:08,083 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:17:08,085 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-09 15:17:08,087 - dq_comparison - INFO - ==================================================
+2026-01-09 15:17:08,089 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-01-09 15:17:08,091 - dq_comparison - INFO - ----------------------------------------
+2026-01-09 15:17:08,093 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-01-09 15:17:08,094 - dq_unified - INFO - Loading data from DATABASE
+2026-01-09 15:17:08,095 - dq_unified - INFO - Loading large database table: customers
+2026-01-09 15:17:08,098 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-09 15:17:08,124 - dq_unified - INFO - MySQL table customers has 15 rows
+2026-01-09 15:17:08,125 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-01-09 15:17:08,136 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-01-09 15:17:08,145 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-09 15:17:08,147 - dq_unified - INFO - Standardizing data types...
+2026-01-09 15:17:08,159 - dq_unified - INFO - Data type standardization complete
+2026-01-09 15:17:08,163 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 123.3MB total, 0.0MB for dataframe
+2026-01-09 15:17:08,165 - dq_comparison - INFO - SOURCE database loaded: 15 rows, 10 columns
+2026-01-09 15:17:08,166 - dq_comparison - INFO - 
+==================================================
+2026-01-09 15:17:08,168 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-09 15:17:08,169 - dq_comparison - INFO - ==================================================
+2026-01-09 15:17:08,169 - dq_comparison - INFO - DEBUG load_excel_source called for TARGET
+2026-01-09 15:17:08,171 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'target_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}
+2026-01-09 15:17:08,173 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-09 15:17:08,175 - dq_comparison - INFO - DEBUG Found target_file_path in ui_data: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2026-01-09 15:17:10,897 - dq_comparison - INFO - TARGET Excel loaded: 15 rows, 10 columns
+2026-01-09 15:17:10,899 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2026-01-09 15:17:10,901 - dq_comparison - INFO - Target data loaded: 15 rows, 10 columns
+2026-01-09 15:17:10,902 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-09 15:17:10,903 - dq_comparison - INFO - Source columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:17:10,904 - dq_comparison - INFO - Target columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:17:10,906 - dq_comparison - INFO - Common columns lowercased: ['joindate', 'customername', 'department', 'postalcode', 'phone', 'country', 'city', 'salary', 'email', 'state']
+2026-01-09 15:17:10,907 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2026-01-09 15:17:10,909 - dq_comparison - INFO - User column selection input: all
+2026-01-09 15:17:10,910 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-09 15:17:10,911 - dq_comparison - INFO - Selected 10 columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone']...
+2026-01-09 15:17:10,913 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-09 15:17:10,914 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.customers, Target: Excel: sample_data.xlsx (sample_data), Selected columns: 10
+2026-01-09 15:17:10,916 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-09 15:17:10,917 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-09 15:17:10,944 - dq_error_log - INFO - Database connection successful
+2026-01-09 15:17:10,944 - dq_comparison - INFO - Session ID: CMP_20260109_151710
+2026-01-09 15:17:10,946 - dq_comparison - INFO - ✅ Row counts match: 15 rows
+2026-01-09 15:17:10,947 - dq_comparison - INFO - Comparing column structures...
+2026-01-09 15:17:10,951 - dq_comparison - WARNING - Found 7 incompatible data type mismatches
+2026-01-09 15:17:10,952 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-09 15:17:11,110 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-09 15:17:11,112 - dq_comparison - INFO - Checking key fields: ['PostalCode']
+2026-01-09 15:17:11,118 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in source: 2 rows
+2026-01-09 15:17:11,119 - dq_comparison - WARNING - Field 'PostalCode' has duplicates in target: 2 rows
+2026-01-09 15:17:11,122 - dq_comparison - INFO - Primary key validation complete. Passed: False
+2026-01-09 15:17:11,174 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-09 15:17:11,198 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-09 15:17:11,199 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-09 15:17:11,204 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-09 15:17:11,205 - dq_comparison - INFO - Column: JoinDate
+2026-01-09 15:17:11,207 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: 1673740800000000000
+2026-01-09 15:17:11,209 - dq_comparison - INFO -   Target type: <class 'pandas._libs.tslibs.timestamps.Timestamp'>, value: 2023-01-15 00:00:00
+2026-01-09 15:17:11,210 - dq_comparison - INFO -   Normalized: '2023-01-15' vs '2023-01-15'
+2026-01-09 15:17:11,211 - dq_comparison - INFO -   Match: True
+2026-01-09 15:17:11,213 - dq_comparison - INFO - Column: CustomerName
+2026-01-09 15:17:11,214 - dq_comparison - INFO -   Source type: <class 'str'>, value: John Doe
+2026-01-09 15:17:11,216 - dq_comparison - INFO -   Target type: <class 'str'>, value: John Doe
+2026-01-09 15:17:11,217 - dq_comparison - INFO -   Normalized: 'john doe' vs 'john doe'
+2026-01-09 15:17:11,218 - dq_comparison - INFO -   Match: True
+2026-01-09 15:17:11,218 - dq_comparison - INFO - Column: Department
+2026-01-09 15:17:11,219 - dq_comparison - INFO -   Source type: <class 'str'>, value: IT
+2026-01-09 15:17:11,220 - dq_comparison - INFO -   Target type: <class 'str'>, value: IT
+2026-01-09 15:17:11,221 - dq_comparison - INFO -   Normalized: 'it' vs 'it'
+2026-01-09 15:17:11,223 - dq_comparison - INFO -   Match: True
+2026-01-09 15:17:11,224 - dq_comparison - INFO - Source DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:17:11,225 - dq_comparison - INFO - Target DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-09 15:17:11,227 - dq_comparison - INFO - Selected columns for comparison: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:17:11,228 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2026-01-09 15:17:11,229 - dq_comparison - INFO - Source columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:17:11,231 - dq_comparison - INFO - Target columns: ['JoinDate', 'CustomerName', 'Department', 'PostalCode', 'Phone', 'Country', 'City', 'Salary', 'Email', 'State']
+2026-01-09 15:17:11,231 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-01-09 15:17:11,234 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'John Doe' -> 'john doe' | Department: 'IT' -> 'it' | PostalCode: '10001.0' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:17:11,235 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:17:11,236 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:17:11,238 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1676851200000000000' -> '2023-02-20' | CustomerName: 'Jane Smith' -> 'jane smith' | Department: 'HR' -> 'hr' | PostalCode: '10002.0' -> '10002' | Phone: '9876543210' -> '9876543210'
+2026-01-09 15:17:11,240 - dq_comparison - INFO - DEBUG HASH STRING: 2023-02-20|jane smith|hr|10002|9876543210...
+2026-01-09 15:17:11,241 - dq_comparison - INFO - DEBUG HASH RESULT: 1c4a9538...
+2026-01-09 15:17:11,243 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1678406400000000000' -> '2023-03-10' | CustomerName: 'Bob Johnson' -> 'bob johnson' | Department: 'Finance' -> 'finance' | PostalCode: '10003.0' -> '10003' | Phone: '5551234567' -> '5551234567'
+2026-01-09 15:17:11,245 - dq_comparison - INFO - DEBUG HASH STRING: 2023-03-10|bob johnson|finance|10003|5551234567...
+2026-01-09 15:17:11,246 - dq_comparison - INFO - DEBUG HASH RESULT: e6ea30e5...
+2026-01-09 15:17:11,248 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'Alice Brown' -> 'alice brown' | Department: 'IT' -> 'it' | PostalCode: '10004.0' -> '10004' | Phone: '4445556666' -> '4445556666'
+2026-01-09 15:17:11,250 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|alice brown|it|10004|4445556666...
+2026-01-09 15:17:11,252 - dq_comparison - INFO - DEBUG HASH RESULT: 9d895e9e...
+2026-01-09 15:17:11,254 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1680652800000000000' -> '2023-04-05' | CustomerName: 'Charlie Wilson' -> 'charlie wilson' | Department: 'HR' -> 'hr' | PostalCode: '10005.0' -> '10005' | Phone: '3334445555' -> '3334445555'
+2026-01-09 15:17:11,256 - dq_comparison - INFO - DEBUG HASH STRING: 2023-04-05|charlie wilson|hr|10005|3334445555...
+2026-01-09 15:17:11,256 - dq_comparison - INFO - DEBUG HASH RESULT: 5a9cf379...
+2026-01-09 15:17:11,257 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1673740800000000000' -> '2023-01-15' | CustomerName: 'John Doe' -> 'john doe' | Department: 'IT' -> 'it' | PostalCode: '10001.0' -> '10001' | Phone: '1234567890' -> '1234567890'
+2026-01-09 15:17:11,260 - dq_comparison - INFO - DEBUG HASH STRING: 2023-01-15|john doe|it|10001|1234567890...
+2026-01-09 15:17:11,261 - dq_comparison - INFO - DEBUG HASH RESULT: 7f8697a8...
+2026-01-09 15:17:11,264 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1683849600000000000' -> '2023-05-12' | CustomerName: 'David Lee' -> 'david lee' | Department: 'Finance' -> 'finance' | PostalCode: '10006.0' -> '10006' | Phone: '2223334444' -> '2223334444'
+2026-01-09 15:17:11,264 - dq_comparison - INFO - DEBUG HASH STRING: 2023-05-12|david lee|finance|10006|2223334444...
+2026-01-09 15:17:11,266 - dq_comparison - INFO - DEBUG HASH RESULT: a35c6262...
+2026-01-09 15:17:11,268 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1687046400000000000' -> '2023-06-18' | CustomerName: 'Sarah Chen' -> 'sarah chen' | Department: 'IT' -> 'it' | PostalCode: '10007.0' -> '10007' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:17:11,269 - dq_comparison - INFO - DEBUG HASH STRING: 2023-06-18|sarah chen|it|10007|1112223333...
+2026-01-09 15:17:11,270 - dq_comparison - INFO - DEBUG HASH RESULT: bc3a360a...
+2026-01-09 15:17:11,272 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1689984000000000000' -> '2023-07-22' | CustomerName: 'Mike Davis' -> 'mike davis' | Department: 'HR' -> 'hr' | PostalCode: 'nan' -> 'NULL' | Phone: '9998887777' -> '9998887777'
+2026-01-09 15:17:11,273 - dq_comparison - INFO - DEBUG HASH STRING: 2023-07-22|mike davis|hr|NULL|9998887777...
+2026-01-09 15:17:11,275 - dq_comparison - INFO - DEBUG HASH RESULT: 65d987d6...
+2026-01-09 15:17:11,276 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1693353600000000000' -> '2023-08-30' | CustomerName: 'Lisa Wang' -> 'lisa wang' | Department: 'nan' -> 'NULL' | PostalCode: '10008.0' -> '10008' | Phone: '6667778888' -> '6667778888'
+2026-01-09 15:17:11,277 - dq_comparison - INFO - DEBUG HASH STRING: 2023-08-30|lisa wang|NULL|10008|6667778888...
+2026-01-09 15:17:11,278 - dq_comparison - INFO - DEBUG HASH RESULT: c0e7c955...
+2026-01-09 15:17:11,279 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1694304000000000000' -> '2023-09-10' | CustomerName: 'Tom Wilson' -> 'tom wilson' | Department: 'Sales' -> 'sales' | PostalCode: '10009.0' -> '10009' | Phone: '7778889999' -> '7778889999'
+2026-01-09 15:17:11,280 - dq_comparison - INFO - DEBUG HASH STRING: 2023-09-10|tom wilson|sales|10009|7778889999...
+2026-01-09 15:17:11,282 - dq_comparison - INFO - DEBUG HASH RESULT: 190c6c34...
+2026-01-09 15:17:11,284 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1697328000000000000' -> '2023-10-15' | CustomerName: 'None' -> 'NULL' | Department: 'Marketing' -> 'marketing' | PostalCode: '10010.0' -> '10010' | Phone: '8889990000' -> '8889990000'
+2026-01-09 15:17:11,286 - dq_comparison - INFO - DEBUG HASH STRING: 2023-10-15|NULL|marketing|10010|8889990000...
+2026-01-09 15:17:11,287 - dq_comparison - INFO - DEBUG HASH RESULT: 8e5434d0...
+2026-01-09 15:17:11,289 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1700438400000000000' -> '2023-11-20' | CustomerName: 'Robert Brown' -> 'robert brown' | Department: 'IT' -> 'it' | PostalCode: '10011.0' -> '10011' | Phone: '9990001111' -> '9990001111'
+2026-01-09 15:17:11,289 - dq_comparison - INFO - DEBUG HASH STRING: 2023-11-20|robert brown|it|10011|9990001111...
+2026-01-09 15:17:11,291 - dq_comparison - INFO - DEBUG HASH RESULT: bac201dc...
+2026-01-09 15:17:11,292 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1701734400000000000' -> '2023-12-05' | CustomerName: 'Nancy Davis' -> 'nancy davis' | Department: 'HR' -> 'hr' | PostalCode: '10012.0' -> '10012' | Phone: '1112222' -> '1112222'
+2026-01-09 15:17:11,292 - dq_comparison - INFO - DEBUG HASH STRING: 2023-12-05|nancy davis|hr|10012|1112222...
+2026-01-09 15:17:11,294 - dq_comparison - INFO - DEBUG HASH RESULT: 01e1a1c5...
+2026-01-09 15:17:11,295 - dq_comparison - INFO - DEBUG HASH ROW: JoinDate: '1704844800000000000' -> '2024-01-10' | CustomerName: 'Kevin Lee' -> 'kevin lee' | Department: 'Sales' -> 'sales' | PostalCode: '10013.0' -> '10013' | Phone: '1112223333' -> '1112223333'
+2026-01-09 15:17:11,296 - dq_comparison - INFO - DEBUG HASH STRING: 2024-01-10|kevin lee|sales|10013|1112223333...
+2026-01-09 15:17:11,298 - dq_comparison - INFO - DEBUG HASH RESULT: 05f55239...
+2026-01-09 15:17:11,299 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-09 15:17:11,301 - dq_comparison - INFO - Hash 1: 7f8697a85d06de5f... (sample row 0)
+2026-01-09 15:17:11,302 - dq_comparison - INFO - Hash 2: 1c4a953828734582... (sample row 1)
+2026-01-09 15:17:11,303 - dq_comparison - INFO - Hash 3: e6ea30e55432e60e... (sample row 2)
+2026-01-09 15:17:11,305 - dq_comparison - INFO - Generating hashes for target data (15 rows)...
+2026-01-09 15:17:11,312 - dq_comparison - INFO - 
+======================================================================
+2026-01-09 15:17:11,313 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-09 15:17:11,314 - dq_comparison - INFO - ======================================================================
+2026-01-09 15:17:11,315 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-09 15:17:11,317 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:17:11,318 - dq_comparison - INFO -   Source: '1673740800000000000' (type: int64) → '2023-01-15'
+2026-01-09 15:17:11,319 - dq_comparison - INFO -   Target: '2023-01-15 00:00:00' (type: Timestamp) → '2023-01-15'
+2026-01-09 15:17:11,320 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,321 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:17:11,322 - dq_comparison - INFO -   Source: 'John Doe' (type: str) → 'john doe'
+2026-01-09 15:17:11,323 - dq_comparison - INFO -   Target: 'John Doe' (type: str) → 'john doe'
+2026-01-09 15:17:11,324 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,325 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:17:11,325 - dq_comparison - INFO -   Source: 'IT' (type: str) → 'it'
+2026-01-09 15:17:11,326 - dq_comparison - INFO -   Target: 'IT' (type: str) → 'it'
+2026-01-09 15:17:11,327 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,328 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:17:11,329 - dq_comparison - INFO -   Source: '10001.0' (type: float64) → '10001'
+2026-01-09 15:17:11,330 - dq_comparison - INFO -   Target: '10001' (type: int) → '10001'
+2026-01-09 15:17:11,331 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,333 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:17:11,333 - dq_comparison - INFO -   Source: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:17:11,335 - dq_comparison - INFO -   Target: '1234567890' (type: int64) → '1234567890'
+2026-01-09 15:17:11,336 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,337 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-09 15:17:11,339 - dq_comparison - INFO - Source hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:17:11,341 - dq_comparison - INFO - Target hash string start: 2023-01-15|john doe|it...
+2026-01-09 15:17:11,343 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:17:11,344 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-09 15:17:11,346 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:17:11,347 - dq_comparison - INFO -   Source: '1676851200000000000' (type: int64) → '2023-02-20'
+2026-01-09 15:17:11,348 - dq_comparison - INFO -   Target: '2023-02-20 00:00:00' (type: Timestamp) → '2023-02-20'
+2026-01-09 15:17:11,349 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,351 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:17:11,352 - dq_comparison - INFO -   Source: 'Jane Smith' (type: str) → 'jane smith'
+2026-01-09 15:17:11,353 - dq_comparison - INFO -   Target: 'Jane Smith' (type: str) → 'jane smith'
+2026-01-09 15:17:11,355 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,356 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:17:11,358 - dq_comparison - INFO -   Source: 'HR' (type: str) → 'hr'
+2026-01-09 15:17:11,359 - dq_comparison - INFO -   Target: '    HR' (type: str) → 'hr'
+2026-01-09 15:17:11,361 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,363 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:17:11,364 - dq_comparison - INFO -   Source: '10002.0' (type: float64) → '10002'
+2026-01-09 15:17:11,365 - dq_comparison - INFO -   Target: '10002' (type: int) → '10002'
+2026-01-09 15:17:11,366 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,368 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:17:11,369 - dq_comparison - INFO -   Source: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:17:11,371 - dq_comparison - INFO -   Target: '9876543210' (type: int64) → '9876543210'
+2026-01-09 15:17:11,372 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,373 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-09 15:17:11,375 - dq_comparison - INFO - Source hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:17:11,376 - dq_comparison - INFO - Target hash string start: 2023-02-20|jane smith|hr...
+2026-01-09 15:17:11,377 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:17:11,379 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-09 15:17:11,381 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-09 15:17:11,382 - dq_comparison - INFO -   Source: '1678406400000000000' (type: int64) → '2023-03-10'
+2026-01-09 15:17:11,383 - dq_comparison - INFO -   Target: '2023-03-10 00:00:00' (type: Timestamp) → '2023-03-10'
+2026-01-09 15:17:11,384 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,385 - dq_comparison - INFO - Column 'CustomerName' → 'CustomerName':
+2026-01-09 15:17:11,386 - dq_comparison - INFO -   Source: 'Bob Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:17:11,388 - dq_comparison - INFO -   Target: 'Bob Johnson' (type: str) → 'bob johnson'
+2026-01-09 15:17:11,389 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,391 - dq_comparison - INFO - Column 'Department' → 'Department':
+2026-01-09 15:17:11,392 - dq_comparison - INFO -   Source: 'Finance' (type: str) → 'finance'
+2026-01-09 15:17:11,394 - dq_comparison - INFO -   Target: 'Finance       ' (type: str) → 'finance'
+2026-01-09 15:17:11,395 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,396 - dq_comparison - INFO - Column 'PostalCode' → 'PostalCode':
+2026-01-09 15:17:11,397 - dq_comparison - INFO -   Source: '10003.0' (type: float64) → '10003'
+2026-01-09 15:17:11,398 - dq_comparison - INFO -   Target: '10003' (type: int) → '10003'
+2026-01-09 15:17:11,399 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,400 - dq_comparison - INFO - Column 'Phone' → 'Phone':
+2026-01-09 15:17:11,401 - dq_comparison - INFO -   Source: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:17:11,403 - dq_comparison - INFO -   Target: '5551234567' (type: int64) → '5551234567'
+2026-01-09 15:17:11,405 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-09 15:17:11,406 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-09 15:17:11,408 - dq_comparison - INFO - Source hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:17:11,410 - dq_comparison - INFO - Target hash string start: 2023-03-10|bob johnson|finance...
+2026-01-09 15:17:11,411 - dq_comparison - INFO - Same? ✅ YES
+2026-01-09 15:17:11,412 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-09 15:17:11,414 - dq_comparison - INFO - Column 1: 'JoinDate' (int64) ↔ 'JoinDate' (datetime64[ns])
+2026-01-09 15:17:11,416 - dq_comparison - INFO -   Sample: Source='1673740800000000000', Target='2023-01-15 00:00:00'
+2026-01-09 15:17:11,417 - dq_comparison - INFO - Column 2: 'CustomerName' (object) ↔ 'CustomerName' (object)
+2026-01-09 15:17:11,418 - dq_comparison - INFO -   Sample: Source='John Doe', Target='John Doe'
+2026-01-09 15:17:11,420 - dq_comparison - INFO - Column 3: 'Department' (category) ↔ 'Department' (object)
+2026-01-09 15:17:11,421 - dq_comparison - INFO -   Sample: Source='IT', Target='IT'
+2026-01-09 15:17:11,422 - dq_comparison - INFO - Column 4: 'PostalCode' (float64) ↔ 'PostalCode' (object)
+2026-01-09 15:17:11,424 - dq_comparison - INFO -   Sample: Source='10001.0', Target='10001'
+2026-01-09 15:17:11,424 - dq_comparison - INFO - Column 5: 'Phone' (int64) ↔ 'Phone' (int64)
+2026-01-09 15:17:11,426 - dq_comparison - INFO -   Sample: Source='1234567890', Target='1234567890'
+2026-01-09 15:17:11,428 - dq_comparison - INFO - === DEBUG: DIRECT ROW COMPARISON ===
+2026-01-09 15:17:11,429 - dq_comparison - INFO - --- Comparing Row 0 ---
+2026-01-09 15:17:11,431 - dq_comparison - INFO -   ✅ JoinDate: '1673740800000000000' → '2023-01-15' vs '2023-01-15 00:00:00' → '2023-01-15'
+2026-01-09 15:17:11,433 - dq_comparison - INFO -   ✅ CustomerName: 'John Doe' → 'john doe' vs 'John Doe' → 'john doe'
+2026-01-09 15:17:11,434 - dq_comparison - INFO -   ✅ Department: 'IT' → 'it' vs 'IT' → 'it'
+2026-01-09 15:17:11,435 - dq_comparison - INFO -   ✅ PostalCode: '10001.0' → '10001' vs '10001' → '10001'
+2026-01-09 15:17:11,436 - dq_comparison - INFO -   ✅ Phone: '1234567890' → '1234567890' vs '1234567890' → '1234567890'
+2026-01-09 15:17:11,438 - dq_comparison - INFO - --- Comparing Row 1 ---
+2026-01-09 15:17:11,440 - dq_comparison - INFO -   ✅ JoinDate: '1676851200000000000' → '2023-02-20' vs '2023-02-20 00:00:00' → '2023-02-20'
+2026-01-09 15:17:11,441 - dq_comparison - INFO -   ✅ CustomerName: 'Jane Smith' → 'jane smith' vs 'Jane Smith' → 'jane smith'
+2026-01-09 15:17:11,442 - dq_comparison - INFO -   ✅ Department: 'HR' → 'hr' vs '    HR' → 'hr'
+2026-01-09 15:17:11,444 - dq_comparison - INFO -   ✅ PostalCode: '10002.0' → '10002' vs '10002' → '10002'
+2026-01-09 15:17:11,445 - dq_comparison - INFO -   ✅ Phone: '9876543210' → '9876543210' vs '9876543210' → '9876543210'
+2026-01-09 15:17:11,447 - dq_comparison - INFO - --- Comparing Row 2 ---
+2026-01-09 15:17:11,449 - dq_comparison - INFO -   ✅ JoinDate: '1678406400000000000' → '2023-03-10' vs '2023-03-10 00:00:00' → '2023-03-10'
+2026-01-09 15:17:11,450 - dq_comparison - INFO -   ✅ CustomerName: 'Bob Johnson' → 'bob johnson' vs 'Bob Johnson' → 'bob johnson'
+2026-01-09 15:17:11,451 - dq_comparison - INFO -   ✅ Department: 'Finance' → 'finance' vs 'Finance       ' → 'finance'
+2026-01-09 15:17:11,452 - dq_comparison - INFO -   ✅ PostalCode: '10003.0' → '10003' vs '10003' → '10003'
+2026-01-09 15:17:11,455 - dq_comparison - INFO -   ✅ Phone: '5551234567' → '5551234567' vs '5551234567' → '5551234567'
+2026-01-09 15:17:11,456 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-09 15:17:11,457 - dq_comparison - INFO -   • Unique source hashes: 14
+2026-01-09 15:17:11,458 - dq_comparison - INFO -   • Unique target hashes: 14
+2026-01-09 15:17:11,459 - dq_comparison - INFO -   • Common hashes: 13
+2026-01-09 15:17:11,460 - dq_comparison - INFO -   • Common rows (counting duplicates): 14
+2026-01-09 15:17:11,462 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 1
+2026-01-09 15:17:11,463 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 1
+2026-01-09 15:17:11,464 - dq_comparison - INFO - Found 1 rows missing in target
+2026-01-09 15:17:11,490 - dq_comparison - INFO - Found 1 extra rows in target
+2026-01-09 15:17:11,511 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-09 15:17:11,513 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-09 15:17:11,514 - dq_comparison - INFO -   Common rows: 14
+2026-01-09 15:17:11,516 - dq_comparison - INFO -   Unique to source: 1
+2026-01-09 15:17:11,517 - dq_comparison - INFO -   Unique to target: 1
+2026-01-09 15:17:11,519 - dq_comparison - INFO -   Value mismatches: 20
+2026-01-09 15:17:11,520 - dq_comparison - INFO -   Missing rows: 1
+2026-01-09 15:17:11,521 - dq_comparison - INFO -   Extra rows: 1
+2026-01-09 15:17:11,523 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-09 15:17:11,544 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2026-01-09 15:17:11,548 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2026-01-09 15:17:11,551 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:17:11,553 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2026-01-09 15:17:11,569 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_151710
+2026-01-09 15:17:11,570 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-09 15:17:11,571 - dq_comparison - INFO -   Source rows: 15
+2026-01-09 15:17:11,572 - dq_comparison - INFO -   Common rows (matched): 14
+2026-01-09 15:17:11,573 - dq_comparison - INFO -   Calculation: (14 / 15) * 100 = 93.33%
+2026-01-09 15:17:11,574 - dq_comparison - INFO -   Explanation: 14 matched rows out of 15 total source rows
+2026-01-09 15:17:11,576 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-09 15:17:11,577 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-09 15:17:11,578 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:17:11,578 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260109_151710
+2026-01-09 15:17:11,579 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-09 15:17:11,602 - dq_audit - INFO - Inserted comparison record with ID: 570
+2026-01-09 15:17:11,604 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 570)
+2026-01-09 15:17:11,621 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_151710
+2026-01-09 15:17:11,640 - dq_error_log - INFO - Retrieved summary: 11 total errors for session CMP_20260109_151710
+2026-01-09 15:17:11,642 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-09 15:17:11,661 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151710
+2026-01-09 15:17:11,662 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-09 15:17:11,663 - dq_comparison - INFO -    Session ID: CMP_20260109_151710
+2026-01-09 15:17:11,664 - dq_comparison - INFO -    DQ Score (Simple %): 93.33%
+2026-01-09 15:17:11,665 - dq_comparison - INFO -    Source rows: 15
+2026-01-09 15:17:11,666 - dq_comparison - INFO -    Matched rows: 14
+2026-01-09 15:17:11,667 - dq_comparison - INFO -    Calculation: (14 / 15) * 100
+2026-01-09 15:17:11,668 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-09 15:17:11,689 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260109_151710
+2026-01-09 15:17:11,708 - dq_error_log - INFO - Retrieved 11 error logs for session CMP_20260109_151710
+2026-01-09 15:17:11,731 - dq_error_log - INFO - Retrieved summary: 11 total errors for session CMP_20260109_151710
+2026-01-09 15:17:11,733 - __main__ - INFO - Comparison completed for session CMP_20260109_151708
+2026-01-09 15:17:11,741 - __main__ - INFO - Completed with status 200 in 3.683s

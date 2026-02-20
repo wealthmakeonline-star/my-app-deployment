@@ -1,0 +1,41 @@
+2025-12-16 14:54:35,907 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-16 14:54:36,049 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-16 14:54:36,049 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-16 14:54:36,051 - __main__ - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-16 14:54:36,051 - __main__ - INFO - DQ modules available: True
+2025-12-16 14:54:36,051 - __main__ - INFO - Config file mode: False
+2025-12-16 14:54:36,051 - __main__ - INFO - Database config: localhost/dq_checks
+2025-12-16 14:54:36,122 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-16 14:54:36,122 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-16 14:57:55,589 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:57:55] "POST /api/get-db-metadata HTTP/1.1" 200 -
+2025-12-16 14:57:57,626 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:57:57] "GET /api/health HTTP/1.1" 200 -
+2025-12-16 14:57:59,655 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:57:59] "GET /api/database-types HTTP/1.1" 200 -
+2025-12-16 14:58:01,675 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:58:01] "GET / HTTP/1.1" 200 -
+2025-12-16 14:58:03,721 - dq_unified - ERROR - Connection test failed: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+2025-12-16 14:58:03,722 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:58:03] "POST /api/test-db-connection HTTP/1.1" 200 -
+2025-12-16 14:58:05,761 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:58:05] "POST /api/get-db-metadata HTTP/1.1" 200 -
+2025-12-16 14:58:07,829 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:58:07] "POST /api/get-db-metadata HTTP/1.1" 200 -
+2025-12-16 14:59:23,487 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:23] "GET /api/health HTTP/1.1" 200 -
+2025-12-16 14:59:25,541 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:25] "GET /api/database-types HTTP/1.1" 200 -
+2025-12-16 14:59:27,589 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:27] "POST /api/test-db-connection HTTP/1.1" 200 -
+2025-12-16 14:59:29,662 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:29] "POST /api/get-db-metadata HTTP/1.1" 200 -
+2025-12-16 14:59:31,739 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:31] "POST /api/upload HTTP/1.1" 200 -
+2025-12-16 14:59:33,790 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-16 14:59:33,791 - dq_unified - INFO - Loading large CSV: uploads\20251216_145931_test.csv
+2025-12-16 14:59:33,792 - dq_unified - INFO - CSV file has 5 rows
+2025-12-16 14:59:33,793 - dq_unified - INFO - Loading 5 rows from CSV...
+2025-12-16 14:59:33,800 - dq_unified - INFO - Loaded 5 rows from CSV
+2025-12-16 14:59:33,804 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-16 14:59:33,805 - dq_unified - INFO - Loaded 5 rows, 4 columns. Memory: 103.6MB total, 0.0MB for dataframe
+2025-12-16 14:59:33,805 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-16 14:59:33,805 - dq_unified - INFO - Column 'id': No empty cells
+2025-12-16 14:59:33,807 - dq_unified - INFO - Column 'name': No empty cells
+2025-12-16 14:59:33,807 - dq_unified - WARNING - Column 'email': 1 empty cells (20.0%)
+2025-12-16 14:59:33,810 - dq_unified - WARNING - Column 'phone': 1 empty cells (20.0%)
+2025-12-16 14:59:33,811 - dq_unified - INFO - Total empty cells found: 2
+2025-12-16 14:59:33,811 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-16 14:59:33,815 - dq_unified - INFO - No strict duplicate rows found
+2025-12-16 14:59:33,818 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2025 14:59:33] "[35m[1mPOST /api/check-single HTTP/1.1[0m" 500 -

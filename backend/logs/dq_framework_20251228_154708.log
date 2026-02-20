@@ -1,0 +1,953 @@
+2025-12-28 15:47:08,114 - root - INFO - CLI Mode Logging Initialized
+2025-12-28 15:47:08,115 - root - INFO - CLI logs will be saved to: logs/dq_framework_20251228_154708.log
+2025-12-28 15:47:08,116 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-28 15:47:08,117 - __main__ - INFO - Starting system resource check
+2025-12-28 15:47:08,122 - __main__ - INFO - Total RAM: 15.7 GB
+2025-12-28 15:47:08,122 - __main__ - INFO - Available RAM: 2.7 GB
+2025-12-28 15:47:08,122 - __main__ - INFO - Memory used: 82.9%
+2025-12-28 15:47:08,122 - __main__ - INFO - Memory status: OK
+2025-12-28 15:47:08,123 - __main__ - INFO - Free disk space: 263.9 GB
+2025-12-28 15:47:08,123 - __main__ - INFO - Disk used: 44.6%
+2025-12-28 15:47:08,124 - __main__ - INFO - Disk space: OK
+2025-12-28 15:47:08,625 - __main__ - INFO - CPU cores: 8
+2025-12-28 15:47:08,625 - __main__ - INFO - CPU usage: 37.2%
+2025-12-28 15:47:08,625 - __main__ - INFO - Python version: 3.12.4
+2025-12-28 15:47:08,625 - __main__ - INFO - System platform: win32
+2025-12-28 15:47:08,626 - __main__ - INFO - User session started at: 2025-12-28 15:47:08.626846
+2025-12-28 15:47:08,626 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:47:16,521 - __main__ - INFO - User selected option: 1
+2025-12-28 15:47:16,523 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-28 15:47:16,527 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-28 15:47:16,527 - dq_unified - INFO - Prompting user for data source type
+2025-12-28 15:47:16,527 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-28 15:47:18,143 - dq_unified - INFO - User selected source type: 1
+2025-12-28 15:47:24,814 - dq_unified - INFO - Loading data from CSV
+2025-12-28 15:47:24,816 - dq_unified - INFO - Loading data from CSV
+2025-12-28 15:47:24,817 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.csv
+2025-12-28 15:47:24,865 - dq_unified - INFO - CSV file has 92,875 rows
+2025-12-28 15:47:24,865 - dq_unified - INFO - Loading 92,875 rows from CSV...
+2025-12-28 15:47:25,057 - dq_unified - INFO - Loaded 89,999 rows from CSV
+2025-12-28 15:47:25,278 - dq_unified - INFO - Memory optimization: 45.4MB -> 17.1MB (Saved: 28.3MB)
+2025-12-28 15:47:25,279 - dq_unified - INFO - Standardizing data types...
+2025-12-28 15:47:25,782 - dq_unified - INFO - Data type standardization complete
+2025-12-28 15:47:25,825 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 106.6MB total, 17.1MB for dataframe
+2025-12-28 15:47:25,825 - dq_unified - INFO - DATA PREVIEW:
+2025-12-28 15:47:25,826 - dq_unified - INFO -    Total rows: 89,999
+2025-12-28 15:47:25,828 - dq_unified - INFO -    Total columns: 12
+2025-12-28 15:47:25,829 - dq_unified - INFO -    Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:47:25,829 - dq_unified - INFO - Running quality checks
+2025-12-28 15:47:25,829 - dq_unified - INFO - Checking for null/empty values
+2025-12-28 15:47:25,830 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2025-12-28 15:47:25,830 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:47:25,830 - dq_unified - INFO - Data source: 
+2025-12-28 15:47:25,831 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('uint32'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  'david.davis@company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float32'), 'quantity': dtype('int8'), 'age': dtype('int16'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2025-12-28 15:47:25,832 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2025-12-28 15:47:25,834 - dq_unified - INFO -   Row 0: {'id': 'np.uint32(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2025-12-28 15:47:25,834 - dq_unified - INFO -   Row 1: {'id': 'np.uint32(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2025-12-28 15:47:26,128 - dq_unified - INFO - Column 'id': No missing cells
+2025-12-28 15:47:26,419 - dq_unified - INFO - Column 'customer_id': No missing cells
+2025-12-28 15:47:26,692 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2025-12-28 15:47:26,980 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:47:26,980 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2025-12-28 15:47:26,982 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:47:26,982 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:47:45,539 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:47:45,539 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2025-12-28 15:47:45,541 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:47:45,543 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:47:53,504 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:47:53,504 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2025-12-28 15:47:53,506 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:47:53,506 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:48:00,371 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2025-12-28 15:48:00,789 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:48:00,789 - dq_unified - INFO -   Not missing samples: ['8653.5595703125', '1948.43994140625', '237.49000549316406']
+2025-12-28 15:48:00,791 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:48:00,791 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:48:06,813 - dq_unified - INFO - Column 'quantity': No missing cells
+2025-12-28 15:48:07,110 - dq_unified - INFO - Column 'age': No missing cells
+2025-12-28 15:48:07,425 - dq_unified - INFO - Column 'status': No missing cells
+2025-12-28 15:48:07,751 - dq_unified - INFO - Column 'description': No missing cells
+2025-12-28 15:48:07,752 - dq_unified - INFO - Total missing cells found: 7,439
+2025-12-28 15:48:07,753 - dq_unified - INFO - ============================================================
+2025-12-28 15:48:07,755 - dq_unified - INFO - MISSING VALUE SUMMARY
+2025-12-28 15:48:07,755 - dq_unified - INFO - ============================================================
+2025-12-28 15:48:07,755 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2025-12-28 15:48:07,755 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2025-12-28 15:48:07,756 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2025-12-28 15:48:07,756 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2025-12-28 15:48:07,756 - dq_unified - INFO - ============================================================
+2025-12-28 15:48:07,757 - dq_unified - INFO - Checking for duplicate rows
+2025-12-28 15:48:07,757 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2025-12-28 15:48:07,762 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:48:08,835 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2025-12-28 15:48:08,835 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2025-12-28 15:48:08,836 - dq_unified - INFO - Total rows to check: 89999
+2025-12-28 15:48:08,837 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2025-12-28 15:48:08,838 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2025-12-28 15:48:08,839 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2025-12-28 15:48:08,839 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2025-12-28 15:48:08,840 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2025-12-28 15:48:08,840 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2025-12-28 15:48:08,841 - dq_unified - INFO - Checking duplicates on ALL columns
+2025-12-28 15:48:08,841 - dq_unified - INFO - First few rows for comparison:
+2025-12-28 15:48:08,842 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2025-12-28 15:48:08,842 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2025-12-28 15:48:08,842 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2025-12-28 15:48:08,940 - dq_unified - INFO - Duplicate mask found 406 rows
+2025-12-28 15:48:08,940 - dq_unified - INFO - Found 406 potential duplicate rows
+2025-12-28 15:48:08,943 - dq_unified - INFO - Unique duplicate groups: 203
+2025-12-28 15:48:08,943 - dq_unified - INFO - Duplicate groups found:
+2025-12-28 15:48:08,947 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2025-12-28 15:48:08,948 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='nan', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2025-12-28 15:48:08,948 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2025-12-28 15:48:08,949 - dq_unified - INFO - Processing 406 duplicate indices
+2025-12-28 15:48:08,967 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2025-12-28 15:48:08,977 - dq_unified - INFO - Checking data formats
+2025-12-28 15:48:08,980 - dq_unified - INFO - Detected id as numeric type
+2025-12-28 15:48:09,172 - dq_unified - INFO - Detected email as email type
+2025-12-28 15:48:09,174 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:48:09,174 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:48:09,175 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:48:09,177 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:48:09,177 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:48:09,357 - dq_unified - INFO - Detected phone as phone type
+2025-12-28 15:48:09,547 - dq_unified - INFO - Detected transaction_date as date type
+2025-12-28 15:48:09,865 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:48:09,866 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:48:10,185 - dq_unified - INFO - Detected amount as numeric type
+2025-12-28 15:48:10,397 - dq_unified - INFO - Detected quantity as numeric type
+2025-12-28 15:48:10,553 - dq_unified - INFO - Detected age as numeric type
+2025-12-28 15:48:11,262 - dq_unified - INFO - Total format issues found: 727
+2025-12-28 15:48:11,263 - dq_unified - INFO - Checking mandatory fields
+2025-12-28 15:48:11,264 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:48:17,410 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:48:17,697 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-28 15:48:17,970 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-28 15:48:18,255 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2025-12-28 15:48:18,530 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2025-12-28 15:48:18,872 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2025-12-28 15:48:19,203 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2025-12-28 15:48:19,527 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2025-12-28 15:48:19,914 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2025-12-28 15:48:20,334 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-28 15:48:20,650 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2025-12-28 15:48:20,955 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-28 15:48:21,275 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2025-12-28 15:48:21,275 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2025-12-28 15:48:21,277 - dq_unified - INFO - Calculating quality score
+2025-12-28 15:48:21,280 - dq_unified - INFO - Quality Score Calculation:
+2025-12-28 15:48:21,280 - dq_unified - INFO -   Total rows: 89,999
+2025-12-28 15:48:21,280 - dq_unified - INFO -   Bad Rows: 6,784
+2025-12-28 15:48:21,281 - dq_unified - INFO -   Good rows (no issues): 83,215
+2025-12-28 15:48:21,281 - dq_unified - INFO -   Quality Score: 92.46%
+2025-12-28 15:48:21,282 - dq_unified - INFO - Generating detailed data quality report
+2025-12-28 15:48:21,282 - dq_unified - INFO - Report for: CSV: source_data_90k.csv, Records: 89,999, Columns: 12
+2025-12-28 15:48:21,282 - dq_unified - INFO - Overall quality score: 92.5%
+2025-12-28 15:48:21,282 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-28 15:48:21,284 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251228_154821
+2025-12-28 15:48:22,945 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-28 15:48:22,945 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-28 15:48:22,958 - dq_audit - INFO - Inserted single_source record with ID: 471
+2025-12-28 15:48:22,958 - dq_unified - INFO - Audit logged for session: DQ_20251228_154822
+2025-12-28 15:48:22,961 - dq_unified - INFO - Analysis completed successfully for CSV: source_data_90k.csv
+2025-12-28 15:48:22,967 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-28 15:48:22,967 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:48:55,467 - __main__ - INFO - User selected option: 1
+2025-12-28 15:48:55,468 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-28 15:48:55,471 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-28 15:48:55,471 - dq_unified - INFO - Prompting user for data source type
+2025-12-28 15:48:55,471 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-28 15:48:56,673 - dq_unified - INFO - User selected source type: 2
+2025-12-28 15:49:01,153 - dq_unified - INFO - Loading data from EXCEL
+2025-12-28 15:49:01,155 - dq_unified - INFO - Loading data from EXCEL
+2025-12-28 15:49:01,155 - dq_unified - INFO - Loading large Excel: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.xlsx
+2025-12-28 15:49:04,671 - dq_unified - INFO - Loading Excel file...
+2025-12-28 15:49:14,176 - dq_unified - INFO - Loaded 89,999 rows from Excel
+2025-12-28 15:49:14,478 - dq_unified - INFO - Memory optimization: 44.5MB -> 16.5MB (Saved: 28.1MB)
+2025-12-28 15:49:14,478 - dq_unified - INFO - Standardizing data types...
+2025-12-28 15:49:14,992 - dq_unified - INFO - Data type standardization complete
+2025-12-28 15:49:15,040 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 189.9MB total, 16.5MB for dataframe
+2025-12-28 15:49:15,046 - dq_unified - INFO - DATA PREVIEW:
+2025-12-28 15:49:15,047 - dq_unified - INFO -    Total rows: 89,999
+2025-12-28 15:49:15,047 - dq_unified - INFO -    Total columns: 12
+2025-12-28 15:49:15,048 - dq_unified - INFO -    Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:49:15,048 - dq_unified - INFO - Running quality checks
+2025-12-28 15:49:15,048 - dq_unified - INFO - Checking for null/empty values
+2025-12-28 15:49:15,049 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2025-12-28 15:49:15,049 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:49:15,049 - dq_unified - INFO - Data source: 
+2025-12-28 15:49:15,051 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('uint32'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  'david.davis@company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=[2023-01-01 00:00:00, 2023-01-02 00:00:00,
+                  2023-01-03 00:00:00, 2023-01-04 00:00:00,
+                  2023-01-05 00:00:00, 2023-01-06 00:00:00,
+                  2023-01-07 00:00:00, 2023-01-08 00:00:00,
+                  2023-01-09 00:00:00, 2023-01-10 00:00:00,
+                  ...
+                         '12/22/2023',        '12/23/2023',
+                         '12/24/2023',        '12/25/2023',
+                         '12/26/2023',        '12/27/2023',
+                         '12/28/2023',        '12/29/2023',
+                         '12/30/2023',        '12/31/2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float32'), 'quantity': dtype('int8'), 'age': dtype('int16'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2025-12-28 15:49:15,051 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2025-12-28 15:49:15,053 - dq_unified - INFO -   Row 0: {'id': 'np.uint32(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2025-12-28 15:49:15,054 - dq_unified - INFO -   Row 1: {'id': 'np.uint32(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2025-12-28 15:49:15,471 - dq_unified - INFO - Column 'id': No missing cells
+2025-12-28 15:49:15,841 - dq_unified - INFO - Column 'customer_id': No missing cells
+2025-12-28 15:49:16,213 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2025-12-28 15:49:16,593 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:49:16,593 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2025-12-28 15:49:16,594 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:49:16,595 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:49:38,414 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:49:38,415 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2025-12-28 15:49:38,416 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:49:38,418 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:49:47,065 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:49:47,066 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", '12123928735']
+2025-12-28 15:49:47,068 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:49:47,070 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:49:54,907 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2025-12-28 15:49:55,341 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:49:55,341 - dq_unified - INFO -   Not missing samples: ['8653.5595703125', '1948.43994140625', '237.49000549316406']
+2025-12-28 15:49:55,342 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:49:55,343 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:50:01,642 - dq_unified - INFO - Column 'quantity': No missing cells
+2025-12-28 15:50:01,952 - dq_unified - INFO - Column 'age': No missing cells
+2025-12-28 15:50:02,269 - dq_unified - INFO - Column 'status': No missing cells
+2025-12-28 15:50:02,677 - dq_unified - INFO - Column 'description': No missing cells
+2025-12-28 15:50:02,677 - dq_unified - INFO - Total missing cells found: 7,439
+2025-12-28 15:50:02,677 - dq_unified - INFO - ============================================================
+2025-12-28 15:50:02,680 - dq_unified - INFO - MISSING VALUE SUMMARY
+2025-12-28 15:50:02,680 - dq_unified - INFO - ============================================================
+2025-12-28 15:50:02,680 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2025-12-28 15:50:02,681 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2025-12-28 15:50:02,681 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2025-12-28 15:50:02,682 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2025-12-28 15:50:02,682 - dq_unified - INFO - ============================================================
+2025-12-28 15:50:02,682 - dq_unified - INFO - Checking for duplicate rows
+2025-12-28 15:50:02,683 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2025-12-28 15:50:02,687 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:50:03,863 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2025-12-28 15:50:03,863 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2025-12-28 15:50:03,864 - dq_unified - INFO - Total rows to check: 89999
+2025-12-28 15:50:03,864 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2025-12-28 15:50:03,866 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2025-12-28 15:50:03,866 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2025-12-28 15:50:03,866 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2025-12-28 15:50:03,867 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2025-12-28 15:50:03,867 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2025-12-28 15:50:03,867 - dq_unified - INFO - Checking duplicates on ALL columns
+2025-12-28 15:50:03,868 - dq_unified - INFO - First few rows for comparison:
+2025-12-28 15:50:03,868 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2025-12-28 15:50:03,869 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2025-12-28 15:50:03,869 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2025-12-28 15:50:04,006 - dq_unified - INFO - Duplicate mask found 406 rows
+2025-12-28 15:50:04,007 - dq_unified - INFO - Found 406 potential duplicate rows
+2025-12-28 15:50:04,027 - dq_unified - INFO - Unique duplicate groups: 203
+2025-12-28 15:50:04,028 - dq_unified - INFO - Duplicate groups found:
+2025-12-28 15:50:04,032 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='2023-01-20 00:00:00', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2025-12-28 15:50:04,032 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='nan', transaction_date='2023-09-05 00:00:00', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2025-12-28 15:50:04,033 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='2023-09-29 00:00:00', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2025-12-28 15:50:04,033 - dq_unified - INFO - Processing 406 duplicate indices
+2025-12-28 15:50:04,051 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2025-12-28 15:50:04,067 - dq_unified - INFO - Checking data formats
+2025-12-28 15:50:04,069 - dq_unified - INFO - Detected id as numeric type
+2025-12-28 15:50:04,290 - dq_unified - INFO - Detected email as email type
+2025-12-28 15:50:04,292 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:50:04,294 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:50:04,295 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:50:04,296 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:50:04,297 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:50:04,492 - dq_unified - INFO - Detected phone as phone type
+2025-12-28 15:50:04,712 - dq_unified - INFO - Detected transaction_date as date type
+2025-12-28 15:50:05,026 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'YYYY-MM-DD HH:MM:SS']
+2025-12-28 15:50:05,026 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'YYYY-MM-DD HH:MM:SS']
+2025-12-28 15:50:05,391 - dq_unified - INFO - Detected amount as numeric type
+2025-12-28 15:50:05,606 - dq_unified - INFO - Detected quantity as numeric type
+2025-12-28 15:50:05,786 - dq_unified - INFO - Detected age as numeric type
+2025-12-28 15:50:06,508 - dq_unified - INFO - Total format issues found: 727
+2025-12-28 15:50:06,509 - dq_unified - INFO - Checking mandatory fields
+2025-12-28 15:50:06,510 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:50:09,689 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:50:09,990 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-28 15:50:10,330 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-28 15:50:10,705 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2025-12-28 15:50:11,053 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2025-12-28 15:50:11,407 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2025-12-28 15:50:11,866 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2025-12-28 15:50:12,219 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2025-12-28 15:50:12,649 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2025-12-28 15:50:12,995 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-28 15:50:13,324 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2025-12-28 15:50:13,656 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-28 15:50:14,037 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2025-12-28 15:50:14,037 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2025-12-28 15:50:14,038 - dq_unified - INFO - Calculating quality score
+2025-12-28 15:50:14,040 - dq_unified - INFO - Quality Score Calculation:
+2025-12-28 15:50:14,040 - dq_unified - INFO -   Total rows: 89,999
+2025-12-28 15:50:14,041 - dq_unified - INFO -   Bad Rows: 6,784
+2025-12-28 15:50:14,041 - dq_unified - INFO -   Good rows (no issues): 83,215
+2025-12-28 15:50:14,041 - dq_unified - INFO -   Quality Score: 92.46%
+2025-12-28 15:50:14,042 - dq_unified - INFO - Generating detailed data quality report
+2025-12-28 15:50:14,042 - dq_unified - INFO - Report for: EXCEL: source_data_90k.xlsx, Records: 89,999, Columns: 12
+2025-12-28 15:50:14,042 - dq_unified - INFO - Overall quality score: 92.5%
+2025-12-28 15:50:14,043 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-28 15:50:14,043 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251228_155014
+2025-12-28 15:50:15,715 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-28 15:50:15,715 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-28 15:50:15,729 - dq_audit - INFO - Inserted single_source record with ID: 472
+2025-12-28 15:50:15,729 - dq_unified - INFO - Audit logged for session: DQ_20251228_155015
+2025-12-28 15:50:15,732 - dq_unified - INFO - Analysis completed successfully for EXCEL: source_data_90k.xlsx
+2025-12-28 15:50:15,738 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-28 15:50:15,738 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:50:33,201 - __main__ - INFO - User selected option: 1
+2025-12-28 15:50:33,202 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-28 15:50:33,206 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-28 15:50:33,206 - dq_unified - INFO - Prompting user for data source type
+2025-12-28 15:50:33,206 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-28 15:50:34,455 - dq_unified - INFO - User selected source type: 3
+2025-12-28 15:50:34,456 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-28 15:50:47,504 - dq_unified - INFO - Getting database config from config file
+2025-12-28 15:50:48,857 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2025-12-28 15:50:53,653 - dq_unified - INFO - Database configuration from config file: postgresql, Table: employee
+2025-12-28 15:50:53,654 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:50:53,655 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:50:53,656 - dq_unified - INFO - Loading large database table: employee
+2025-12-28 15:50:53,811 - dq_unified - INFO - PostgreSQL table has 89,999 rows
+2025-12-28 15:50:53,811 - dq_unified - INFO - Loading 89,999 rows from PostgreSQL...
+2025-12-28 15:50:54,139 - dq_unified - INFO - Loaded 89,999 rows from PostgreSQL
+2025-12-28 15:50:54,903 - dq_unified - INFO - Memory optimization: 60.9MB -> 25.8MB (Saved: 35.1MB)
+2025-12-28 15:50:54,904 - dq_unified - INFO - Standardizing data types...
+2025-12-28 15:50:55,759 - dq_unified - INFO - Data type standardization complete
+2025-12-28 15:50:55,850 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 229.1MB total, 18.9MB for dataframe
+2025-12-28 15:50:55,851 - dq_unified - INFO - DATA PREVIEW:
+2025-12-28 15:50:55,852 - dq_unified - INFO -    Total rows: 89,999
+2025-12-28 15:50:55,852 - dq_unified - INFO -    Total columns: 12
+2025-12-28 15:50:55,853 - dq_unified - INFO -    Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:50:55,854 - dq_unified - INFO - Running quality checks
+2025-12-28 15:50:55,854 - dq_unified - INFO - Checking for null/empty values
+2025-12-28 15:50:55,855 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2025-12-28 15:50:55,855 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:50:55,855 - dq_unified - INFO - Data source: 
+2025-12-28 15:50:55,857 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('int64'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'NaN', 'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float64'), 'quantity': dtype('int64'), 'age': dtype('int64'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2025-12-28 15:50:55,858 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2025-12-28 15:50:55,859 - dq_unified - INFO -   Row 0: {'id': 'np.int64(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2025-12-28 15:50:55,860 - dq_unified - INFO -   Row 1: {'id': 'np.int64(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2025-12-28 15:50:56,382 - dq_unified - INFO - Column 'id': No missing cells
+2025-12-28 15:50:56,994 - dq_unified - INFO - Column 'customer_id': No missing cells
+2025-12-28 15:50:57,625 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2025-12-28 15:50:58,168 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2025-12-28 15:50:58,169 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2025-12-28 15:50:58,172 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:50:58,175 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:51:20,960 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2025-12-28 15:51:20,960 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2025-12-28 15:51:20,961 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:51:20,963 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:51:30,767 - dq_unified - INFO -   Missing samples: ["'NaN'", "'NaN'", "'NaN'"]
+2025-12-28 15:51:30,768 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2025-12-28 15:51:30,768 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:51:30,769 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:51:38,690 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2025-12-28 15:51:39,228 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:51:39,228 - dq_unified - INFO -   Not missing samples: ['8653.56', '1948.44', '237.49']
+2025-12-28 15:51:39,229 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:51:39,230 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:51:46,305 - dq_unified - INFO - Column 'quantity': No missing cells
+2025-12-28 15:51:46,664 - dq_unified - INFO - Column 'age': No missing cells
+2025-12-28 15:51:47,077 - dq_unified - INFO - Column 'status': No missing cells
+2025-12-28 15:51:47,519 - dq_unified - INFO - Column 'description': No missing cells
+2025-12-28 15:51:47,519 - dq_unified - INFO - Total missing cells found: 7,439
+2025-12-28 15:51:47,520 - dq_unified - INFO - ============================================================
+2025-12-28 15:51:47,520 - dq_unified - INFO - MISSING VALUE SUMMARY
+2025-12-28 15:51:47,522 - dq_unified - INFO - ============================================================
+2025-12-28 15:51:47,522 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2025-12-28 15:51:47,522 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2025-12-28 15:51:47,523 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2025-12-28 15:51:47,523 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2025-12-28 15:51:47,523 - dq_unified - INFO - ============================================================
+2025-12-28 15:51:47,524 - dq_unified - INFO - Checking for duplicate rows
+2025-12-28 15:51:47,524 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2025-12-28 15:51:47,531 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:51:48,839 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2025-12-28 15:51:48,840 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2025-12-28 15:51:48,842 - dq_unified - INFO - Total rows to check: 89999
+2025-12-28 15:51:48,842 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2025-12-28 15:51:48,843 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2025-12-28 15:51:48,843 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2025-12-28 15:51:48,843 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2025-12-28 15:51:48,844 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2025-12-28 15:51:48,844 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2025-12-28 15:51:48,844 - dq_unified - INFO - Checking duplicates on ALL columns
+2025-12-28 15:51:48,845 - dq_unified - INFO - First few rows for comparison:
+2025-12-28 15:51:48,883 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2025-12-28 15:51:48,883 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2025-12-28 15:51:48,885 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2025-12-28 15:51:49,021 - dq_unified - INFO - Duplicate mask found 406 rows
+2025-12-28 15:51:49,022 - dq_unified - INFO - Found 406 potential duplicate rows
+2025-12-28 15:51:49,025 - dq_unified - INFO - Unique duplicate groups: 203
+2025-12-28 15:51:49,025 - dq_unified - INFO - Duplicate groups found:
+2025-12-28 15:51:49,026 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2025-12-28 15:51:49,027 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='NaN', phone='NaN', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2025-12-28 15:51:49,027 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2025-12-28 15:51:49,027 - dq_unified - INFO - Processing 406 duplicate indices
+2025-12-28 15:51:49,045 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2025-12-28 15:51:49,059 - dq_unified - INFO - Checking data formats
+2025-12-28 15:51:49,061 - dq_unified - INFO - Detected id as numeric type
+2025-12-28 15:51:49,284 - dq_unified - INFO - Detected email as email type
+2025-12-28 15:51:49,287 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:51:49,288 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:51:49,288 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:51:49,290 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:51:49,290 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:51:49,508 - dq_unified - INFO - Detected phone as phone type
+2025-12-28 15:51:49,741 - dq_unified - INFO - Detected transaction_date as date type
+2025-12-28 15:51:50,083 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:51:50,083 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:51:50,437 - dq_unified - INFO - Detected amount as numeric type
+2025-12-28 15:51:50,631 - dq_unified - INFO - Detected quantity as numeric type
+2025-12-28 15:51:50,814 - dq_unified - INFO - Detected age as numeric type
+2025-12-28 15:51:51,619 - dq_unified - INFO - Total format issues found: 727
+2025-12-28 15:51:51,620 - dq_unified - INFO - Checking mandatory fields
+2025-12-28 15:51:51,621 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:51:56,574 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:51:56,917 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-28 15:51:57,444 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-28 15:51:57,994 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2025-12-28 15:51:58,324 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2025-12-28 15:51:58,731 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2025-12-28 15:51:59,288 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2025-12-28 15:51:59,633 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2025-12-28 15:52:00,069 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2025-12-28 15:52:00,420 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-28 15:52:00,767 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2025-12-28 15:52:01,169 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-28 15:52:01,558 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2025-12-28 15:52:01,558 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2025-12-28 15:52:01,559 - dq_unified - INFO - Calculating quality score
+2025-12-28 15:52:01,561 - dq_unified - INFO - Quality Score Calculation:
+2025-12-28 15:52:01,562 - dq_unified - INFO -   Total rows: 89,999
+2025-12-28 15:52:01,562 - dq_unified - INFO -   Bad Rows: 6,784
+2025-12-28 15:52:01,562 - dq_unified - INFO -   Good rows (no issues): 83,215
+2025-12-28 15:52:01,563 - dq_unified - INFO -   Quality Score: 92.46%
+2025-12-28 15:52:01,563 - dq_unified - INFO - Generating detailed data quality report
+2025-12-28 15:52:01,565 - dq_unified - INFO - Report for: Database: postgresql - Table: employee, Records: 89,999, Columns: 12
+2025-12-28 15:52:01,565 - dq_unified - INFO - Overall quality score: 92.5%
+2025-12-28 15:52:01,565 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-28 15:52:01,565 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251228_155201
+2025-12-28 15:52:03,252 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-28 15:52:03,253 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-28 15:52:03,265 - dq_audit - INFO - Inserted single_source record with ID: 473
+2025-12-28 15:52:03,266 - dq_unified - INFO - Audit logged for session: DQ_20251228_155203
+2025-12-28 15:52:03,267 - dq_unified - INFO - Analysis completed successfully for Database: postgresql - Table: employee
+2025-12-28 15:52:03,284 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-28 15:52:03,284 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:52:09,102 - __main__ - INFO - User selected option: 1
+2025-12-28 15:52:09,103 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-28 15:52:09,106 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-28 15:52:09,106 - dq_unified - INFO - Prompting user for data source type
+2025-12-28 15:52:09,106 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-28 15:52:10,824 - dq_unified - INFO - User selected source type: 3
+2025-12-28 15:52:10,825 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-28 15:52:11,896 - dq_unified - INFO - Getting database config from config file
+2025-12-28 15:52:13,204 - dq_unified - INFO - Using MYSQL configuration from config file
+2025-12-28 15:52:23,247 - dq_unified - INFO - Database configuration from config file: mysql, Table: employee
+2025-12-28 15:52:23,248 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:52:23,248 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:52:23,249 - dq_unified - INFO - Loading large database table: employee
+2025-12-28 15:52:23,284 - dq_unified - INFO - MySQL table has 89,999 rows
+2025-12-28 15:52:23,284 - dq_unified - INFO - Loading 89,999 rows from MySQL...
+2025-12-28 15:52:24,601 - dq_unified - INFO - Loaded 89,999 rows from MySQL
+2025-12-28 15:52:25,213 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2025-12-28 15:52:25,213 - dq_unified - INFO - Standardizing data types...
+2025-12-28 15:52:25,944 - dq_unified - INFO - Data type standardization complete
+2025-12-28 15:52:26,023 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 256.8MB total, 18.9MB for dataframe
+2025-12-28 15:52:26,023 - dq_unified - INFO - DATA PREVIEW:
+2025-12-28 15:52:26,024 - dq_unified - INFO -    Total rows: 89,999
+2025-12-28 15:52:26,024 - dq_unified - INFO -    Total columns: 12
+2025-12-28 15:52:26,026 - dq_unified - INFO -    Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:52:26,026 - dq_unified - INFO - Running quality checks
+2025-12-28 15:52:26,026 - dq_unified - INFO - Checking for null/empty values
+2025-12-28 15:52:26,026 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2025-12-28 15:52:26,027 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:52:26,027 - dq_unified - INFO - Data source: 
+2025-12-28 15:52:26,028 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('int64'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  '  Michael Davis  ', 'David Brown', 'David Brown  ',
+                  'David Davis', 'David Davis  ', 'David Johnson',
+                  'David Johnson  ', 'David Jones',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'Jennifer.johnson@hotmail', 'david.brown.company.com',
+                  'david.brown@company.com', 'david.brown@gmail.com',
+                  'david.brown@hotmail.com', 'david.brown@invalid',
+                  'david.brown@outlook.com', 'david.brown@yahoo.com',
+                  'david.davis.company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-11-2023', '30-12-2023', '31-01-2023', '31-03-2023',
+                  '31-05-2023', '31-07-2023', '31-08-2023', '31-10-2023',
+                  '31-12-2023', 'July 5th, 2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float64'), 'quantity': dtype('int64'), 'age': dtype('int64'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2025-12-28 15:52:26,028 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2025-12-28 15:52:26,030 - dq_unified - INFO -   Row 0: {'id': 'np.int64(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2025-12-28 15:52:26,030 - dq_unified - INFO -   Row 1: {'id': 'np.int64(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2025-12-28 15:52:26,481 - dq_unified - INFO - Column 'id': No missing cells
+2025-12-28 15:52:27,079 - dq_unified - INFO - Column 'customer_id': No missing cells
+2025-12-28 15:52:27,675 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2025-12-28 15:52:28,015 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:52:28,015 - dq_unified - INFO -   Not missing samples: ["'  Michael Davis  '", "'Susan Brown'", "'Sarah Davis'"]
+2025-12-28 15:52:28,016 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:52:28,017 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:52:47,295 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:52:47,295 - dq_unified - INFO -   Not missing samples: ["'david.jones@company'", "'duplicate.email@gmail.com'", "'Jennifer.johnson@hotmail'"]
+2025-12-28 15:52:47,297 - dq_unified - WARNING - Column 'email': 1,517 missing cells (1.7%)
+2025-12-28 15:52:47,298 - dq_unified - WARNING - Column 'email': 1,517 missing cells (1.7%)
+2025-12-28 15:52:56,274 - dq_unified - INFO -   Missing samples: ['None', 'None', 'None']
+2025-12-28 15:52:56,274 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'1212392873A'", "'2125-982-408'"]
+2025-12-28 15:52:56,276 - dq_unified - WARNING - Column 'phone': 1,282 missing cells (1.4%)
+2025-12-28 15:52:56,278 - dq_unified - WARNING - Column 'phone': 1,282 missing cells (1.4%)
+2025-12-28 15:53:04,439 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2025-12-28 15:53:05,143 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:53:05,143 - dq_unified - INFO -   Not missing samples: ['9999999.99', '1948.44', '237.49']
+2025-12-28 15:53:05,144 - dq_unified - WARNING - Column 'amount': 1,134 missing cells (1.3%)
+2025-12-28 15:53:05,146 - dq_unified - WARNING - Column 'amount': 1,134 missing cells (1.3%)
+2025-12-28 15:53:13,104 - dq_unified - INFO - Column 'quantity': No missing cells
+2025-12-28 15:53:13,480 - dq_unified - INFO - Column 'age': No missing cells
+2025-12-28 15:53:13,888 - dq_unified - INFO - Column 'status': No missing cells
+2025-12-28 15:53:14,330 - dq_unified - INFO - Column 'description': No missing cells
+2025-12-28 15:53:14,330 - dq_unified - INFO - Total missing cells found: 7,443
+2025-12-28 15:53:14,331 - dq_unified - INFO - ============================================================
+2025-12-28 15:53:14,331 - dq_unified - INFO - MISSING VALUE SUMMARY
+2025-12-28 15:53:14,333 - dq_unified - INFO - ============================================================
+2025-12-28 15:53:14,333 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2025-12-28 15:53:14,334 - dq_unified - INFO - email: 1,517 missing (1.7%)
+2025-12-28 15:53:14,334 - dq_unified - INFO - phone: 1,282 missing (1.4%)
+2025-12-28 15:53:14,334 - dq_unified - INFO - amount: 1,134 missing (1.3%)
+2025-12-28 15:53:14,335 - dq_unified - INFO - ============================================================
+2025-12-28 15:53:14,335 - dq_unified - INFO - Checking for duplicate rows
+2025-12-28 15:53:14,335 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2025-12-28 15:53:14,343 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:53:15,588 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2025-12-28 15:53:15,588 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2025-12-28 15:53:15,589 - dq_unified - INFO - Total rows to check: 89999
+2025-12-28 15:53:15,590 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2025-12-28 15:53:15,591 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2025-12-28 15:53:15,591 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2025-12-28 15:53:15,591 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2025-12-28 15:53:15,591 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2025-12-28 15:53:15,592 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2025-12-28 15:53:15,592 - dq_unified - INFO - Checking duplicates on ALL columns
+2025-12-28 15:53:15,592 - dq_unified - INFO - First few rows for comparison:
+2025-12-28 15:53:15,593 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2025-12-28 15:53:15,594 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2025-12-28 15:53:15,594 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST078303', 'transaction_id': 'TX00093228'}
+2025-12-28 15:53:15,749 - dq_unified - INFO - Duplicate mask found 406 rows
+2025-12-28 15:53:15,749 - dq_unified - INFO - Found 406 potential duplicate rows
+2025-12-28 15:53:15,777 - dq_unified - INFO - Unique duplicate groups: 203
+2025-12-28 15:53:15,777 - dq_unified - INFO - Duplicate groups found:
+2025-12-28 15:53:15,778 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2025-12-28 15:53:15,779 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='None', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2025-12-28 15:53:15,779 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2025-12-28 15:53:15,780 - dq_unified - INFO - Processing 406 duplicate indices
+2025-12-28 15:53:15,798 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2025-12-28 15:53:15,814 - dq_unified - INFO - Checking data formats
+2025-12-28 15:53:15,817 - dq_unified - INFO - Detected id as numeric type
+2025-12-28 15:53:16,046 - dq_unified - INFO - Detected email as email type
+2025-12-28 15:53:16,048 - dq_unified - WARNING -   Row 1: 'david.jones@company...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:53:16,048 - dq_unified - WARNING -   Row 4: 'Jennifer.johnson@hotmail...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:53:16,049 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:53:16,050 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:53:16,050 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:53:16,261 - dq_unified - INFO - Detected phone as phone type
+2025-12-28 15:53:16,485 - dq_unified - INFO - Detected transaction_date as date type
+2025-12-28 15:53:16,807 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['YYYY-MM-DD', 'invalid_date', 'DD-MM-YYYY or MM-DD-YYYY', 'MM/DD/YYYY']
+2025-12-28 15:53:16,807 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['YYYY-MM-DD', 'invalid_date', 'DD-MM-YYYY or MM-DD-YYYY', 'MM/DD/YYYY']
+2025-12-28 15:53:16,808 - dq_unified - WARNING -     Invalid date format: July 5th, 2023
+2025-12-28 15:53:17,155 - dq_unified - INFO - Detected amount as numeric type
+2025-12-28 15:53:17,337 - dq_unified - INFO - Detected quantity as numeric type
+2025-12-28 15:53:17,521 - dq_unified - INFO - Detected age as numeric type
+2025-12-28 15:53:18,168 - dq_unified - INFO - Total format issues found: 733
+2025-12-28 15:53:18,169 - dq_unified - INFO - Checking mandatory fields
+2025-12-28 15:53:18,169 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:53:21,680 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:53:22,072 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-28 15:53:22,658 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-28 15:53:23,315 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2025-12-28 15:53:23,629 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2025-12-28 15:53:23,990 - dq_unified - WARNING - Mandatory field 'email': 1,517 missing values (98.3% filled)
+2025-12-28 15:53:24,606 - dq_unified - WARNING - Mandatory field 'phone': 1,282 missing values (98.6% filled)
+2025-12-28 15:53:25,033 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2025-12-28 15:53:25,592 - dq_unified - WARNING - Mandatory field 'amount': 1,134 missing values (98.7% filled)
+2025-12-28 15:53:26,057 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-28 15:53:26,479 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2025-12-28 15:53:26,933 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-28 15:53:27,407 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2025-12-28 15:53:27,408 - dq_unified - INFO - All columns mandatory: 6014 unique rows with missing values
+2025-12-28 15:53:27,409 - dq_unified - INFO - Calculating quality score
+2025-12-28 15:53:27,412 - dq_unified - INFO - Quality Score Calculation:
+2025-12-28 15:53:27,413 - dq_unified - INFO -   Total rows: 89,999
+2025-12-28 15:53:27,413 - dq_unified - INFO -   Bad Rows: 6,788
+2025-12-28 15:53:27,413 - dq_unified - INFO -   Good rows (no issues): 83,211
+2025-12-28 15:53:27,414 - dq_unified - INFO -   Quality Score: 92.46%
+2025-12-28 15:53:27,414 - dq_unified - INFO - Generating detailed data quality report
+2025-12-28 15:53:27,414 - dq_unified - INFO - Report for: Database: mysql - Table: employee, Records: 89,999, Columns: 12
+2025-12-28 15:53:27,415 - dq_unified - INFO - Overall quality score: 92.5%
+2025-12-28 15:53:27,415 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-28 15:53:27,416 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251228_155327
+2025-12-28 15:53:29,179 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-28 15:53:29,180 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-28 15:53:29,192 - dq_audit - INFO - Inserted single_source record with ID: 474
+2025-12-28 15:53:29,193 - dq_unified - INFO - Audit logged for session: DQ_20251228_155329
+2025-12-28 15:53:29,195 - dq_unified - INFO - Analysis completed successfully for Database: mysql - Table: employee
+2025-12-28 15:53:29,211 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-28 15:53:29,212 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:53:49,257 - __main__ - INFO - User selected option: 1
+2025-12-28 15:53:49,258 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-28 15:53:49,261 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-28 15:53:49,262 - dq_unified - INFO - Prompting user for data source type
+2025-12-28 15:53:49,263 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-28 15:53:50,776 - dq_unified - INFO - User selected source type: 3
+2025-12-28 15:53:50,777 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-28 15:53:54,580 - dq_unified - INFO - Getting database config from config file
+2025-12-28 15:53:56,225 - dq_unified - INFO - Using ORACLE configuration from config file
+2025-12-28 15:54:06,324 - dq_unified - INFO - Database configuration from config file: oracle, Table: employee
+2025-12-28 15:54:06,325 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:54:06,327 - dq_unified - INFO - Loading data from DATABASE
+2025-12-28 15:54:06,327 - dq_unified - INFO - Loading large database table: employee
+2025-12-28 15:54:06,649 - dq_unified - INFO - Oracle table has 89,999 rows
+2025-12-28 15:54:06,649 - dq_unified - INFO - Loading 89,999 rows from Oracle...
+2025-12-28 15:54:07,014 - dq_unified - INFO - Loaded 89,999 rows from Oracle
+2025-12-28 15:54:07,676 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2025-12-28 15:54:07,676 - dq_unified - INFO - Standardizing data types...
+2025-12-28 15:54:08,404 - dq_unified - INFO - Data type standardization complete
+2025-12-28 15:54:08,484 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 264.0MB total, 18.9MB for dataframe
+2025-12-28 15:54:08,484 - dq_unified - INFO - DATA PREVIEW:
+2025-12-28 15:54:08,485 - dq_unified - INFO -    Total rows: 89,999
+2025-12-28 15:54:08,486 - dq_unified - INFO -    Total columns: 12
+2025-12-28 15:54:08,487 - dq_unified - INFO -    Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:54:08,487 - dq_unified - INFO - Running quality checks
+2025-12-28 15:54:08,488 - dq_unified - INFO - Checking for null/empty values
+2025-12-28 15:54:08,488 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2025-12-28 15:54:08,488 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:54:08,488 - dq_unified - INFO - Data source: 
+2025-12-28 15:54:08,489 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('int64'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ', 'David Miller',
+                  'David Miller  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  'david.davis@company.com', 'david.davis@gmail.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float64'), 'quantity': dtype('int64'), 'age': dtype('int64'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs', 'Text with%percent signs',
+                  'Text with& ampersands', 'Text with'apostrophes',
+                  'Text with(parentheses)', 'Text with*asterisks',
+                  'Text with, commas', 'Text with. periods',
+                  'Text with/slashes', 'Text with; semicolons',
+                  'Text with<angle brackets>', 'Text with? questions',
+                  'Text with@at signs', 'Text with[brackets]',
+                  'Text with\backslashes', 'Text with_underscores',
+                  'Text with`backticks', 'Text with{braces}',
+                  'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2025-12-28 15:54:08,490 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2025-12-28 15:54:08,491 - dq_unified - INFO -   Row 0: {'id': 'np.int64(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2025-12-28 15:54:08,492 - dq_unified - INFO -   Row 1: {'id': 'np.int64(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2025-12-28 15:54:08,940 - dq_unified - INFO - Column 'id': No missing cells
+2025-12-28 15:54:09,596 - dq_unified - INFO - Column 'customer_id': No missing cells
+2025-12-28 15:54:10,263 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2025-12-28 15:54:10,581 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:54:10,581 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2025-12-28 15:54:10,582 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:54:10,582 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2025-12-28 15:54:28,699 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:54:28,700 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2025-12-28 15:54:28,701 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:54:28,703 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2025-12-28 15:54:37,378 - dq_unified - INFO -   Missing samples: ['None', 'None', 'None']
+2025-12-28 15:54:37,378 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2025-12-28 15:54:37,379 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:54:37,381 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2025-12-28 15:54:43,690 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2025-12-28 15:54:44,149 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2025-12-28 15:54:44,150 - dq_unified - INFO -   Not missing samples: ['8653.56', '1948.44', '237.49']
+2025-12-28 15:54:44,151 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:54:44,152 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2025-12-28 15:54:49,833 - dq_unified - INFO - Column 'quantity': No missing cells
+2025-12-28 15:54:50,183 - dq_unified - INFO - Column 'age': No missing cells
+2025-12-28 15:54:50,552 - dq_unified - INFO - Column 'status': No missing cells
+2025-12-28 15:54:51,000 - dq_unified - INFO - Column 'description': No missing cells
+2025-12-28 15:54:51,000 - dq_unified - INFO - Total missing cells found: 7,439
+2025-12-28 15:54:51,001 - dq_unified - INFO - ============================================================
+2025-12-28 15:54:51,002 - dq_unified - INFO - MISSING VALUE SUMMARY
+2025-12-28 15:54:51,003 - dq_unified - INFO - ============================================================
+2025-12-28 15:54:51,004 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2025-12-28 15:54:51,004 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2025-12-28 15:54:51,004 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2025-12-28 15:54:51,005 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2025-12-28 15:54:51,005 - dq_unified - INFO - ============================================================
+2025-12-28 15:54:51,005 - dq_unified - INFO - Checking for duplicate rows
+2025-12-28 15:54:51,005 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2025-12-28 15:54:51,012 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:54:52,054 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2025-12-28 15:54:52,055 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2025-12-28 15:54:52,056 - dq_unified - INFO - Total rows to check: 89999
+2025-12-28 15:54:52,058 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2025-12-28 15:54:52,059 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2025-12-28 15:54:52,059 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2025-12-28 15:54:52,059 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2025-12-28 15:54:52,060 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2025-12-28 15:54:52,060 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2025-12-28 15:54:52,060 - dq_unified - INFO - Checking duplicates on ALL columns
+2025-12-28 15:54:52,061 - dq_unified - INFO - First few rows for comparison:
+2025-12-28 15:54:52,062 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2025-12-28 15:54:52,062 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2025-12-28 15:54:52,062 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2025-12-28 15:54:52,223 - dq_unified - INFO - Duplicate mask found 406 rows
+2025-12-28 15:54:52,223 - dq_unified - INFO - Found 406 potential duplicate rows
+2025-12-28 15:54:52,226 - dq_unified - INFO - Unique duplicate groups: 203
+2025-12-28 15:54:52,226 - dq_unified - INFO - Duplicate groups found:
+2025-12-28 15:54:52,228 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2025-12-28 15:54:52,228 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='None', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2025-12-28 15:54:52,228 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2025-12-28 15:54:52,229 - dq_unified - INFO - Processing 406 duplicate indices
+2025-12-28 15:54:52,245 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2025-12-28 15:54:52,257 - dq_unified - INFO - Checking data formats
+2025-12-28 15:54:52,260 - dq_unified - INFO - Detected id as numeric type
+2025-12-28 15:54:52,468 - dq_unified - INFO - Detected email as email type
+2025-12-28 15:54:52,471 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:54:52,471 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:54:52,473 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:54:52,475 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:54:52,476 - dq_unified - WARNING -   Row 452: 'john.jones.company.com...' doesn't match Valid email format (user@domain.com)
+2025-12-28 15:54:52,660 - dq_unified - INFO - Detected phone as phone type
+2025-12-28 15:54:52,853 - dq_unified - INFO - Detected transaction_date as date type
+2025-12-28 15:54:53,157 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:54:53,158 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2025-12-28 15:54:53,472 - dq_unified - INFO - Detected amount as numeric type
+2025-12-28 15:54:53,641 - dq_unified - INFO - Detected quantity as numeric type
+2025-12-28 15:54:53,797 - dq_unified - INFO - Detected age as numeric type
+2025-12-28 15:54:54,473 - dq_unified - INFO - Total format issues found: 725
+2025-12-28 15:54:54,474 - dq_unified - INFO - Checking mandatory fields
+2025-12-28 15:54:54,475 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:54:56,875 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-28 15:54:57,165 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-28 15:54:57,726 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-28 15:54:58,290 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2025-12-28 15:54:58,566 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2025-12-28 15:54:58,879 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2025-12-28 15:54:59,459 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2025-12-28 15:54:59,800 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2025-12-28 15:55:00,165 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2025-12-28 15:55:00,476 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-28 15:55:00,787 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2025-12-28 15:55:01,113 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-28 15:55:01,509 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2025-12-28 15:55:01,509 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2025-12-28 15:55:01,511 - dq_unified - INFO - Calculating quality score
+2025-12-28 15:55:01,513 - dq_unified - INFO - Quality Score Calculation:
+2025-12-28 15:55:01,513 - dq_unified - INFO -   Total rows: 89,999
+2025-12-28 15:55:01,514 - dq_unified - INFO -   Bad Rows: 6,783
+2025-12-28 15:55:01,514 - dq_unified - INFO -   Good rows (no issues): 83,216
+2025-12-28 15:55:01,514 - dq_unified - INFO -   Quality Score: 92.46%
+2025-12-28 15:55:01,515 - dq_unified - INFO - Generating detailed data quality report
+2025-12-28 15:55:01,515 - dq_unified - INFO - Report for: Database: oracle - Table: employee, Records: 89,999, Columns: 12
+2025-12-28 15:55:01,516 - dq_unified - INFO - Overall quality score: 92.5%
+2025-12-28 15:55:01,516 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-28 15:55:01,516 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251228_155501
+2025-12-28 15:55:02,921 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-28 15:55:02,922 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-28 15:55:02,935 - dq_audit - INFO - Inserted single_source record with ID: 475
+2025-12-28 15:55:02,935 - dq_unified - INFO - Audit logged for session: DQ_20251228_155502
+2025-12-28 15:55:02,938 - dq_unified - INFO - Analysis completed successfully for Database: oracle - Table: employee
+2025-12-28 15:55:02,955 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-28 15:55:02,955 - __main__ - INFO - Displaying main menu options to user
+2025-12-28 15:55:28,731 - __main__ - INFO - User selected option: 6
+2025-12-28 15:55:28,732 - __main__ - INFO - User session ended. Duration: 0:08:20.105870
+2025-12-28 15:55:28,732 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

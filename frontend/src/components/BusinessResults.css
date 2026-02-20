@@ -1,0 +1,384 @@
+/* BusinessResults.css */
+
+.business-results-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Inter', Arial, Helvetica, sans-serif; /* Inter is great for dashboards */
+    color: #34495e;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* --- Menu / Dashboard Styles --- */
+.br-menu-card {
+    text-align: center;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.br-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+.br-action-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.br-action-box {
+    flex: 1;
+    max-width: 300px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.br-action-box:hover {
+    border-color: #34495e;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.br-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.br-action-box h4 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+.br-action-box p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* --- Form Styles --- */
+.br-form-card, .br-mapping-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.br-form-card h4, .br-mapping-card h4 {
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.br-input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.br-input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* UPDATED: Unified width for all input types including textarea */
+.br-input-group input, 
+.br-input-group select, 
+.br-input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #34495e;
+    box-sizing: border-box; /* Crucial for ensuring padding doesn't break 100% width */
+    display: block;
+    font-family: inherit;
+}
+
+/* Specific styling for the Description and Logic boxes */
+.br-input-group textarea {
+    min-height: 80px;
+    resize: vertical; /* Allow users to scale height, but keep width locked */
+}
+
+/* Extra height for the custom rule logic box */
+/* .br-dynamic-section textarea {
+    min-height: 160px;
+} */
+
+.br-input-group input:focus, 
+.br-input-group select:focus, 
+.br-input-group textarea:focus {
+    outline: none;
+    border-color: #34495e;
+    box-shadow: 0 0 0 3px rgba(52, 73, 94, 0.1);
+}
+
+.br-row-split {
+    display: flex;
+    gap: 20px;
+}
+
+.br-row-split .br-input-group {
+    flex: 1;
+}
+
+.br-form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    border-top: 1px solid #edf2f7;
+    padding-top: 20px;
+}
+
+.br-btn-primary, .br-btn-secondary {
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.br-btn-primary {
+    background: #34495e;
+    color: white;
+}
+.br-btn-primary:hover { background: #2c3e50; }
+.br-btn-primary:disabled { background: #bdc3c7; cursor: not-allowed; }
+
+.br-btn-secondary {
+    background: white;
+    color: #7f8c8d;
+    border: 1px solid #cbd5e0;
+}
+.br-btn-secondary:hover { border-color: #34495e; color: #34495e; }
+
+/* --- Mapping Screen --- */
+.br-header-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.br-scroll-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fcfcfc;
+}
+
+.br-check-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.br-check-item:hover {
+    border-color: #34495e;
+    background: #f8fafc;
+}
+
+.br-check-item.selected {
+    border-color: #34495e;
+    background: #f0f7ff;
+}
+
+.br-rule-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.br-rule-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.br-icon-btn {
+    background: #f1f5f9;
+    border: none;
+    color: #475569;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.br-icon-btn:hover { background: #e2e8f0; color: #0f172a; }
+.br-icon-btn.del:hover { background: #fee2e2; color: #ef4444; }
+
+/* --- Report Styles --- */
+.br-results-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.br-score-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #edf2f7;
+    margin-bottom: 25px;
+}
+
+.br-score-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    background: white;
+    border: 6px solid #edf2f7;
+}
+
+.br-score-circle.good { border-color: #2ecc71; color: #2ecc71; }
+.br-score-circle.avg { border-color: #f1c40f; color: #f1c40f; }
+.br-score-circle.poor { border-color: #e74c3c; color: #e74c3c; }
+
+.br-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-card.fail strong { color: #e74c3c; }
+
+.br-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.br-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.br-table th {
+    background: #f8fafc;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 700;
+    color: #4a5568;
+    position: sticky;
+    top: 0;
+}
+
+.br-table td {
+    padding: 12px 15px;
+    border-top: 1px solid #edf2f7;
+    color: #2c3e50;
+}
+
+/* Notification Toast */
+.br-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.br-notification.success { background: #2ecc71; }
+.br-notification.error { background: #e74c3c; }
+
+.br-reset-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    background: #34495e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.br-pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.br-page-info {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.br-page-info strong {
+    color: #34495e;
+}
+
+.br-pagination-controls button {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+}

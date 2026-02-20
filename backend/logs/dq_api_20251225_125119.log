@@ -1,0 +1,78 @@
+2025-12-25 12:51:19,748 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 12:51:19,749 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_125119.log
+2025-12-25 12:51:19,936 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 12:51:19,937 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 12:51:19,939 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 12:51:19,940 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 12:51:19,940 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 12:51:19,951 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 12:51:19,952 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 12:51:19,953 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 12:51:19,954 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 12:51:19,956 - __main__ - INFO -   GET  /              - API status
+2025-12-25 12:51:19,957 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 12:51:19,958 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 12:51:19,959 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 12:51:19,960 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 12:51:19,961 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 12:51:19,962 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 12:51:19,963 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 12:51:19,964 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 12:51:36,135 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 12:51:36,136 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 12:51:38,183 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 12:51:38,184 - __main__ - INFO - Single source analysis request received
+2025-12-25 12:51:38,185 - __main__ - INFO - Starting analysis for session SINGLE_20251225_125138_b3424d38
+2025-12-25 12:51:38,186 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 12:51:38,188 - dq_unified - INFO - User selected source type: 1
+2025-12-25 12:51:38,189 - input_handler - WARNING - Required field 'file_path' not provided in UI mode, using empty string
+2025-12-25 12:51:38,190 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:51:38,191 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:51:38,192 - dq_unified - INFO - Loading large CSV: 
+2025-12-25 12:51:38,192 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:51:38,196 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:51:38,197 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 12:51:38,197 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 12:51:38,199 - __main__ - INFO - Completed with status 200 in 0.015s
+2025-12-25 12:54:42,222 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 12:54:42,223 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 12:54:44,275 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 12:54:44,276 - __main__ - INFO - Single source analysis request received
+2025-12-25 12:54:44,277 - __main__ - INFO - Starting analysis for session SINGLE_20251225_125444_bbfb6aff
+2025-12-25 12:54:44,278 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 12:54:44,279 - dq_unified - INFO - User selected source type: 1
+2025-12-25 12:54:44,279 - input_handler - WARNING - Required field 'file_path' not provided in UI mode, using empty string
+2025-12-25 12:54:44,280 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:54:44,280 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:54:44,282 - dq_unified - INFO - Loading large CSV: 
+2025-12-25 12:54:44,282 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:54:44,283 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:54:44,285 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 12:54:44,286 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 12:54:44,286 - __main__ - INFO - Completed with status 200 in 0.012s

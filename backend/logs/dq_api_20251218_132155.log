@@ -1,0 +1,72 @@
+2025-12-18 13:21:55,009 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-18 13:21:55,181 - root - WARNING - run_rules_analysis_ui not available yet
+2025-12-18 13:21:55,187 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 13:21:55,188 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 13:21:55,198 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-18 13:21:55,199 - root - INFO - DQ modules available: True
+2025-12-18 13:21:55,199 - root - INFO - Config file mode: False
+2025-12-18 13:21:55,200 - root - INFO - Database config: localhost/dq_checks
+2025-12-18 13:21:56,104 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-18 13:21:56,104 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 13:22:03,122 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 13:22:03] "GET /api/health HTTP/1.1" 200 -
+2025-12-18 13:22:05,279 - root - INFO - Advanced checks request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'check_whitespace', 'check_zero_padding', 'check_numeric', 'columns_to_check', 'allow_negative_Phone', 'allow_negative_Salary'])
+2025-12-18 13:22:05,280 - root - INFO - Starting advanced checks for session ADV_20251218_132205_a9a39a2e
+2025-12-18 13:22:05,286 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2025-12-18 13:22:05,286 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 13:22:05,286 - dq_unified - INFO - User selected source type: 1
+2025-12-18 13:22:05,286 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 13:22:05,287 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-18 13:22:05,290 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 13:22:05,291 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 13:22:05,310 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 13:22:05,324 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 13:22:05,325 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 97.5MB total, 0.0MB for dataframe
+2025-12-18 13:22:05,328 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 13:22:05,476 - dq_error_log - INFO - Database connection successful
+2025-12-18 13:22:05,477 - dq_advanced - INFO - Session ID: ADV_20251218_132205
+2025-12-18 13:22:05,482 - dq_advanced - INFO - CHECKING WHITESPACE VALIDATION
+2025-12-18 13:22:05,482 - dq_advanced - INFO - Checking 6 text columns for whitespace issues...
+2025-12-18 13:22:05,482 - dq_advanced - WARNING - CustomerName: 4 whitespace issues
+2025-12-18 13:22:05,483 - dq_advanced - WARNING - Email: 1 whitespace issues
+2025-12-18 13:22:05,484 - dq_advanced - INFO - JoinDate: No whitespace issues
+2025-12-18 13:22:05,484 - dq_advanced - INFO - PostalCode: No whitespace issues
+2025-12-18 13:22:05,485 - dq_advanced - INFO - City: No whitespace issues
+2025-12-18 13:22:05,485 - dq_advanced - INFO - State: No whitespace issues
+2025-12-18 13:22:05,505 - dq_error_log - INFO - Batch logged 5 errors for session ADV_20251218_132205
+2025-12-18 13:22:05,505 - dq_advanced - INFO - Total whitespace errors: 5
+2025-12-18 13:22:05,507 - dq_advanced - INFO - CHECKING ZERO-PADDING VALIDATION
+2025-12-18 13:22:05,513 - dq_advanced - INFO - Checking ALL columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 13:22:05,513 - dq_advanced - INFO - Checking 10 columns for zero-padding issues...
+2025-12-18 13:22:05,513 - dq_advanced - INFO - CustomerName: No zero-padding issues
+2025-12-18 13:22:05,513 - dq_advanced - INFO - Email: No zero-padding issues
+2025-12-18 13:22:05,513 - dq_advanced - INFO - Phone: No zero-padding issues
+2025-12-18 13:22:05,514 - dq_advanced - INFO - Salary: No zero-padding issues
+2025-12-18 13:22:05,514 - dq_advanced - INFO - Department: No zero-padding issues
+2025-12-18 13:22:05,514 - dq_advanced - WARNING - JoinDate: 2 rows with unnecessary zero-padding
+2025-12-18 13:22:05,515 - dq_advanced - INFO - PostalCode: No zero-padding issues
+2025-12-18 13:22:05,515 - dq_advanced - INFO - City: No zero-padding issues
+2025-12-18 13:22:05,515 - dq_advanced - INFO - Country: No zero-padding issues
+2025-12-18 13:22:05,516 - dq_advanced - INFO - State: No zero-padding issues
+2025-12-18 13:22:05,529 - dq_error_log - INFO - Batch logged 2 errors for session ADV_20251218_132205
+2025-12-18 13:22:05,529 - dq_advanced - INFO - Total zero-padding errors: 2
+2025-12-18 13:22:05,531 - dq_advanced - INFO - CHECKING NUMERIC CONSISTENCY
+2025-12-18 13:22:05,534 - dq_advanced - INFO - Checking 6 columns for numeric consistency...
+2025-12-18 13:22:05,534 - dq_advanced - WARNING - Column '['CustomerName'' not found in dataset
+2025-12-18 13:22:05,534 - dq_advanced - WARNING - Column ''CustomerID'' not found in dataset
+2025-12-18 13:22:05,535 - dq_advanced - WARNING - Column ''CustomerEmail'' not found in dataset
+2025-12-18 13:22:05,535 - dq_advanced - WARNING - Column ''CustomerMobile'' not found in dataset
+2025-12-18 13:22:05,536 - dq_advanced - WARNING - Column ''Salary'' not found in dataset
+2025-12-18 13:22:05,536 - dq_advanced - WARNING - Column ''DateOfBirth']' not found in dataset
+2025-12-18 13:22:05,536 - dq_advanced - INFO - Numeric fields are consistent
+2025-12-18 13:22:05,537 - dq_advanced - INFO - GENERATING ADVANCED DATA QUALITY REPORT
+2025-12-18 13:22:05,537 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 13:22:05,537 - dq_audit - INFO - Starting database insertion for advanced...
+2025-12-18 13:22:05,552 - dq_audit - INFO - Inserted advanced record
+2025-12-18 13:22:05,552 - dq_audit - INFO - advanced audit record successfully stored in database
+2025-12-18 13:22:05,552 - dq_advanced - INFO - Audit record logged for UI/API mode: ADV_20251218_132205
+2025-12-18 13:22:05,584 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 13:22:05,638 - root - INFO - Completed advanced checks for session ADV_20251218_132205_a9a39a2e
+2025-12-18 13:22:05,639 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 13:22:05] "POST /api/advanced HTTP/1.1" 200 -

@@ -1,0 +1,44 @@
+2026-01-07 15:50:55,155 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-07 15:50:55,156 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260107_155055.log
+2026-01-07 15:50:55,206 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-07 15:50:55,207 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-07 15:50:55,210 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-07 15:50:55,210 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-07 15:50:55,211 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-07 15:50:55,217 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-07 15:50:55,218 - __main__ - INFO - 📊 Modules available: True
+2026-01-07 15:50:55,218 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-07 15:50:55,219 - __main__ - INFO - 📋 Available endpoints:
+2026-01-07 15:50:55,219 - __main__ - INFO -   GET  /              - API status
+2026-01-07 15:50:55,220 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-07 15:50:55,220 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-07 15:50:55,222 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-07 15:50:55,222 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-07 15:50:55,222 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-07 15:50:55,223 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-07 15:50:55,223 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-07 15:50:55,224 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-07 15:51:33,316 - __main__ - INFO - POST /api/compare - Request started
+2026-01-07 15:51:33,317 - __main__ - INFO - Comparison analysis request received
+2026-01-07 15:51:33,319 - __main__ - INFO - Starting comparison for session CMP_20260107_155133
+2026-01-07 15:51:33,320 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-07 15:51:33,321 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-07 15:51:33,321 - dq_comparison - INFO - 
+==================================================
+2026-01-07 15:51:33,322 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-07 15:51:33,324 - dq_comparison - INFO - ==================================================
+2026-01-07 15:51:34,040 - dq_comparison - ERROR - Error loading SOURCE Excel: 'dict' object has no attribute 'columns'
+2026-01-07 15:51:34,045 - dq_comparison - ERROR - Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 239, in load_excel_source
+    logger.info(f"{source_type_label} Excel loaded: {len(df):,} rows, {len(df.columns)} columns")
+                                                                           ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'columns'
+
+2026-01-07 15:51:34,046 - dq_comparison - INFO - 
+==================================================
+2026-01-07 15:51:34,047 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-07 15:51:34,048 - dq_comparison - INFO - ==================================================
+2026-01-07 15:51:34,055 - dq_comparison - INFO - TARGET CSV loaded: 50 rows, 8 columns
+2026-01-07 15:51:34,055 - dq_comparison - ERROR - Failed to load source or target data
+2026-01-07 15:51:34,056 - __main__ - WARNING - Comparison completed with errors: Failed to load source or target data
+2026-01-07 15:51:34,057 - __main__ - INFO - Completed with status 200 in 0.741s

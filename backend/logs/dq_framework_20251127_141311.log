@@ -1,0 +1,46 @@
+2025-11-27 14:13:11,932 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-11-27 14:13:11,933 - __main__ - INFO - User session started at: 2025-11-27 14:13:11.933301
+2025-11-27 14:13:11,934 - __main__ - INFO - Displaying main menu options to user
+2025-11-27 14:13:16,172 - __main__ - INFO - User selected option: 4
+2025-11-27 14:13:16,173 - __main__ - INFO - Starting Business Rules Engine module
+2025-11-27 14:13:16,178 - dq_rules - INFO - 🚀 STARTING BUSINESS RULES VALIDATION
+2025-11-27 14:13:16,179 - dq_rules - INFO - 📈 LOADING DATA FOR BUSINESS RULES
+2025-11-27 14:13:16,183 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-11-27 14:13:19,022 - dq_unified - INFO - User selected source type: 3
+2025-11-27 14:13:19,023 - dq_unified - INFO - 🗄️ GETTING DATABASE CONFIGURATION
+2025-11-27 14:13:22,487 - dq_unified - INFO - User selected database type: 2
+2025-11-27 14:13:26,481 - dq_unified - INFO - Database configuration collected: mysql, Table: customers
+2025-11-27 14:13:26,482 - dq_unified - INFO - 📥 LOADING DATA FROM DATABASE
+2025-11-27 14:13:26,485 - dq_unified - INFO - Connecting to mysql database
+2025-11-27 14:13:27,351 - dq_unified - INFO - ✅ Database loaded: 15 rows, 11 columns from customers
+2025-11-27 14:13:27,352 - dq_rules - INFO - 🎯 DEFINING CUSTOM BUSINESS RULES
+2025-11-27 14:13:42,207 - dq_rules - INFO - User selected rule type: 6
+2025-11-27 14:13:42,209 - dq_rules - INFO - 🚀 CREATING COMPREHENSIVE RULE SET
+2025-11-27 14:13:56,599 - dq_rules - ERROR - ❌ Error in business rules validation: Can only use .str accessor with string values!
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 931, in main
+    rules = define_custom_rules(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 66, in define_custom_rules
+    rules = create_all_rules(df)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 133, in create_all_rules
+    email_count = sample_values.str.contains(DATA_PATTERNS['email'], na=False).sum()
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\strings\accessor.py", line 191, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\strings\accessor.py", line 245, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!. Did you mean: 'std'?
+2025-11-27 14:13:56,669 - __main__ - INFO - Business Rules Engine completed successfully
+2025-11-27 14:13:56,669 - __main__ - INFO - Displaying main menu options to user
+2025-11-27 14:28:15,283 - __main__ - INFO - User selected option: 5
+2025-11-27 14:28:15,283 - __main__ - INFO - User session ended. Duration: 0:15:03.350352
+2025-11-27 14:28:15,283 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

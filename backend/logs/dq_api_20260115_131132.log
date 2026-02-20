@@ -1,0 +1,333 @@
+2026-01-15 13:11:32,323 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-15 13:11:32,324 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260115_131132.log
+2026-01-15 13:11:32,396 - dq_rules - WARNING - Could not load config from database: name 'get_db_connection' is not defined
+2026-01-15 13:11:32,401 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-15 13:11:32,402 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-15 13:11:32,404 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-15 13:11:32,404 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-15 13:11:32,406 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-15 13:11:32,423 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-15 13:11:32,424 - __main__ - INFO - 📊 Modules available: True
+2026-01-15 13:11:32,425 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-15 13:11:32,427 - __main__ - INFO - 📋 Available endpoints:
+2026-01-15 13:11:32,427 - __main__ - INFO -   GET  /              - API status
+2026-01-15 13:11:32,428 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-15 13:11:32,430 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-15 13:11:32,430 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-15 13:11:32,432 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-15 13:11:32,433 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-15 13:11:32,434 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-15 13:11:32,435 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-15 13:11:32,435 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-15 13:11:39,265 - __main__ - INFO - POST /api/compare - Request started
+2026-01-15 13:11:39,266 - __main__ - INFO - Comparison request - Source: database, Target: csv
+2026-01-15 13:11:39,268 - __main__ - INFO - Comparison analysis request received
+2026-01-15 13:11:39,269 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'table': 'employee', 'user': 'root', 'password': 'root'}
+2026-01-15 13:11:39,270 - __main__ - INFO - Starting comparison for session CMP_20260115_131139
+2026-01-15 13:11:39,271 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-15 13:11:39,273 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-15 13:11:39,273 - dq_comparison - INFO - 
+==================================================
+2026-01-15 13:11:39,274 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-15 13:11:39,275 - dq_comparison - INFO - ==================================================
+2026-01-15 13:11:39,275 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-01-15 13:11:39,276 - dq_comparison - INFO - ----------------------------------------
+2026-01-15 13:11:39,277 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-01-15 13:11:39,278 - dq_unified - INFO - Loading data from DATABASE
+2026-01-15 13:11:39,278 - dq_unified - INFO - Loading large database table: employee
+2026-01-15 13:11:39,279 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-01-15 13:11:39,498 - dq_unified - INFO - MySQL table employee has 89,999 rows
+2026-01-15 13:11:39,499 - dq_unified - INFO - Loading 89,999 rows from MySQL...
+2026-01-15 13:11:41,251 - dq_unified - INFO - Loaded 89,999 rows from MySQL
+2026-01-15 13:11:41,850 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2026-01-15 13:11:41,851 - dq_unified - INFO - Standardizing data types...
+2026-01-15 13:11:42,507 - dq_unified - INFO - Data type standardization complete
+2026-01-15 13:11:42,575 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 204.6MB total, 18.9MB for dataframe
+2026-01-15 13:11:42,576 - dq_comparison - INFO - SOURCE database loaded: 89,999 rows, 12 columns
+2026-01-15 13:11:42,576 - dq_comparison - INFO - 
+==================================================
+2026-01-15 13:11:42,577 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-15 13:11:42,578 - dq_comparison - INFO - ==================================================
+2026-01-15 13:11:42,578 - dq_comparison - INFO - DEBUG load_csv_source called for TARGET
+2026-01-15 13:11:42,579 - dq_comparison - INFO - DEBUG: Using file_path from 'target_file_path': C:\\Users\\003160\\OneDrive - wisseninfotech.com\\Documents\\DQ-Checks-Shashi\\Test_data\\source_data_90k.csv
+2026-01-15 13:11:42,819 - dq_comparison - INFO - TARGET CSV loaded: 89,999 rows, 12 columns
+2026-01-15 13:11:42,820 - dq_comparison - INFO - Source data loaded: 89999 rows, 12 columns
+2026-01-15 13:11:42,820 - dq_comparison - INFO - Target data loaded: 89999 rows, 12 columns
+2026-01-15 13:11:42,822 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-15 13:11:42,822 - dq_comparison - INFO - Source columns (original): ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-15 13:11:42,823 - dq_comparison - INFO - Target columns (original): ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-15 13:11:42,824 - dq_comparison - INFO - Common columns lowercased: ['email', 'description', 'customer_name', 'status', 'amount', 'customer_id', 'transaction_id', 'phone', 'age', 'transaction_date', 'quantity', 'id']
+2026-01-15 13:11:42,824 - dq_comparison - INFO - Found 12 common columns between source and target (case-insensitive)
+2026-01-15 13:11:42,825 - dq_comparison - INFO - User column selection input: all
+2026-01-15 13:11:42,826 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-15 13:11:42,826 - dq_comparison - INFO - Selected 12 columns for comparison: ['email', 'description', 'customer_name', 'status', 'amount']...
+2026-01-15 13:11:42,827 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-15 13:11:42,828 - dq_comparison - INFO - Report details - Source: Database: mysql - dq_checks.employee, Target: CSV: source_data_90k.csv, Selected columns: 12
+2026-01-15 13:11:42,828 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-15 13:11:42,828 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-15 13:11:42,848 - dq_error_log - INFO - Database connection successful
+2026-01-15 13:11:42,849 - dq_comparison - INFO - Session ID: CMP_20260115_131142
+2026-01-15 13:11:42,850 - dq_comparison - INFO - ✅ Row counts match: 89,999 rows
+2026-01-15 13:11:42,851 - dq_comparison - INFO - Comparing column structures...
+2026-01-15 13:11:42,853 - dq_comparison - WARNING - Found 8 incompatible data type mismatches
+2026-01-15 13:11:42,853 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-15 13:11:42,853 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-15 13:11:42,855 - dq_comparison - INFO - Checking key fields: ['id', 'customer_id']
+2026-01-15 13:11:42,863 - dq_comparison - WARNING - Field 'id' has duplicates in source: 406 rows
+2026-01-15 13:11:42,864 - dq_comparison - WARNING - Field 'id' has duplicates in target: 406 rows
+2026-01-15 13:11:42,894 - dq_comparison - WARNING - Field 'customer_id' has duplicates in source: 806 rows
+2026-01-15 13:11:42,895 - dq_comparison - WARNING - Field 'customer_id' has duplicates in target: 804 rows
+2026-01-15 13:11:42,896 - dq_comparison - INFO - Primary key validation complete. Passed: False
+2026-01-15 13:11:42,969 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-15 13:11:43,931 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-15 13:11:43,955 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-15 13:11:44,016 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-15 13:11:44,018 - dq_comparison - INFO - Column: email
+2026-01-15 13:11:44,018 - dq_comparison - INFO -   Source type: <class 'str'>, value: david.jones@company
+2026-01-15 13:11:44,018 - dq_comparison - INFO -   Target type: <class 'str'>, value: david.jones@company.com
+2026-01-15 13:11:44,020 - dq_comparison - INFO -   Normalized: 'david.jones@company' vs 'david.jones@company.com'
+2026-01-15 13:11:44,020 - dq_comparison - INFO -   Match: False
+2026-01-15 13:11:44,020 - dq_comparison - INFO - Column: description
+2026-01-15 13:11:44,021 - dq_comparison - INFO -   Source type: <class 'str'>, value: Text with& ampersands
+2026-01-15 13:11:44,022 - dq_comparison - INFO -   Target type: <class 'str'>, value: Text with& ampersands
+2026-01-15 13:11:44,022 - dq_comparison - INFO -   Normalized: 'text with& ampersands' vs 'text with& ampersands'
+2026-01-15 13:11:44,023 - dq_comparison - INFO -   Match: True
+2026-01-15 13:11:44,024 - dq_comparison - INFO - Column: customer_name
+2026-01-15 13:11:44,024 - dq_comparison - INFO -   Source type: <class 'str'>, value:   Michael Davis  
+2026-01-15 13:11:44,025 - dq_comparison - INFO -   Target type: <class 'str'>, value: Michael Davis
+2026-01-15 13:11:44,025 - dq_comparison - INFO -   Normalized: 'michael davis' vs 'michael davis'
+2026-01-15 13:11:44,026 - dq_comparison - INFO -   Match: True
+2026-01-15 13:11:44,026 - dq_comparison - INFO - Source DF columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-15 13:11:44,027 - dq_comparison - INFO - Target DF columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-01-15 13:11:44,028 - dq_comparison - INFO - Selected columns for comparison: ['email', 'description', 'customer_name', 'status', 'amount', 'customer_id', 'transaction_id', 'phone', 'age', 'transaction_date', 'quantity', 'id']
+2026-01-15 13:11:44,028 - dq_comparison - INFO - Using 12 common columns for hash comparison
+2026-01-15 13:11:44,029 - dq_comparison - INFO - Source columns: ['email', 'description', 'customer_name', 'status', 'amount', 'customer_id', 'transaction_id', 'phone', 'age', 'transaction_date', 'quantity', 'id']
+2026-01-15 13:11:44,030 - dq_comparison - INFO - Target columns: ['email', 'description', 'customer_name', 'status', 'amount', 'customer_id', 'transaction_id', 'phone', 'age', 'transaction_date', 'quantity', 'id']
+2026-01-15 13:11:44,030 - dq_comparison - INFO - Generating hashes for source data (89999 rows)...
+2026-01-15 13:12:00,073 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-15 13:12:00,075 - dq_comparison - INFO - Hash 1: 442cf33a4f5eb006... (sample row 0)
+2026-01-15 13:12:00,076 - dq_comparison - INFO - Hash 2: 8b0974a463496f9b... (sample row 1)
+2026-01-15 13:12:00,077 - dq_comparison - INFO - Hash 3: 7a43234f5fc478e2... (sample row 2)
+2026-01-15 13:12:00,079 - dq_comparison - INFO - Generating hashes for target data (89999 rows)...
+2026-01-15 13:12:15,140 - dq_comparison - INFO - 
+======================================================================
+2026-01-15 13:12:15,141 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-15 13:12:15,142 - dq_comparison - INFO - ======================================================================
+2026-01-15 13:12:15,143 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-15 13:12:15,144 - dq_comparison - INFO - Column 'email' → 'email':
+2026-01-15 13:12:15,144 - dq_comparison - INFO -   Source: 'david.jones@company' (type: str) → 'david.jones@company'
+2026-01-15 13:12:15,145 - dq_comparison - INFO -   Target: 'david.jones@company.com' (type: str) → 'david.jones@company.com'
+2026-01-15 13:12:15,145 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-15 13:12:15,146 - dq_comparison - INFO - Column 'description' → 'description':
+2026-01-15 13:12:15,147 - dq_comparison - INFO -   Source: 'Text with& ampersands' (type: str) → 'text with& ampersands'
+2026-01-15 13:12:15,147 - dq_comparison - INFO -   Target: 'Text with& ampersands' (type: str) → 'text with& ampersands'
+2026-01-15 13:12:15,147 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,149 - dq_comparison - INFO - Column 'customer_name' → 'customer_name':
+2026-01-15 13:12:15,149 - dq_comparison - INFO -   Source: '  Michael Davis  ' (type: str) → 'michael davis'
+2026-01-15 13:12:15,150 - dq_comparison - INFO -   Target: 'Michael Davis' (type: str) → 'michael davis'
+2026-01-15 13:12:15,151 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,151 - dq_comparison - INFO - Column 'status' → 'status':
+2026-01-15 13:12:15,152 - dq_comparison - INFO -   Source: 'PENDING' (type: str) → 'pending'
+2026-01-15 13:12:15,153 - dq_comparison - INFO -   Target: 'PENDING' (type: str) → 'pending'
+2026-01-15 13:12:15,153 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,154 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-01-15 13:12:15,154 - dq_comparison - INFO -   Source: '9999999.99' (type: float64) → '9999999.9900000002'
+2026-01-15 13:12:15,155 - dq_comparison - INFO -   Target: '8653.56' (type: float64) → '8653.56'
+2026-01-15 13:12:15,155 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-15 13:12:15,156 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-15 13:12:15,156 - dq_comparison - INFO - Source hash string start: david.jones@company|text with& ampersands|michael davis...
+2026-01-15 13:12:15,158 - dq_comparison - INFO - Target hash string start: david.jones@company.com|text with& ampersands|michael davis...
+2026-01-15 13:12:15,158 - dq_comparison - INFO - Same? ❌ NO
+2026-01-15 13:12:15,159 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-15 13:12:15,160 - dq_comparison - INFO - Column 'email' → 'email':
+2026-01-15 13:12:15,160 - dq_comparison - INFO -   Source: 'duplicate.email@gmail.com' (type: str) → 'duplicate.email@gmail.com'
+2026-01-15 13:12:15,161 - dq_comparison - INFO -   Target: 'jennifer.williams@gmail.com' (type: str) → 'jennifer.williams@gmail.com'
+2026-01-15 13:12:15,162 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-15 13:12:15,162 - dq_comparison - INFO - Column 'description' → 'description':
+2026-01-15 13:12:15,163 - dq_comparison - INFO -   Source: 'Text with. periods' (type: str) → 'text with. periods'
+2026-01-15 13:12:15,163 - dq_comparison - INFO -   Target: 'Text with. periods' (type: str) → 'text with. periods'
+2026-01-15 13:12:15,164 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,165 - dq_comparison - INFO - Column 'customer_name' → 'customer_name':
+2026-01-15 13:12:15,165 - dq_comparison - INFO -   Source: 'Susan Brown' (type: str) → 'susan brown'
+2026-01-15 13:12:15,166 - dq_comparison - INFO -   Target: 'Susan Brown' (type: str) → 'susan brown'
+2026-01-15 13:12:15,166 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,167 - dq_comparison - INFO - Column 'status' → 'status':
+2026-01-15 13:12:15,167 - dq_comparison - INFO -   Source: 'ACTIVE' (type: str) → 'active'
+2026-01-15 13:12:15,168 - dq_comparison - INFO -   Target: 'ACTIVE' (type: str) → 'active'
+2026-01-15 13:12:15,168 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,169 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-01-15 13:12:15,170 - dq_comparison - INFO -   Source: '1948.44' (type: float64) → '1948.44'
+2026-01-15 13:12:15,170 - dq_comparison - INFO -   Target: '1948.44' (type: float64) → '1948.44'
+2026-01-15 13:12:15,171 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,171 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-15 13:12:15,172 - dq_comparison - INFO - Source hash string start: duplicate.email@gmail.com|text with. periods|susan brown...
+2026-01-15 13:12:15,173 - dq_comparison - INFO - Target hash string start: jennifer.williams@gmail.com|text with. periods|susan brown...
+2026-01-15 13:12:15,173 - dq_comparison - INFO - Same? ❌ NO
+2026-01-15 13:12:15,174 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-15 13:12:15,174 - dq_comparison - INFO - Column 'email' → 'email':
+2026-01-15 13:12:15,175 - dq_comparison - INFO -   Source: 'nan' (type: float) → 'NULL'
+2026-01-15 13:12:15,176 - dq_comparison - INFO -   Target: 'james.davis@hotmail.com' (type: str) → 'james.davis@hotmail.com'
+2026-01-15 13:12:15,176 - dq_comparison - INFO -   Match after normalization: ❌ NO
+2026-01-15 13:12:15,177 - dq_comparison - INFO - Column 'description' → 'description':
+2026-01-15 13:12:15,178 - dq_comparison - INFO -   Source: 'Text with{braces}' (type: str) → 'text with{braces}'
+2026-01-15 13:12:15,179 - dq_comparison - INFO -   Target: 'Text with{braces}' (type: str) → 'text with{braces}'
+2026-01-15 13:12:15,179 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,180 - dq_comparison - INFO - Column 'customer_name' → 'customer_name':
+2026-01-15 13:12:15,180 - dq_comparison - INFO -   Source: 'nan' (type: float) → 'NULL'
+2026-01-15 13:12:15,181 - dq_comparison - INFO -   Target: 'nan' (type: float) → 'NULL'
+2026-01-15 13:12:15,182 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,182 - dq_comparison - INFO - Column 'status' → 'status':
+2026-01-15 13:12:15,183 - dq_comparison - INFO -   Source: 'CANCELLED' (type: str) → 'cancelled'
+2026-01-15 13:12:15,183 - dq_comparison - INFO -   Target: 'CANCELLED' (type: str) → 'cancelled'
+2026-01-15 13:12:15,184 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,184 - dq_comparison - INFO - Column 'amount' → 'amount':
+2026-01-15 13:12:15,185 - dq_comparison - INFO -   Source: '237.49' (type: float64) → '237.49'
+2026-01-15 13:12:15,186 - dq_comparison - INFO -   Target: '237.49' (type: float64) → '237.49'
+2026-01-15 13:12:15,186 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-15 13:12:15,187 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-15 13:12:15,187 - dq_comparison - INFO - Source hash string start: NULL|text with{braces}|NULL...
+2026-01-15 13:12:15,188 - dq_comparison - INFO - Target hash string start: james.davis@hotmail.com|text with{braces}|NULL...
+2026-01-15 13:12:15,189 - dq_comparison - INFO - Same? ❌ NO
+2026-01-15 13:12:15,189 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-15 13:12:15,190 - dq_comparison - INFO - Column 1: 'email' (category) ↔ 'email' (object)
+2026-01-15 13:12:15,191 - dq_comparison - INFO -   Sample: Source='david.jones@company', Target='david.jones@company.com'
+2026-01-15 13:12:15,191 - dq_comparison - INFO - Column 2: 'description' (category) ↔ 'description' (object)
+2026-01-15 13:12:15,192 - dq_comparison - INFO -   Sample: Source='Text with& ampersands', Target='Text with& ampersands'
+2026-01-15 13:12:15,192 - dq_comparison - INFO - Column 3: 'customer_name' (category) ↔ 'customer_name' (object)
+2026-01-15 13:12:15,193 - dq_comparison - INFO -   Sample: Source='  Michael Davis  ', Target='Michael Davis'
+2026-01-15 13:12:15,194 - dq_comparison - INFO - Column 4: 'status' (category) ↔ 'status' (object)
+2026-01-15 13:12:15,194 - dq_comparison - INFO -   Sample: Source='PENDING', Target='PENDING'
+2026-01-15 13:12:15,195 - dq_comparison - INFO - Column 5: 'amount' (float64) ↔ 'amount' (float64)
+2026-01-15 13:12:15,196 - dq_comparison - INFO -   Sample: Source='9999999.99', Target='8653.56'
+2026-01-15 13:12:15,196 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-01-15 13:12:15,337 - dq_comparison - INFO - SOURCE DATA: email: david.jones@company; description: Text with& ampersands; customer_name:   Michael Davis  ; status: PENDING; amount: 9999999.99; customer_id: CUST078303; transaction_id: TX00078303; phone: 212-127-8383; age: 50; transaction_date: 04-10-2023; quantity: 41; id: 78303
+2026-01-15 13:12:15,339 - dq_comparison - INFO - TARGET DATA: email: david.jones@company.com; description: Text with& ampersands; customer_name: Michael Davis; status: PENDING; amount: 8653.56; customer_id: CUST078303; transaction_id: TX00078303; phone: 212-127-8383; age: 50; transaction_date: 04-10-2023; quantity: 41; id: 78303
+2026-01-15 13:12:15,339 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,340 - dq_comparison - INFO -   • email: 'david.jones@company' ≠ 'david.jones@company.com'
+2026-01-15 13:12:15,340 - dq_comparison - INFO -   • amount: '9999999.99' ≠ '8653.56'
+2026-01-15 13:12:15,361 - dq_comparison - INFO - SOURCE DATA: email: duplicate.email@gmail.com; description: Text with. periods; customer_name: Susan Brown; status: ACTIVE; amount: 1948.44; customer_id: CUST066465; transaction_id: TX00066465; phone: NULL; age: 49; transaction_date: 04-07-2023; quantity: 73; id: 66465
+2026-01-15 13:12:15,362 - dq_comparison - INFO - TARGET DATA: email: jennifer.williams@gmail.com; description: Text with. periods; customer_name: Susan Brown; status: ACTIVE; amount: 1948.44; customer_id: CUST066465; transaction_id: TX00066465; phone: (212) 706-7216; age: 49; transaction_date: 04-07-2023; quantity: 73; id: 66465
+2026-01-15 13:12:15,362 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,363 - dq_comparison - INFO -   • email: 'duplicate.email@gmail.com' ≠ 'jennifer.williams@gmail.com'
+2026-01-15 13:12:15,363 - dq_comparison - INFO -   • phone: 'NULL' ≠ '(212) 706-7216'
+2026-01-15 13:12:15,382 - dq_comparison - INFO - SOURCE DATA: email: NULL; description: Text with{braces}; customer_name: NULL; status: CANCELLED; amount: 237.49; customer_id: CUST078303; transaction_id: TX00093228; phone: 1212392873A; age: 65; transaction_date: 10-03-2023; quantity: 17; id: 93228
+2026-01-15 13:12:15,383 - dq_comparison - INFO - TARGET DATA: email: james.davis@hotmail.com; description: Text with{braces}; customer_name: NULL; status: CANCELLED; amount: 237.49; customer_id: CUST093228; transaction_id: TX00093228; phone: 12123928735; age: 65; transaction_date: 10-03-2023; quantity: 17; id: 93228
+2026-01-15 13:12:15,384 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,384 - dq_comparison - INFO -   • email: 'NULL' ≠ 'james.davis@hotmail.com'
+2026-01-15 13:12:15,385 - dq_comparison - INFO -   • customer_id: 'CUST078303' ≠ 'CUST093228'
+2026-01-15 13:12:15,385 - dq_comparison - INFO -   • phone: '1212392873A' ≠ '12123928735'
+2026-01-15 13:12:15,411 - dq_comparison - INFO - SOURCE DATA: email: Jennifer.johnson@hotmail; description: Normal text without issues; customer_name: Sarah Davis; status: PENDING; amount: 117.22; customer_id: CUST001748; transaction_id: TX00001748; phone: 2125-982-408; age: 73; transaction_date: July 5th, 2023; quantity: 54; id: 1748
+2026-01-15 13:12:15,412 - dq_comparison - INFO - TARGET DATA: email: jennifer.johnson@hotmail.com; description: Normal text without issues; customer_name: Sarah Davis; status: PENDING; amount: 117.22; customer_id: CUST001748; transaction_id: TX00001748; phone: 2125982408; age: 73; transaction_date: 07-05-2023; quantity: 54; id: 1748
+2026-01-15 13:12:15,412 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,413 - dq_comparison - INFO -   • email: 'Jennifer.johnson@hotmail' ≠ 'jennifer.johnson@hotmail.com'
+2026-01-15 13:12:15,414 - dq_comparison - INFO -   • transaction_date: 'July 5th, 2023' ≠ '07-05-2023'
+2026-01-15 13:12:15,437 - dq_comparison - INFO - SOURCE DATA: email: mary.brown@hotmail.com; description:   Text with leading spaces; customer_name:       Susan Miller; status: INACTIVE; amount: 2620.76; customer_id: CUST080005; transaction_id: TX00080005; phone: (212) 876-9757; age: 56; transaction_date: 2023-13-45; quantity: 5; id: 80005
+2026-01-15 13:12:15,438 - dq_comparison - INFO - TARGET DATA: email: mary.brown@hotmail.com; description:   Text with leading spaces; customer_name:       Susan Miller; status: INACTIVE; amount: 2620.76; customer_id: CUST080005; transaction_id: TX00080005; phone: (212) 876-9757; age: 56; transaction_date: 11-07-2023; quantity: 5; id: 80005
+2026-01-15 13:12:15,439 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,440 - dq_comparison - INFO -   • transaction_date: '2023-13-45' ≠ '11-07-2023'
+2026-01-15 13:12:15,456 - dq_comparison - INFO - SOURCE DATA: email: jane.williams@gmail.com; description: Text with<angle brackets>; customer_name: William Miller; status: COMPLETED; amount: NULL; customer_id: CUST019261; transaction_id: TX00019261; phone: NULL; age: 20; transaction_date: 10-02-2023; quantity: 18; id: 19261
+2026-01-15 13:12:15,457 - dq_comparison - INFO - TARGET DATA: email: jane.williams@gmail.com; description: Text with<angle brackets>; customer_name: William Miller; status: COMPLETED; amount: 1410.81; customer_id: CUST019261; transaction_id: TX00019261; phone: 212-752-8338; age: 20; transaction_date: 10-02-2023; quantity: 18; id: 19261
+2026-01-15 13:12:15,457 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,458 - dq_comparison - INFO -   • amount: 'NULL' ≠ '1410.81'
+2026-01-15 13:12:15,460 - dq_comparison - INFO -   • phone: 'NULL' ≠ '212-752-8338'
+2026-01-15 13:12:15,474 - dq_comparison - INFO - SOURCE DATA: email: mary.jones@hotmail.com; description: Text with  multiple   spaces; customer_name: Michael Williams; status: COMPLETED; amount: 1277.16; customer_id: CUST026830; transaction_id: TX00026830; phone: 212-648-2980; age: 24; transaction_date: 07-08-2023; quantity: -10; id: 26830
+2026-01-15 13:12:15,474 - dq_comparison - INFO - TARGET DATA: email: mary.jones@hotmail.com; description: Text with  multiple   spaces; customer_name: Michael Williams; status: COMPLETED; amount: 1277.16; customer_id: CUST026830; transaction_id: TX00026830; phone: 212-648-2980; age: 24; transaction_date: 07-08-2023; quantity: 93; id: 26830
+2026-01-15 13:12:15,475 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,476 - dq_comparison - INFO -   • quantity: '-10' ≠ '93'
+2026-01-15 13:12:15,491 - dq_comparison - INFO - SOURCE DATA: email: james.brown@outlook.com; description: Text with trailing spaces  ; customer_name: William Smith; status: INACTIVE; amount: 2331.34; customer_id: CUST080313; transaction_id: TX00078303; phone: 12128295968; age: -5; transaction_date: 08-10-2023; quantity: 36; id: 80313
+2026-01-15 13:12:15,492 - dq_comparison - INFO - TARGET DATA: email: james.brown@outlook.com; description: Text with trailing spaces  ; customer_name: William Smith; status: INACTIVE; amount: 2331.34; customer_id: CUST080313; transaction_id: TX00080313; phone: 12128295968; age: 80; transaction_date: 08-10-2023; quantity: 36; id: 80313
+2026-01-15 13:12:15,492 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,493 - dq_comparison - INFO -   • transaction_id: 'TX00078303' ≠ 'TX00080313'
+2026-01-15 13:12:15,494 - dq_comparison - INFO -   • age: '-5' ≠ '80'
+2026-01-15 13:12:15,513 - dq_comparison - INFO - SOURCE DATA: email: duplicate.email@gmail.com; description: Text with trailing spaces  ; customer_name: James Davis; status: CANCELLED; amount: 6676.41; customer_id: CUST018568; transaction_id: TX00018568; phone: 2126087878; age: 32; transaction_date: 10-01-2023; quantity: 46; id: 18568
+2026-01-15 13:12:15,514 - dq_comparison - INFO - TARGET DATA: email: mary.williams@hotmail.com; description: Text with trailing spaces  ; customer_name: James Davis; status: CANCELLED; amount: 6676.41; customer_id: CUST018568; transaction_id: TX00018568; phone: 2126087878; age: 32; transaction_date: 10-01-2023; quantity: 46; id: 18568
+2026-01-15 13:12:15,514 - dq_comparison - INFO - SPECIFIC DIFFERENCES:
+2026-01-15 13:12:15,515 - dq_comparison - INFO -   • email: 'duplicate.email@gmail.com' ≠ 'mary.williams@hotmail.com'
+2026-01-15 13:12:15,546 - dq_comparison - INFO - 
+================================================================================
+2026-01-15 13:12:15,548 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-01-15 13:12:15,548 - dq_comparison - INFO -   Total mismatches found: 9
+2026-01-15 13:12:15,549 - dq_comparison - INFO -   Detailed comparisons logged: 9
+2026-01-15 13:12:15,551 - dq_comparison - INFO -   First 10 rows displayed above
+2026-01-15 13:12:15,551 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-01-15 13:12:15,552 - dq_comparison - INFO - ================================================================================
+2026-01-15 13:12:15,610 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-15 13:12:15,611 - dq_comparison - INFO -   • Unique source hashes: 89796
+2026-01-15 13:12:15,612 - dq_comparison - INFO -   • Unique target hashes: 89796
+2026-01-15 13:12:15,613 - dq_comparison - INFO -   • Common hashes: 89787
+2026-01-15 13:12:15,613 - dq_comparison - INFO -   • Common rows (counting duplicates): 89,990
+2026-01-15 13:12:15,614 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 9
+2026-01-15 13:12:15,615 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 9
+2026-01-15 13:12:15,678 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-15 13:12:15,679 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-15 13:12:15,680 - dq_comparison - INFO -   Common rows: 89,990
+2026-01-15 13:12:15,681 - dq_comparison - INFO -   Unique to source: 9
+2026-01-15 13:12:15,681 - dq_comparison - INFO -   Unique to target: 9
+2026-01-15 13:12:15,682 - dq_comparison - INFO -   Value mismatches: 216
+2026-01-15 13:12:15,684 - dq_comparison - INFO -   Missing rows: 9
+2026-01-15 13:12:15,686 - dq_comparison - INFO -   Extra rows: 9
+2026-01-15 13:12:15,687 - dq_comparison - INFO - 
+========================================================================================================================
+COMPARISON: Mysql Database vs CSV (source_data_90k.csv)
+========================================================================================================================
+Row   | Diff Count | Source (Sample)                          | Target (Sample)                         
+------------------------------------------------------------------------------------------------------------------------
+2     | 2          | email: david.jones@company               | email: david.jones@company.com          
+3     | 2          | email: duplicate.email@gmail.com         | email: jennifer.williams@gmail.com      
+4     | 3          | email: NULL                              | email: james.davis@hotmail.com          
+5     | 2          | email: Jennifer.johnson@hotmail          | email: jennifer.johnson@hotmail.com     
+6     | 1          | email: mary.brown@hotmail.com            | email: mary.brown@hotmail.com           
+7     | 2          | email: jane.williams@gmail.com           | email: jane.williams@gmail.com          
+8     | 1          | email: mary.jones@hotmail.com            | email: mary.jones@hotmail.com           
+9     | 2          | email: james.brown@outlook.com           | email: james.brown@outlook.com          
+10    | 1          | email: duplicate.email@gmail.com         | email: mary.williams@hotmail.com        
+------------------------------------------------------------------------------------------------------------------------
+Showing all 9 mismatched rows.
+========================================================================================================================
+2026-01-15 13:12:15,687 - dq_comparison - INFO - Returning enhanced mismatch structure with 9 detailed mismatches
+2026-01-15 13:12:15,731 - dq_comparison - INFO - New structure: 9 detailed mismatches
+2026-01-15 13:12:15,732 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-15 13:12:28,228 - dq_comparison - INFO - Null values - Source: 7443 (0.69%), Target: 7439 (0.69%)
+2026-01-15 13:12:28,466 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 203, Target: 203
+2026-01-15 13:12:28,602 - dq_comparison - INFO - Source duplicate samples: ['Row 169', 'Row 383', 'Row 639']
+2026-01-15 13:12:28,712 - dq_comparison - INFO - Target duplicate samples: ['Row 169', 'Row 383', 'Row 639']
+2026-01-15 13:12:28,751 - dq_error_log - INFO - Retrieved 14 error logs for session CMP_20260115_131142
+2026-01-15 13:12:28,751 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-15 13:12:28,752 - dq_comparison - INFO -   Source rows: 89999
+2026-01-15 13:12:28,752 - dq_comparison - INFO -   Common rows (matched): 89990
+2026-01-15 13:12:28,754 - dq_comparison - INFO -   Calculation: (89990 / 89999) * 100 = 99.99%
+2026-01-15 13:12:28,754 - dq_comparison - INFO -   Explanation: 89990 matched rows out of 89999 total source rows
+2026-01-15 13:12:28,754 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-15 13:12:28,755 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-15 13:12:28,756 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-15 13:12:28,756 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260115_131142
+2026-01-15 13:12:28,757 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-15 13:12:28,775 - dq_audit - INFO - Inserted comparison record with ID: 694
+2026-01-15 13:12:28,777 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 694)
+2026-01-15 13:12:28,792 - dq_error_log - INFO - Retrieved 14 error logs for session CMP_20260115_131142
+2026-01-15 13:12:28,807 - dq_error_log - INFO - Retrieved summary: 14 total errors for session CMP_20260115_131142
+2026-01-15 13:12:28,808 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-15 13:12:28,824 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260115_131142
+2026-01-15 13:12:28,826 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-15 13:12:28,827 - dq_comparison - INFO -    Session ID: CMP_20260115_131142
+2026-01-15 13:12:28,828 - dq_comparison - INFO -    DQ Score (Simple %): 99.99%
+2026-01-15 13:12:28,828 - dq_comparison - INFO -    Source rows: 89999
+2026-01-15 13:12:28,829 - dq_comparison - INFO -    Matched rows: 89990
+2026-01-15 13:12:28,829 - dq_comparison - INFO -    Calculation: (89990 / 89999) * 100
+2026-01-15 13:12:28,830 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-15 13:12:28,866 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260115_131142
+2026-01-15 13:12:28,879 - dq_error_log - INFO - Retrieved 14 error logs for session CMP_20260115_131142
+2026-01-15 13:12:28,894 - dq_error_log - INFO - Retrieved summary: 14 total errors for session CMP_20260115_131142
+2026-01-15 13:12:28,895 - __main__ - INFO - Comparison completed for session CMP_20260115_131139
+2026-01-15 13:12:28,900 - __main__ - INFO - Completed with status 200 in 49.635s

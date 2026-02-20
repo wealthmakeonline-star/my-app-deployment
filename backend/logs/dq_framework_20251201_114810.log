@@ -1,0 +1,117 @@
+2025-12-01 11:48:10,240 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-01 11:48:10,242 - __main__ - INFO - User session started at: 2025-12-01 11:48:10.242538
+2025-12-01 11:48:10,243 - __main__ - INFO - Displaying main menu options to user
+2025-12-01 11:48:13,190 - __main__ - INFO - User selected option: 4
+2025-12-01 11:48:13,190 - __main__ - INFO - Starting Business Rules Engine module
+2025-12-01 11:48:13,191 - dq_rules - INFO - 🚀 STARTING BUSINESS RULES VALIDATION
+2025-12-01 11:48:13,191 - dq_rules - INFO - 📈 LOADING DATA FOR BUSINESS RULES
+2025-12-01 11:48:13,192 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-01 11:48:14,780 - dq_unified - INFO - User selected source type: 3
+2025-12-01 11:48:14,781 - dq_unified - INFO - 🗄️ GETTING DATABASE CONFIGURATION
+2025-12-01 11:48:17,408 - dq_unified - INFO - User selected database type: 3
+2025-12-01 11:48:24,098 - dq_unified - INFO - Database configuration collected: oracle, Table: customers
+2025-12-01 11:48:24,099 - dq_unified - INFO - 📥 LOADING DATA FROM DATABASE
+2025-12-01 11:48:24,099 - dq_unified - INFO - Connecting to oracle database
+2025-12-01 11:48:25,449 - dq_unified - ERROR - Database connection failed: Execution failed on sql 'SELECT * FROM customers LIMIT 10000': ORA-00933: SQL command not properly ended
+Help: https://docs.oracle.com/error-help/db/ora-00933/
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2674, in execute
+    cur.execute(sql, *args)
+cx_Oracle.DatabaseError: ORA-00933: SQL command not properly ended
+Help: https://docs.oracle.com/error-help/db/ora-00933/
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 210, in load_database_data
+    df = pd.read_sql_query(query, conn)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2686, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'SELECT * FROM customers LIMIT 10000': ORA-00933: SQL command not properly ended
+Help: https://docs.oracle.com/error-help/db/ora-00933/
+2025-12-01 11:48:25,460 - dq_rules - INFO - ✅ Business rules validation completed successfully
+2025-12-01 11:48:25,461 - __main__ - INFO - Business Rules Engine completed successfully
+2025-12-01 11:48:25,461 - __main__ - INFO - Displaying main menu options to user
+2025-12-01 12:19:30,142 - __main__ - INFO - User selected option: 1
+2025-12-01 12:19:30,144 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-01 12:19:30,144 - dq_unified - INFO - 🚀 STARTING UNIFIED DATA QUALITY ANALYSIS
+2025-12-01 12:19:30,145 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-01 12:19:33,337 - dq_unified - INFO - User selected source type: 1
+2025-12-01 12:19:33,338 - dq_unified - INFO - Getting CSV file path from user
+2025-12-01 12:20:04,151 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_test_data_full.csv
+2025-12-01 12:20:04,151 - dq_unified - INFO - 📥 LOADING DATA FROM CSV
+2025-12-01 12:20:04,151 - dq_unified - INFO - Loading CSV data from: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_test_data_full.csv
+2025-12-01 12:20:04,344 - dq_unified - INFO - ✅ CSV loaded: 50000 rows, 22 columns
+2025-12-01 12:20:04,346 - dq_unified - INFO - Data loaded successfully, displaying first 3 rows
+2025-12-01 12:20:04,391 - dq_unified - INFO - 🔍 CHECKING FOR EMPTY CELLS
+2025-12-01 12:20:04,411 - dq_unified - INFO - Column 'id': No empty cells
+2025-12-01 12:20:04,420 - dq_unified - INFO - Column 'scenario_type': No empty cells
+2025-12-01 12:20:04,429 - dq_unified - INFO - Column 'customer_id': No empty cells
+2025-12-01 12:20:04,438 - dq_unified - WARNING - Column 'customer_name': 1897 empty cells (3.8%)
+2025-12-01 12:20:04,458 - dq_unified - WARNING - Column 'email': 1928 empty cells (3.9%)
+2025-12-01 12:20:04,478 - dq_unified - WARNING - Column 'phone': 1939 empty cells (3.9%)
+2025-12-01 12:20:04,497 - dq_unified - WARNING - Column 'birth_date': 1904 empty cells (3.8%)
+2025-12-01 12:20:04,518 - dq_unified - INFO - Column 'join_date': No empty cells
+2025-12-01 12:20:04,534 - dq_unified - INFO - Column 'total_purchases': No empty cells
+2025-12-01 12:20:04,564 - dq_unified - INFO - Column 'account_balance': No empty cells
+2025-12-01 12:20:04,580 - dq_unified - INFO - Column 'credit_score': No empty cells
+2025-12-01 12:20:04,609 - dq_unified - INFO - Column 'transaction_amount': No empty cells
+2025-12-01 12:20:04,623 - dq_unified - INFO - Column 'quantity': No empty cells
+2025-12-01 12:20:04,656 - dq_unified - INFO - Column 'unit_price': No empty cells
+2025-12-01 12:20:04,685 - dq_unified - INFO - Column 'discount_percent': No empty cells
+2025-12-01 12:20:04,695 - dq_unified - INFO - Column 'status': No empty cells
+2025-12-01 12:20:04,706 - dq_unified - INFO - Column 'postal_code': No empty cells
+2025-12-01 12:20:04,717 - dq_unified - INFO - Column 'notes': No empty cells
+2025-12-01 12:20:04,743 - dq_unified - INFO - Column 'performance_rating': No empty cells
+2025-12-01 12:20:04,775 - dq_unified - INFO - Column 'sales_target': No empty cells
+2025-12-01 12:20:04,805 - dq_unified - INFO - Column 'actual_sales': No empty cells
+2025-12-01 12:20:04,831 - dq_unified - INFO - Column 'kpi_score': No empty cells
+2025-12-01 12:20:04,832 - dq_unified - INFO - Total empty cells found: 7668
+2025-12-01 12:20:04,834 - dq_unified - INFO - 🔍 CHECKING FOR DUPLICATE ROWS
+2025-12-01 12:20:04,888 - dq_unified - INFO - No duplicate rows found
+2025-12-01 12:20:04,889 - dq_unified - INFO - 🔍 CHECKING MANDATORY FIELDS
+2025-12-01 12:20:10,576 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2025-12-01 12:20:10,584 - dq_unified - INFO - Mandatory field 'scenario_type': 100.0% filled
+2025-12-01 12:20:10,594 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2025-12-01 12:20:10,604 - dq_unified - WARNING - Mandatory field 'customer_name': 1897 missing values (96.2% filled)
+2025-12-01 12:20:10,632 - dq_unified - WARNING - Mandatory field 'email': 1928 missing values (96.1% filled)
+2025-12-01 12:20:10,651 - dq_unified - WARNING - Mandatory field 'phone': 1939 missing values (96.1% filled)
+2025-12-01 12:20:10,671 - dq_unified - WARNING - Mandatory field 'birth_date': 1904 missing values (96.2% filled)
+2025-12-01 12:20:10,689 - dq_unified - INFO - Mandatory field 'join_date': 100.0% filled
+2025-12-01 12:20:10,703 - dq_unified - INFO - Mandatory field 'total_purchases': 100.0% filled
+2025-12-01 12:20:10,733 - dq_unified - INFO - Mandatory field 'account_balance': 100.0% filled
+2025-12-01 12:20:10,750 - dq_unified - INFO - Mandatory field 'credit_score': 100.0% filled
+2025-12-01 12:20:10,777 - dq_unified - INFO - Mandatory field 'transaction_amount': 100.0% filled
+2025-12-01 12:20:10,791 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2025-12-01 12:20:10,817 - dq_unified - INFO - Mandatory field 'unit_price': 100.0% filled
+2025-12-01 12:20:10,842 - dq_unified - INFO - Mandatory field 'discount_percent': 100.0% filled
+2025-12-01 12:20:10,851 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2025-12-01 12:20:10,859 - dq_unified - INFO - Mandatory field 'postal_code': 100.0% filled
+2025-12-01 12:20:10,869 - dq_unified - INFO - Mandatory field 'notes': 100.0% filled
+2025-12-01 12:20:10,897 - dq_unified - INFO - Mandatory field 'performance_rating': 100.0% filled
+2025-12-01 12:20:10,930 - dq_unified - INFO - Mandatory field 'sales_target': 100.0% filled
+2025-12-01 12:20:10,960 - dq_unified - INFO - Mandatory field 'actual_sales': 100.0% filled
+2025-12-01 12:20:10,986 - dq_unified - INFO - Mandatory field 'kpi_score': 100.0% filled
+2025-12-01 12:20:10,989 - dq_unified - INFO - Mandatory field check completed: 4 issues found
+2025-12-01 12:20:10,990 - dq_unified - INFO - 📊 CALCULATING OVERALL QUALITY SCORE
+2025-12-01 12:20:10,990 - dq_unified - INFO - Quality score: 99.7% (Issues: nulls=7668, duplicates=0, formats=0, mandatory=4)
+2025-12-01 12:20:10,992 - dq_unified - INFO - 📊 GENERATING DETAILED DATA QUALITY REPORT
+2025-12-01 12:20:11,000 - dq_unified - INFO - Report for: CSV: dq_test_data_full.csv, Records: 50000, Columns: 22
+2025-12-01 12:20:11,001 - dq_unified - INFO - Overall quality score: 99.7%
+2025-12-01 12:20:11,002 - dq_unified - WARNING - Empty cells found: 7668 total
+2025-12-01 12:20:11,007 - dq_unified - WARNING - Missing mandatory fields: 7668 total
+2025-12-01 12:20:11,010 - dq_unified - INFO - Recommendations: ['Fill in empty cells in identified rows', 'Ensure mandatory fields are populated', 'Use Source-Target Comparison for detailed format validation']
+2025-12-01 12:20:11,441 - dq_audit - INFO - ✅ Audit record stored: single_source check
+2025-12-01 12:20:11,443 - dq_unified - INFO - ✅ Analysis completed successfully for CSV: dq_test_data_full.csv
+2025-12-01 12:20:11,447 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-01 12:20:11,448 - __main__ - INFO - Displaying main menu options to user
+2025-12-01 12:22:30,873 - __main__ - INFO - User selected option: 5
+2025-12-01 12:22:30,874 - __main__ - INFO - User session ended. Duration: 0:34:20.631851
+2025-12-01 12:22:30,875 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

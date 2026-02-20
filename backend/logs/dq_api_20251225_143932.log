@@ -1,0 +1,152 @@
+2025-12-25 14:39:32,483 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 14:39:32,485 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_143932.log
+2025-12-25 14:39:33,055 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 14:39:33,056 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 14:39:33,059 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 14:39:33,060 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 14:39:33,060 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 14:39:33,071 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 14:39:33,072 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 14:39:33,072 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 14:39:33,073 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 14:39:33,074 - __main__ - INFO -   GET  /              - API status
+2025-12-25 14:39:33,075 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 14:39:33,077 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 14:39:33,078 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 14:39:33,079 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 14:39:33,080 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 14:39:33,081 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 14:39:33,083 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 14:39:33,084 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 14:39:46,586 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 14:39:46,587 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 14:39:48,622 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 14:39:48,623 - __main__ - INFO - Single source analysis request received
+2025-12-25 14:39:48,624 - __main__ - INFO - Starting analysis for session SINGLE_20251225_143948_45fb5e92
+2025-12-25 14:39:48,624 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 14:39:48,625 - dq_unified - INFO - User selected source type: 1
+2025-12-25 14:39:48,625 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:39:48,626 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:39:48,626 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2025-12-25 14:39:48,628 - dq_unified - ERROR - Error loading large CSV: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:39:48,632 - dq_unified - ERROR - Error loading data from csv: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:39:48,634 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 14:39:48,634 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 14:39:48,635 - __main__ - INFO - Completed with status 200 in 0.013s
+2025-12-25 14:44:17,578 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 14:44:17,579 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 14:44:20,190 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 14:44:20,191 - __main__ - INFO - Single source analysis request received
+2025-12-25 14:44:20,193 - __main__ - INFO - Starting analysis for session SINGLE_20251225_144420_819e0972
+2025-12-25 14:44:20,194 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 14:44:20,195 - dq_unified - INFO - User selected source type: 1
+2025-12-25 14:44:20,196 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:20,196 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:20,197 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2025-12-25 14:44:20,200 - dq_unified - ERROR - Error loading large CSV: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:44:20,201 - dq_unified - ERROR - Error loading data from csv: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:44:20,204 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 14:44:20,205 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 14:44:20,206 - __main__ - INFO - Completed with status 200 in 0.016s
+2025-12-25 14:44:22,241 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 14:44:22,242 - __main__ - INFO - Single source analysis request received
+2025-12-25 14:44:22,243 - __main__ - INFO - Starting analysis for session SINGLE_20251225_144422_054342a4
+2025-12-25 14:44:22,244 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 14:44:22,244 - dq_unified - INFO - User selected source type: 1
+2025-12-25 14:44:22,245 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:22,247 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:22,249 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2025-12-25 14:44:22,252 - dq_unified - ERROR - Error loading large CSV: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:44:22,253 - dq_unified - ERROR - Error loading data from csv: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:44:22,254 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 14:44:22,255 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 14:44:22,256 - __main__ - INFO - Completed with status 200 in 0.016s
+2025-12-25 14:44:24,397 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 14:44:24,398 - __main__ - INFO - Single source analysis request received
+2025-12-25 14:44:24,399 - __main__ - INFO - Starting analysis for session SINGLE_20251225_144424_6bd2c0aa
+2025-12-25 14:44:24,400 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 14:44:24,400 - dq_unified - INFO - User selected source type: 1
+2025-12-25 14:44:24,401 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:24,401 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:44:24,402 - dq_unified - INFO - Loading large CSV: test_excel_simple.xlsx
+2025-12-25 14:44:24,405 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: 'test_excel_simple.xlsx'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_excel_simple.xlsx'
+2025-12-25 14:44:24,405 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: 'test_excel_simple.xlsx'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_excel_simple.xlsx'
+2025-12-25 14:44:24,407 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 14:44:24,408 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 14:44:24,409 - __main__ - INFO - Completed with status 200 in 0.012s

@@ -1,0 +1,918 @@
+2026-02-09 12:53:34,951 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-02-09 12:53:34,959 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260209_125334.log
+2026-02-09 12:53:35,288 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-02-09 12:53:35,289 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-02-09 12:53:35,294 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-09 12:53:35,296 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-09 12:53:35,298 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-02-09 12:53:35,332 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-02-09 12:53:35,334 - __main__ - INFO - 📊 Modules available: True
+2026-02-09 12:53:35,336 - __main__ - INFO - 🔧 Config file mode: False
+2026-02-09 12:53:35,337 - __main__ - INFO - 📋 Available endpoints:
+2026-02-09 12:53:35,338 - __main__ - INFO -   GET  /              - API status
+2026-02-09 12:53:35,340 - __main__ - INFO -   GET  /api/health    - Health check
+2026-02-09 12:53:35,343 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-02-09 12:53:35,343 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-02-09 12:53:35,346 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-02-09 12:53:35,354 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-02-09 12:53:35,355 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-02-09 12:53:35,356 - __main__ - INFO -   POST /api/upload    - File upload
+2026-02-09 12:53:35,359 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-02-09 12:53:35,360 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-02-09 12:53:35,362 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-02-09 12:53:35,363 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-02-09 12:54:58,200 - __main__ - INFO - POST /api/check-single - Request started
+2026-02-09 12:54:58,203 - __main__ - INFO - Single source analysis request received
+2026-02-09 12:54:58,204 - __main__ - INFO - Starting analysis for session SINGLE_20260209_125458_c71d56cc
+2026-02-09 12:54:58,205 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-02-09 12:54:58,207 - __main__ - INFO -   source_type: csv
+2026-02-09 12:54:58,207 - __main__ - INFO -   file_path: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2026-02-09 12:54:58,208 - __main__ - INFO -   sheet_name: None
+2026-02-09 12:54:58,208 - __main__ - INFO -   mandatory_fields: all
+2026-02-09 12:54:58,208 - dq_unified - INFO - ==================================================
+2026-02-09 12:54:58,210 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-02-09 12:54:58,211 - dq_unified - INFO - Prompting user for data source type
+2026-02-09 12:54:58,211 - dq_unified - INFO - UI Data source_type: csv
+2026-02-09 12:54:58,213 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-09 12:54:58,213 - dq_unified - INFO - Loading data from CSV...
+2026-02-09 12:54:58,214 - dq_unified - INFO - Loading data from CSV
+2026-02-09 12:54:58,214 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2026-02-09 12:54:58,217 - dq_unified - INFO - CSV file has 15 rows
+2026-02-09 12:54:58,218 - dq_unified - INFO - Loading 15 rows from CSV...
+2026-02-09 12:54:58,239 - dq_unified - INFO - Loaded 15 rows from CSV
+2026-02-09 12:54:58,252 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-02-09 12:54:58,254 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 105.6MB total, 0.0MB for dataframe
+2026-02-09 12:54:58,255 - dq_unified - INFO - Data loaded: 15 rows, 10 columns
+2026-02-09 12:54:58,256 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-09 12:54:58,256 - dq_unified - INFO - Session ID: SINGLE_20260209_125458
+2026-02-09 12:54:58,257 - dq_unified - INFO - Column data types collected: 10 columns
+2026-02-09 12:54:58,258 - dq_unified - INFO - ==================================================
+2026-02-09 12:54:58,259 - dq_unified - INFO - Starting quality checks...
+2026-02-09 12:54:58,260 - dq_unified - INFO - ==================================================
+2026-02-09 12:54:58,261 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-02-09 12:54:58,261 - dq_unified - INFO - Checking for null/empty values
+2026-02-09 12:54:58,262 - dq_unified - INFO - DataFrame shape: (15, 10)
+2026-02-09 12:54:58,263 - dq_unified - INFO - Columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 12:54:58,264 - dq_unified - INFO - Data source: CSV: sample_data.csv
+2026-02-09 12:54:58,265 - dq_unified - INFO - DataFrame dtypes: {'CustomerName': dtype('O'), 'Email': dtype('O'), 'Phone': dtype('int64'), 'Salary': dtype('float32'), 'Department': CategoricalDtype(categories=['           Marketing', '       HR', 'Finance', 'HR', 'IT',
+                  'IT             ', 'Sales'],
+, ordered=False, categories_dtype=object), 'JoinDate': dtype('O'), 'PostalCode': dtype('O'), 'City': dtype('O'), 'Country': CategoricalDtype(categories=['USA'], ordered=False, categories_dtype=object), 'State': dtype('O')}
+2026-02-09 12:54:58,266 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-02-09 12:54:58,268 - dq_unified - INFO -   Row 0: {'CustomerName': "'   John Doe'", 'Email': "'john@email.com'", 'Phone': 'np.int64(1234567890)'}
+2026-02-09 12:54:58,269 - dq_unified - INFO -   Row 1: {'CustomerName': "'Jane      Smith'", 'Email': "'jane@email.com'", 'Phone': 'np.int64(9876543210)'}
+2026-02-09 12:54:58,294 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 12:54:58,295 - dq_unified - INFO -   Not missing samples: ["'   John Doe'", "'Jane      Smith'", "'Bob        Johnson'"]
+2026-02-09 12:54:58,296 - dq_unified - WARNING - Column 'CustomerName': 1 missing cells (6.7%)
+2026-02-09 12:54:58,296 - dq_unified - WARNING - Column 'CustomerName': 1 missing cells (6.7%)
+2026-02-09 12:54:58,299 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,512 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 12:54:58,513 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 12:54:58,514 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,531 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 12:54:58,531 - dq_unified - INFO -   Not missing samples: ["'john@email.com'", "'jane@email.com'", "'alice@email.com'"]
+2026-02-09 12:54:58,532 - dq_unified - WARNING - Column 'Email': 1 missing cells (6.7%)
+2026-02-09 12:54:58,532 - dq_unified - WARNING - Column 'Email': 1 missing cells (6.7%)
+2026-02-09 12:54:58,534 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,551 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 12:54:58,552 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 12:54:58,553 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,573 - dq_unified - INFO - Column 'Phone': No missing cells
+2026-02-09 12:54:58,601 - dq_unified - INFO -   Missing samples: ['nan', 'nan']
+2026-02-09 12:54:58,602 - dq_unified - INFO -   Not missing samples: ['50000.0', '60000.0', '55000.0']
+2026-02-09 12:54:58,603 - dq_unified - WARNING - Column 'Salary': 2 missing cells (13.3%)
+2026-02-09 12:54:58,603 - dq_unified - WARNING - Column 'Salary': 2 missing cells (13.3%)
+2026-02-09 12:54:58,605 - dq_error_log - INFO - Starting batch logging for 2 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,627 - dq_error_log - INFO - Batch 1: Successfully logged 2 errors
+2026-02-09 12:54:58,628 - dq_error_log - INFO - Progress: 2/2 errors processed
+2026-02-09 12:54:58,629 - dq_error_log - INFO - COMPLETE: Logged 2/2 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,661 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 12:54:58,661 - dq_unified - INFO -   Not missing samples: ["'IT             '", "'       HR'", "'Finance'"]
+2026-02-09 12:54:58,662 - dq_unified - WARNING - Column 'Department': 1 missing cells (6.7%)
+2026-02-09 12:54:58,663 - dq_unified - WARNING - Column 'Department': 1 missing cells (6.7%)
+2026-02-09 12:54:58,665 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,681 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 12:54:58,684 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 12:54:58,685 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,702 - dq_unified - INFO - Column 'JoinDate': No missing cells
+2026-02-09 12:54:58,716 - dq_unified - INFO - Column 'PostalCode': No missing cells
+2026-02-09 12:54:58,747 - dq_unified - INFO - Column 'City': No missing cells
+2026-02-09 12:54:58,773 - dq_unified - INFO - Column 'Country': No missing cells
+2026-02-09 12:54:58,798 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 12:54:58,800 - dq_unified - INFO -   Not missing samples: ["'TS'", "'AP'", "'KL'"]
+2026-02-09 12:54:58,801 - dq_unified - WARNING - Column 'State': 1 missing cells (6.7%)
+2026-02-09 12:54:58,802 - dq_unified - WARNING - Column 'State': 1 missing cells (6.7%)
+2026-02-09 12:54:58,803 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,824 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 12:54:58,826 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 12:54:58,827 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,829 - dq_unified - INFO - Total missing cells found: 6
+2026-02-09 12:54:58,830 - dq_unified - INFO - ============================================================
+2026-02-09 12:54:58,831 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-02-09 12:54:58,832 - dq_unified - INFO - ============================================================
+2026-02-09 12:54:58,833 - dq_unified - INFO - CustomerName: 1 missing (6.7%)
+2026-02-09 12:54:58,833 - dq_unified - INFO - Email: 1 missing (6.7%)
+2026-02-09 12:54:58,834 - dq_unified - INFO - Salary: 2 missing (13.3%)
+2026-02-09 12:54:58,835 - dq_unified - INFO - Department: 1 missing (6.7%)
+2026-02-09 12:54:58,836 - dq_unified - INFO - State: 1 missing (6.7%)
+2026-02-09 12:54:58,837 - dq_unified - INFO - ============================================================
+2026-02-09 12:54:58,837 - dq_unified - INFO -    Found 6 empty cells
+2026-02-09 12:54:58,838 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-02-09 12:54:58,839 - dq_unified - INFO - Checking for duplicate rows
+2026-02-09 12:54:58,841 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-02-09 12:54:58,844 - dq_unified - INFO - Columns after cleaning: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 12:54:58,857 - dq_unified - INFO - Sample of first column after cleaning: 'John Doe'
+2026-02-09 12:54:58,860 - dq_unified - INFO - Sample of row 6 first column: 'John Doe'
+2026-02-09 12:54:58,861 - dq_unified - INFO - Total rows to check: 15
+2026-02-09 12:54:58,863 - dq_unified - INFO - Checking first column 'CustomerName' for serial numbers
+2026-02-09 12:54:58,864 - dq_unified - INFO - First 5 values: ['John Doe', 'Jane Smith', 'Bob Johnson', 'Alice Brown', 'Charlie Wilson']
+2026-02-09 12:54:58,865 - dq_unified - INFO -   Row 1: 'John Doe' → Not numeric
+2026-02-09 12:54:58,865 - dq_unified - INFO -   Row 2: 'Jane Smith' → Not numeric
+2026-02-09 12:54:58,866 - dq_unified - INFO -   Row 3: 'Bob Johnson' → Not numeric
+2026-02-09 12:54:58,868 - dq_unified - INFO - Not enough numeric values to be serial: []
+2026-02-09 12:54:58,869 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-02-09 12:54:58,870 - dq_unified - INFO - First few rows for comparison:
+2026-02-09 12:54:58,871 - dq_unified - INFO -   Row 0: {'CustomerName': 'John Doe', 'Email': 'john@email.com', 'Phone': '1234567890'}
+2026-02-09 12:54:58,872 - dq_unified - INFO -   Row 1: {'CustomerName': 'Jane Smith', 'Email': 'jane@email.com', 'Phone': '9876543210'}
+2026-02-09 12:54:58,872 - dq_unified - INFO -   Row 2: {'CustomerName': 'Bob Johnson', 'Email': 'nan', 'Phone': '5551234567'}
+2026-02-09 12:54:58,877 - dq_unified - INFO - Duplicate mask found 0 rows
+2026-02-09 12:54:58,878 - dq_unified - INFO - No duplicate rows found
+2026-02-09 12:54:58,879 - dq_unified - INFO - FINAL RESULT: Found 0 duplicate groups
+2026-02-09 12:54:58,880 - dq_unified - INFO -    Found 0 duplicate rows
+2026-02-09 12:54:58,880 - dq_unified - INFO - 3. Checking data formats...
+2026-02-09 12:54:58,881 - dq_unified - INFO - Checking data formats
+2026-02-09 12:54:58,887 - dq_unified - INFO - Detected Email as email type
+2026-02-09 12:54:58,888 - dq_unified - WARNING -   Row 9: 'invalid-email...' doesn't match Valid email format (user@domain.com)
+2026-02-09 12:54:58,891 - dq_unified - INFO - Detected Phone as phone type
+2026-02-09 12:54:58,893 - dq_unified - WARNING -   Row 14: '1112222...' doesn't match Valid phone number format
+2026-02-09 12:54:58,895 - dq_unified - INFO - Detected Salary as numeric type
+2026-02-09 12:54:58,899 - dq_unified - INFO - Detected JoinDate as date type
+2026-02-09 12:54:58,901 - dq_unified - INFO -   Date format check for JoinDate: Consistent=True, Format=DD-MM-YYYY or MM-DD-YYYY
+2026-02-09 12:54:58,902 - dq_unified - INFO - Detected PostalCode as numeric type
+2026-02-09 12:54:58,903 - dq_unified - WARNING -   Row 1: 'SAI10001...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-09 12:54:58,904 - dq_unified - WARNING -   Row 9: 'ABC123...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-09 12:54:58,913 - dq_unified - INFO - Total format issues found: 4
+2026-02-09 12:54:58,914 - dq_error_log - INFO - Starting batch logging for 4 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:58,932 - dq_error_log - INFO - Batch 1: Successfully logged 4 errors
+2026-02-09 12:54:58,933 - dq_error_log - INFO - Progress: 4/4 errors processed
+2026-02-09 12:54:58,933 - dq_error_log - INFO - COMPLETE: Logged 4/4 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:58,934 - dq_unified - INFO -    Found 4 format issues
+2026-02-09 12:54:58,935 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-02-09 12:54:58,936 - dq_unified - INFO - Checking mandatory fields
+2026-02-09 12:54:58,936 - dq_unified - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 12:54:58,937 - dq_unified - INFO - Checking ALL columns as mandatory: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 12:54:58,949 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2026-02-09 12:54:58,961 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2026-02-09 12:54:58,977 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2026-02-09 12:54:58,992 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2026-02-09 12:54:59,015 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2026-02-09 12:54:59,039 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2026-02-09 12:54:59,054 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2026-02-09 12:54:59,072 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2026-02-09 12:54:59,087 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2026-02-09 12:54:59,102 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2026-02-09 12:54:59,298 - dq_error_log - INFO - Starting batch logging for 6 errors, session: SINGLE_20260209_125458
+2026-02-09 12:54:59,318 - dq_error_log - INFO - Batch 1: Successfully logged 6 errors
+2026-02-09 12:54:59,319 - dq_error_log - INFO - Progress: 6/6 errors processed
+2026-02-09 12:54:59,321 - dq_error_log - INFO - COMPLETE: Logged 6/6 errors for session SINGLE_20260209_125458
+2026-02-09 12:54:59,322 - dq_unified - INFO - All columns mandatory: 5 unique rows with missing values
+2026-02-09 12:54:59,322 - dq_unified - INFO -    Found 5 missing mandatory values
+2026-02-09 12:54:59,324 - dq_unified - INFO - 5. Calculating quality score...
+2026-02-09 12:54:59,325 - dq_unified - INFO - Calculating quality score
+2026-02-09 12:54:59,326 - dq_unified - INFO - Quality Score Calculation:
+2026-02-09 12:54:59,326 - dq_unified - INFO -   Total rows: 15
+2026-02-09 12:54:59,327 - dq_unified - INFO -   Bad Rows: 7
+2026-02-09 12:54:59,329 - dq_unified - INFO -   Good rows (no issues): 8
+2026-02-09 12:54:59,330 - dq_unified - INFO -   Quality Score: 53.33%
+2026-02-09 12:54:59,345 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20260209_125458
+2026-02-09 12:54:59,364 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20260209_125458
+2026-02-09 12:54:59,365 - dq_unified - INFO - Added 16 error logs to results
+2026-02-09 12:54:59,367 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-09 12:54:59,367 - dq_audit - INFO - Starting database insertion for single_source...
+2026-02-09 12:54:59,405 - dq_audit - INFO - Inserted single_source record with ID: 896
+2026-02-09 12:54:59,433 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_125458
+2026-02-09 12:54:59,434 - dq_unified - INFO - Added 1 audit logs to results
+2026-02-09 12:54:59,435 - dq_unified - INFO - Analysis completed successfully for CSV: sample_data.csv
+2026-02-09 12:54:59,435 - dq_unified - INFO - Final quality score: 53.33%
+2026-02-09 12:54:59,453 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20260209_125458
+2026-02-09 12:54:59,467 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20260209_125458
+2026-02-09 12:54:59,491 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_125458
+2026-02-09 12:54:59,492 - __main__ - INFO - Analysis completed for session SINGLE_20260209_125458
+2026-02-09 12:54:59,496 - __main__ - INFO - Completed with status 200 in 1.295s
+2026-02-09 12:55:52,403 - __main__ - INFO - GET /api/single/SINGLE_20260209_125458/data - Request started
+2026-02-09 12:55:52,419 - __main__ - INFO - Completed with status 200 in 0.016s
+2026-02-09 12:58:14,087 - __main__ - INFO - POST /api/check-single - Request started
+2026-02-09 12:58:14,090 - __main__ - INFO - Single source analysis request received
+2026-02-09 12:58:14,092 - __main__ - INFO - Starting analysis for session SINGLE_20260209_125814_f66cad72
+2026-02-09 12:58:14,094 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-02-09 12:58:14,095 - __main__ - INFO -   source_type: csv
+2026-02-09 12:58:14,096 - __main__ - INFO -   file_path: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.csv
+2026-02-09 12:58:14,097 - __main__ - INFO -   sheet_name: None
+2026-02-09 12:58:14,099 - __main__ - INFO -   mandatory_fields: all
+2026-02-09 12:58:14,103 - dq_unified - INFO - ==================================================
+2026-02-09 12:58:14,104 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-02-09 12:58:14,105 - dq_unified - INFO - Prompting user for data source type
+2026-02-09 12:58:14,106 - dq_unified - INFO - UI Data source_type: csv
+2026-02-09 12:58:14,107 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-09 12:58:14,108 - dq_unified - INFO - Loading data from CSV...
+2026-02-09 12:58:14,109 - dq_unified - INFO - Loading data from CSV
+2026-02-09 12:58:14,110 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.csv
+2026-02-09 12:58:14,191 - dq_unified - INFO - CSV file has 92,875 rows
+2026-02-09 12:58:14,193 - dq_unified - INFO - Loading 92,875 rows from CSV...
+2026-02-09 12:58:14,870 - dq_unified - INFO - Loaded 89,999 rows from CSV
+2026-02-09 12:58:15,709 - dq_unified - INFO - Memory optimization: 45.4MB -> 17.1MB (Saved: 28.3MB)
+2026-02-09 12:58:15,875 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 136.6MB total, 17.1MB for dataframe
+2026-02-09 12:58:15,876 - dq_unified - INFO - Data loaded: 89,999 rows, 12 columns
+2026-02-09 12:58:15,878 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-09 12:58:15,880 - dq_unified - INFO - Session ID: SINGLE_20260209_125815
+2026-02-09 12:58:15,882 - dq_unified - INFO - Column data types collected: 12 columns
+2026-02-09 12:58:15,883 - dq_unified - INFO - ==================================================
+2026-02-09 12:58:15,884 - dq_unified - INFO - Starting quality checks...
+2026-02-09 12:58:15,886 - dq_unified - INFO - ==================================================
+2026-02-09 12:58:15,887 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-02-09 12:58:15,889 - dq_unified - INFO - Checking for null/empty values
+2026-02-09 12:58:15,890 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2026-02-09 12:58:15,892 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 12:58:15,894 - dq_unified - INFO - Data source: CSV: source_data_90k.csv
+2026-02-09 12:58:15,898 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('uint32'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  'david.davis@company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float32'), 'quantity': dtype('int8'), 'age': dtype('int16'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2026-02-09 12:58:15,899 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-02-09 12:58:15,904 - dq_unified - INFO -   Row 0: {'id': 'np.uint32(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2026-02-09 12:58:15,907 - dq_unified - INFO -   Row 1: {'id': 'np.uint32(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2026-02-09 12:58:16,985 - dq_unified - INFO - Column 'id': No missing cells
+2026-02-09 12:58:18,299 - dq_unified - INFO - Column 'customer_id': No missing cells
+2026-02-09 12:58:20,057 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2026-02-09 12:58:21,423 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 12:58:21,424 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2026-02-09 12:58:21,425 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-02-09 12:58:21,427 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-02-09 12:59:14,769 - __main__ - INFO - GET /api/single/SINGLE_20260209_125458/errors - Request started
+2026-02-09 12:59:14,830 - __main__ - INFO - Completed with status 500 in 0.062s
+2026-02-09 12:59:28,688 - dq_error_log - INFO - Starting batch logging for 3510 errors, session: SINGLE_20260209_125815
+2026-02-09 12:59:28,815 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 12:59:28,937 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 12:59:29,030 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 12:59:29,101 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-09 12:59:29,189 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-02-09 12:59:29,283 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-02-09 12:59:29,356 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-02-09 12:59:29,374 - dq_error_log - INFO - Batch 8: Successfully logged 10 errors
+2026-02-09 12:59:29,376 - dq_error_log - INFO - Progress: 3510/3510 errors processed
+2026-02-09 12:59:29,377 - dq_error_log - INFO - COMPLETE: Logged 3510/3510 errors for session SINGLE_20260209_125815
+2026-02-09 12:59:30,173 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 12:59:30,175 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2026-02-09 12:59:30,176 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-02-09 12:59:30,178 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-02-09 12:59:49,003 - dq_error_log - INFO - Starting batch logging for 1516 errors, session: SINGLE_20260209_125815
+2026-02-09 12:59:49,076 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 12:59:49,144 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 12:59:49,217 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 12:59:49,236 - dq_error_log - INFO - Batch 4: Successfully logged 16 errors
+2026-02-09 12:59:49,238 - dq_error_log - INFO - Progress: 1516/1516 errors processed
+2026-02-09 12:59:49,238 - dq_error_log - INFO - COMPLETE: Logged 1516/1516 errors for session SINGLE_20260209_125815
+2026-02-09 12:59:49,941 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 12:59:49,942 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2026-02-09 12:59:49,944 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-02-09 12:59:49,944 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-02-09 13:00:02,300 - dq_error_log - INFO - Starting batch logging for 1280 errors, session: SINGLE_20260209_125815
+2026-02-09 13:00:02,382 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:00:02,463 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:00:02,561 - dq_error_log - INFO - Batch 3: Successfully logged 280 errors
+2026-02-09 13:00:02,563 - dq_error_log - INFO - Progress: 1280/1280 errors processed
+2026-02-09 13:00:02,565 - dq_error_log - INFO - COMPLETE: Logged 1280/1280 errors for session SINGLE_20260209_125815
+2026-02-09 13:00:03,234 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2026-02-09 13:00:04,569 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 13:00:04,570 - dq_unified - INFO -   Not missing samples: ['8653.5595703125', '1948.43994140625', '237.49000549316406']
+2026-02-09 13:00:04,572 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-02-09 13:00:04,573 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-02-09 13:00:29,751 - dq_error_log - INFO - Starting batch logging for 1133 errors, session: SINGLE_20260209_125815
+2026-02-09 13:00:29,824 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:00:29,895 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:00:29,925 - dq_error_log - INFO - Batch 3: Successfully logged 133 errors
+2026-02-09 13:00:29,927 - dq_error_log - INFO - Progress: 1133/1133 errors processed
+2026-02-09 13:00:29,928 - dq_error_log - INFO - COMPLETE: Logged 1133/1133 errors for session SINGLE_20260209_125815
+2026-02-09 13:00:30,833 - dq_unified - INFO - Column 'quantity': No missing cells
+2026-02-09 13:00:31,838 - dq_unified - INFO - Column 'age': No missing cells
+2026-02-09 13:00:32,978 - dq_unified - INFO - Column 'status': No missing cells
+2026-02-09 13:00:34,039 - dq_unified - INFO - Column 'description': No missing cells
+2026-02-09 13:00:34,041 - dq_unified - INFO - Total missing cells found: 7,439
+2026-02-09 13:00:34,042 - dq_unified - INFO - ============================================================
+2026-02-09 13:00:34,044 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-02-09 13:00:34,046 - dq_unified - INFO - ============================================================
+2026-02-09 13:00:34,047 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2026-02-09 13:00:34,049 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2026-02-09 13:00:34,051 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2026-02-09 13:00:34,053 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2026-02-09 13:00:34,054 - dq_unified - INFO - ============================================================
+2026-02-09 13:00:34,057 - dq_unified - INFO -    Found 7,439 empty cells
+2026-02-09 13:00:34,058 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-02-09 13:00:34,060 - dq_unified - INFO - Checking for duplicate rows
+2026-02-09 13:00:34,061 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-02-09 13:00:34,080 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:00:37,488 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2026-02-09 13:00:37,490 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2026-02-09 13:00:37,491 - dq_unified - INFO - Total rows to check: 89999
+2026-02-09 13:00:37,493 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2026-02-09 13:00:37,495 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2026-02-09 13:00:37,496 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2026-02-09 13:00:37,497 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2026-02-09 13:00:37,499 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2026-02-09 13:00:37,500 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2026-02-09 13:00:37,502 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-02-09 13:00:37,503 - dq_unified - INFO - First few rows for comparison:
+2026-02-09 13:00:37,505 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2026-02-09 13:00:37,506 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2026-02-09 13:00:37,507 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2026-02-09 13:00:37,785 - dq_unified - INFO - Duplicate mask found 406 rows
+2026-02-09 13:00:37,787 - dq_unified - INFO - Found 406 potential duplicate rows
+2026-02-09 13:00:37,832 - dq_unified - INFO - Unique duplicate groups: 203
+2026-02-09 13:00:37,834 - dq_unified - INFO - Duplicate groups found:
+2026-02-09 13:00:37,840 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2026-02-09 13:00:37,842 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='nan', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2026-02-09 13:00:37,843 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2026-02-09 13:00:37,846 - dq_unified - INFO - Processing 406 duplicate indices
+2026-02-09 13:00:37,905 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2026-02-09 13:00:37,907 - dq_error_log - INFO - Starting batch logging for 406 errors, session: SINGLE_20260209_125815
+2026-02-09 13:00:38,004 - dq_error_log - INFO - Batch 1: Successfully logged 406 errors
+2026-02-09 13:00:38,007 - dq_error_log - INFO - Progress: 406/406 errors processed
+2026-02-09 13:00:38,008 - dq_error_log - INFO - COMPLETE: Logged 406/406 errors for session SINGLE_20260209_125815
+2026-02-09 13:00:38,027 - dq_unified - INFO -    Found 406 duplicate rows
+2026-02-09 13:00:38,030 - dq_unified - INFO - 3. Checking data formats...
+2026-02-09 13:00:38,031 - dq_unified - INFO - Checking data formats
+2026-02-09 13:00:38,040 - dq_unified - INFO - Detected id as numeric type
+2026-02-09 13:00:38,691 - dq_unified - INFO - Detected email as email type
+2026-02-09 13:00:38,697 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:00:38,700 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:00:38,703 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:00:38,704 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:00:38,706 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:00:39,292 - dq_unified - INFO - Detected phone as phone type
+2026-02-09 13:00:39,906 - dq_unified - INFO - Detected transaction_date as date type
+2026-02-09 13:00:40,880 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-02-09 13:00:40,882 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-02-09 13:00:41,893 - dq_unified - INFO - Detected amount as numeric type
+2026-02-09 13:00:42,534 - dq_unified - INFO - Detected quantity as numeric type
+2026-02-09 13:00:43,067 - dq_unified - INFO - Detected age as numeric type
+2026-02-09 13:00:45,556 - dq_unified - INFO - Total format issues found: 727
+2026-02-09 13:00:45,560 - dq_error_log - INFO - Starting batch logging for 727 errors, session: SINGLE_20260209_125815
+2026-02-09 13:00:45,672 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:00:45,730 - dq_error_log - INFO - Batch 2: Successfully logged 227 errors
+2026-02-09 13:00:45,732 - dq_error_log - INFO - Progress: 727/727 errors processed
+2026-02-09 13:00:45,734 - dq_error_log - INFO - COMPLETE: Logged 727/727 errors for session SINGLE_20260209_125815
+2026-02-09 13:00:45,735 - dq_unified - INFO -    Found 727 format issues
+2026-02-09 13:00:45,737 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-02-09 13:00:45,739 - dq_unified - INFO - Checking mandatory fields
+2026-02-09 13:00:45,741 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:00:45,743 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:00:46,938 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2026-02-09 13:00:48,112 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2026-02-09 13:00:49,286 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2026-02-09 13:00:50,339 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2026-02-09 13:00:51,648 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2026-02-09 13:00:52,849 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2026-02-09 13:00:53,911 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2026-02-09 13:00:55,307 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2026-02-09 13:00:56,516 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2026-02-09 13:00:57,702 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2026-02-09 13:00:58,797 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2026-02-09 13:00:59,923 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2026-02-09 13:01:13,887 - dq_error_log - INFO - Starting batch logging for 7439 errors, session: SINGLE_20260209_125815
+2026-02-09 13:01:13,994 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:01:14,089 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:01:14,183 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 13:01:14,288 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-09 13:01:14,399 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-02-09 13:01:14,510 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-02-09 13:01:14,599 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-02-09 13:01:14,679 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-02-09 13:01:14,750 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-02-09 13:01:14,847 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-02-09 13:01:14,848 - dq_error_log - INFO - Progress: 5000/7439 errors processed
+2026-02-09 13:01:14,995 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-02-09 13:01:15,082 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-02-09 13:01:15,162 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-02-09 13:01:15,244 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-02-09 13:01:15,323 - dq_error_log - INFO - Batch 15: Successfully logged 439 errors
+2026-02-09 13:01:15,324 - dq_error_log - INFO - Progress: 7439/7439 errors processed
+2026-02-09 13:01:15,325 - dq_error_log - INFO - COMPLETE: Logged 7439/7439 errors for session SINGLE_20260209_125815
+2026-02-09 13:01:15,326 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2026-02-09 13:01:15,330 - dq_unified - INFO -    Found 6,012 missing mandatory values
+2026-02-09 13:01:15,331 - dq_unified - INFO - 5. Calculating quality score...
+2026-02-09 13:01:15,332 - dq_unified - INFO - Calculating quality score
+2026-02-09 13:01:15,336 - dq_unified - INFO - Quality Score Calculation:
+2026-02-09 13:01:15,337 - dq_unified - INFO -   Total rows: 89,999
+2026-02-09 13:01:15,339 - dq_unified - INFO -   Bad Rows: 6,784
+2026-02-09 13:01:15,340 - dq_unified - INFO -   Good rows (no issues): 83,215
+2026-02-09 13:01:15,343 - dq_unified - INFO -   Quality Score: 92.46%
+2026-02-09 13:01:15,552 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260209_125815
+2026-02-09 13:01:15,719 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260209_125815
+2026-02-09 13:01:15,721 - dq_unified - INFO - Added 200 error logs to results
+2026-02-09 13:01:15,722 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-09 13:01:15,722 - dq_audit - INFO - Starting database insertion for single_source...
+2026-02-09 13:01:15,746 - dq_audit - INFO - Inserted single_source record with ID: 897
+2026-02-09 13:01:15,767 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_125815
+2026-02-09 13:01:15,768 - dq_unified - INFO - Added 1 audit logs to results
+2026-02-09 13:01:15,769 - dq_unified - INFO - Analysis completed successfully for CSV: source_data_90k.csv
+2026-02-09 13:01:15,770 - dq_unified - INFO - Final quality score: 92.46%
+2026-02-09 13:01:15,940 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260209_125815
+2026-02-09 13:01:16,115 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260209_125815
+2026-02-09 13:01:16,144 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_125815
+2026-02-09 13:01:16,145 - __main__ - INFO - Analysis completed for session SINGLE_20260209_125815
+2026-02-09 13:01:16,927 - __main__ - INFO - Completed with status 200 in 182.840s
+2026-02-09 13:02:16,234 - __main__ - INFO - POST /api/check-single - Request started
+2026-02-09 13:02:16,236 - __main__ - INFO - Single source analysis request received
+2026-02-09 13:02:16,240 - __main__ - INFO - Starting analysis for session SINGLE_20260209_130216_b5ad1a08
+2026-02-09 13:02:16,241 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-02-09 13:02:16,244 - __main__ - INFO -   source_type: csv
+2026-02-09 13:02:16,245 - __main__ - INFO -   file_path: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.csv
+2026-02-09 13:02:16,247 - __main__ - INFO -   sheet_name: None
+2026-02-09 13:02:16,250 - __main__ - INFO -   mandatory_fields: all
+2026-02-09 13:02:16,251 - dq_unified - INFO - ==================================================
+2026-02-09 13:02:16,253 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-02-09 13:02:16,255 - dq_unified - INFO - Prompting user for data source type
+2026-02-09 13:02:16,256 - dq_unified - INFO - UI Data source_type: csv
+2026-02-09 13:02:16,258 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-09 13:02:16,259 - dq_unified - INFO - Loading data from CSV...
+2026-02-09 13:02:16,261 - dq_unified - INFO - Loading data from CSV
+2026-02-09 13:02:16,263 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/source_data_90k.csv
+2026-02-09 13:02:16,358 - dq_unified - INFO - CSV file has 92,875 rows
+2026-02-09 13:02:16,359 - dq_unified - INFO - Loading 92,875 rows from CSV...
+2026-02-09 13:02:16,865 - dq_unified - INFO - Loaded 89,999 rows from CSV
+2026-02-09 13:02:17,589 - dq_unified - INFO - Memory optimization: 45.4MB -> 17.1MB (Saved: 28.3MB)
+2026-02-09 13:02:17,733 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 199.1MB total, 17.1MB for dataframe
+2026-02-09 13:02:17,734 - dq_unified - INFO - Data loaded: 89,999 rows, 12 columns
+2026-02-09 13:02:17,735 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-09 13:02:17,736 - dq_unified - INFO - Session ID: SINGLE_20260209_130217
+2026-02-09 13:02:17,738 - dq_unified - INFO - Column data types collected: 12 columns
+2026-02-09 13:02:17,739 - dq_unified - INFO - ==================================================
+2026-02-09 13:02:17,740 - dq_unified - INFO - Starting quality checks...
+2026-02-09 13:02:17,741 - dq_unified - INFO - ==================================================
+2026-02-09 13:02:17,743 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-02-09 13:02:17,744 - dq_unified - INFO - Checking for null/empty values
+2026-02-09 13:02:17,746 - dq_unified - INFO - DataFrame shape: (89999, 12)
+2026-02-09 13:02:17,747 - dq_unified - INFO - Columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:02:17,749 - dq_unified - INFO - Data source: CSV: source_data_90k.csv
+2026-02-09 13:02:17,754 - dq_unified - INFO - DataFrame dtypes: {'id': dtype('uint32'), 'customer_id': dtype('O'), 'transaction_id': dtype('O'), 'customer_name': CategoricalDtype(categories=['                     Michael Smith', '      Susan Miller',
+                  'David Brown', 'David Brown  ', 'David Davis',
+                  'David Davis  ', 'David Johnson', 'David Johnson  ',
+                  'David Jones', 'David Jones  ',
+                  ...
+                  'William Johnson', 'William Johnson  ', 'William Jones',
+                  'William Jones  ', 'William Miller', 'William Miller  ',
+                  'William Smith', 'William Smith  ', 'William Williams',
+                  'William Williams  '],
+, ordered=False, categories_dtype=object), 'email': CategoricalDtype(categories=['                             robert.johnson@outlook.com',
+                  'david.brown.company.com', 'david.brown@company.com',
+                  'david.brown@gmail.com', 'david.brown@hotmail.com',
+                  'david.brown@invalid', 'david.brown@outlook.com',
+                  'david.brown@yahoo.com', 'david.davis.company.com',
+                  'david.davis@company.com',
+                  ...
+                  'william.smith@invalid', 'william.smith@outlook.com',
+                  'william.smith@yahoo.com', 'william.williams.company.com',
+                  'william.williams@company.com', 'william.williams@gmail.com',
+                  'william.williams@hotmail.com', 'william.williams@invalid',
+                  'william.williams@outlook.com',
+                  'william.williams@yahoo.com'],
+, ordered=False, categories_dtype=object), 'phone': dtype('O'), 'transaction_date': CategoricalDtype(categories=['01-01-2023', '01-01-2024', '01-02-2023', '01-03-2023',
+                  '01-04-2023', '01-05-2023', '01-06-2023', '01-07-2023',
+                  '01-08-2023', '01-09-2023',
+                  ...
+                  '30-10-2023', '30-11-2023', '30-12-2023', '31-01-2023',
+                  '31-03-2023', '31-05-2023', '31-07-2023', '31-08-2023',
+                  '31-10-2023', '31-12-2023'],
+, ordered=False, categories_dtype=object), 'amount': dtype('float32'), 'quantity': dtype('int8'), 'age': dtype('int16'), 'status': CategoricalDtype(categories=['ACTIVE', 'CANCELLED', 'COMPLETED', 'INACTIVE', 'PENDING'], ordered=False, categories_dtype=object), 'description': CategoricalDtype(categories=['  Text with leading spaces', 'Normal text without issues',
+                  'Text with\ttabs', 'Text with\nnewlines',
+                  'Text with  multiple   spaces', 'Text with - dashes',
+                  'Text with mixed CAPITAL and lowercase',
+                  'Text with trailing spaces  ', 'Text with! exclamations',
+                  'Text with"quotes"', 'Text with#hashtags',
+                  'Text with$dollar signs',
+                  'Text with$dollar signs                       ',
+                  'Text with%percent signs', 'Text with& ampersands',
+                  'Text with'apostrophes', 'Text with(parentheses)',
+                  'Text with*asterisks', 'Text with, commas',
+                  'Text with. periods', 'Text with/slashes',
+                  'Text with; semicolons', 'Text with<angle brackets>',
+                  'Text with? questions', 'Text with@at signs',
+                  'Text with[brackets]', 'Text with\backslashes',
+                  'Text with_underscores', 'Text with`backticks',
+                  'Text with{braces}', 'Text with|pipes', 'Text with~tildes'],
+, ordered=False, categories_dtype=object)}
+2026-02-09 13:02:17,755 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-02-09 13:02:17,760 - dq_unified - INFO -   Row 0: {'id': 'np.uint32(78303)', 'customer_id': "'CUST078303'", 'transaction_id': "'TX00078303'"}
+2026-02-09 13:02:17,762 - dq_unified - INFO -   Row 1: {'id': 'np.uint32(66465)', 'customer_id': "'CUST066465'", 'transaction_id': "'TX00066465'"}
+2026-02-09 13:02:19,222 - dq_unified - INFO - Column 'id': No missing cells
+2026-02-09 13:02:20,244 - dq_unified - INFO - Column 'customer_id': No missing cells
+2026-02-09 13:02:21,453 - dq_unified - INFO - Column 'transaction_id': No missing cells
+2026-02-09 13:02:22,461 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 13:02:22,462 - dq_unified - INFO -   Not missing samples: ["'Michael Davis'", "'Susan Brown'", "'Sarah Davis'"]
+2026-02-09 13:02:22,464 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-02-09 13:02:22,465 - dq_unified - WARNING - Column 'customer_name': 3,510 missing cells (3.9%)
+2026-02-09 13:03:56,291 - dq_error_log - INFO - Starting batch logging for 3510 errors, session: SINGLE_20260209_130217
+2026-02-09 13:03:56,397 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:03:56,480 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:03:56,583 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 13:03:56,660 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-09 13:03:56,747 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-02-09 13:03:56,832 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-02-09 13:03:56,926 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-02-09 13:03:56,949 - dq_error_log - INFO - Batch 8: Successfully logged 10 errors
+2026-02-09 13:03:56,952 - dq_error_log - INFO - Progress: 3510/3510 errors processed
+2026-02-09 13:03:56,953 - dq_error_log - INFO - COMPLETE: Logged 3510/3510 errors for session SINGLE_20260209_130217
+2026-02-09 13:03:57,961 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 13:03:57,963 - dq_unified - INFO -   Not missing samples: ["'david.jones@company.com'", "'jennifer.williams@gmail.com'", "'james.davis@hotmail.com'"]
+2026-02-09 13:03:57,965 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-02-09 13:03:57,967 - dq_unified - WARNING - Column 'email': 1,516 missing cells (1.7%)
+2026-02-09 13:04:34,704 - dq_error_log - INFO - Starting batch logging for 1516 errors, session: SINGLE_20260209_130217
+2026-02-09 13:04:34,860 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:04:34,970 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:04:35,089 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 13:04:35,112 - dq_error_log - INFO - Batch 4: Successfully logged 16 errors
+2026-02-09 13:04:35,114 - dq_error_log - INFO - Progress: 1516/1516 errors processed
+2026-02-09 13:04:35,115 - dq_error_log - INFO - COMPLETE: Logged 1516/1516 errors for session SINGLE_20260209_130217
+2026-02-09 13:04:36,876 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 13:04:36,879 - dq_unified - INFO -   Not missing samples: ["'212-127-8383'", "'(212) 706-7216'", "'12123928735'"]
+2026-02-09 13:04:36,880 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-02-09 13:04:36,882 - dq_unified - WARNING - Column 'phone': 1,280 missing cells (1.4%)
+2026-02-09 13:05:10,321 - dq_error_log - INFO - Starting batch logging for 1280 errors, session: SINGLE_20260209_130217
+2026-02-09 13:05:10,408 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:05:10,531 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:05:10,582 - dq_error_log - INFO - Batch 3: Successfully logged 280 errors
+2026-02-09 13:05:10,584 - dq_error_log - INFO - Progress: 1280/1280 errors processed
+2026-02-09 13:05:10,585 - dq_error_log - INFO - COMPLETE: Logged 1280/1280 errors for session SINGLE_20260209_130217
+2026-02-09 13:05:11,118 - dq_unified - INFO - Column 'transaction_date': No missing cells
+2026-02-09 13:05:11,897 - dq_unified - INFO -   Missing samples: ['nan', 'nan', 'nan']
+2026-02-09 13:05:11,898 - dq_unified - INFO -   Not missing samples: ['8653.5595703125', '1948.43994140625', '237.49000549316406']
+2026-02-09 13:05:11,899 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-02-09 13:05:11,900 - dq_unified - WARNING - Column 'amount': 1,133 missing cells (1.3%)
+2026-02-09 13:05:31,426 - dq_error_log - INFO - Starting batch logging for 1133 errors, session: SINGLE_20260209_130217
+2026-02-09 13:05:31,519 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:05:31,606 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:05:31,646 - dq_error_log - INFO - Batch 3: Successfully logged 133 errors
+2026-02-09 13:05:31,648 - dq_error_log - INFO - Progress: 1133/1133 errors processed
+2026-02-09 13:05:31,650 - dq_error_log - INFO - COMPLETE: Logged 1133/1133 errors for session SINGLE_20260209_130217
+2026-02-09 13:05:32,860 - dq_unified - INFO - Column 'quantity': No missing cells
+2026-02-09 13:05:34,002 - dq_unified - INFO - Column 'age': No missing cells
+2026-02-09 13:05:35,072 - dq_unified - INFO - Column 'status': No missing cells
+2026-02-09 13:05:36,059 - dq_unified - INFO - Column 'description': No missing cells
+2026-02-09 13:05:36,061 - dq_unified - INFO - Total missing cells found: 7,439
+2026-02-09 13:05:36,063 - dq_unified - INFO - ============================================================
+2026-02-09 13:05:36,064 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-02-09 13:05:36,065 - dq_unified - INFO - ============================================================
+2026-02-09 13:05:36,068 - dq_unified - INFO - customer_name: 3,510 missing (3.9%)
+2026-02-09 13:05:36,069 - dq_unified - INFO - email: 1,516 missing (1.7%)
+2026-02-09 13:05:36,070 - dq_unified - INFO - phone: 1,280 missing (1.4%)
+2026-02-09 13:05:36,072 - dq_unified - INFO - amount: 1,133 missing (1.3%)
+2026-02-09 13:05:36,073 - dq_unified - INFO - ============================================================
+2026-02-09 13:05:36,075 - dq_unified - INFO -    Found 7,439 empty cells
+2026-02-09 13:05:36,077 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-02-09 13:05:36,078 - dq_unified - INFO - Checking for duplicate rows
+2026-02-09 13:05:36,079 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-02-09 13:05:36,105 - dq_unified - INFO - Columns after cleaning: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:05:39,181 - dq_unified - INFO - Sample of first column after cleaning: '78303'
+2026-02-09 13:05:39,184 - dq_unified - INFO - Sample of row 6 first column: '19261'
+2026-02-09 13:05:39,185 - dq_unified - INFO - Total rows to check: 89999
+2026-02-09 13:05:39,215 - dq_unified - INFO - Checking first column 'id' for serial numbers
+2026-02-09 13:05:39,249 - dq_unified - INFO - First 5 values: ['78303', '66465', '93228', '1748', '80005']
+2026-02-09 13:05:39,251 - dq_unified - INFO -   Row 1: '78303' → 78303.0 (numeric)
+2026-02-09 13:05:39,254 - dq_unified - INFO -   Row 2: '66465' → 66465.0 (numeric)
+2026-02-09 13:05:39,321 - dq_unified - INFO -   Row 3: '93228' → 93228.0 (numeric)
+2026-02-09 13:05:39,323 - dq_unified - INFO - First column values not sequential: [78303.0, 66465.0, 93228.0]
+2026-02-09 13:05:39,324 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-02-09 13:05:39,328 - dq_unified - INFO - First few rows for comparison:
+2026-02-09 13:05:39,331 - dq_unified - INFO -   Row 0: {'id': '78303', 'customer_id': 'CUST078303', 'transaction_id': 'TX00078303'}
+2026-02-09 13:05:39,332 - dq_unified - INFO -   Row 1: {'id': '66465', 'customer_id': 'CUST066465', 'transaction_id': 'TX00066465'}
+2026-02-09 13:05:39,335 - dq_unified - INFO -   Row 2: {'id': '93228', 'customer_id': 'CUST093228', 'transaction_id': 'TX00093228'}
+2026-02-09 13:05:39,650 - dq_unified - INFO - Duplicate mask found 406 rows
+2026-02-09 13:05:39,651 - dq_unified - INFO - Found 406 potential duplicate rows
+2026-02-09 13:05:39,688 - dq_unified - INFO - Unique duplicate groups: 203
+2026-02-09 13:05:39,689 - dq_unified - INFO - Duplicate groups found:
+2026-02-09 13:05:39,694 - dq_unified - INFO -   Group sample: Pandas(Index=167, id='42732', customer_id='CUST042732', transaction_id='TX00042732', customer_name='William Davis', email='james.miller@gmail.com', phone='12127948623', transaction_date='20-01-2023', amount='7954.53', quantity='60', age='64', status='PENDING', description='Text with trailing spaces')
+2026-02-09 13:05:39,695 - dq_unified - INFO -   Group sample: Pandas(Index=381, id='34440', customer_id='CUST034440', transaction_id='TX00034440', customer_name='William Miller', email='nan', phone='nan', transaction_date='05-09-2023', amount='1954.43', quantity='64', age='75', status='CANCELLED', description='Text with. periods')
+2026-02-09 13:05:39,696 - dq_unified - INFO -   Group sample: Pandas(Index=637, id='58427', customer_id='CUST058427', transaction_id='TX00058427', customer_name='Richard Brown', email='jennifer.johnson@gmail.com', phone='2124608202', transaction_date='29-09-2023', amount='9156.7', quantity='69', age='45', status='PENDING', description='Text with multiple spaces')
+2026-02-09 13:05:39,698 - dq_unified - INFO - Processing 406 duplicate indices
+2026-02-09 13:05:39,751 - dq_unified - INFO - FINAL RESULT: Found 406 duplicate groups
+2026-02-09 13:05:39,752 - dq_error_log - INFO - Starting batch logging for 406 errors, session: SINGLE_20260209_130217
+2026-02-09 13:05:39,839 - dq_error_log - INFO - Batch 1: Successfully logged 406 errors
+2026-02-09 13:05:39,840 - dq_error_log - INFO - Progress: 406/406 errors processed
+2026-02-09 13:05:39,841 - dq_error_log - INFO - COMPLETE: Logged 406/406 errors for session SINGLE_20260209_130217
+2026-02-09 13:05:39,861 - dq_unified - INFO -    Found 406 duplicate rows
+2026-02-09 13:05:39,864 - dq_unified - INFO - 3. Checking data formats...
+2026-02-09 13:05:39,865 - dq_unified - INFO - Checking data formats
+2026-02-09 13:05:39,874 - dq_unified - INFO - Detected id as numeric type
+2026-02-09 13:05:40,517 - dq_unified - INFO - Detected email as email type
+2026-02-09 13:05:40,522 - dq_unified - WARNING -   Row 38: 'lisa.miller_outlook.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:05:40,525 - dq_unified - WARNING -   Row 223: 'richard.miller.company.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:05:40,531 - dq_unified - WARNING -   Row 311: 'james.miller@invalid...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:05:40,534 - dq_unified - WARNING -   Row 355: 'richard.williams@invalid...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:05:40,536 - dq_unified - WARNING -   Row 416: 'susan.brown.company.com...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:05:41,109 - dq_unified - INFO - Detected phone as phone type
+2026-02-09 13:05:41,743 - dq_unified - INFO - Detected transaction_date as date type
+2026-02-09 13:05:42,678 - dq_unified - INFO -   Date format check for transaction_date: Consistent=False, Format=['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-02-09 13:05:42,679 - dq_unified - WARNING -   transaction_date: Inconsistent date formats: ['MM/DD/YYYY', 'DD-MM-YYYY or MM-DD-YYYY']
+2026-02-09 13:05:43,642 - dq_unified - INFO - Detected amount as numeric type
+2026-02-09 13:05:44,264 - dq_unified - INFO - Detected quantity as numeric type
+2026-02-09 13:05:44,767 - dq_unified - INFO - Detected age as numeric type
+2026-02-09 13:05:46,969 - dq_unified - INFO - Total format issues found: 727
+2026-02-09 13:05:46,974 - dq_error_log - INFO - Starting batch logging for 727 errors, session: SINGLE_20260209_130217
+2026-02-09 13:05:47,081 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:05:47,140 - dq_error_log - INFO - Batch 2: Successfully logged 227 errors
+2026-02-09 13:05:47,142 - dq_error_log - INFO - Progress: 727/727 errors processed
+2026-02-09 13:05:47,144 - dq_error_log - INFO - COMPLETE: Logged 727/727 errors for session SINGLE_20260209_130217
+2026-02-09 13:05:47,146 - dq_unified - INFO -    Found 727 format issues
+2026-02-09 13:05:47,147 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-02-09 13:05:47,149 - dq_unified - INFO - Checking mandatory fields
+2026-02-09 13:05:47,150 - dq_unified - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:05:47,151 - dq_unified - INFO - Checking ALL columns as mandatory: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2026-02-09 13:05:48,205 - dq_unified - INFO - Mandatory field 'id': 100.0% filled
+2026-02-09 13:05:49,307 - dq_unified - INFO - Mandatory field 'customer_id': 100.0% filled
+2026-02-09 13:05:50,465 - dq_unified - INFO - Mandatory field 'transaction_id': 100.0% filled
+2026-02-09 13:05:51,402 - dq_unified - WARNING - Mandatory field 'customer_name': 3,510 missing values (96.1% filled)
+2026-02-09 13:05:52,730 - dq_unified - WARNING - Mandatory field 'email': 1,516 missing values (98.3% filled)
+2026-02-09 13:05:54,015 - dq_unified - WARNING - Mandatory field 'phone': 1,280 missing values (98.6% filled)
+2026-02-09 13:05:55,117 - dq_unified - INFO - Mandatory field 'transaction_date': 100.0% filled
+2026-02-09 13:05:56,428 - dq_unified - WARNING - Mandatory field 'amount': 1,133 missing values (98.7% filled)
+2026-02-09 13:05:57,511 - dq_unified - INFO - Mandatory field 'quantity': 100.0% filled
+2026-02-09 13:05:58,518 - dq_unified - INFO - Mandatory field 'age': 100.0% filled
+2026-02-09 13:05:59,540 - dq_unified - INFO - Mandatory field 'status': 100.0% filled
+2026-02-09 13:06:00,539 - dq_unified - INFO - Mandatory field 'description': 100.0% filled
+2026-02-09 13:06:13,519 - dq_error_log - INFO - Starting batch logging for 7439 errors, session: SINGLE_20260209_130217
+2026-02-09 13:06:13,606 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-09 13:06:13,704 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-09 13:06:13,789 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-09 13:06:13,884 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-09 13:06:13,979 - dq_error_log - INFO - Batch 5: Successfully logged 500 errors
+2026-02-09 13:06:14,084 - dq_error_log - INFO - Batch 6: Successfully logged 500 errors
+2026-02-09 13:06:14,184 - dq_error_log - INFO - Batch 7: Successfully logged 500 errors
+2026-02-09 13:06:14,283 - dq_error_log - INFO - Batch 8: Successfully logged 500 errors
+2026-02-09 13:06:14,374 - dq_error_log - INFO - Batch 9: Successfully logged 500 errors
+2026-02-09 13:06:14,500 - dq_error_log - INFO - Batch 10: Successfully logged 500 errors
+2026-02-09 13:06:14,503 - dq_error_log - INFO - Progress: 5000/7439 errors processed
+2026-02-09 13:06:14,607 - dq_error_log - INFO - Batch 11: Successfully logged 500 errors
+2026-02-09 13:06:14,712 - dq_error_log - INFO - Batch 12: Successfully logged 500 errors
+2026-02-09 13:06:14,790 - dq_error_log - INFO - Batch 13: Successfully logged 500 errors
+2026-02-09 13:06:14,887 - dq_error_log - INFO - Batch 14: Successfully logged 500 errors
+2026-02-09 13:06:14,964 - dq_error_log - INFO - Batch 15: Successfully logged 439 errors
+2026-02-09 13:06:14,965 - dq_error_log - INFO - Progress: 7439/7439 errors processed
+2026-02-09 13:06:14,967 - dq_error_log - INFO - COMPLETE: Logged 7439/7439 errors for session SINGLE_20260209_130217
+2026-02-09 13:06:14,968 - dq_unified - INFO - All columns mandatory: 6012 unique rows with missing values
+2026-02-09 13:06:14,971 - dq_unified - INFO -    Found 6,012 missing mandatory values
+2026-02-09 13:06:14,972 - dq_unified - INFO - 5. Calculating quality score...
+2026-02-09 13:06:14,973 - dq_unified - INFO - Calculating quality score
+2026-02-09 13:06:14,977 - dq_unified - INFO - Quality Score Calculation:
+2026-02-09 13:06:14,978 - dq_unified - INFO -   Total rows: 89,999
+2026-02-09 13:06:14,979 - dq_unified - INFO -   Bad Rows: 6,784
+2026-02-09 13:06:14,980 - dq_unified - INFO -   Good rows (no issues): 83,215
+2026-02-09 13:06:14,981 - dq_unified - INFO -   Quality Score: 92.46%
+2026-02-09 13:06:15,179 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260209_130217
+2026-02-09 13:06:15,397 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260209_130217
+2026-02-09 13:06:15,400 - dq_unified - INFO - Added 200 error logs to results
+2026-02-09 13:06:15,402 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-09 13:06:15,404 - dq_audit - INFO - Starting database insertion for single_source...
+2026-02-09 13:06:15,433 - dq_audit - INFO - Inserted single_source record with ID: 898
+2026-02-09 13:06:15,458 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_130217
+2026-02-09 13:06:15,460 - dq_unified - INFO - Added 1 audit logs to results
+2026-02-09 13:06:15,461 - dq_unified - INFO - Analysis completed successfully for CSV: source_data_90k.csv
+2026-02-09 13:06:15,462 - dq_unified - INFO - Final quality score: 92.46%
+2026-02-09 13:06:15,656 - dq_error_log - INFO - Retrieved 200 error logs for session SINGLE_20260209_130217
+2026-02-09 13:06:15,918 - dq_error_log - INFO - Retrieved summary: 16011 total errors for session SINGLE_20260209_130217
+2026-02-09 13:06:15,941 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_130217
+2026-02-09 13:06:15,943 - __main__ - INFO - Analysis completed for session SINGLE_20260209_130217
+2026-02-09 13:06:16,460 - __main__ - INFO - Completed with status 200 in 240.226s
+2026-02-09 13:07:06,945 - __main__ - INFO - GET /api/single/SINGLE_20260209_130216_b5ad1a08/errors - Request started
+2026-02-09 13:07:06,949 - __main__ - INFO - Completed with status 404 in 0.003s
+2026-02-09 13:07:14,726 - __main__ - INFO - GET /api/single/SINGLE_20260209_130216/errors - Request started
+2026-02-09 13:07:14,729 - __main__ - INFO - Completed with status 404 in 0.003s
+2026-02-09 13:10:18,837 - __main__ - INFO - POST /api/upload - Request started
+2026-02-09 13:10:18,859 - __main__ - INFO - File uploaded: 20260209_131018_sample_data.csv (csv)
+2026-02-09 13:10:18,862 - __main__ - INFO - Completed with status 200 in 0.025s
+2026-02-09 13:10:19,063 - __main__ - INFO - POST /api/check-single - Request started
+2026-02-09 13:10:19,065 - __main__ - INFO - Single source analysis request received
+2026-02-09 13:10:19,068 - __main__ - INFO - Starting analysis for session SINGLE_20260209_131019_38b0b231
+2026-02-09 13:10:19,071 - __main__ - INFO - UI Data being passed to dq_unified:
+2026-02-09 13:10:19,073 - __main__ - INFO -   source_type: csv
+2026-02-09 13:10:19,076 - __main__ - INFO -   file_path: uploads\20260209_131018_sample_data.csv
+2026-02-09 13:10:19,078 - __main__ - INFO -   sheet_name: None
+2026-02-09 13:10:19,079 - __main__ - INFO -   mandatory_fields: all
+2026-02-09 13:10:19,082 - dq_unified - INFO - ==================================================
+2026-02-09 13:10:19,084 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2026-02-09 13:10:19,085 - dq_unified - INFO - Prompting user for data source type
+2026-02-09 13:10:19,087 - dq_unified - INFO - UI Data source_type: csv
+2026-02-09 13:10:19,089 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-09 13:10:19,091 - dq_unified - INFO - Loading data from CSV...
+2026-02-09 13:10:19,093 - dq_unified - INFO - Loading data from CSV
+2026-02-09 13:10:19,095 - dq_unified - INFO - Loading large CSV: uploads\20260209_131018_sample_data.csv
+2026-02-09 13:10:19,097 - dq_unified - INFO - CSV file has 15 rows
+2026-02-09 13:10:19,099 - dq_unified - INFO - Loading 15 rows from CSV...
+2026-02-09 13:10:19,106 - dq_unified - INFO - Loaded 15 rows from CSV
+2026-02-09 13:10:19,117 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-02-09 13:10:19,121 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 222.2MB total, 0.0MB for dataframe
+2026-02-09 13:10:19,123 - dq_unified - INFO - Data loaded: 15 rows, 10 columns
+2026-02-09 13:10:19,125 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-09 13:10:19,126 - dq_unified - INFO - Session ID: SINGLE_20260209_131019
+2026-02-09 13:10:19,129 - dq_unified - INFO - Column data types collected: 10 columns
+2026-02-09 13:10:19,130 - dq_unified - INFO - ==================================================
+2026-02-09 13:10:19,131 - dq_unified - INFO - Starting quality checks...
+2026-02-09 13:10:19,132 - dq_unified - INFO - ==================================================
+2026-02-09 13:10:19,133 - dq_unified - INFO - 1. Checking for null/empty values...
+2026-02-09 13:10:19,135 - dq_unified - INFO - Checking for null/empty values
+2026-02-09 13:10:19,136 - dq_unified - INFO - DataFrame shape: (15, 10)
+2026-02-09 13:10:19,137 - dq_unified - INFO - Columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 13:10:19,138 - dq_unified - INFO - Data source: CSV: 20260209_131018_sample_data.csv
+2026-02-09 13:10:19,140 - dq_unified - INFO - DataFrame dtypes: {'CustomerName': dtype('O'), 'Email': dtype('O'), 'Phone': dtype('int64'), 'Salary': dtype('float32'), 'Department': CategoricalDtype(categories=['           Marketing', '       HR', 'Finance', 'HR', 'IT',
+                  'IT             ', 'Sales'],
+, ordered=False, categories_dtype=object), 'JoinDate': dtype('O'), 'PostalCode': dtype('O'), 'City': dtype('O'), 'Country': CategoricalDtype(categories=['USA'], ordered=False, categories_dtype=object), 'State': dtype('O')}
+2026-02-09 13:10:19,141 - dq_unified - INFO - First 2 rows (first 3 columns only):
+2026-02-09 13:10:19,144 - dq_unified - INFO -   Row 0: {'CustomerName': "'   John Doe'", 'Email': "'john@email.com'", 'Phone': 'np.int64(1234567890)'}
+2026-02-09 13:10:19,147 - dq_unified - INFO -   Row 1: {'CustomerName': "'Jane      Smith'", 'Email': "'jane@email.com'", 'Phone': 'np.int64(9876543210)'}
+2026-02-09 13:10:19,173 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 13:10:19,175 - dq_unified - INFO -   Not missing samples: ["'   John Doe'", "'Jane      Smith'", "'Bob        Johnson'"]
+2026-02-09 13:10:19,177 - dq_unified - WARNING - Column 'CustomerName': 1 missing cells (6.7%)
+2026-02-09 13:10:19,178 - dq_unified - WARNING - Column 'CustomerName': 1 missing cells (6.7%)
+2026-02-09 13:10:19,180 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,208 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 13:10:19,209 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 13:10:19,209 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,230 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 13:10:19,232 - dq_unified - INFO -   Not missing samples: ["'john@email.com'", "'jane@email.com'", "'alice@email.com'"]
+2026-02-09 13:10:19,233 - dq_unified - WARNING - Column 'Email': 1 missing cells (6.7%)
+2026-02-09 13:10:19,234 - dq_unified - WARNING - Column 'Email': 1 missing cells (6.7%)
+2026-02-09 13:10:19,237 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,254 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 13:10:19,256 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 13:10:19,257 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,285 - dq_unified - INFO - Column 'Phone': No missing cells
+2026-02-09 13:10:19,314 - dq_unified - INFO -   Missing samples: ['nan', 'nan']
+2026-02-09 13:10:19,315 - dq_unified - INFO -   Not missing samples: ['50000.0', '60000.0', '55000.0']
+2026-02-09 13:10:19,316 - dq_unified - WARNING - Column 'Salary': 2 missing cells (13.3%)
+2026-02-09 13:10:19,318 - dq_unified - WARNING - Column 'Salary': 2 missing cells (13.3%)
+2026-02-09 13:10:19,321 - dq_error_log - INFO - Starting batch logging for 2 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,342 - dq_error_log - INFO - Batch 1: Successfully logged 2 errors
+2026-02-09 13:10:19,343 - dq_error_log - INFO - Progress: 2/2 errors processed
+2026-02-09 13:10:19,345 - dq_error_log - INFO - COMPLETE: Logged 2/2 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,364 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 13:10:19,365 - dq_unified - INFO -   Not missing samples: ["'IT             '", "'       HR'", "'Finance'"]
+2026-02-09 13:10:19,367 - dq_unified - WARNING - Column 'Department': 1 missing cells (6.7%)
+2026-02-09 13:10:19,370 - dq_unified - WARNING - Column 'Department': 1 missing cells (6.7%)
+2026-02-09 13:10:19,372 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,394 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 13:10:19,395 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 13:10:19,397 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,424 - dq_unified - INFO - Column 'JoinDate': No missing cells
+2026-02-09 13:10:19,445 - dq_unified - INFO - Column 'PostalCode': No missing cells
+2026-02-09 13:10:19,468 - dq_unified - INFO - Column 'City': No missing cells
+2026-02-09 13:10:19,495 - dq_unified - INFO - Column 'Country': No missing cells
+2026-02-09 13:10:19,519 - dq_unified - INFO -   Missing samples: ['nan']
+2026-02-09 13:10:19,521 - dq_unified - INFO -   Not missing samples: ["'TS'", "'AP'", "'KL'"]
+2026-02-09 13:10:19,522 - dq_unified - WARNING - Column 'State': 1 missing cells (6.7%)
+2026-02-09 13:10:19,525 - dq_unified - WARNING - Column 'State': 1 missing cells (6.7%)
+2026-02-09 13:10:19,531 - dq_error_log - INFO - Starting batch logging for 1 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,553 - dq_error_log - INFO - Batch 1: Successfully logged 1 errors
+2026-02-09 13:10:19,555 - dq_error_log - INFO - Progress: 1/1 errors processed
+2026-02-09 13:10:19,555 - dq_error_log - INFO - COMPLETE: Logged 1/1 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,557 - dq_unified - INFO - Total missing cells found: 6
+2026-02-09 13:10:19,558 - dq_unified - INFO - ============================================================
+2026-02-09 13:10:19,559 - dq_unified - INFO - MISSING VALUE SUMMARY
+2026-02-09 13:10:19,560 - dq_unified - INFO - ============================================================
+2026-02-09 13:10:19,562 - dq_unified - INFO - CustomerName: 1 missing (6.7%)
+2026-02-09 13:10:19,563 - dq_unified - INFO - Email: 1 missing (6.7%)
+2026-02-09 13:10:19,564 - dq_unified - INFO - Salary: 2 missing (13.3%)
+2026-02-09 13:10:19,566 - dq_unified - INFO - Department: 1 missing (6.7%)
+2026-02-09 13:10:19,567 - dq_unified - INFO - State: 1 missing (6.7%)
+2026-02-09 13:10:19,569 - dq_unified - INFO - ============================================================
+2026-02-09 13:10:19,570 - dq_unified - INFO -    Found 6 empty cells
+2026-02-09 13:10:19,572 - dq_unified - INFO - 2. Checking for duplicate rows...
+2026-02-09 13:10:19,573 - dq_unified - INFO - Checking for duplicate rows
+2026-02-09 13:10:19,573 - dq_unified - INFO - Cleaning data (removing whitespace)...
+2026-02-09 13:10:19,575 - dq_unified - INFO - Columns after cleaning: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 13:10:19,589 - dq_unified - INFO - Sample of first column after cleaning: 'John Doe'
+2026-02-09 13:10:19,591 - dq_unified - INFO - Sample of row 6 first column: 'John Doe'
+2026-02-09 13:10:19,592 - dq_unified - INFO - Total rows to check: 15
+2026-02-09 13:10:19,594 - dq_unified - INFO - Checking first column 'CustomerName' for serial numbers
+2026-02-09 13:10:19,596 - dq_unified - INFO - First 5 values: ['John Doe', 'Jane Smith', 'Bob Johnson', 'Alice Brown', 'Charlie Wilson']
+2026-02-09 13:10:19,596 - dq_unified - INFO -   Row 1: 'John Doe' → Not numeric
+2026-02-09 13:10:19,598 - dq_unified - INFO -   Row 2: 'Jane Smith' → Not numeric
+2026-02-09 13:10:19,599 - dq_unified - INFO -   Row 3: 'Bob Johnson' → Not numeric
+2026-02-09 13:10:19,600 - dq_unified - INFO - Not enough numeric values to be serial: []
+2026-02-09 13:10:19,603 - dq_unified - INFO - Checking duplicates on ALL columns
+2026-02-09 13:10:19,604 - dq_unified - INFO - First few rows for comparison:
+2026-02-09 13:10:19,605 - dq_unified - INFO -   Row 0: {'CustomerName': 'John Doe', 'Email': 'john@email.com', 'Phone': '1234567890'}
+2026-02-09 13:10:19,607 - dq_unified - INFO -   Row 1: {'CustomerName': 'Jane Smith', 'Email': 'jane@email.com', 'Phone': '9876543210'}
+2026-02-09 13:10:19,608 - dq_unified - INFO -   Row 2: {'CustomerName': 'Bob Johnson', 'Email': 'nan', 'Phone': '5551234567'}
+2026-02-09 13:10:19,613 - dq_unified - INFO - Duplicate mask found 0 rows
+2026-02-09 13:10:19,614 - dq_unified - INFO - No duplicate rows found
+2026-02-09 13:10:19,617 - dq_unified - INFO - FINAL RESULT: Found 0 duplicate groups
+2026-02-09 13:10:19,618 - dq_unified - INFO -    Found 0 duplicate rows
+2026-02-09 13:10:19,620 - dq_unified - INFO - 3. Checking data formats...
+2026-02-09 13:10:19,622 - dq_unified - INFO - Checking data formats
+2026-02-09 13:10:19,627 - dq_unified - INFO - Detected Email as email type
+2026-02-09 13:10:19,629 - dq_unified - WARNING -   Row 9: 'invalid-email...' doesn't match Valid email format (user@domain.com)
+2026-02-09 13:10:19,633 - dq_unified - INFO - Detected Phone as phone type
+2026-02-09 13:10:19,634 - dq_unified - WARNING -   Row 14: '1112222...' doesn't match Valid phone number format
+2026-02-09 13:10:19,640 - dq_unified - INFO - Detected Salary as numeric type
+2026-02-09 13:10:19,650 - dq_unified - INFO - Detected JoinDate as date type
+2026-02-09 13:10:19,651 - dq_unified - INFO -   Date format check for JoinDate: Consistent=True, Format=DD-MM-YYYY or MM-DD-YYYY
+2026-02-09 13:10:19,656 - dq_unified - INFO - Detected PostalCode as numeric type
+2026-02-09 13:10:19,658 - dq_unified - WARNING -   Row 1: 'SAI10001...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-09 13:10:19,659 - dq_unified - WARNING -   Row 9: 'ABC123...' doesn't match Numeric value (no leading zeros, no alphabets)
+2026-02-09 13:10:19,672 - dq_unified - INFO - Total format issues found: 4
+2026-02-09 13:10:19,674 - dq_error_log - INFO - Starting batch logging for 4 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:19,694 - dq_error_log - INFO - Batch 1: Successfully logged 4 errors
+2026-02-09 13:10:19,696 - dq_error_log - INFO - Progress: 4/4 errors processed
+2026-02-09 13:10:19,697 - dq_error_log - INFO - COMPLETE: Logged 4/4 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:19,699 - dq_unified - INFO -    Found 4 format issues
+2026-02-09 13:10:19,701 - dq_unified - INFO - 4. Checking mandatory fields...
+2026-02-09 13:10:19,702 - dq_unified - INFO - Checking mandatory fields
+2026-02-09 13:10:19,703 - dq_unified - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 13:10:19,704 - dq_unified - INFO - Checking ALL columns as mandatory: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-02-09 13:10:19,732 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2026-02-09 13:10:19,753 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2026-02-09 13:10:19,782 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2026-02-09 13:10:19,806 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2026-02-09 13:10:19,837 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2026-02-09 13:10:19,865 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2026-02-09 13:10:19,887 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2026-02-09 13:10:19,918 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2026-02-09 13:10:19,946 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2026-02-09 13:10:19,971 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2026-02-09 13:10:20,228 - dq_error_log - INFO - Starting batch logging for 6 errors, session: SINGLE_20260209_131019
+2026-02-09 13:10:20,253 - dq_error_log - INFO - Batch 1: Successfully logged 6 errors
+2026-02-09 13:10:20,254 - dq_error_log - INFO - Progress: 6/6 errors processed
+2026-02-09 13:10:20,255 - dq_error_log - INFO - COMPLETE: Logged 6/6 errors for session SINGLE_20260209_131019
+2026-02-09 13:10:20,257 - dq_unified - INFO - All columns mandatory: 5 unique rows with missing values
+2026-02-09 13:10:20,258 - dq_unified - INFO -    Found 5 missing mandatory values
+2026-02-09 13:10:20,259 - dq_unified - INFO - 5. Calculating quality score...
+2026-02-09 13:10:20,261 - dq_unified - INFO - Calculating quality score
+2026-02-09 13:10:20,262 - dq_unified - INFO - Quality Score Calculation:
+2026-02-09 13:10:20,264 - dq_unified - INFO -   Total rows: 15
+2026-02-09 13:10:20,265 - dq_unified - INFO -   Bad Rows: 7
+2026-02-09 13:10:20,266 - dq_unified - INFO -   Good rows (no issues): 8
+2026-02-09 13:10:20,267 - dq_unified - INFO -   Quality Score: 53.33%
+2026-02-09 13:10:20,286 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20260209_131019
+2026-02-09 13:10:20,306 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20260209_131019
+2026-02-09 13:10:20,308 - dq_unified - INFO - Added 16 error logs to results
+2026-02-09 13:10:20,310 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-09 13:10:20,311 - dq_audit - INFO - Starting database insertion for single_source...
+2026-02-09 13:10:20,335 - dq_audit - INFO - Inserted single_source record with ID: 899
+2026-02-09 13:10:20,360 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_131019
+2026-02-09 13:10:20,363 - dq_unified - INFO - Added 1 audit logs to results
+2026-02-09 13:10:20,369 - dq_unified - INFO - Analysis completed successfully for CSV: 20260209_131018_sample_data.csv
+2026-02-09 13:10:20,380 - dq_unified - INFO - Final quality score: 53.33%
+2026-02-09 13:10:20,410 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20260209_131019
+2026-02-09 13:10:20,430 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20260209_131019
+2026-02-09 13:10:20,488 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20260209_131019
+2026-02-09 13:10:20,491 - __main__ - INFO - Analysis completed for session SINGLE_20260209_131019
+2026-02-09 13:10:20,510 - __main__ - INFO - Completed with status 200 in 1.446s
+2026-02-09 14:25:25,006 - __main__ - INFO - GET /api/single/SINGLE_20260209_130216/data - Request started
+2026-02-09 14:25:25,010 - __main__ - INFO - Completed with status 404 in 0.004s
+2026-02-09 14:25:39,015 - __main__ - INFO - GET /api/single/SINGLE_20260209_130217/data - Request started
+2026-02-09 14:25:39,033 - __main__ - INFO - Completed with status 200 in 0.018s
+2026-02-09 14:25:59,760 - __main__ - INFO - GET /api/single/SINGLE_20260209_130217/data - Request started
+2026-02-09 14:25:59,767 - __main__ - INFO - Completed with status 200 in 0.006s
+2026-02-09 14:26:30,332 - __main__ - INFO - GET /api/single/SINGLE_20260209_130217/errors - Request started
+2026-02-09 14:26:30,378 - __main__ - INFO - Completed with status 500 in 0.046s

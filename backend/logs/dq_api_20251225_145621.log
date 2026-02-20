@@ -1,0 +1,54 @@
+2025-12-25 14:56:21,967 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 14:56:21,969 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_145621.log
+2025-12-25 14:56:22,140 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 14:56:22,140 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 14:56:22,142 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 14:56:22,143 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 14:56:22,144 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 14:56:22,152 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 14:56:22,152 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 14:56:22,153 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 14:56:22,154 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 14:56:22,154 - __main__ - INFO -   GET  /              - API status
+2025-12-25 14:56:22,155 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 14:56:22,156 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 14:56:22,156 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 14:56:22,157 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 14:56:22,158 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 14:56:22,159 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 14:56:22,160 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 14:56:22,161 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 14:56:32,620 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 14:56:32,620 - __main__ - INFO - Single source analysis request received
+2025-12-25 14:56:32,621 - __main__ - INFO - Starting analysis for session SINGLE_20251225_145632_93f5d762
+2025-12-25 14:56:32,622 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 14:56:32,622 - dq_unified - INFO - User selected source type: 1
+2025-12-25 14:56:32,623 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:56:32,624 - dq_unified - INFO - Loading data from CSV
+2025-12-25 14:56:32,625 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2025-12-25 14:56:32,627 - dq_unified - ERROR - Error loading large CSV: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:56:32,631 - dq_unified - ERROR - Error loading data from csv: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 103, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-25 14:56:32,632 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 14:56:32,632 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 14:56:32,634 - __main__ - INFO - Completed with status 200 in 0.014s

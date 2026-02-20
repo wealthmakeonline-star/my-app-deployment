@@ -1,0 +1,281 @@
+2025-12-09 15:25:26,205 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-09 15:25:26,718 - __main__ - INFO - User session started at: 2025-12-09 15:25:26.718048
+2025-12-09 15:25:26,718 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:25:31,632 - __main__ - INFO - User selected option: 4
+2025-12-09 15:25:31,633 - __main__ - INFO - Starting Business Rules Engine module
+2025-12-09 15:25:31,637 - dq_rules - INFO - STARTING BUSINESS RULES VALIDATION
+2025-12-09 15:25:31,637 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-09 15:25:31,638 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:25:34,945 - dq_unified - INFO - User selected source type: 3
+2025-12-09 15:25:34,946 - dq_unified - INFO - GETTING DATABASE CONFIGURATION
+2025-12-09 15:25:37,933 - dq_unified - INFO - User selected database type: 3
+2025-12-09 15:25:50,967 - dq_unified - INFO - Database configuration collected: oracle, Table: employee
+2025-12-09 15:25:50,968 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-09 15:25:50,971 - dq_unified - INFO - Loading large database table: employee
+2025-12-09 15:25:51,103 - dq_unified - INFO - Oracle table has 89,999 rows
+2025-12-09 15:25:51,105 - dq_unified - INFO - Loading 89,999 rows from Oracle...
+2025-12-09 15:25:51,597 - dq_unified - INFO - Loaded 89,999 rows from Oracle
+2025-12-09 15:25:52,433 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2025-12-09 15:25:52,571 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 180.7MB total, 25.7MB for dataframe
+2025-12-09 15:25:52,574 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:25:52,575 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-09 15:25:52,575 - dq_rules - INFO - Available columns: ['id', 'customer_id', 'transaction_id', 'customer_name', 'email', 'phone', 'transaction_date', 'amount', 'quantity', 'age', 'status', 'description']
+2025-12-09 15:26:03,515 - dq_rules - INFO - User selected rule type: 6
+2025-12-09 15:26:03,517 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-09 15:26:03,517 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-09 15:26:03,519 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-09 15:26:03,566 - dq_rules - INFO - Available string columns: ['id', 'customer_id', 'transaction_id', 'phone', 'amount']
+2025-12-09 15:26:21,972 - dq_rules - WARNING - Column 'email' not found in string columns
+2025-12-09 15:26:21,973 - dq_rules - INFO - RANGE RULES SETUP
+2025-12-09 15:26:21,973 - dq_rules - INFO - NULL CHECK RULES SETUP
+2025-12-09 15:26:24,999 - dq_rules - INFO - Checking for columns with null values...
+2025-12-09 15:26:25,026 - dq_rules - INFO - Found 3510 null values in 'customer_name'
+2025-12-09 15:26:25,027 - dq_rules - INFO - Created null check rule for customer_name
+2025-12-09 15:26:25,029 - dq_rules - INFO - Found 1516 null values in 'email'
+2025-12-09 15:26:25,030 - dq_rules - INFO - Created null check rule for email
+2025-12-09 15:26:25,038 - dq_rules - INFO - Found 1280 null values in 'phone'
+2025-12-09 15:26:25,038 - dq_rules - INFO - Created null check rule for phone
+2025-12-09 15:26:25,043 - dq_rules - INFO - Found 1133 null values in 'amount'
+2025-12-09 15:26:25,044 - dq_rules - INFO - Created null check rule for amount
+2025-12-09 15:26:25,045 - dq_rules - INFO - KPI THRESHOLD RULES SETUP
+2025-12-09 15:26:28,971 - dq_rules - INFO - Current row count: 89,999
+2025-12-09 15:26:39,300 - dq_rules - INFO - Storing KPI history for: row_count
+2025-12-09 15:26:39,301 - dq_rules - INFO - Storing KPI history for: row_count
+2025-12-09 15:26:39,302 - dq_rules - INFO - Connecting to database: dq_checks at localhost
+2025-12-09 15:26:39,522 - dq_rules - INFO - Database connection successful!
+2025-12-09 15:26:39,522 - dq_rules - INFO - Creating/checking kpi_history table...
+2025-12-09 15:26:39,531 - dq_rules - INFO - Table check/creation completed
+2025-12-09 15:26:39,531 - dq_rules - INFO - Inserting KPI: row_count = 89999.0
+2025-12-09 15:26:39,536 - dq_rules - INFO - ✅ KPI history stored successfully for: row_count (ID: 4)
+2025-12-09 15:26:39,537 - dq_rules - INFO - Created KPI rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:26:39,538 - dq_rules - INFO - Created comprehensive rule set with 5 rules
+2025-12-09 15:26:39,539 - dq_rules - INFO - Defined 5 business rules
+2025-12-09 15:26:39,540 - dq_rules - INFO - EXECUTING 5 BUSINESS RULES
+2025-12-09 15:26:39,540 - dq_rules - INFO - Executing rule: customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:26:39,540 - dq_rules - INFO - Executing threshold rule: customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:26:39,542 - dq_rules - INFO - Threshold rule 'customer_name should have no null values (currently 3510 nulls)': 0 violations found
+2025-12-09 15:26:39,544 - dq_rules - INFO - No violations found
+2025-12-09 15:26:39,545 - dq_rules - INFO - Rule 'customer_name should have no null values (currently 3510 nulls)' completed with status: PASS
+2025-12-09 15:26:39,545 - dq_rules - INFO - Executing rule: email should have no null values (currently 1516 nulls)
+2025-12-09 15:26:39,545 - dq_rules - INFO - Executing threshold rule: email should have no null values (currently 1516 nulls)
+2025-12-09 15:26:39,547 - dq_rules - INFO - Threshold rule 'email should have no null values (currently 1516 nulls)': 0 violations found
+2025-12-09 15:26:39,547 - dq_rules - INFO - No violations found
+2025-12-09 15:26:39,548 - dq_rules - INFO - Rule 'email should have no null values (currently 1516 nulls)' completed with status: PASS
+2025-12-09 15:26:39,548 - dq_rules - INFO - Executing rule: phone should have no null values (currently 1280 nulls)
+2025-12-09 15:26:39,548 - dq_rules - INFO - Executing threshold rule: phone should have no null values (currently 1280 nulls)
+2025-12-09 15:26:39,567 - dq_rules - INFO - Threshold rule 'phone should have no null values (currently 1280 nulls)': 0 violations found
+2025-12-09 15:26:39,568 - dq_rules - INFO - No violations found
+2025-12-09 15:26:39,568 - dq_rules - INFO - Rule 'phone should have no null values (currently 1280 nulls)' completed with status: PASS
+2025-12-09 15:26:39,569 - dq_rules - INFO - Executing rule: amount should have no null values (currently 1133 nulls)
+2025-12-09 15:26:39,569 - dq_rules - INFO - Executing threshold rule: amount should have no null values (currently 1133 nulls)
+2025-12-09 15:26:39,577 - dq_rules - INFO - Threshold rule 'amount should have no null values (currently 1133 nulls)': 0 violations found
+2025-12-09 15:26:39,577 - dq_rules - INFO - No violations found
+2025-12-09 15:26:39,578 - dq_rules - INFO - Rule 'amount should have no null values (currently 1133 nulls)' completed with status: PASS
+2025-12-09 15:26:39,578 - dq_rules - INFO - Executing rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:26:39,578 - dq_rules - INFO - Executing KPI threshold rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:26:39,600 - dq_rules - INFO - Growth Analysis: Previous value: 15.00 (2025-12-08 15:10:51), Current value: 89,999.00, Growth rate: 599893.3%, Max allowed: 30.0%
+2025-12-09 15:26:39,600 - dq_rules - WARNING - KPI Threshold Violation
+2025-12-09 15:26:39,602 - dq_rules - WARNING - Growth rate 599893.3% exceeds maximum 30.0%
+2025-12-09 15:26:39,622 - dq_rules - INFO - Rule 'KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%' completed with status: FAIL
+2025-12-09 15:26:39,623 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 1
+2025-12-09 15:26:39,623 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-09 15:26:39,624 - dq_rules - INFO - Report for: Database: oracle - Table: employee, Records: 89999, Columns: 12
+2025-12-09 15:26:39,624 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:26:39,625 - dq_rules - INFO - Rules compliance score: 80.0% (Passed: 4, Failed: 1, Errors: 0)
+2025-12-09 15:26:39,625 - dq_rules - INFO - RULES SUMMARY: Total Rules: 5, Passed: 4, Failed: 1, Errors: 0, Total Violations: 1
+2025-12-09 15:26:39,626 - dq_rules - INFO - DETAILED RESULTS:
+2025-12-09 15:26:39,626 - dq_rules - INFO - PASS customer_name should have no null values (currently 3510 nulls)
+2025-12-09 15:26:39,627 - dq_rules - INFO - PASS email should have no null values (currently 1516 nulls)
+2025-12-09 15:26:39,629 - dq_rules - INFO - PASS phone should have no null values (currently 1280 nulls)
+2025-12-09 15:26:39,630 - dq_rules - INFO - PASS amount should have no null values (currently 1133 nulls)
+2025-12-09 15:26:39,630 - dq_rules - INFO - FAIL KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-09 15:26:39,630 - dq_rules - INFO - Violations: 1
+2025-12-09 15:26:39,631 - dq_rules - INFO - Current Value: 89,999.00
+2025-12-09 15:26:39,631 - dq_rules - INFO - Threshold: 98,998.90
+2025-12-09 15:26:39,631 - dq_rules - INFO - Growth Rate: 599893.3%
+2025-12-09 15:26:39,632 - dq_rules - INFO - Growth rate 599893.3% exceeds maximum 30.0%
+2025-12-09 15:26:39,651 - dq_rules - INFO - RECOMMENDATIONS:
+2025-12-09 15:26:39,651 - dq_rules - INFO - Review and fix business rule violations
+2025-12-09 15:26:39,651 - dq_rules - INFO - Adjust KPI thresholds if needed
+2025-12-09 15:26:39,652 - dq_rules - INFO - Monitor growth rates regularly
+2025-12-09 15:26:39,652 - dq_rules - INFO - ERROR LOGGING: Session ID: RULES_20251209_152639, Total errors logged: 1
+2025-12-09 15:26:39,652 - dq_rules - INFO - Check dq_error_logs table for details
+2025-12-09 15:26:39,656 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 15:26:39,656 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-09 15:26:39,674 - dq_audit - INFO - Inserted rules record
+2025-12-09 15:26:39,674 - dq_audit - INFO - rules audit record successfully stored in database
+2025-12-09 15:30:44,384 - dq_rules - INFO - Business rules validation completed successfully
+2025-12-09 15:30:44,423 - __main__ - INFO - Business Rules Engine completed successfully
+2025-12-09 15:30:44,424 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:30:46,662 - __main__ - INFO - User selected option: 2
+2025-12-09 15:30:46,663 - __main__ - INFO - Starting Source-Target Comparison module
+2025-12-09 15:30:46,666 - dq_comparison - INFO - STARTING UNIVERSAL SOURCE-TARGET COMPARISON TOOL
+2025-12-09 15:30:46,666 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-09 15:30:46,666 - dq_comparison - INFO - SOURCE DATA:
+2025-12-09 15:30:46,666 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:30:51,990 - dq_unified - INFO - User selected source type: 1
+2025-12-09 15:30:51,991 - dq_unified - INFO - Getting CSV file path from user
+2025-12-09 15:31:09,231 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv (0.0MB)
+2025-12-09 15:31:09,231 - dq_comparison - INFO - TARGET DATA:
+2025-12-09 15:31:09,231 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:31:12,793 - dq_unified - INFO - User selected source type: 3
+2025-12-09 15:31:12,794 - dq_unified - INFO - GETTING DATABASE CONFIGURATION
+2025-12-09 15:31:17,145 - dq_unified - INFO - User selected database type: 1
+2025-12-09 15:31:23,039 - dq_unified - INFO - Database configuration collected: postgresql, Table: customers
+2025-12-09 15:31:23,040 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-09 15:31:23,042 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-09 15:31:23,045 - dq_unified - INFO - CSV file has 15 rows
+2025-12-09 15:31:23,046 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-09 15:31:23,051 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-09 15:31:23,055 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-09 15:31:23,055 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 112.8MB total, 0.0MB for dataframe
+2025-12-09 15:31:23,056 - dq_unified - INFO - LOADING DATA FROM DATABASE
+2025-12-09 15:31:23,061 - dq_unified - INFO - Loading large database table: customers
+2025-12-09 15:31:23,284 - dq_unified - INFO - PostgreSQL table has 15 rows
+2025-12-09 15:31:23,286 - dq_unified - INFO - Loading 15 rows from PostgreSQL...
+2025-12-09 15:31:24,511 - dq_unified - INFO - Loaded 15 rows from PostgreSQL
+2025-12-09 15:31:24,518 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-09 15:31:24,519 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 120.1MB total, 0.0MB for dataframe
+2025-12-09 15:31:24,520 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-09 15:31:24,520 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-09 15:31:27,590 - dq_comparison - INFO - User column selection input: all
+2025-12-09 15:31:27,590 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-09 15:31:27,591 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-09 15:31:27,592 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Database: postgresql - Table: customers, Selected columns: 10
+2025-12-09 15:31:27,592 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-09 15:31:27,592 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:31:27,606 - dq_error_log - INFO - Database connection successful
+2025-12-09 15:31:27,606 - dq_comparison - INFO - Session ID: CMP_20251209_153127
+2025-12-09 15:31:27,612 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-09 15:31:27,613 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-09 15:31:27,613 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-09 15:31:27,614 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON
+2025-12-09 15:31:27,614 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-09 15:31:27,614 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-09 15:31:27,618 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-09 15:31:27,620 - dq_comparison - INFO - Hash-based Comparison: Common rows: 9, Rows only in source: 5, Rows only in target: 5
+2025-12-09 15:31:27,620 - dq_comparison - INFO - Logging 5 rows missing in target...
+2025-12-09 15:31:27,621 - dq_comparison - INFO - Logging 5 rows extra in target...
+2025-12-09 15:31:27,638 - dq_error_log - INFO - Batch logged 10 errors for session CMP_20251209_153127
+2025-12-09 15:31:27,639 - dq_comparison - INFO - THIRD CHECK: ANALYZING VALUE MISMATCHES IN COMMON ROWS
+2025-12-09 15:31:27,642 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-09 15:31:27,646 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-09 15:31:27,649 - dq_comparison - INFO - Duplicate rows - Source: 0, Target: 1
+2025-12-09 15:31:27,652 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-09 15:31:27,685 - dq_error_log - INFO - Retrieved 10 errors for session CMP_20251209_153127
+2025-12-09 15:31:27,708 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 15:31:27,709 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-09 15:31:27,726 - dq_audit - INFO - Inserted comparison record
+2025-12-09 15:31:27,726 - dq_audit - INFO - comparison audit record successfully stored in database
+2025-12-09 15:31:27,729 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-09 15:31:27,730 - __main__ - INFO - Source-Target Comparison completed successfully
+2025-12-09 15:31:27,731 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:33:09,898 - __main__ - INFO - User selected option: 1
+2025-12-09 15:33:09,898 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-09 15:33:09,899 - dq_unified - INFO - STARTING UNIFIED DATA QUALITY ANALYSIS
+2025-12-09 15:33:09,900 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:33:11,220 - dq_unified - INFO - User selected source type: 1
+2025-12-09 15:33:11,221 - dq_unified - INFO - Getting CSV file path from user
+2025-12-09 15:33:17,413 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx (0.0MB)
+2025-12-09 15:33:17,413 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-09 15:33:17,414 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-09 15:33:17,418 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx
+2025-12-09 15:33:17,421 - dq_unified - ERROR - Error loading large CSV: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 77, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 77, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-09 15:33:17,427 - dq_unified - ERROR - Error loading data from csv: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 656, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 77, in load_large_csv
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 77, in <genexpr>
+    total_rows = sum(1 for _ in f) - 1  # Subtract header
+                    ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2025-12-09 15:33:17,429 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-09 15:33:17,430 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-09 15:33:17,430 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:34:29,579 - __main__ - INFO - User selected option: 1
+2025-12-09 15:34:29,579 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-09 15:34:29,581 - dq_unified - INFO - STARTING UNIFIED DATA QUALITY ANALYSIS
+2025-12-09 15:34:29,581 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-09 15:34:31,198 - dq_unified - INFO - User selected source type: 2
+2025-12-09 15:34:31,199 - dq_unified - INFO - Getting Excel file path from user
+2025-12-09 15:34:33,378 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx (0.0MB)
+2025-12-09 15:34:33,379 - dq_unified - INFO - LOADING DATA FROM EXCEL
+2025-12-09 15:34:33,379 - dq_unified - INFO - LOADING DATA FROM EXCEL
+2025-12-09 15:34:33,383 - dq_unified - INFO - Loading large Excel: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx
+2025-12-09 15:34:34,567 - dq_unified - INFO - Loading Excel file...
+2025-12-09 15:34:34,581 - dq_unified - INFO - Loaded 15 rows from Excel
+2025-12-09 15:34:34,585 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-09 15:34:34,586 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 133.6MB total, 0.0MB for dataframe
+2025-12-09 15:34:34,588 - dq_unified - INFO - DATA PREVIEW:
+2025-12-09 15:34:34,590 - dq_unified - INFO -    Total rows: 15
+2025-12-09 15:34:34,590 - dq_unified - INFO -    Total columns: 10
+2025-12-09 15:34:34,590 - dq_unified - INFO -    Columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-09 15:34:34,591 - dq_unified - INFO - RUNNING QUALITY CHECKS
+2025-12-09 15:34:34,591 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-09 15:34:34,594 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-09 15:34:34,595 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-09 15:34:34,597 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-09 15:34:34,597 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-09 15:34:34,599 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-09 15:34:34,601 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-09 15:34:34,601 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-09 15:34:34,602 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-09 15:34:34,605 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-09 15:34:34,606 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-09 15:34:34,607 - dq_unified - INFO - Total empty cells found: 6
+2025-12-09 15:34:34,608 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-09 15:34:34,609 - dq_unified - INFO - No duplicate rows found
+2025-12-09 15:34:34,609 - dq_unified - INFO - Skipping automatic format checking (disabled)
+2025-12-09 15:34:34,611 - dq_unified - INFO - CHECKING MANDATORY FIELDS
+2025-12-09 15:34:38,596 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2025-12-09 15:34:38,599 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2025-12-09 15:34:38,602 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2025-12-09 15:34:38,603 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2025-12-09 15:34:38,605 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2025-12-09 15:34:38,607 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2025-12-09 15:34:38,608 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2025-12-09 15:34:38,609 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2025-12-09 15:34:38,610 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2025-12-09 15:34:38,611 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2025-12-09 15:34:38,612 - dq_unified - INFO - Mandatory field check completed: 5 issues found
+2025-12-09 15:34:38,612 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-09 15:34:38,613 - dq_unified - INFO - Quality score: 96.3% (Issues: nulls=6, duplicates=0, formats=0, mandatory=5)
+2025-12-09 15:34:38,613 - dq_unified - INFO - GENERATING DETAILED DATA QUALITY REPORT
+2025-12-09 15:34:38,613 - dq_unified - INFO - Report for: EXCEL: sample_data.xlsx, Records: 15, Columns: 10
+2025-12-09 15:34:38,613 - dq_unified - INFO - Overall quality score: 96.3%
+2025-12-09 15:34:38,614 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-09 15:34:38,614 - dq_unified - INFO - Error Logger Session ID: SINGLE_20251209_153438
+2025-12-09 15:34:38,614 - dq_unified - INFO - DETAILED ISSUE BREAKDOWN:
+2025-12-09 15:34:38,614 - dq_unified - WARNING - Empty cells found: 6 total
+2025-12-09 15:34:38,678 - dq_unified - INFO - FORMAT ISSUES: Automatic checking disabled
+2025-12-09 15:34:38,678 - dq_unified - WARNING - Missing mandatory fields: 6 total
+2025-12-09 15:34:38,739 - dq_unified - INFO - RECOMMENDATIONS:
+2025-12-09 15:34:38,740 - dq_unified - INFO - Recommendations: ['Fill in empty cells in identified rows', 'Ensure mandatory fields are populated', 'Use Source-Target Comparison for detailed format validation']
+2025-12-09 15:34:38,741 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-09 15:34:38,743 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-09 15:34:38,757 - dq_audit - INFO - Inserted single_source record
+2025-12-09 15:34:38,758 - dq_audit - INFO - single_source audit record successfully stored in database
+2025-12-09 15:34:38,758 - dq_unified - INFO - Audit logged for session: DQ_20251209_153438
+2025-12-09 15:34:38,759 - dq_unified - INFO - ERROR LOGGING SUMMARY: Session ID: SINGLE_20251209_153438
+2025-12-09 15:34:38,759 - dq_unified - INFO - Total errors logged: Nulls=6, Duplicates=0, Mandatory=6
+2025-12-09 15:34:38,760 - dq_unified - INFO - Check dq_error_logs table for error details
+2025-12-09 15:34:38,760 - dq_unified - INFO - Analysis completed successfully for EXCEL: sample_data.xlsx
+2025-12-09 15:34:38,760 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-09 15:34:38,760 - __main__ - INFO - Displaying main menu options to user
+2025-12-09 15:53:06,396 - __main__ - INFO - User selected option: 6
+2025-12-09 15:53:06,398 - __main__ - INFO - User session ended. Duration: 0:27:39.680152
+2025-12-09 15:53:06,402 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

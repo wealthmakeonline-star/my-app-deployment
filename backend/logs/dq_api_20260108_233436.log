@@ -1,0 +1,276 @@
+2026-01-08 23:34:36,039 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-08 23:34:36,040 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260108_233436.log
+2026-01-08 23:34:36,290 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-08 23:34:36,291 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-08 23:34:36,294 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-08 23:34:36,295 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:34:36,296 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-08 23:34:36,306 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-08 23:34:36,307 - __main__ - INFO - 📊 Modules available: True
+2026-01-08 23:34:36,308 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-08 23:34:36,309 - __main__ - INFO - 📋 Available endpoints:
+2026-01-08 23:34:36,309 - __main__ - INFO -   GET  /              - API status
+2026-01-08 23:34:36,311 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-08 23:34:36,312 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-08 23:34:36,313 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-08 23:34:36,313 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-08 23:34:36,314 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-08 23:34:36,315 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-08 23:34:36,316 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-08 23:34:36,316 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-08 23:34:40,010 - __main__ - INFO - POST /api/compare - Request started
+2026-01-08 23:34:40,011 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}, 'target': {'source_type': 'database', 'db_type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'table': 'customers', 'user': 'postgres', 'password': 'postgres'}, 'selected_columns': 'all'}
+2026-01-08 23:34:40,013 - __main__ - INFO - DEBUG: source_type: None
+2026-01-08 23:34:40,014 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-08 23:34:40,015 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-08 23:34:40,015 - __main__ - INFO - Comparison analysis request received
+2026-01-08 23:34:40,016 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}
+2026-01-08 23:34:40,017 - __main__ - INFO - Starting comparison for session CMP_20260108_233440
+2026-01-08 23:34:40,018 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-08 23:34:40,019 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-08 23:34:40,019 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:34:40,021 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-08 23:34:40,022 - dq_comparison - INFO - ==================================================
+2026-01-08 23:34:40,022 - dq_comparison - INFO - DEBUG load_excel_source called for SOURCE
+2026-01-08 23:34:40,023 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'sheet_name': None}
+2026-01-08 23:34:40,024 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-08 23:34:40,025 - dq_comparison - INFO - DEBUG Found file_path in ui_data: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2026-01-08 23:34:41,666 - dq_comparison - INFO - SOURCE Excel loaded: 15 rows, 10 columns
+2026-01-08 23:34:41,666 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:34:41,667 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-08 23:34:41,669 - dq_comparison - INFO - ==================================================
+2026-01-08 23:34:41,669 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-01-08 23:34:41,670 - dq_comparison - INFO - ----------------------------------------
+2026-01-08 23:34:41,671 - dq_comparison - INFO - Converted db_type to numeric code: 1
+2026-01-08 23:34:41,672 - dq_comparison - INFO - Selected database type code: postgresql
+2026-01-08 23:34:41,673 - dq_unified - INFO - Getting database config from config file
+2026-01-08 23:34:41,675 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2026-01-08 23:34:41,675 - dq_unified - INFO - Database configuration from config file: postgresql, Table: customers
+2026-01-08 23:34:41,677 - dq_unified - INFO - Loading data from DATABASE
+2026-01-08 23:34:41,677 - dq_unified - INFO - Loading large database table: customers
+2026-01-08 23:34:41,679 - dq_unified - INFO - Normalized DB config with schema: public
+2026-01-08 23:34:41,811 - dq_unified - INFO - PostgreSQL table public.customers has 15 rows
+2026-01-08 23:34:41,812 - dq_unified - INFO - Loading 15 rows from PostgreSQL...
+2026-01-08 23:34:43,126 - dq_unified - INFO - Loaded 15 rows from PostgreSQL
+2026-01-08 23:34:43,135 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-08 23:34:43,136 - dq_unified - INFO - Standardizing data types...
+2026-01-08 23:34:43,142 - dq_unified - INFO - Data type standardization complete
+2026-01-08 23:34:43,143 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 129.9MB total, 0.0MB for dataframe
+2026-01-08 23:34:43,144 - dq_comparison - INFO - TARGET database loaded: 15 rows, 10 columns
+2026-01-08 23:34:43,146 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2026-01-08 23:34:43,147 - dq_comparison - INFO - Target data loaded: 15 rows, 10 columns
+2026-01-08 23:34:43,148 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-08 23:34:43,149 - dq_comparison - INFO - Source columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-08 23:34:43,149 - dq_comparison - INFO - Target columns (original): ['customername', 'email', 'phone', 'salary', 'department', 'joindate', 'postalcode', 'city', 'country', 'state']
+2026-01-08 23:34:43,151 - dq_comparison - INFO - Common columns lowercased: ['state', 'country', 'city', 'salary', 'department', 'email', 'joindate', 'postalcode', 'customername', 'phone']
+2026-01-08 23:34:43,152 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2026-01-08 23:34:43,153 - dq_comparison - INFO - User column selection input: all
+2026-01-08 23:34:43,154 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-08 23:34:43,155 - dq_comparison - INFO - Selected 10 columns for comparison: ['State', 'Country', 'City', 'Salary', 'Department']...
+2026-01-08 23:34:43,155 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-08 23:34:43,156 - dq_comparison - INFO - Report details - Source: Excel: sample_data.xlsx (sample_data), Target: Database: postgresql - dq_checks.customers, Selected columns: 10
+2026-01-08 23:34:43,158 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-08 23:34:43,158 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-08 23:34:43,228 - dq_error_log - INFO - Database connection successful
+2026-01-08 23:34:43,229 - dq_comparison - INFO - Session ID: CMP_20260108_233443
+2026-01-08 23:34:43,230 - dq_comparison - INFO - ✅ Row counts match: 15 rows
+2026-01-08 23:34:43,231 - dq_comparison - INFO - Comparing column structures...
+2026-01-08 23:34:43,232 - dq_comparison - WARNING - Found 8 incompatible data type mismatches
+2026-01-08 23:34:43,233 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-08 23:34:43,366 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-08 23:34:43,366 - dq_comparison - INFO - Checking key fields: ['PostalCode']
+2026-01-08 23:34:43,367 - dq_comparison - WARNING - No key fields found in both datasets
+2026-01-08 23:34:43,383 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-08 23:34:43,403 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-08 23:34:43,405 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-08 23:34:43,443 - dq_comparison - INFO - Source DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-08 23:34:43,443 - dq_comparison - INFO - Target DF columns: ['customername', 'email', 'phone', 'salary', 'department', 'joindate', 'postalcode', 'city', 'country', 'state']
+2026-01-08 23:34:43,444 - dq_comparison - INFO - Selected columns for comparison: ['State', 'Country', 'City', 'Salary', 'Department', 'Email', 'JoinDate', 'PostalCode', 'CustomerName', 'Phone']
+2026-01-08 23:34:43,445 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2026-01-08 23:34:43,446 - dq_comparison - INFO - Source columns: ['State', 'Country', 'City', 'Salary', 'Department', 'Email', 'JoinDate', 'PostalCode', 'CustomerName', 'Phone']
+2026-01-08 23:34:43,447 - dq_comparison - INFO - Target columns: ['state', 'country', 'city', 'salary', 'department', 'email', 'joindate', 'postalcode', 'customername', 'phone']
+2026-01-08 23:34:43,447 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-01-08 23:34:43,454 - dq_comparison - INFO - Generating hashes for target data (15 rows)...
+2026-01-08 23:34:43,468 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-08 23:34:43,469 - dq_comparison - INFO -   • Unique source hashes: 14
+2026-01-08 23:34:43,470 - dq_comparison - INFO -   • Unique target hashes: 14
+2026-01-08 23:34:43,471 - dq_comparison - INFO -   • Common hashes: 0
+2026-01-08 23:34:43,472 - dq_comparison - INFO -   • Common rows (counting duplicates): 0
+2026-01-08 23:34:43,473 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 15
+2026-01-08 23:34:43,474 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 15
+2026-01-08 23:34:43,475 - dq_comparison - INFO - Found 15 rows missing in target
+2026-01-08 23:34:43,609 - dq_comparison - INFO - Found 15 extra rows in target
+2026-01-08 23:34:43,762 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2026-01-08 23:34:43,765 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2026-01-08 23:34:44,189 - dq_comparison - INFO - Found 16 column value mismatches across all rows
+2026-01-08 23:34:44,191 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-08 23:34:44,192 - dq_comparison - INFO -   Common rows: 0
+2026-01-08 23:34:44,193 - dq_comparison - INFO -   Unique to source: 15
+2026-01-08 23:34:44,193 - dq_comparison - INFO -   Unique to target: 15
+2026-01-08 23:34:44,194 - dq_comparison - INFO -   Value mismatches: 16
+2026-01-08 23:34:44,194 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-08 23:34:44,216 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 7 (4.67%)
+2026-01-08 23:34:44,238 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2026-01-08 23:34:44,243 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2026-01-08 23:34:44,246 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2026-01-08 23:34:44,264 - dq_error_log - INFO - Retrieved 36 error logs for session CMP_20260108_233443
+2026-01-08 23:34:44,266 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-08 23:34:44,266 - dq_comparison - INFO -   Source rows: 15
+2026-01-08 23:34:44,267 - dq_comparison - INFO -   Common rows (matched): 0
+2026-01-08 23:34:44,267 - dq_comparison - INFO -   Calculation: (0 / 15) * 100 = 0.00%
+2026-01-08 23:34:44,268 - dq_comparison - INFO -   Explanation: 0 matched rows out of 15 total source rows
+2026-01-08 23:34:44,269 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-08 23:34:44,269 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-08 23:34:44,271 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:34:44,272 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260108_233443
+2026-01-08 23:34:44,273 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-08 23:34:44,298 - dq_audit - INFO - Inserted comparison record with ID: 553
+2026-01-08 23:34:44,299 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 553)
+2026-01-08 23:34:44,316 - dq_error_log - INFO - Retrieved 36 error logs for session CMP_20260108_233443
+2026-01-08 23:34:44,336 - dq_error_log - INFO - Retrieved summary: 36 total errors for session CMP_20260108_233443
+2026-01-08 23:34:44,337 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:34:44,367 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260108_233443
+2026-01-08 23:34:44,368 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-08 23:34:44,369 - dq_comparison - INFO -    Session ID: CMP_20260108_233443
+2026-01-08 23:34:44,370 - dq_comparison - INFO -    DQ Score (Simple %): 0.00%
+2026-01-08 23:34:44,370 - dq_comparison - INFO -    Source rows: 15
+2026-01-08 23:34:44,371 - dq_comparison - INFO -    Matched rows: 0
+2026-01-08 23:34:44,372 - dq_comparison - INFO -    Calculation: (0 / 15) * 100
+2026-01-08 23:34:44,373 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-08 23:34:44,395 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260108_233443
+2026-01-08 23:34:44,411 - dq_error_log - INFO - Retrieved 36 error logs for session CMP_20260108_233443
+2026-01-08 23:34:44,428 - dq_error_log - INFO - Retrieved summary: 36 total errors for session CMP_20260108_233443
+2026-01-08 23:34:44,429 - __main__ - INFO - Comparison completed for session CMP_20260108_233440
+2026-01-08 23:34:44,438 - __main__ - INFO - Completed with status 200 in 4.428s
+2026-01-08 23:35:27,832 - __main__ - INFO - POST /api/compare - Request started
+2026-01-08 23:36:02,981 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'database', 'db_type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'table': 'customers', 'user': 'postgres', 'password': 'postgres'}, 'target': {'source_type': 'excel', 'target_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}, 'selected_columns': 'all'}
+2026-01-08 23:36:02,987 - __main__ - INFO - DEBUG: source_type: None
+2026-01-08 23:36:02,988 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-08 23:36:02,988 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-08 23:36:02,993 - __main__ - INFO - Comparison analysis request received
+2026-01-08 23:36:02,996 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'database', 'db_type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'table': 'customers', 'user': 'postgres', 'password': 'postgres'}
+2026-01-08 23:36:02,996 - __main__ - INFO - Starting comparison for session CMP_20260108_233602
+2026-01-08 23:36:02,997 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-08 23:36:02,997 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-08 23:36:02,998 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:36:02,998 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-08 23:36:02,999 - dq_comparison - INFO - ==================================================
+2026-01-08 23:36:03,000 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-01-08 23:36:03,001 - dq_comparison - INFO - ----------------------------------------
+2026-01-08 23:36:03,001 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-01-08 23:36:03,001 - dq_unified - INFO - Loading data from DATABASE
+2026-01-08 23:36:03,002 - dq_unified - INFO - Loading large database table: customers
+2026-01-08 23:36:03,003 - dq_unified - INFO - Normalized DB config with schema: public
+2026-01-08 23:36:03,216 - dq_unified - INFO - PostgreSQL table public.customers has 15 rows
+2026-01-08 23:36:03,217 - dq_unified - INFO - Loading 15 rows from PostgreSQL...
+2026-01-08 23:36:03,223 - dq_unified - INFO - Loaded 15 rows from PostgreSQL
+2026-01-08 23:36:03,228 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-08 23:36:03,229 - dq_unified - INFO - Standardizing data types...
+2026-01-08 23:36:03,233 - dq_unified - INFO - Data type standardization complete
+2026-01-08 23:36:03,235 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 136.3MB total, 0.0MB for dataframe
+2026-01-08 23:36:03,235 - dq_comparison - INFO - SOURCE database loaded: 15 rows, 10 columns
+2026-01-08 23:36:03,236 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:36:03,238 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-08 23:36:03,238 - dq_comparison - INFO - ==================================================
+2026-01-08 23:36:03,239 - dq_comparison - INFO - DEBUG load_excel_source called for TARGET
+2026-01-08 23:36:03,240 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'target_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}
+2026-01-08 23:36:03,240 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-08 23:36:03,241 - dq_comparison - INFO - DEBUG Found target_file_path in ui_data: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2026-01-08 23:36:03,284 - dq_comparison - INFO - TARGET Excel loaded: 15 rows, 10 columns
+2026-01-08 23:36:03,285 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2026-01-08 23:36:03,285 - dq_comparison - INFO - Target data loaded: 15 rows, 10 columns
+2026-01-08 23:36:03,286 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-08 23:36:03,286 - dq_comparison - INFO - Source columns (original): ['customername', 'email', 'phone', 'salary', 'department', 'joindate', 'postalcode', 'city', 'country', 'state']
+2026-01-08 23:36:03,287 - dq_comparison - INFO - Target columns (original): ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-08 23:36:03,288 - dq_comparison - INFO - Common columns lowercased: ['state', 'country', 'city', 'salary', 'department', 'email', 'joindate', 'postalcode', 'customername', 'phone']
+2026-01-08 23:36:03,289 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2026-01-08 23:36:03,290 - dq_comparison - INFO - User column selection input: all
+2026-01-08 23:36:03,290 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-08 23:36:03,291 - dq_comparison - INFO - Selected 10 columns for comparison: ['state', 'country', 'city', 'salary', 'department']...
+2026-01-08 23:36:03,292 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-08 23:36:03,292 - dq_comparison - INFO - Report details - Source: Database: postgresql - dq_checks.customers, Target: Excel: sample_data.xlsx (sample_data), Selected columns: 10
+2026-01-08 23:36:03,293 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-08 23:36:03,293 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-08 23:36:03,314 - dq_error_log - INFO - Database connection successful
+2026-01-08 23:36:03,315 - dq_comparison - INFO - Session ID: CMP_20260108_233603
+2026-01-08 23:36:03,316 - dq_comparison - INFO - ✅ Row counts match: 15 rows
+2026-01-08 23:36:03,316 - dq_comparison - INFO - Comparing column structures...
+2026-01-08 23:36:03,317 - dq_comparison - WARNING - Found 7 incompatible data type mismatches
+2026-01-08 23:36:03,318 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-08 23:36:03,411 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-08 23:36:03,412 - dq_comparison - INFO - Checking key fields: ['postalcode']
+2026-01-08 23:36:03,412 - dq_comparison - WARNING - No key fields found in both datasets
+2026-01-08 23:36:03,426 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-08 23:36:03,433 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-08 23:36:03,434 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-08 23:36:03,437 - dq_comparison - INFO - Source DF columns: ['customername', 'email', 'phone', 'salary', 'department', 'joindate', 'postalcode', 'city', 'country', 'state']
+2026-01-08 23:36:03,437 - dq_comparison - INFO - Target DF columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2026-01-08 23:36:03,437 - dq_comparison - INFO - Selected columns for comparison: ['state', 'country', 'city', 'salary', 'department', 'email', 'joindate', 'postalcode', 'customername', 'phone']
+2026-01-08 23:36:03,438 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2026-01-08 23:36:03,439 - dq_comparison - INFO - Source columns: ['state', 'country', 'city', 'salary', 'department', 'email', 'joindate', 'postalcode', 'customername', 'phone']
+2026-01-08 23:36:03,440 - dq_comparison - INFO - Target columns: ['State', 'Country', 'City', 'Salary', 'Department', 'Email', 'JoinDate', 'PostalCode', 'CustomerName', 'Phone']
+2026-01-08 23:36:03,441 - dq_comparison - INFO - Generating hashes for source data (15 rows)...
+2026-01-08 23:36:03,445 - dq_comparison - INFO - Generating hashes for target data (15 rows)...
+2026-01-08 23:36:03,448 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-08 23:36:03,448 - dq_comparison - INFO -   • Unique source hashes: 14
+2026-01-08 23:36:03,449 - dq_comparison - INFO -   • Unique target hashes: 14
+2026-01-08 23:36:03,449 - dq_comparison - INFO -   • Common hashes: 0
+2026-01-08 23:36:03,450 - dq_comparison - INFO -   • Common rows (counting duplicates): 0
+2026-01-08 23:36:03,450 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 15
+2026-01-08 23:36:03,451 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 15
+2026-01-08 23:36:03,451 - dq_comparison - INFO - Found 15 rows missing in target
+2026-01-08 23:36:03,522 - dq_comparison - INFO - Found 15 extra rows in target
+2026-01-08 23:36:03,590 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2026-01-08 23:36:03,591 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2026-01-08 23:36:03,797 - dq_comparison - INFO - Found 16 column value mismatches across all rows
+2026-01-08 23:36:03,797 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-08 23:36:03,798 - dq_comparison - INFO -   Common rows: 0
+2026-01-08 23:36:03,799 - dq_comparison - INFO -   Unique to source: 15
+2026-01-08 23:36:03,800 - dq_comparison - INFO -   Unique to target: 15
+2026-01-08 23:36:03,800 - dq_comparison - INFO -   Value mismatches: 16
+2026-01-08 23:36:03,801 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-08 23:36:03,814 - dq_comparison - INFO - Null values - Source: 7 (4.67%), Target: 6 (4.00%)
+2026-01-08 23:36:03,829 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2026-01-08 23:36:03,831 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2026-01-08 23:36:03,833 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2026-01-08 23:36:03,848 - dq_error_log - INFO - Retrieved 35 error logs for session CMP_20260108_233603
+2026-01-08 23:36:03,849 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-08 23:36:03,850 - dq_comparison - INFO -   Source rows: 15
+2026-01-08 23:36:03,850 - dq_comparison - INFO -   Common rows (matched): 0
+2026-01-08 23:36:03,851 - dq_comparison - INFO -   Calculation: (0 / 15) * 100 = 0.00%
+2026-01-08 23:36:03,851 - dq_comparison - INFO -   Explanation: 0 matched rows out of 15 total source rows
+2026-01-08 23:36:03,853 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-08 23:36:03,854 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-08 23:36:03,855 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:36:03,855 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260108_233603
+2026-01-08 23:36:03,855 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-08 23:36:03,876 - dq_audit - INFO - Inserted comparison record with ID: 554
+2026-01-08 23:36:03,877 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 554)
+2026-01-08 23:36:03,888 - dq_error_log - INFO - Retrieved 35 error logs for session CMP_20260108_233603
+2026-01-08 23:36:03,899 - dq_error_log - INFO - Retrieved summary: 35 total errors for session CMP_20260108_233603
+2026-01-08 23:36:03,901 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:36:03,913 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260108_233603
+2026-01-08 23:36:03,913 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-08 23:36:03,914 - dq_comparison - INFO -    Session ID: CMP_20260108_233603
+2026-01-08 23:36:03,915 - dq_comparison - INFO -    DQ Score (Simple %): 0.00%
+2026-01-08 23:36:03,916 - dq_comparison - INFO -    Source rows: 15
+2026-01-08 23:36:03,916 - dq_comparison - INFO -    Matched rows: 0
+2026-01-08 23:36:03,916 - dq_comparison - INFO -    Calculation: (0 / 15) * 100
+2026-01-08 23:36:03,917 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-08 23:36:03,932 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260108_233603
+2026-01-08 23:36:03,943 - dq_error_log - INFO - Retrieved 35 error logs for session CMP_20260108_233603
+2026-01-08 23:36:03,957 - dq_error_log - INFO - Retrieved summary: 35 total errors for session CMP_20260108_233603
+2026-01-08 23:36:03,958 - __main__ - INFO - Comparison completed for session CMP_20260108_233602
+2026-01-08 23:36:03,963 - __main__ - INFO - Completed with status 200 in 36.131s

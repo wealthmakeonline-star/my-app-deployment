@@ -1,0 +1,74 @@
+2025-12-23 15:50:29,812 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-23 15:50:29,814 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251223_155029.log
+2025-12-23 15:50:29,990 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-23 15:50:29,990 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-23 15:50:29,994 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 15:50:29,994 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 15:50:29,995 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-23 15:50:29,999 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-23 15:50:30,001 - __main__ - INFO - 📊 Modules available: True
+2025-12-23 15:50:30,002 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-23 15:50:30,002 - __main__ - INFO - 📋 Available endpoints:
+2025-12-23 15:50:30,003 - __main__ - INFO -   GET  /              - API status
+2025-12-23 15:50:30,004 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-23 15:50:30,004 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-23 15:50:30,006 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-23 15:50:30,006 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-23 15:50:30,007 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-23 15:50:30,008 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-23 15:50:30,009 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-23 15:50:30,010 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-23 15:51:03,005 - __main__ - INFO - GET /api/health - Request started
+2025-12-23 15:51:03,006 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-23 15:51:05,205 - __main__ - INFO - POST /api/advanced - Request started
+2025-12-23 15:51:05,206 - __main__ - INFO - Advanced checks request received
+2025-12-23 15:51:05,208 - __main__ - INFO - DEBUG: Received columns_input: ['phone', 'Salary'] (type: <class 'list'>)
+2025-12-23 15:51:05,209 - __main__ - INFO - DEBUG: Using as-is: ['phone', 'Salary']
+2025-12-23 15:51:05,211 - __main__ - INFO - Starting advanced checks for session ADV_20251223_155105_60a11642
+2025-12-23 15:51:05,212 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2025-12-23 15:51:05,213 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 15:51:05,214 - dq_unified - INFO - User selected source type: 1
+2025-12-23 15:51:05,215 - dq_unified - INFO - Loading data from CSV
+2025-12-23 15:51:05,216 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 15:51:05,219 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 15:51:05,220 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 15:51:05,233 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 15:51:05,240 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 15:51:05,243 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 97.9MB total, 0.0MB for dataframe
+2025-12-23 15:51:05,244 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 15:51:05,362 - dq_error_log - INFO - Database connection successful
+2025-12-23 15:51:05,363 - dq_advanced - INFO - Session ID: ADV_20251223_155105
+2025-12-23 15:51:05,366 - dq_advanced - INFO - CHECKING WHITESPACE VALIDATION
+2025-12-23 15:51:05,367 - dq_advanced - INFO - Checking 6 text columns for whitespace issues...
+2025-12-23 15:51:05,368 - dq_advanced - WARNING - CustomerName: 4 whitespace issues
+2025-12-23 15:51:05,369 - dq_advanced - WARNING - Email: 1 whitespace issues
+2025-12-23 15:51:05,371 - dq_advanced - INFO - JoinDate: No whitespace issues
+2025-12-23 15:51:05,373 - dq_advanced - INFO - PostalCode: No whitespace issues
+2025-12-23 15:51:05,374 - dq_advanced - INFO - City: No whitespace issues
+2025-12-23 15:51:05,375 - dq_advanced - INFO - State: No whitespace issues
+2025-12-23 15:51:05,395 - dq_error_log - INFO - Batch logged 5 errors for session ADV_20251223_155105
+2025-12-23 15:51:05,397 - dq_advanced - INFO - Total whitespace errors: 5
+2025-12-23 15:51:05,400 - dq_advanced - INFO - CHECKING ZERO-PADDING VALIDATION
+2025-12-23 15:51:05,408 - dq_advanced - INFO - Checking 2 columns for zero-padding issues...
+2025-12-23 15:51:05,409 - dq_advanced - WARNING - Column '['phone'' not found in dataset
+2025-12-23 15:51:05,410 - dq_advanced - WARNING - Column ''Salary']' not found in dataset
+2025-12-23 15:51:05,411 - dq_advanced - INFO - No zero-padding issues found in any columns
+2025-12-23 15:51:05,413 - dq_advanced - INFO - CHECKING NUMERIC CONSISTENCY
+2025-12-23 15:51:05,424 - dq_advanced - INFO - Checking 2 columns for numeric consistency...
+2025-12-23 15:51:05,425 - dq_advanced - WARNING - Column '['phone'' not found in dataset
+2025-12-23 15:51:05,428 - dq_advanced - WARNING - Column ''Salary']' not found in dataset
+2025-12-23 15:51:05,429 - dq_advanced - INFO - Numeric fields are consistent
+2025-12-23 15:51:05,430 - dq_advanced - INFO - GENERATING ADVANCED DATA QUALITY REPORT
+2025-12-23 15:51:05,431 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 15:51:05,433 - dq_audit - INFO - Starting database insertion for advanced...
+2025-12-23 15:51:05,460 - dq_audit - INFO - Inserted advanced record with ID: 251
+2025-12-23 15:51:05,461 - dq_advanced - INFO - Audit record logged for UI/API mode: ADV_20251223_155105
+2025-12-23 15:51:05,479 - dq_error_log - INFO - Retrieved 5 error logs for session ADV_20251223_155105
+2025-12-23 15:51:05,496 - dq_error_log - INFO - Retrieved summary: 5 total errors for session ADV_20251223_155105
+2025-12-23 15:51:05,497 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 15:51:05,514 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20251223_155105
+2025-12-23 15:51:05,530 - dq_error_log - INFO - Retrieved 5 error logs for session ADV_20251223_155105
+2025-12-23 15:51:05,550 - dq_error_log - INFO - Retrieved summary: 5 total errors for session ADV_20251223_155105
+2025-12-23 15:51:05,567 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20251223_155105
+2025-12-23 15:51:05,570 - __main__ - INFO - Advanced checks completed for session ADV_20251223_155105
+2025-12-23 15:51:05,571 - __main__ - INFO - Completed with status 200 in 0.367s

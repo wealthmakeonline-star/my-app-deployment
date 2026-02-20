@@ -1,0 +1,93 @@
+2025-11-27 14:33:55,299 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-11-27 14:33:55,300 - __main__ - INFO - User session started at: 2025-11-27 14:33:55.300628
+2025-11-27 14:33:55,300 - __main__ - INFO - Displaying main menu options to user
+2025-11-27 14:33:57,849 - __main__ - INFO - User selected option: 4
+2025-11-27 14:33:57,849 - __main__ - INFO - Starting Business Rules Engine module
+2025-11-27 14:33:57,850 - dq_rules - INFO - 🚀 STARTING BUSINESS RULES VALIDATION
+2025-11-27 14:33:57,850 - dq_rules - INFO - 📈 LOADING DATA FOR BUSINESS RULES
+2025-11-27 14:33:57,852 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-11-27 14:34:03,150 - dq_unified - INFO - User selected source type: 3
+2025-11-27 14:34:03,151 - dq_unified - INFO - 🗄️ GETTING DATABASE CONFIGURATION
+2025-11-27 14:34:05,689 - dq_unified - INFO - User selected database type: 2
+2025-11-27 14:34:09,905 - dq_unified - INFO - Database configuration collected: mysql, Table: customers
+2025-11-27 14:34:09,906 - dq_unified - INFO - 📥 LOADING DATA FROM DATABASE
+2025-11-27 14:34:09,906 - dq_unified - INFO - Connecting to mysql database
+2025-11-27 14:34:11,828 - dq_unified - INFO - ✅ Database loaded: 15 rows, 11 columns from customers
+2025-11-27 14:34:11,829 - dq_rules - INFO - 🎯 DEFINING CUSTOM BUSINESS RULES
+2025-11-27 14:34:16,482 - dq_rules - INFO - User selected rule type: 6
+2025-11-27 14:34:16,483 - dq_rules - INFO - 🚀 CREATING COMPREHENSIVE RULE SET
+2025-11-27 14:34:22,434 - dq_rules - INFO - Created range rule for Salary: 45000.00 to 70000.00
+2025-11-27 14:34:22,435 - dq_rules - INFO - Email column is not string type, skipping pattern rule
+2025-11-27 14:34:22,439 - dq_rules - INFO - Created phone pattern rule
+2025-11-27 14:34:22,443 - dq_rules - INFO - Created comprehensive rule set with 4 rules
+2025-11-27 14:34:22,444 - dq_rules - INFO - Defined 4 business rules
+2025-11-27 14:34:22,444 - dq_rules - INFO - 🔍 EXECUTING 4 BUSINESS RULES
+2025-11-27 14:34:22,446 - dq_rules - INFO - Executing rule: Salary should be between 45000.00 and 70000.00
+2025-11-27 14:34:22,448 - dq_rules - INFO - Executing range rule: Salary should be between 45000.00 and 70000.00
+2025-11-27 14:34:22,448 - dq_rules - ERROR - Error executing range rule 'Salary should be between 45000.00 and 70000.00': 'min'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 800, in execute_range_rule
+    min_val = float(rule['min'])
+                    ~~~~^^^^^^^
+KeyError: 'min'
+2025-11-27 14:34:22,457 - dq_rules - INFO - Rule 'Salary should be between 45000.00 and 70000.00' completed with status: ERROR
+2025-11-27 14:34:22,458 - dq_rules - INFO - Executing rule: Phone should be in valid format
+2025-11-27 14:34:22,460 - dq_rules - INFO - Executing pattern rule: Phone should be in valid format
+2025-11-27 14:34:22,462 - dq_rules - INFO - Pattern rule 'Phone should be in valid format': 0 pattern violations found
+2025-11-27 14:34:22,475 - dq_rules - INFO - Rule 'Phone should be in valid format' completed with status: PASS
+2025-11-27 14:34:22,475 - dq_rules - INFO - Executing rule: CustomerID should be above median value (8.00)
+2025-11-27 14:34:22,477 - dq_rules - INFO - Executing threshold rule: CustomerID should be above median value (8.00)
+2025-11-27 14:34:22,478 - dq_rules - ERROR - Error executing threshold rule 'CustomerID should be above median value (8.00)': 'operator'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 738, in execute_threshold_rule
+    operator = rule['operator']
+               ~~~~^^^^^^^^^^^^
+KeyError: 'operator'
+2025-11-27 14:34:22,480 - dq_rules - INFO - Rule 'CustomerID should be above median value (8.00)' completed with status: ERROR
+2025-11-27 14:34:22,481 - dq_rules - INFO - Executing rule: Salary should be above median value (53000.00)
+2025-11-27 14:34:22,482 - dq_rules - INFO - Executing threshold rule: Salary should be above median value (53000.00)
+2025-11-27 14:34:22,485 - dq_rules - ERROR - Error executing threshold rule 'Salary should be above median value (53000.00)': 'operator'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_rules.py", line 738, in execute_threshold_rule
+    operator = rule['operator']
+               ~~~~^^^^^^^^^^^^
+KeyError: 'operator'
+2025-11-27 14:34:22,488 - dq_rules - INFO - Rule 'Salary should be above median value (53000.00)' completed with status: ERROR
+2025-11-27 14:34:22,488 - dq_rules - INFO - 📊 GENERATING BUSINESS RULES VALIDATION REPORT
+2025-11-27 14:34:22,492 - dq_rules - INFO - Report for: Database: mysql - Table: customers, Records: 15, Columns: 11
+2025-11-27 14:34:22,493 - dq_rules - INFO - Rules compliance score: 25.0% (Passed: 1, Failed: 0, Errors: 3)
+2025-11-27 14:34:22,505 - dq_rules - ERROR - Rule 'Salary should be between 45000.00 and 70000.00' error: 'min'
+2025-11-27 14:34:22,507 - dq_rules - ERROR - Rule 'CustomerID should be above median value (8.00)' error: 'operator'
+2025-11-27 14:34:22,509 - dq_rules - ERROR - Rule 'Salary should be above median value (53000.00)' error: 'operator'
+2025-11-27 14:34:22,554 - dq_audit - INFO - ✅ Audit record stored: rules check
+2025-11-27 14:34:33,562 - dq_rules - INFO - 🔤 RUNNING SEPARATE TEXT COMPARISON
+2025-11-27 14:34:51,733 - dq_rules - INFO - ✅ Business rules validation completed successfully
+2025-11-27 14:34:51,739 - __main__ - INFO - Business Rules Engine completed successfully
+2025-11-27 14:34:51,740 - __main__ - INFO - Displaying main menu options to user
+2025-11-27 14:48:26,903 - __main__ - INFO - User selected option: 4
+2025-11-27 14:48:26,903 - __main__ - INFO - Starting Business Rules Engine module
+2025-11-27 14:48:26,904 - dq_rules - INFO - 🚀 STARTING BUSINESS RULES VALIDATION
+2025-11-27 14:48:26,905 - dq_rules - INFO - 📈 LOADING DATA FOR BUSINESS RULES
+2025-11-27 14:48:26,907 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-11-27 15:04:39,117 - dq_unified - INFO - User selected source type: 3
+2025-11-27 15:04:39,118 - dq_unified - INFO - 🗄️ GETTING DATABASE CONFIGURATION
+2025-11-27 15:04:40,898 - dq_unified - INFO - User selected database type: 1
+2025-11-27 15:04:44,564 - dq_unified - INFO - Database configuration collected: postgresql, Table: customers
+2025-11-27 15:04:44,564 - dq_unified - INFO - 📥 LOADING DATA FROM DATABASE
+2025-11-27 15:04:44,564 - dq_unified - INFO - Connecting to postgresql database
+2025-11-27 15:04:44,834 - dq_unified - ERROR - Database connection failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 154, in load_database_data
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-11-27 15:04:44,847 - dq_rules - INFO - ✅ Business rules validation completed successfully
+2025-11-27 15:04:44,848 - __main__ - INFO - Business Rules Engine completed successfully
+2025-11-27 15:04:44,848 - __main__ - INFO - Displaying main menu options to user
+2025-11-27 15:05:30,830 - __main__ - INFO - User selected option: 5
+2025-11-27 15:05:30,831 - __main__ - INFO - User session ended. Duration: 0:31:35.530743
+2025-11-27 15:05:30,832 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

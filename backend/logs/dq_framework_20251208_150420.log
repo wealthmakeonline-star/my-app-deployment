@@ -1,0 +1,134 @@
+2025-12-08 15:04:20,561 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-08 15:04:21,075 - __main__ - INFO - User session started at: 2025-12-08 15:04:21.075346
+2025-12-08 15:04:21,075 - __main__ - INFO - Displaying main menu options to user
+2025-12-08 15:04:25,410 - __main__ - INFO - User selected option: 4
+2025-12-08 15:04:25,412 - __main__ - INFO - Starting Business Rules Engine module
+2025-12-08 15:04:25,419 - dq_rules - INFO - STARTING BUSINESS RULES VALIDATION
+2025-12-08 15:04:25,419 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-08 15:04:25,421 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-08 15:04:28,852 - dq_unified - INFO - User selected source type: 2
+2025-12-08 15:04:28,853 - dq_unified - INFO - Getting Excel file path from user
+2025-12-08 15:04:54,991 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx (0.0MB)
+2025-12-08 15:04:54,992 - dq_unified - INFO - LOADING DATA FROM EXCEL
+2025-12-08 15:04:54,998 - dq_unified - INFO - Loading large Excel: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.xlsx
+2025-12-08 15:04:56,981 - dq_unified - INFO - Loading Excel file...
+2025-12-08 15:04:57,008 - dq_unified - INFO - Loaded 15 rows from Excel
+2025-12-08 15:04:57,015 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-08 15:04:57,016 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 98.4MB total, 0.0MB for dataframe
+2025-12-08 15:04:57,018 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-08 15:04:57,273 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-08 15:04:57,274 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-08 15:05:09,486 - dq_rules - INFO - User selected rule type: 6
+2025-12-08 15:05:09,488 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-08 15:05:09,488 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-08 15:05:09,492 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-08 15:05:19,497 - dq_rules - INFO - Creating threshold rule for: Salary
+2025-12-08 15:05:19,502 - dq_rules - INFO - Current stats - Min: 45000.00, Max: 70000.00, Median: 53000.00
+2025-12-08 15:05:36,248 - dq_rules - INFO - Created: Salary should be above median value (53000.00)
+2025-12-08 15:05:36,249 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-08 15:05:36,251 - dq_rules - INFO - Available string columns: ['CustomerName', 'Email', 'Department', 'PostalCode', 'City', 'State']
+2025-12-08 15:05:46,301 - dq_rules - INFO - Created pattern rule for Email
+2025-12-08 15:05:46,303 - dq_rules - INFO - RANGE RULES SETUP
+2025-12-08 15:05:46,303 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-08 15:06:07,554 - dq_rules - INFO - Creating range rule for: Salary
+2025-12-08 15:06:07,555 - dq_rules - INFO - Current range - Min: 45000.00, Max: 70000.00
+2025-12-08 15:06:10,941 - dq_rules - INFO - Created: Salary should be between 45000.00 and 70000.00
+2025-12-08 15:06:10,942 - dq_rules - INFO - NULL CHECK RULES SETUP
+2025-12-08 15:06:15,754 - dq_rules - INFO - Checking for columns with null values...
+2025-12-08 15:06:15,756 - dq_rules - INFO - Found 1 null values in 'CustomerName'
+2025-12-08 15:06:15,756 - dq_rules - INFO - Created null check rule for CustomerName
+2025-12-08 15:06:15,760 - dq_rules - INFO - Found 1 null values in 'Email'
+2025-12-08 15:06:15,760 - dq_rules - INFO - Created null check rule for Email
+2025-12-08 15:06:15,762 - dq_rules - INFO - Found 2 null values in 'Salary'
+2025-12-08 15:06:15,762 - dq_rules - INFO - Created null check rule for Salary
+2025-12-08 15:06:15,764 - dq_rules - INFO - Found 1 null values in 'Department'
+2025-12-08 15:06:15,764 - dq_rules - INFO - Created null check rule for Department
+2025-12-08 15:06:15,766 - dq_rules - INFO - Found 1 null values in 'State'
+2025-12-08 15:06:15,766 - dq_rules - INFO - Created null check rule for State
+2025-12-08 15:06:15,767 - dq_rules - INFO - KPI THRESHOLD RULES SETUP
+2025-12-08 15:06:19,403 - dq_rules - INFO - Current row count: 15
+2025-12-08 15:06:30,388 - dq_rules - INFO - Created KPI rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-08 15:06:30,389 - dq_rules - INFO - Created comprehensive rule set with 9 rules
+2025-12-08 15:06:30,391 - dq_rules - INFO - Defined 9 business rules
+2025-12-08 15:06:30,394 - dq_rules - INFO - EXECUTING 9 BUSINESS RULES
+2025-12-08 15:06:30,395 - dq_rules - INFO - Executing rule: Salary should be above median value (53000.00)
+2025-12-08 15:06:30,396 - dq_rules - INFO - Executing threshold rule: Salary should be above median value (53000.00)
+2025-12-08 15:06:30,397 - dq_rules - INFO - Threshold rule 'Salary should be above median value (53000.00)': 6 violations found
+2025-12-08 15:06:30,516 - dq_rules - WARNING - 6 violations found
+2025-12-08 15:06:30,523 - dq_rules - INFO - Rule 'Salary should be above median value (53000.00)' completed with status: FAIL
+2025-12-08 15:06:30,523 - dq_rules - INFO - Executing rule: Email should be in valid email format
+2025-12-08 15:06:30,524 - dq_rules - INFO - Executing pattern rule: Email should be in valid email format
+2025-12-08 15:06:30,526 - dq_rules - INFO - Pattern rule 'Email should be in valid email format': 2 pattern violations found
+2025-12-08 15:06:30,567 - dq_rules - WARNING - 2 pattern violations found
+2025-12-08 15:06:30,569 - dq_rules - INFO - Rule 'Email should be in valid email format' completed with status: FAIL
+2025-12-08 15:06:30,570 - dq_rules - INFO - Executing rule: Salary should be between 45000.00 and 70000.00
+2025-12-08 15:06:30,573 - dq_rules - INFO - Executing range rule: Salary should be between 45000.00 and 70000.00
+2025-12-08 15:06:30,575 - dq_rules - INFO - Range rule 'Salary should be between 45000.00 and 70000.00': 0 range violations found
+2025-12-08 15:06:30,576 - dq_rules - INFO - No range violations found
+2025-12-08 15:06:30,578 - dq_rules - INFO - Rule 'Salary should be between 45000.00 and 70000.00' completed with status: PASS
+2025-12-08 15:06:30,578 - dq_rules - INFO - Executing rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,578 - dq_rules - INFO - Executing threshold rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,580 - dq_rules - INFO - Threshold rule 'CustomerName should have no null values (currently 1 nulls)': 0 violations found
+2025-12-08 15:06:30,582 - dq_rules - INFO - No violations found
+2025-12-08 15:06:30,584 - dq_rules - INFO - Rule 'CustomerName should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-08 15:06:30,585 - dq_rules - INFO - Executing rule: Email should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,585 - dq_rules - INFO - Executing threshold rule: Email should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,589 - dq_rules - INFO - Threshold rule 'Email should have no null values (currently 1 nulls)': 0 violations found
+2025-12-08 15:06:30,591 - dq_rules - INFO - No violations found
+2025-12-08 15:06:30,591 - dq_rules - INFO - Rule 'Email should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-08 15:06:30,591 - dq_rules - INFO - Executing rule: Salary should have no null values (currently 2 nulls)
+2025-12-08 15:06:30,593 - dq_rules - INFO - Executing threshold rule: Salary should have no null values (currently 2 nulls)
+2025-12-08 15:06:30,594 - dq_rules - INFO - Threshold rule 'Salary should have no null values (currently 2 nulls)': 0 violations found
+2025-12-08 15:06:30,595 - dq_rules - INFO - No violations found
+2025-12-08 15:06:30,596 - dq_rules - INFO - Rule 'Salary should have no null values (currently 2 nulls)' completed with status: PASS
+2025-12-08 15:06:30,600 - dq_rules - INFO - Executing rule: Department should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,601 - dq_rules - INFO - Executing threshold rule: Department should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,604 - dq_rules - INFO - Threshold rule 'Department should have no null values (currently 1 nulls)': 0 violations found
+2025-12-08 15:06:30,604 - dq_rules - INFO - No violations found
+2025-12-08 15:06:30,604 - dq_rules - INFO - Rule 'Department should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-08 15:06:30,606 - dq_rules - INFO - Executing rule: State should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,606 - dq_rules - INFO - Executing threshold rule: State should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,608 - dq_rules - INFO - Threshold rule 'State should have no null values (currently 1 nulls)': 0 violations found
+2025-12-08 15:06:30,609 - dq_rules - INFO - No violations found
+2025-12-08 15:06:30,609 - dq_rules - INFO - Rule 'State should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-08 15:06:30,610 - dq_rules - INFO - Executing rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-08 15:06:30,613 - dq_rules - INFO - Executing KPI threshold rule: KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-08 15:06:30,621 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-08 15:06:30,640 - dq_rules - INFO - KPI within acceptable limits. Current value: 15.00, Threshold: 16.50
+2025-12-08 15:06:30,640 - dq_rules - INFO - Rule 'KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%' completed with status: PASS
+2025-12-08 15:06:30,642 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 8
+2025-12-08 15:06:30,642 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-08 15:06:30,646 - dq_rules - INFO - Report for: EXCEL: sample_data.xlsx, Records: 15, Columns: 10
+2025-12-08 15:06:30,647 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-08 15:06:30,668 - dq_rules - INFO - Rules compliance score: 77.8% (Passed: 7, Failed: 2, Errors: 0)
+2025-12-08 15:06:30,669 - dq_rules - INFO - RULES SUMMARY: Total Rules: 9, Passed: 7, Failed: 2, Errors: 0, Total Violations: 8
+2025-12-08 15:06:30,669 - dq_rules - INFO - DETAILED RESULTS:
+2025-12-08 15:06:30,674 - dq_rules - INFO - FAIL Salary should be above median value (53000.00)
+2025-12-08 15:06:30,676 - dq_rules - INFO - Violations: 6
+2025-12-08 15:06:30,680 - dq_rules - INFO - FAIL Email should be in valid email format
+2025-12-08 15:06:30,681 - dq_rules - INFO - Violations: 2
+2025-12-08 15:06:30,681 - dq_rules - INFO - PASS Salary should be between 45000.00 and 70000.00
+2025-12-08 15:06:30,682 - dq_rules - INFO - PASS CustomerName should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,682 - dq_rules - INFO - PASS Email should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,683 - dq_rules - INFO - PASS Salary should have no null values (currently 2 nulls)
+2025-12-08 15:06:30,683 - dq_rules - INFO - PASS Department should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,684 - dq_rules - INFO - PASS State should have no null values (currently 1 nulls)
+2025-12-08 15:06:30,684 - dq_rules - INFO - PASS KPI: Total row count | Percentage threshold: 10.0% | Max growth: 30.0%
+2025-12-08 15:06:30,685 - dq_rules - INFO - Current Value: 15.00
+2025-12-08 15:06:30,686 - dq_rules - INFO - Threshold: 16.50
+2025-12-08 15:06:30,701 - dq_rules - INFO - RECOMMENDATIONS:
+2025-12-08 15:06:30,701 - dq_rules - INFO - Review and fix business rule violations
+2025-12-08 15:06:30,702 - dq_rules - INFO - Adjust KPI thresholds if needed
+2025-12-08 15:06:30,707 - dq_rules - INFO - Monitor growth rates regularly
+2025-12-08 15:06:30,708 - dq_rules - INFO - ERROR LOGGING: Session ID: RULES_20251208_150630, Total errors logged: 8
+2025-12-08 15:06:30,708 - dq_rules - INFO - Check dq_error_logs table for details
+2025-12-08 15:06:30,709 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-08 15:06:30,709 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-08 15:06:30,727 - dq_audit - INFO - Inserted rules record
+2025-12-08 15:06:30,729 - dq_audit - INFO - rules audit record successfully stored in database
+2025-12-08 15:08:46,875 - dq_rules - INFO - Business rules validation completed successfully
+2025-12-08 15:08:46,877 - __main__ - INFO - Business Rules Engine completed successfully
+2025-12-08 15:08:46,879 - __main__ - INFO - Displaying main menu options to user
+2025-12-08 15:08:51,541 - __main__ - INFO - User selected option: 6
+2025-12-08 15:08:51,542 - __main__ - INFO - User session ended. Duration: 0:04:30.467024
+2025-12-08 15:08:51,542 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

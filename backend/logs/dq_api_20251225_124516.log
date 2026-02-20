@@ -1,0 +1,73 @@
+2025-12-25 12:45:16,693 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 12:45:16,695 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_124516.log
+2025-12-25 12:45:16,921 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 12:45:16,922 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 12:45:16,925 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 12:45:16,925 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 12:45:16,925 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 12:45:16,936 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 12:45:16,936 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 12:45:16,937 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 12:45:16,938 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 12:45:16,939 - __main__ - INFO -   GET  /              - API status
+2025-12-25 12:45:16,940 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 12:45:16,942 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 12:45:16,942 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 12:45:16,943 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 12:45:16,944 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 12:45:16,946 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 12:45:16,948 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 12:45:16,949 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 12:45:26,367 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 12:45:26,370 - __main__ - INFO - Completed with status 200 in 0.003s
+2025-12-25 12:45:28,430 - __main__ - INFO - GET /api/debug-db - Request started
+2025-12-25 12:45:28,612 - dq_error_log - INFO - Database connection successful
+2025-12-25 12:45:28,646 - __main__ - INFO - Database debug: connected=True, errors=38517, audits=283
+2025-12-25 12:45:28,647 - __main__ - INFO - Completed with status 200 in 0.217s
+2025-12-25 12:45:30,695 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 12:45:30,697 - dq_unified - INFO - Getting database config from config file
+2025-12-25 12:45:30,698 - dq_unified - INFO - Using MYSQL configuration from config file
+2025-12-25 12:45:48,089 - dq_unified - INFO - Database configuration from config file: mysql, Table: customers
+2025-12-25 12:45:48,104 - __main__ - INFO - Database connection test: MYSQL connection from config file successful
+2025-12-25 12:45:48,106 - __main__ - INFO - Completed with status 200 in 17.410s
+2025-12-25 12:45:50,177 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 12:45:50,178 - dq_unified - INFO - Getting database config from config file
+2025-12-25 12:45:50,179 - dq_unified - INFO - Using MYSQL configuration from config file
+2025-12-25 12:46:00,705 - dq_unified - INFO - Database configuration from config file: mysql, Table: customers
+2025-12-25 12:46:00,719 - __main__ - INFO - Database connection test: MYSQL connection from config file successful
+2025-12-25 12:46:00,721 - __main__ - INFO - Completed with status 200 in 10.544s
+2025-12-25 12:46:02,787 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 12:46:02,804 - __main__ - INFO - Database connection test: MYSQL connection successful
+2025-12-25 12:46:02,806 - __main__ - INFO - Completed with status 200 in 0.019s
+2025-12-25 12:46:04,864 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 12:46:04,865 - dq_unified - INFO - Getting database config from config file
+2025-12-25 12:46:04,866 - dq_unified - INFO - Using POSTGRESQL configuration from config file
+2025-12-25 12:46:36,923 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 12:46:36,925 - __main__ - INFO - Single source analysis request received
+2025-12-25 12:46:36,928 - __main__ - INFO - Starting analysis for session SINGLE_20251225_124636_b5d9be4a
+2025-12-25 12:46:36,931 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 12:46:36,932 - dq_unified - INFO - User selected source type: 1
+2025-12-25 12:46:36,933 - input_handler - WARNING - Required field 'file_path' not provided in UI mode, using empty string
+2025-12-25 12:46:36,936 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:46:36,936 - dq_unified - INFO - Loading data from CSV
+2025-12-25 12:46:36,938 - dq_unified - INFO - Loading large CSV: 
+2025-12-25 12:46:36,939 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:46:36,946 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 12:46:36,961 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 12:46:36,965 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 12:46:36,966 - __main__ - INFO - Completed with status 200 in 0.043s
+2025-12-25 12:51:13,707 - __main__ - ERROR - Error in test-db-connection: 
+2025-12-25 12:51:13,708 - __main__ - INFO - Completed with status 500 in 308.843s

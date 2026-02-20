@@ -1,0 +1,83 @@
+2025-12-18 12:49:49,831 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-18 12:49:50,232 - root - WARNING - run_rules_analysis_ui not available yet
+2025-12-18 12:49:50,240 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 12:49:50,240 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 12:49:50,254 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-18 12:49:50,254 - root - INFO - DQ modules available: True
+2025-12-18 12:49:50,254 - root - INFO - Config file mode: False
+2025-12-18 12:49:50,254 - root - INFO - Database config: localhost/dq_checks
+2025-12-18 12:49:51,306 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-18 12:49:51,306 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 12:49:59,395 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 12:49:59] "GET /api/health HTTP/1.1" 200 -
+2025-12-18 12:50:01,779 - root - INFO - Advanced checks request received: dict_keys(['source_type', 'file_path', 'analysis_type', 'check_whitespace', 'check_zero_padding', 'check_numeric', 'columns_to_check'])
+2025-12-18 12:50:01,779 - root - INFO - Starting advanced checks for session ADV_20251218_125001_0e9ae826
+2025-12-18 12:50:01,781 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2025-12-18 12:50:01,781 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-18 12:50:01,781 - dq_unified - INFO - User selected source type: 1
+2025-12-18 12:50:01,781 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-18 12:50:01,782 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-18 12:50:01,785 - dq_unified - INFO - CSV file has 15 rows
+2025-12-18 12:50:01,786 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-18 12:50:01,800 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-18 12:50:01,806 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-18 12:50:01,806 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 98.5MB total, 0.0MB for dataframe
+2025-12-18 12:50:01,810 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 12:50:01,968 - dq_error_log - INFO - Database connection successful
+2025-12-18 12:50:01,969 - dq_advanced - INFO - Session ID: ADV_20251218_125001
+2025-12-18 12:50:01,976 - dq_advanced - INFO - CHECKING WHITESPACE VALIDATION
+2025-12-18 12:50:01,976 - dq_advanced - INFO - Checking 6 text columns for whitespace issues...
+2025-12-18 12:50:01,976 - dq_advanced - WARNING - CustomerName: 4 whitespace issues
+2025-12-18 12:50:01,978 - dq_advanced - WARNING - Email: 1 whitespace issues
+2025-12-18 12:50:01,983 - dq_advanced - INFO - JoinDate: No whitespace issues
+2025-12-18 12:50:01,984 - dq_advanced - INFO - PostalCode: No whitespace issues
+2025-12-18 12:50:01,985 - dq_advanced - INFO - City: No whitespace issues
+2025-12-18 12:50:01,985 - dq_advanced - INFO - State: No whitespace issues
+2025-12-18 12:50:02,010 - dq_error_log - INFO - Batch logged 5 errors for session ADV_20251218_125001
+2025-12-18 12:50:02,010 - dq_advanced - INFO - Total whitespace errors: 5
+2025-12-18 12:50:02,016 - dq_advanced - INFO - CHECKING ZERO-PADDING VALIDATION
+2025-12-18 12:50:02,024 - dq_advanced - INFO - Checking ALL columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 12:50:02,027 - dq_advanced - INFO - Checking 10 columns for zero-padding issues...
+2025-12-18 12:50:02,030 - dq_advanced - INFO - CustomerName: No zero-padding issues
+2025-12-18 12:50:02,031 - dq_advanced - INFO - Email: No zero-padding issues
+2025-12-18 12:50:02,032 - dq_advanced - INFO - Phone: No zero-padding issues
+2025-12-18 12:50:02,032 - dq_advanced - INFO - Salary: No zero-padding issues
+2025-12-18 12:50:02,033 - dq_advanced - INFO - Department: No zero-padding issues
+2025-12-18 12:50:02,034 - dq_advanced - WARNING - JoinDate: 2 rows with unnecessary zero-padding
+2025-12-18 12:50:02,035 - dq_advanced - INFO - PostalCode: No zero-padding issues
+2025-12-18 12:50:02,036 - dq_advanced - INFO - City: No zero-padding issues
+2025-12-18 12:50:02,037 - dq_advanced - INFO - Country: No zero-padding issues
+2025-12-18 12:50:02,038 - dq_advanced - INFO - State: No zero-padding issues
+2025-12-18 12:50:02,059 - dq_error_log - INFO - Batch logged 2 errors for session ADV_20251218_125001
+2025-12-18 12:50:02,059 - dq_advanced - INFO - Total zero-padding errors: 2
+2025-12-18 12:50:02,065 - dq_advanced - INFO - CHECKING NUMERIC CONSISTENCY
+2025-12-18 12:50:02,079 - dq_advanced - INFO - Checking ALL columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-18 12:50:02,080 - dq_advanced - INFO - Checking 10 columns for numeric consistency...
+2025-12-18 12:50:02,082 - dq_advanced - INFO - Analyzing column: CustomerName
+2025-12-18 12:50:02,083 - dq_advanced - WARNING - CustomerName: 14 non-numeric values found
+2025-12-18 12:50:02,085 - dq_advanced - INFO - Analyzing column: Email
+2025-12-18 12:50:02,085 - dq_advanced - WARNING - Email: 14 non-numeric values found
+2025-12-18 12:50:02,087 - dq_advanced - INFO - Analyzing column: Phone
+2025-12-18 12:50:02,092 - dq_advanced - INFO - Statistics: Min=1112222.00, Max=9998887777.00, Avg=4896757125.67
+2025-12-18 12:50:14,996 - dq_advanced - INFO - Analyzing column: Salary
+2025-12-18 12:50:14,999 - dq_advanced - INFO - Statistics: Min=45000.00, Max=70000.00, Avg=55307.69
+2025-12-18 12:50:22,462 - dq_advanced - INFO - Analyzing column: Department
+2025-12-18 12:50:22,465 - dq_advanced - WARNING - Department: 14 non-numeric values found
+2025-12-18 12:50:22,468 - dq_advanced - INFO - Analyzing column: JoinDate
+2025-12-18 12:50:22,468 - dq_advanced - WARNING - JoinDate: 15 non-numeric values found
+2025-12-18 12:50:22,476 - dq_advanced - INFO - Analyzing column: PostalCode
+2025-12-18 12:50:22,477 - dq_advanced - WARNING - PostalCode: 1 non-numeric values found
+2025-12-18 12:50:22,480 - dq_advanced - INFO - Analyzing column: City
+2025-12-18 12:50:22,481 - dq_advanced - WARNING - City: 15 non-numeric values found
+2025-12-18 12:50:22,484 - dq_advanced - INFO - Analyzing column: Country
+2025-12-18 12:50:22,486 - dq_advanced - ERROR - Country: Error in analysis - Object with dtype category cannot perform the numpy op bitwise_and
+2025-12-18 12:50:22,493 - dq_advanced - INFO - Analyzing column: State
+2025-12-18 12:50:22,494 - dq_advanced - WARNING - State: 14 non-numeric values found
+2025-12-18 12:50:22,526 - dq_error_log - INFO - Batch logged 87 errors for session ADV_20251218_125001
+2025-12-18 12:50:22,527 - dq_advanced - INFO - Total numeric consistency errors: 87
+2025-12-18 12:50:22,527 - dq_advanced - INFO - GENERATING ADVANCED DATA QUALITY REPORT
+2025-12-18 12:50:22,571 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 12:50:22,642 - root - INFO - Completed advanced checks for session ADV_20251218_125001_0e9ae826
+2025-12-18 12:50:22,643 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 12:50:22] "POST /api/advanced HTTP/1.1" 200 -

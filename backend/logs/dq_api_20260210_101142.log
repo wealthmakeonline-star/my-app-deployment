@@ -1,0 +1,77 @@
+2026-02-10 10:11:42,576 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-02-10 10:11:42,578 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260210_101142.log
+2026-02-10 10:11:42,735 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-02-10 10:11:42,736 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-02-10 10:11:42,740 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-10 10:11:42,741 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-10 10:11:42,742 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-02-10 10:11:42,786 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-02-10 10:11:42,788 - __main__ - INFO - 📊 Modules available: True
+2026-02-10 10:11:42,789 - __main__ - INFO - 🔧 Config file mode: False
+2026-02-10 10:11:42,792 - __main__ - INFO - 📋 Available endpoints:
+2026-02-10 10:11:42,795 - __main__ - INFO -   GET  /              - API status
+2026-02-10 10:11:42,796 - __main__ - INFO -   GET  /api/health    - Health check
+2026-02-10 10:11:42,798 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-02-10 10:11:42,799 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-02-10 10:11:42,800 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-02-10 10:11:42,802 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-02-10 10:11:42,803 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-02-10 10:11:42,804 - __main__ - INFO -   POST /api/upload    - File upload
+2026-02-10 10:11:42,805 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-02-10 10:11:42,805 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-02-10 10:11:42,807 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-02-10 10:11:42,808 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-02-10 10:13:17,822 - __main__ - INFO - POST /api/advanced - Request started
+2026-02-10 10:13:17,824 - __main__ - INFO - Advanced checks request received
+2026-02-10 10:13:17,827 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-02-10 10:13:17,829 - __main__ - INFO - DEBUG: Using as-is: []
+2026-02-10 10:13:17,830 - __main__ - INFO - Starting advanced checks for session ADV_20260210_101317_8a89e6a7
+2026-02-10 10:13:17,832 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-02-10 10:13:17,833 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-02-10 10:13:17,834 - dq_unified - INFO - Prompting user for data source type
+2026-02-10 10:13:17,836 - dq_unified - INFO - UI Data source_type: database
+2026-02-10 10:13:17,838 - dq_unified - INFO - Using source_type from UI data: database
+2026-02-10 10:13:17,839 - dq_unified - INFO - Loading data from DATABASE
+2026-02-10 10:13:17,841 - dq_unified - INFO - Loading large database table: customers
+2026-02-10 10:13:17,842 - dq_unified - INFO - Normalized DB config with schema: dq_checks
+2026-02-10 10:13:18,156 - dq_unified - INFO - MySQL table customers has 15 rows
+2026-02-10 10:13:18,157 - dq_unified - INFO - Loading 15 rows from MySQL...
+2026-02-10 10:13:19,813 - dq_unified - INFO - Loaded 15 rows from MySQL
+2026-02-10 10:13:19,837 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-02-10 10:13:19,840 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 123.7MB total, 0.0MB for dataframe
+2026-02-10 10:13:19,842 - dq_advanced - INFO - Data loaded: 15 rows, 10 columns from Database: mysql - Table: customers
+2026-02-10 10:13:19,843 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-10 10:13:19,867 - dq_error_log - INFO - Database connection successful
+2026-02-10 10:13:19,869 - dq_advanced - INFO - Session ID: ADV_20260210_101319_2684
+2026-02-10 10:13:19,871 - dq_advanced - INFO - Starting comprehensive validations on 15 rows, 10 columns
+2026-02-10 10:13:19,884 - dq_advanced - INFO - Memory: 1896MB available, 0.0004MB/row, Optimal batch: 50000 rows
+2026-02-10 10:13:19,885 - dq_advanced - INFO - Auto-calculated batch size: 50000 rows
+2026-02-10 10:13:19,887 - dq_advanced - INFO - Analyzing 10 columns...
+2026-02-10 10:13:19,895 - dq_advanced - INFO - Analyzed column 'CustomerName': text with 0 patterns
+2026-02-10 10:13:19,900 - dq_advanced - INFO - Analyzed column 'Email': text with 1 patterns
+2026-02-10 10:13:19,906 - dq_advanced - INFO - Analyzed column 'Phone': numeric with 3 patterns
+2026-02-10 10:13:19,911 - dq_advanced - INFO - Analyzed column 'Salary': numeric with 1 patterns
+2026-02-10 10:13:19,917 - dq_advanced - INFO - Analyzed column 'Department': text with 0 patterns
+2026-02-10 10:13:19,924 - dq_advanced - INFO - Analyzed column 'JoinDate': date with 1 patterns
+2026-02-10 10:13:19,931 - dq_advanced - INFO - Analyzed column 'PostalCode': numeric with 2 patterns
+2026-02-10 10:13:19,936 - dq_advanced - INFO - Analyzed column 'City': text with 0 patterns
+2026-02-10 10:13:19,943 - dq_advanced - INFO - Analyzed column 'Country': text with 1 patterns
+2026-02-10 10:13:19,948 - dq_advanced - INFO - Analyzed column 'State': text with 1 patterns
+2026-02-10 10:13:19,979 - dq_error_log - INFO - Starting batch logging for 6 errors, session: ADV_20260210_101319_2684
+2026-02-10 10:13:20,013 - dq_error_log - INFO - Batch 1: Successfully logged 6 errors
+2026-02-10 10:13:20,014 - dq_error_log - INFO - Progress: 6/6 errors processed
+2026-02-10 10:13:20,015 - dq_error_log - INFO - COMPLETE: Logged 6/6 errors for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,016 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-10 10:13:20,018 - dq_audit - INFO - Starting database insertion for advanced...
+2026-02-10 10:13:20,043 - dq_audit - INFO - Inserted advanced record with ID: 900
+2026-02-10 10:13:20,044 - dq_advanced - INFO - Audit record logged with ID: 900
+2026-02-10 10:13:20,062 - dq_error_log - INFO - Retrieved 6 error logs for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,088 - dq_error_log - INFO - Retrieved summary: 6 total errors for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,090 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-10 10:13:20,122 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,125 - dq_advanced - INFO - Advanced checks completed for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,148 - dq_error_log - INFO - Retrieved 6 error logs for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,173 - dq_error_log - INFO - Retrieved summary: 6 total errors for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,202 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,204 - __main__ - INFO - Advanced checks completed for session ADV_20260210_101319_2684
+2026-02-10 10:13:20,207 - __main__ - INFO - Completed with status 200 in 2.385s

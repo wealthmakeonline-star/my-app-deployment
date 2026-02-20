@@ -1,0 +1,120 @@
+2025-12-23 14:43:47,692 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-23 14:43:47,692 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251223_144347.log
+2025-12-23 14:43:48,448 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-23 14:43:48,450 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-23 14:43:48,453 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 14:43:48,454 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 14:43:48,455 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-23 14:43:48,463 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-23 14:43:48,464 - __main__ - INFO - 📊 Modules available: True
+2025-12-23 14:43:48,465 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-23 14:43:48,466 - __main__ - INFO - 📋 Available endpoints:
+2025-12-23 14:43:48,467 - __main__ - INFO -   GET  /              - API status
+2025-12-23 14:43:48,468 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-23 14:43:48,469 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-23 14:43:48,471 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-23 14:43:48,472 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-23 14:43:48,473 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-23 14:43:48,474 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-23 14:43:48,475 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-23 14:43:48,476 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-23 14:43:59,431 - __main__ - INFO - GET /api/health - Request started
+2025-12-23 14:43:59,433 - __main__ - INFO - Completed with status 200 in 0.002s
+2025-12-23 14:44:01,490 - __main__ - INFO - POST /api/compare - Request started
+2025-12-23 14:44:01,492 - __main__ - INFO - Comparison analysis request received
+2025-12-23 14:44:01,493 - __main__ - INFO - Starting comparison for session CMP_20251223_144401
+2025-12-23 14:44:01,495 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2025-12-23 14:44:01,496 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-23 14:44:01,497 - dq_comparison - INFO - 
+==================================================
+2025-12-23 14:44:01,498 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2025-12-23 14:44:01,499 - dq_comparison - INFO - ==================================================
+2025-12-23 14:44:01,518 - dq_comparison - INFO - SOURCE CSV loaded: 15 rows, 10 columns
+2025-12-23 14:44:01,520 - dq_comparison - INFO - 
+==================================================
+2025-12-23 14:44:01,521 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2025-12-23 14:44:01,522 - dq_comparison - INFO - ==================================================
+2025-12-23 14:44:01,523 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2025-12-23 14:44:01,524 - dq_comparison - INFO - ----------------------------------------
+2025-12-23 14:44:01,525 - dq_unified - INFO - Loading data from DATABASE
+2025-12-23 14:44:01,526 - dq_unified - INFO - Loading large database table: customers
+2025-12-23 14:44:01,944 - dq_unified - INFO - MySQL table has 15 rows
+2025-12-23 14:44:01,945 - dq_unified - INFO - Loading 15 rows from MySQL...
+2025-12-23 14:44:03,324 - dq_unified - INFO - Loaded 15 rows from MySQL
+2025-12-23 14:44:03,330 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 14:44:03,333 - dq_unified - INFO - Loaded 15 rows, 11 columns. Memory: 118.2MB total, 0.0MB for dataframe
+2025-12-23 14:44:03,334 - dq_comparison - INFO - TARGET database loaded: 15 rows, 11 columns
+2025-12-23 14:44:03,335 - dq_comparison - INFO - Source data loaded: 15 rows, 10 columns
+2025-12-23 14:44:03,336 - dq_comparison - INFO - Target data loaded: 15 rows, 11 columns
+2025-12-23 14:44:03,337 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-23 14:44:03,339 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-23 14:44:03,340 - dq_comparison - INFO - User column selection input: all
+2025-12-23 14:44:03,342 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-23 14:44:03,342 - dq_comparison - INFO - Selected 10 columns for comparison: ['Phone', 'Country', 'Department', 'PostalCode', 'JoinDate']...
+2025-12-23 14:44:03,343 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-23 14:44:03,344 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: Database: mysql - dq_checks.customers, Selected columns: 10
+2025-12-23 14:44:03,345 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-23 14:44:03,346 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 14:44:03,364 - dq_error_log - INFO - Database connection successful
+2025-12-23 14:44:03,365 - dq_comparison - INFO - Session ID: CMP_20251223_144403
+2025-12-23 14:44:03,366 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-23 14:44:03,367 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-23 14:44:03,368 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-23 14:44:03,369 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-23 14:44:03,371 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-23 14:44:03,372 - dq_comparison - INFO - Source columns: ['Phone', 'Country', 'Department', 'PostalCode', 'JoinDate', 'Salary', 'Email', 'State', 'CustomerName', 'City']
+2025-12-23 14:44:03,372 - dq_comparison - INFO - Target columns: ['Phone', 'Country', 'Department', 'PostalCode', 'JoinDate', 'Salary', 'Email', 'State', 'CustomerName', 'City']
+2025-12-23 14:44:03,374 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-23 14:44:03,382 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-23 14:44:03,387 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-23 14:44:03,388 - dq_comparison - INFO -   • Common rows: 14
+2025-12-23 14:44:03,389 - dq_comparison - INFO -   • Rows only in source: 0
+2025-12-23 14:44:03,391 - dq_comparison - INFO -   • Rows only in target: 0
+2025-12-23 14:44:03,393 - dq_comparison - INFO - ℹ️  No row-level errors to log (all rows matched by hash)
+2025-12-23 14:44:03,394 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-23 14:44:03,395 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2025-12-23 14:44:03,404 - dq_comparison - INFO - Found 0 column value mismatches across all rows
+2025-12-23 14:44:03,405 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-23 14:44:03,418 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 2 (1.33%)
+2025-12-23 14:44:03,443 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 1
+2025-12-23 14:44:03,446 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 14:44:03,448 - dq_comparison - INFO - Target duplicate samples: ['Row 2', 'Row 7']
+2025-12-23 14:44:03,465 - dq_error_log - INFO - Retrieved 1 errors for session CMP_20251223_144403
+2025-12-23 14:44:03,466 - dq_comparison - INFO - 
+=== DEBUG: ENTERING AUDIT LOGGING SECTION ===
+2025-12-23 14:44:03,467 - dq_comparison - INFO - Time: 2025-12-23 14:44:03.467380
+2025-12-23 14:44:03,469 - dq_comparison - INFO - Session ID for audit: CMP_20251223_144403
+2025-12-23 14:44:03,470 - dq_comparison - INFO - APP_SETTINGS['audit_enabled'] = True
+2025-12-23 14:44:03,471 - dq_comparison - INFO - ✅ dq_audit import successful
+2025-12-23 14:44:03,472 - dq_comparison - INFO - 🔍 DEBUG: Audit logging is ENABLED in APP_SETTINGS
+2025-12-23 14:44:03,473 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 14:44:03,474 - dq_comparison - INFO - ✅ Audit instance created: <dq_audit.DataQualityAudit object at 0x000001F849711CD0>
+2025-12-23 14:44:03,475 - dq_comparison - INFO - 🔍 DEBUG: Attempting to log audit record for session: CMP_20251223_144403
+2025-12-23 14:44:03,476 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-23 14:44:03,505 - dq_audit - INFO - Inserted comparison record with ID: 245
+2025-12-23 14:44:03,506 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 245)
+2025-12-23 14:44:03,522 - dq_error_log - INFO - Retrieved 1 error logs for session CMP_20251223_144403
+2025-12-23 14:44:03,543 - dq_error_log - INFO - Retrieved summary: 1 total errors for session CMP_20251223_144403
+2025-12-23 14:44:03,544 - dq_comparison - INFO - 
+🔍 DEBUG: Adding audit logs to response for session: CMP_20251223_144403
+2025-12-23 14:44:03,545 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 14:44:03,563 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_144403
+2025-12-23 14:44:03,564 - dq_comparison - INFO - 🔍 DEBUG: Retrieved 1 audit logs
+2025-12-23 14:44:03,565 - dq_comparison - INFO - ✅ DEBUG: Successfully added 1 audit logs to results
+2025-12-23 14:44:03,566 - dq_comparison - INFO -    First audit log keys: ['audit_id', 'session_id', 'check_type', 'source_type', 'source_name', 'target_type', 'target_name', 'check_timestamp', 'duration_seconds', 'source_row_count', 'target_row_count', 'common_row_count', 'match_rate', 'value_mismatch_count', 'structure_issues_count', 'total_null_count', 'duplicate_row_count', 'mandatory_field_issues', 'quality_score', 'whitespace_issues', 'formatting_issues', 'numeric_issues', 'total_rules_executed', 'rules_passed', 'rules_failed', 'compliance_score', 'overall_score', 'assessment_category', 'issues_summary', 'created_at']
+2025-12-23 14:44:03,567 - dq_comparison - INFO -    First audit log ID: 245
+2025-12-23 14:44:03,568 - dq_comparison - INFO - 
+🔍 DEBUG: Final results verification:
+2025-12-23 14:44:03,569 - dq_comparison - INFO -    Results has 'audit_logs' key: True
+2025-12-23 14:44:03,570 - dq_comparison - INFO -    Audit logs count in results: 1
+2025-12-23 14:44:03,571 - dq_comparison - INFO -    Results has 'session_id' key: True
+2025-12-23 14:44:03,572 - dq_comparison - INFO -    Session ID in results: CMP_20251223_144403
+2025-12-23 14:44:03,574 - dq_comparison - INFO -    Overall Score (Weighted): 100%
+2025-12-23 14:44:03,575 - dq_comparison - INFO -    Match Rate (Simple): 93.33333333333333%
+2025-12-23 14:44:03,575 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-23 14:44:03,600 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20251223_144403
+2025-12-23 14:44:03,618 - dq_error_log - INFO - Retrieved 1 error logs for session CMP_20251223_144403
+2025-12-23 14:44:03,640 - dq_error_log - INFO - Retrieved summary: 1 total errors for session CMP_20251223_144403
+2025-12-23 14:44:03,641 - __main__ - INFO - Comparison completed for session CMP_20251223_144401
+2025-12-23 14:44:03,643 - __main__ - INFO - Completed with status 200 in 2.153s

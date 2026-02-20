@@ -1,0 +1,51 @@
+2026-01-08 23:20:51,817 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-08 23:20:51,818 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260108_232051.log
+2026-01-08 23:20:51,929 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-08 23:20:51,930 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-08 23:20:51,932 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-08 23:20:51,932 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 23:20:51,933 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-08 23:20:51,939 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-08 23:20:51,940 - __main__ - INFO - 📊 Modules available: True
+2026-01-08 23:20:51,940 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-08 23:20:51,941 - __main__ - INFO - 📋 Available endpoints:
+2026-01-08 23:20:51,942 - __main__ - INFO -   GET  /              - API status
+2026-01-08 23:20:51,942 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-08 23:20:51,943 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-08 23:20:51,944 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-08 23:20:51,945 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-08 23:20:51,945 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-08 23:20:51,946 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-08 23:20:51,946 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-08 23:20:51,947 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-08 23:20:58,936 - __main__ - INFO - POST /api/compare - Request started
+2026-01-08 23:20:58,937 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}, 'target': {'source_type': 'database', 'db_type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'table': 'customers', 'user': 'postgres', 'password': 'postgres'}, 'selected_columns': 'all'}
+2026-01-08 23:20:58,938 - __main__ - INFO - DEBUG: source_type: None
+2026-01-08 23:20:58,939 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-08 23:20:58,940 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-08 23:20:58,940 - __main__ - INFO - Comparison analysis request received
+2026-01-08 23:20:58,941 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}
+2026-01-08 23:20:58,942 - __main__ - INFO - Starting comparison for session CMP_20260108_232058
+2026-01-08 23:20:58,943 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-08 23:20:58,943 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-08 23:20:58,944 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:20:58,945 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-08 23:20:58,946 - dq_comparison - INFO - ==================================================
+2026-01-08 23:20:58,946 - dq_comparison - INFO - DEBUG load_excel_source called for SOURCE
+2026-01-08 23:20:58,947 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'sheet_name': None}
+2026-01-08 23:20:58,948 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-08 23:20:58,948 - dq_comparison - INFO - DEBUG Found file_path in ui_data: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2026-01-08 23:20:59,653 - dq_comparison - INFO - SOURCE Excel loaded: 15 rows, 10 columns
+2026-01-08 23:20:59,654 - dq_comparison - INFO - 
+==================================================
+2026-01-08 23:20:59,654 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-08 23:20:59,655 - dq_comparison - INFO - ==================================================
+2026-01-08 23:20:59,655 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-01-08 23:20:59,656 - dq_comparison - INFO - ----------------------------------------
+2026-01-08 23:20:59,657 - dq_comparison - ERROR - Invalid database type for TARGET: postgresql
+2026-01-08 23:20:59,657 - dq_comparison - ERROR - No database configuration obtained for TARGET
+2026-01-08 23:20:59,658 - dq_comparison - ERROR - Failed to load source or target data
+2026-01-08 23:20:59,658 - __main__ - WARNING - Comparison completed with errors: Failed to load source or target data
+2026-01-08 23:20:59,660 - __main__ - INFO - Completed with status 200 in 0.724s

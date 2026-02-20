@@ -1,0 +1,90 @@
+2026-01-02 16:24:53,996 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-02 16:24:53,997 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260102_162453.log
+2026-01-02 16:24:54,049 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-02 16:24:54,050 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-02 16:24:54,053 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-02 16:24:54,055 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-02 16:24:54,056 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-02 16:24:54,064 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-02 16:24:54,064 - __main__ - INFO - 📊 Modules available: True
+2026-01-02 16:24:54,065 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-02 16:24:54,066 - __main__ - INFO - 📋 Available endpoints:
+2026-01-02 16:24:54,067 - __main__ - INFO -   GET  /              - API status
+2026-01-02 16:24:54,067 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-02 16:24:54,068 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-02 16:24:54,069 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-02 16:24:54,071 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-02 16:24:54,071 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-02 16:24:54,072 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-02 16:24:54,074 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-02 16:24:54,075 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-02 16:25:11,241 - __main__ - INFO - GET /api/health - Request started
+2026-01-02 16:25:11,241 - __main__ - INFO - Completed with status 200 in 0.001s
+2026-01-02 16:25:13,299 - __main__ - INFO - POST /api/upload - Request started
+2026-01-02 16:25:13,308 - __main__ - INFO - File uploaded: 20260102_162513_sample_data.csv (csv)
+2026-01-02 16:25:13,309 - __main__ - INFO - Completed with status 200 in 0.010s
+2026-01-02 16:25:15,355 - __main__ - INFO - POST /api/upload - Request started
+2026-01-02 16:25:15,395 - __main__ - INFO - File uploaded: 20260102_162515_sample_data.xlsx (excel)
+2026-01-02 16:25:15,396 - __main__ - INFO - Completed with status 200 in 0.042s
+2026-01-02 16:28:19,352 - __main__ - INFO - POST /api/compare - Request started
+2026-01-02 16:28:19,353 - __main__ - INFO - Comparison analysis request received
+2026-01-02 16:28:19,354 - __main__ - INFO - Starting comparison for session CMP_20260102_162819
+2026-01-02 16:28:19,355 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-02 16:28:19,356 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-02 16:28:19,357 - dq_comparison - INFO - 
+==================================================
+2026-01-02 16:28:19,358 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-02 16:28:19,358 - dq_comparison - INFO - ==================================================
+2026-01-02 16:28:19,359 - dq_comparison - INFO - 
+🗄️ SOURCE DATABASE CONFIGURATION
+2026-01-02 16:28:19,359 - dq_comparison - INFO - ----------------------------------------
+2026-01-02 16:28:19,360 - dq_comparison - INFO - UI mode: Using provided database configuration for SOURCE
+2026-01-02 16:28:19,361 - dq_unified - INFO - Loading data from DATABASE
+2026-01-02 16:28:19,361 - dq_unified - INFO - Loading large database table: customers
+2026-01-02 16:28:19,362 - dq_unified - INFO - Normalized DB config with schema: system
+2026-01-02 16:28:19,443 - dq_unified - ERROR - Error loading large database: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 217, in load_large_database
+    return LargeDatasetHandler._load_large_oracle(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 386, in _load_large_oracle
+    cursor.execute(f"SELECT COUNT(*) FROM {full_table_name}")
+cx_Oracle.DatabaseError: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+2026-01-02 16:28:19,447 - dq_unified - ERROR - Error loading data from database: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 1226, in load_data_from_source
+    df = LargeDatasetHandler.load_large_database(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 217, in load_large_database
+    return LargeDatasetHandler._load_large_oracle(db_config, max_rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 386, in _load_large_oracle
+    cursor.execute(f"SELECT COUNT(*) FROM {full_table_name}")
+cx_Oracle.DatabaseError: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+2026-01-02 16:28:19,447 - dq_comparison - ERROR - No data loaded from SOURCE database
+2026-01-02 16:28:19,448 - dq_comparison - INFO - 
+==================================================
+2026-01-02 16:28:19,449 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-02 16:28:19,449 - dq_comparison - INFO - ==================================================
+2026-01-02 16:28:19,449 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-01-02 16:28:19,450 - dq_comparison - INFO - ----------------------------------------
+2026-01-02 16:28:19,450 - dq_comparison - INFO - UI mode: Using provided database configuration for TARGET
+2026-01-02 16:28:19,451 - dq_unified - INFO - Loading data from DATABASE
+2026-01-02 16:28:19,451 - dq_unified - INFO - Loading large database table: customers
+2026-01-02 16:28:19,452 - dq_unified - INFO - Normalized DB config with schema: public
+2026-01-02 16:28:19,555 - dq_unified - INFO - PostgreSQL table public.customers has 15 rows
+2026-01-02 16:28:19,555 - dq_unified - INFO - Loading 15 rows from PostgreSQL...
+2026-01-02 16:28:19,976 - dq_unified - INFO - Loaded 15 rows from PostgreSQL
+2026-01-02 16:28:19,982 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2026-01-02 16:28:19,982 - dq_unified - INFO - Standardizing data types...
+2026-01-02 16:28:19,985 - dq_unified - INFO - Data type standardization complete
+2026-01-02 16:28:19,986 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 129.8MB total, 0.0MB for dataframe
+2026-01-02 16:28:19,987 - dq_comparison - INFO - TARGET database loaded: 15 rows, 10 columns
+2026-01-02 16:28:19,987 - dq_comparison - ERROR - Failed to load source or target data
+2026-01-02 16:28:19,987 - __main__ - WARNING - Comparison completed with errors: Failed to load source or target data
+2026-01-02 16:28:19,988 - __main__ - INFO - Completed with status 200 in 0.636s

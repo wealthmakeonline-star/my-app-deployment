@@ -1,0 +1,47 @@
+2025-12-25 15:02:53,621 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 15:02:53,623 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_150253.log
+2025-12-25 15:02:53,809 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 15:02:53,809 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 15:02:53,813 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 15:02:53,813 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 15:02:53,814 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 15:02:53,822 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 15:02:53,822 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 15:02:53,823 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 15:02:53,824 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 15:02:53,824 - __main__ - INFO -   GET  /              - API status
+2025-12-25 15:02:53,826 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 15:02:53,827 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 15:02:53,828 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 15:02:53,829 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 15:02:53,830 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 15:02:53,831 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 15:02:53,831 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 15:02:53,832 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 15:03:01,615 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 15:03:01,616 - __main__ - INFO - Single source analysis request received
+2025-12-25 15:03:01,617 - __main__ - INFO - Starting analysis for session SINGLE_20251225_150301_432ceeff
+2025-12-25 15:03:01,618 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 15:03:01,619 - dq_unified - INFO - User selected source type: 1
+2025-12-25 15:03:01,619 - input_handler - WARNING - Required field 'file_path' not provided in UI mode, using empty string
+2025-12-25 15:03:01,620 - dq_unified - INFO - Loading data from CSV
+2025-12-25 15:03:01,620 - dq_unified - INFO - Loading data from CSV
+2025-12-25 15:03:01,621 - dq_unified - INFO - Loading large CSV: 
+2025-12-25 15:03:01,622 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 15:03:01,625 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1128, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 102, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-12-25 15:03:01,626 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-25 15:03:01,627 - __main__ - WARNING - Analysis completed with errors: No data loaded or dataset is empty
+2025-12-25 15:03:01,627 - __main__ - INFO - Completed with status 200 in 0.012s

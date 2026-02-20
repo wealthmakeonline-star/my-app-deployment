@@ -1,0 +1,91 @@
+2025-12-22 14:34:11,297 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-22 14:34:11,820 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-22 14:34:11,820 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-22 14:34:11,826 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-22 14:34:11,827 - root - INFO - DQ modules available: True
+2025-12-22 14:34:11,827 - root - INFO - Config file mode: False
+2025-12-22 14:34:11,827 - root - INFO - Database config: localhost/dq_checks
+2025-12-22 14:34:12,907 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-22 14:34:12,907 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 14:34:30,599 - werkzeug - INFO - 127.0.0.1 - - [22/Dec/2025 14:34:30] "GET /api/health HTTP/1.1" 200 -
+2025-12-22 14:34:32,645 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-22 14:34:32,648 - root - INFO - Starting comparison for session CMP_20251222_143432
+2025-12-22 14:34:32,648 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-22 14:34:32,668 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2025-12-22 14:34:32,668 - dq_comparison - INFO - Found 10 common columns between source and target (case-insensitive)
+2025-12-22 14:34:32,668 - dq_comparison - INFO - User column selection input: all
+2025-12-22 14:34:32,668 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-22 14:34:32,668 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-22 14:34:32,668 - dq_comparison - INFO - Report details - Source: CSV: sample_data.csv, Target: CSV: sample_data_DIFF.csv, Selected columns: 10
+2025-12-22 14:34:32,668 - dq_comparison - INFO - Initializing Error Logger...
+2025-12-22 14:34:32,668 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-22 14:34:32,777 - dq_error_log - INFO - Database connection successful
+2025-12-22 14:34:32,778 - dq_comparison - INFO - Session ID: CMP_20251222_143432
+2025-12-22 14:34:32,780 - dq_comparison - INFO - FIRST CHECK: ROW COUNT COMPARISON
+2025-12-22 14:34:32,781 - dq_comparison - INFO - Source rows: 15, Target rows: 15
+2025-12-22 14:34:32,781 - dq_comparison - INFO - ✅ Row counts match perfectly
+2025-12-22 14:34:32,781 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2025-12-22 14:34:32,781 - dq_comparison - INFO - Using 10 common columns for hash comparison
+2025-12-22 14:34:32,781 - dq_comparison - INFO - Source columns: ['Phone', 'CustomerName', 'Country', 'JoinDate', 'Department', 'Salary', 'Email', 'PostalCode', 'City', 'State']
+2025-12-22 14:34:32,781 - dq_comparison - INFO - Target columns: ['Phone', 'CustomerName', 'Country', 'JoinDate', 'Department', 'Salary', 'Email', 'PostalCode', 'City', 'State']
+2025-12-22 14:34:32,781 - dq_comparison - INFO - Generating hashes for source data...
+2025-12-22 14:34:32,786 - dq_comparison - INFO - Generating hashes for target data...
+2025-12-22 14:34:32,789 - dq_comparison - INFO - Hash-based Comparison Results:
+2025-12-22 14:34:32,789 - dq_comparison - INFO -   • Common rows: 11
+2025-12-22 14:34:32,789 - dq_comparison - INFO -   • Rows only in source: 3
+2025-12-22 14:34:32,789 - dq_comparison - INFO -   • Rows only in target: 4
+2025-12-22 14:34:32,789 - dq_comparison - INFO - 🔍 DEBUG: Analyzing mismatches...
+2025-12-22 14:34:32,790 - dq_comparison - INFO - 
+Source row 5 not found in target:
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   Phone: '4445556666' → '4445556666'
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   CustomerName: 'Alice Brown' → 'alice brown'
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,790 - dq_comparison - INFO - 
+Source row 4 not found in target:
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   Phone: '5551234567' → '5551234567'
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   CustomerName: 'Bob        Johnson' → 'bob johnson'
+2025-12-22 14:34:32,790 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,790 - dq_comparison - INFO - 
+Source row 3 not found in target:
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Phone: '9876543210' → '9876543210'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   CustomerName: 'Jane      Smith' → 'jane smith'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,791 - dq_comparison - INFO - 
+Target row 2 not found in source:
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Phone: '9999999999' → '9999999999'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   CustomerName: '   John Doe' → 'john doe'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,791 - dq_comparison - INFO - 
+Target row 5 not found in source:
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Phone: '4445556666' → '4445556666'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   CustomerName: 'DIFFERENT NAME' → 'different name'
+2025-12-22 14:34:32,791 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,791 - dq_comparison - INFO - 
+Target row 4 not found in source:
+2025-12-22 14:34:32,792 - dq_comparison - INFO -   Phone: '5551234567' → '5551234567'
+2025-12-22 14:34:32,792 - dq_comparison - INFO -   CustomerName: 'Bob        Johnson' → 'bob johnson'
+2025-12-22 14:34:32,792 - dq_comparison - INFO -   Country: 'USA' → 'usa'
+2025-12-22 14:34:32,792 - dq_comparison - INFO - Logging 3 rows missing in target...
+2025-12-22 14:34:32,792 - dq_comparison - INFO - Logging 4 rows extra in target...
+2025-12-22 14:34:32,807 - dq_error_log - INFO - Batch logged 7 errors for session CMP_20251222_143432
+2025-12-22 14:34:32,807 - dq_comparison - INFO - ✅ Logged 7 row-level errors to database
+2025-12-22 14:34:32,810 - dq_comparison - INFO - PERFORMING DETAILED COLUMN-BY-COLUMN COMPARISON...
+2025-12-22 14:34:32,810 - dq_comparison - INFO - Will compare 15 rows (min of source:15 and target:15)
+2025-12-22 14:34:32,862 - dq_comparison - INFO - Found 4 column value mismatches across all rows
+2025-12-22 14:34:32,866 - dq_comparison - INFO - Analyzing data quality metrics...
+2025-12-22 14:34:32,877 - dq_comparison - INFO - Null values - Source: 6 (4.00%), Target: 6 (4.00%)
+2025-12-22 14:34:32,878 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 1, Target: 0
+2025-12-22 14:34:32,879 - dq_comparison - INFO - Source duplicate samples: ['Row 2', 'Row 7']
+2025-12-22 14:34:32,905 - dq_error_log - INFO - Retrieved 12 errors for session CMP_20251222_143432
+2025-12-22 14:34:32,910 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-22 14:34:32,954 - dq_audit - INFO - Starting database insertion for comparison...
+2025-12-22 14:34:32,969 - dq_audit - INFO - Inserted comparison record with ID: 200
+2025-12-22 14:34:32,969 - dq_audit - INFO - Inserted comparison record with ID: 200
+2025-12-22 14:34:33,006 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-22 14:34:33,043 - dq_comparison - INFO - Comparison analysis completed successfully
+2025-12-22 14:34:33,043 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-22 14:34:33,095 - root - INFO - Completed comparison for session CMP_20251222_143432
+2025-12-22 14:34:33,096 - werkzeug - INFO - 127.0.0.1 - - [22/Dec/2025 14:34:33] "POST /api/compare HTTP/1.1" 200 -

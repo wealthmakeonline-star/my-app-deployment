@@ -1,0 +1,42 @@
+2025-12-22 16:17:41,367 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-22 16:17:41,643 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-22 16:17:41,643 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-22 16:17:41,648 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-22 16:17:41,648 - root - INFO - DQ modules available: True
+2025-12-22 16:17:41,649 - root - INFO - Config file mode: False
+2025-12-22 16:17:41,649 - root - INFO - Database config: localhost/dq_checks
+2025-12-22 16:17:42,600 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-22 16:17:42,600 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 16:17:49,670 - root - INFO - Business rules request received: dict_keys(['source_type', 'file_path', 'rule_type', 'threshold_column', 'threshold_operator', 'threshold_value'])
+2025-12-22 16:17:49,670 - root - INFO - Starting business rules validation for session RULES_20251222_161749_4d9409bc
+2025-12-22 16:17:49,671 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-22 16:17:49,671 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-22 16:17:49,671 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-22 16:17:49,671 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type']
+2025-12-22 16:17:49,671 - dq_rules - INFO - File path in UI data: sample_data.csv
+2025-12-22 16:17:49,671 - dq_rules - INFO - ===============================
+2025-12-22 16:17:49,671 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-22 16:17:49,671 - dq_unified - INFO - User selected source type: 1
+2025-12-22 16:17:49,671 - dq_rules - INFO - Source type: csv, Source config: sample_data.csv
+2025-12-22 16:17:49,671 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-22 16:17:49,672 - dq_unified - INFO - Loading large CSV: sample_data.csv
+2025-12-22 16:17:49,674 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: 'sample_data.csv'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 117, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sample_data.csv'
+2025-12-22 16:17:49,677 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: 'sample_data.csv'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 1233, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_unified.py", line 117, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sample_data.csv'
+2025-12-22 16:17:49,679 - dq_rules - ERROR - DataFrame is None after loading
+2025-12-22 16:17:49,679 - werkzeug - INFO - 127.0.0.1 - - [22/Dec/2025 16:17:49] "[31m[1mPOST /api/rules HTTP/1.1[0m" 400 -

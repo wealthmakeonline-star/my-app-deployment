@@ -1,0 +1,66 @@
+2026-01-08 21:52:22,988 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-08 21:52:22,989 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260108_215222.log
+2026-01-08 21:52:23,125 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-08 21:52:23,125 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-08 21:52:23,127 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-08 21:52:23,128 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-08 21:52:23,128 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-08 21:52:23,135 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-08 21:52:23,135 - __main__ - INFO - 📊 Modules available: True
+2026-01-08 21:52:23,136 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-08 21:52:23,136 - __main__ - INFO - 📋 Available endpoints:
+2026-01-08 21:52:23,137 - __main__ - INFO -   GET  /              - API status
+2026-01-08 21:52:23,138 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-08 21:52:23,138 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-08 21:52:23,139 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-08 21:52:23,140 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-08 21:52:23,140 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-08 21:52:23,141 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-08 21:52:23,141 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-08 21:52:23,142 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-08 21:52:47,623 - __main__ - INFO - POST /api/compare - Request started
+2026-01-08 21:52:47,624 - __main__ - INFO - DEBUG: Received data: {'source': {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}, 'target': {'source_type': 'database', 'db_type': 'postgresql', 'host': 'localhost', 'port': 5432, 'database': 'dq_checks', 'table': 'customers', 'user': 'postgres', 'password': 'postgres'}, 'selected_columns': 'all'}
+2026-01-08 21:52:47,626 - __main__ - INFO - DEBUG: source_type: None
+2026-01-08 21:52:47,627 - __main__ - INFO - DEBUG: source_file_path type: <class 'NoneType'>
+2026-01-08 21:52:47,628 - __main__ - INFO - DEBUG: source_file_path value: None
+2026-01-08 21:52:47,629 - __main__ - INFO - Comparison analysis request received
+2026-01-08 21:52:47,630 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx'}
+2026-01-08 21:52:47,632 - __main__ - INFO - Starting comparison for session CMP_20260108_215247
+2026-01-08 21:52:47,636 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-08 21:52:47,637 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-08 21:52:47,638 - dq_comparison - INFO - 
+==================================================
+2026-01-08 21:52:47,639 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-08 21:52:47,641 - dq_comparison - INFO - ==================================================
+2026-01-08 21:52:47,642 - dq_comparison - INFO - DEBUG load_excel_source called for SOURCE
+2026-01-08 21:52:47,645 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'source_file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'file_path': 'C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx', 'sheet_name': None}
+2026-01-08 21:52:47,646 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-08 21:52:47,647 - dq_comparison - INFO - DEBUG Found file_path in ui_data: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.xlsx
+2026-01-08 21:52:49,084 - dq_comparison - INFO - SOURCE Excel loaded: 15 rows, 10 columns
+2026-01-08 21:52:49,084 - dq_comparison - INFO - 
+==================================================
+2026-01-08 21:52:49,086 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-08 21:52:49,087 - dq_comparison - INFO - ==================================================
+2026-01-08 21:52:49,088 - dq_comparison - INFO - 
+🗄️ TARGET DATABASE CONFIGURATION
+2026-01-08 21:52:49,089 - dq_comparison - INFO - ----------------------------------------
+2026-01-08 21:52:49,090 - dq_comparison - ERROR - Error in comparison tool execution: 'postgresql'
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 2682, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 619, in load_comparison_sources
+    target_df, target_info, target_file = load_single_comparison_source("TARGET", target_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 160, in load_single_comparison_source
+    return load_database_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 368, in load_database_source
+    db_config = get_database_config_for_comparison(source_type_label, actual_ui_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_comparison.py", line 465, in get_database_config_for_comparison
+    db_type_code = db_type_map[db_type]
+                   ~~~~~~~~~~~^^^^^^^^^
+KeyError: 'postgresql'
+2026-01-08 21:52:49,095 - __main__ - WARNING - Comparison completed with errors: Error in comparison tool execution: 'postgresql'
+2026-01-08 21:52:49,096 - __main__ - INFO - Completed with status 200 in 1.473s

@@ -1,0 +1,116 @@
+2026-02-16 13:13:31,929 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-02-16 13:13:31,930 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260216_131331.log
+2026-02-16 13:13:32,109 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-02-16 13:13:32,110 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-02-16 13:13:32,114 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-16 13:13:32,117 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-16 13:13:32,118 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-02-16 13:13:32,133 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-02-16 13:13:32,134 - __main__ - INFO - 📊 Modules available: True
+2026-02-16 13:13:32,136 - __main__ - INFO - 🔧 Config file mode: False
+2026-02-16 13:13:32,138 - __main__ - INFO - 📋 Available endpoints:
+2026-02-16 13:13:32,139 - __main__ - INFO -   GET  /              - API status
+2026-02-16 13:13:32,141 - __main__ - INFO -   GET  /api/health    - Health check
+2026-02-16 13:13:32,143 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-02-16 13:13:32,144 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-02-16 13:13:32,150 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-02-16 13:13:32,151 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-02-16 13:13:32,155 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-02-16 13:13:32,158 - __main__ - INFO -   POST /api/upload    - File upload
+2026-02-16 13:13:32,159 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-02-16 13:13:32,161 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-02-16 13:13:32,163 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-02-16 13:13:32,165 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-02-16 13:13:53,577 - __main__ - INFO - POST /api/advanced - Request started
+2026-02-16 13:13:53,578 - __main__ - INFO - Advanced checks request received
+2026-02-16 13:13:53,579 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-02-16 13:13:53,581 - __main__ - INFO - DEBUG: Using as-is: []
+2026-02-16 13:13:53,582 - __main__ - INFO - Starting advanced checks for session ADV_20260216_131353_3c71c821
+2026-02-16 13:13:53,584 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-02-16 13:13:53,586 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-02-16 13:13:53,587 - dq_unified - INFO - Prompting user for data source type
+2026-02-16 13:13:53,588 - dq_unified - INFO - UI Data source_type: csv
+2026-02-16 13:13:53,589 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-16 13:13:53,589 - dq_unified - INFO - Loading data from CSV
+2026-02-16 13:13:53,589 - dq_unified - INFO - Loading large CSV: C:/Users/006398/Desktop/Accilerator/Data_Quality_Framework/finance1000.csv
+2026-02-16 13:13:53,592 - dq_unified - ERROR - Error loading large CSV: [Errno 2] No such file or directory: 'C:/Users/006398/Desktop/Accilerator/Data_Quality_Framework/finance1000.csv'
+Traceback (most recent call last):
+  File "C:\Users\006398\Desktop\Accilerator\Data_Quality_Framework\dq_unified.py", line 125, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/006398/Desktop/Accilerator/Data_Quality_Framework/finance1000.csv'
+2026-02-16 13:13:53,609 - dq_unified - ERROR - Error loading data from csv: [Errno 2] No such file or directory: 'C:/Users/006398/Desktop/Accilerator/Data_Quality_Framework/finance1000.csv'
+Traceback (most recent call last):
+  File "C:\Users\006398\Desktop\Accilerator\Data_Quality_Framework\dq_unified.py", line 1221, in load_data_from_source
+    df = LargeDatasetHandler.load_large_csv(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\006398\Desktop\Accilerator\Data_Quality_Framework\dq_unified.py", line 125, in load_large_csv
+    with open(file_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/006398/Desktop/Accilerator/Data_Quality_Framework/finance1000.csv'
+2026-02-16 13:13:53,611 - dq_advanced - ERROR - Failed to load data
+2026-02-16 13:13:53,611 - __main__ - WARNING - Advanced checks completed with errors: No data loaded or dataset is empty
+2026-02-16 13:13:53,612 - __main__ - INFO - Completed with status 200 in 0.035s
+2026-02-16 13:15:26,908 - __main__ - INFO - POST /api/advanced - Request started
+2026-02-16 13:15:26,909 - __main__ - INFO - Advanced checks request received
+2026-02-16 13:15:26,912 - __main__ - INFO - DEBUG: Received columns_input: [] (type: <class 'list'>)
+2026-02-16 13:15:26,914 - __main__ - INFO - DEBUG: Using as-is: []
+2026-02-16 13:15:26,916 - __main__ - INFO - Starting advanced checks for session ADV_20260216_131526_dae8a92f
+2026-02-16 13:15:26,916 - dq_advanced - INFO - Starting advanced checks in UI/API mode
+2026-02-16 13:15:26,918 - dq_advanced - INFO - LOADING DATA FOR ADVANCED CHECKS
+2026-02-16 13:15:26,918 - dq_unified - INFO - Prompting user for data source type
+2026-02-16 13:15:26,919 - dq_unified - INFO - UI Data source_type: csv
+2026-02-16 13:15:26,919 - dq_unified - INFO - Using source_type from UI data: csv
+2026-02-16 13:15:26,919 - dq_unified - INFO - Loading data from CSV
+2026-02-16 13:15:26,919 - dq_unified - INFO - Loading large CSV: C:/Users/006398/Desktop/Accilerator/OLD/FINAL TEST MAKE IT WORK/ADVANCED/finance1000.csv
+2026-02-16 13:15:26,925 - dq_unified - INFO - CSV file has 1,000 rows
+2026-02-16 13:15:26,926 - dq_unified - INFO - Loading 1,000 rows from CSV...
+2026-02-16 13:15:26,950 - dq_unified - INFO - Loaded 1,000 rows from CSV
+2026-02-16 13:15:26,969 - dq_unified - INFO - Memory optimization: 0.5MB -> 0.3MB (Saved: 0.2MB)
+2026-02-16 13:15:26,970 - dq_unified - INFO - Loaded 1,000 rows, 10 columns. Memory: 104.7MB total, 0.3MB for dataframe
+2026-02-16 13:15:26,970 - dq_advanced - INFO - Data loaded: 1,000 rows, 10 columns from CSV: finance1000.csv
+2026-02-16 13:15:26,970 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-02-16 13:15:27,272 - mysql.connector - INFO - package: mysql.connector.plugins
+2026-02-16 13:15:27,273 - mysql.connector - INFO - plugin_name: caching_sha2_password
+2026-02-16 13:15:27,274 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2026-02-16 13:15:27,276 - mysql.connector - INFO - package: mysql.connector.plugins
+2026-02-16 13:15:27,278 - mysql.connector - INFO - plugin_name: mysql_native_password
+2026-02-16 13:15:27,288 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2026-02-16 13:15:27,306 - dq_error_log - INFO - Database connection successful
+2026-02-16 13:15:27,308 - dq_advanced - INFO - Session ID: ADV_20260216_131527_8515
+2026-02-16 13:15:27,310 - dq_advanced - INFO - Starting comprehensive validations on 1,000 rows, 10 columns
+2026-02-16 13:15:27,319 - dq_advanced - INFO - Memory: 1171MB available, 0.0003MB/row, Optimal batch: 50000 rows
+2026-02-16 13:15:27,320 - dq_advanced - INFO - Auto-calculated batch size: 50000 rows
+2026-02-16 13:15:27,320 - dq_advanced - INFO - Analyzing 10 columns...
+2026-02-16 13:15:27,330 - dq_advanced - INFO - Analyzed column 'transaction_id': numeric with 1 patterns
+2026-02-16 13:15:27,332 - dq_advanced - INFO - Analyzed column 'account_number': numeric with 3 patterns
+2026-02-16 13:15:27,336 - dq_advanced - INFO - Analyzed column 'customer_name': text with 0 patterns
+2026-02-16 13:15:27,340 - dq_advanced - INFO - Analyzed column 'email': text with 1 patterns
+2026-02-16 13:15:27,343 - dq_advanced - INFO - Analyzed column 'transaction_date': text with 1 patterns
+2026-02-16 13:15:27,346 - dq_advanced - INFO - Analyzed column 'amount': numeric with 0 patterns
+2026-02-16 13:15:27,351 - dq_advanced - INFO - Analyzed column 'currency': text with 1 patterns
+2026-02-16 13:15:27,354 - dq_advanced - INFO - Analyzed column 'balance': numeric with 0 patterns
+2026-02-16 13:15:27,358 - dq_advanced - INFO - Analyzed column 'status': text with 0 patterns
+2026-02-16 13:15:27,361 - dq_advanced - INFO - Analyzed column 'remarks': text with 0 patterns
+2026-02-16 13:15:27,390 - dq_error_log - INFO - Starting batch logging for 2019 errors, session: ADV_20260216_131527_8515
+2026-02-16 13:15:27,561 - dq_error_log - INFO - Batch 1: Successfully logged 500 errors
+2026-02-16 13:15:27,767 - dq_error_log - INFO - Batch 2: Successfully logged 500 errors
+2026-02-16 13:15:27,930 - dq_error_log - INFO - Batch 3: Successfully logged 500 errors
+2026-02-16 13:15:28,100 - dq_error_log - INFO - Batch 4: Successfully logged 500 errors
+2026-02-16 13:15:28,195 - dq_error_log - INFO - Batch 5: Successfully logged 19 errors
+2026-02-16 13:15:28,196 - dq_error_log - INFO - Progress: 2019/2019 errors processed
+2026-02-16 13:15:28,197 - dq_error_log - INFO - COMPLETE: Logged 2019/2019 errors for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,198 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-16 13:15:28,198 - dq_audit - INFO - Starting database insertion for advanced...
+2026-02-16 13:15:28,299 - dq_audit - INFO - Inserted advanced record with ID: 699
+2026-02-16 13:15:28,300 - dq_advanced - INFO - Audit record logged with ID: 699
+2026-02-16 13:15:28,457 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,565 - dq_error_log - INFO - Retrieved summary: 2019 total errors for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,566 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-02-16 13:15:28,654 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,657 - dq_advanced - INFO - Advanced checks completed for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,820 - dq_error_log - INFO - Retrieved 100 error logs for session ADV_20260216_131527_8515
+2026-02-16 13:15:28,921 - dq_error_log - INFO - Retrieved summary: 2019 total errors for session ADV_20260216_131527_8515
+2026-02-16 13:15:29,020 - dq_audit - INFO - Retrieved 1 audit logs for session ADV_20260216_131527_8515
+2026-02-16 13:15:29,023 - __main__ - INFO - Advanced checks completed for session ADV_20260216_131527_8515
+2026-02-16 13:15:29,026 - __main__ - INFO - Completed with status 200 in 2.119s

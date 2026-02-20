@@ -1,0 +1,526 @@
+2025-12-23 16:45:02,700 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-23 16:45:02,701 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251223_164502.log
+2025-12-23 16:45:03,551 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-23 16:45:03,552 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-23 16:45:03,555 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:03,558 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:03,559 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-23 16:45:03,568 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-23 16:45:03,569 - __main__ - INFO - 📊 Modules available: True
+2025-12-23 16:45:03,570 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-23 16:45:03,572 - __main__ - INFO - 📋 Available endpoints:
+2025-12-23 16:45:03,573 - __main__ - INFO -   GET  /              - API status
+2025-12-23 16:45:03,574 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-23 16:45:03,575 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-23 16:45:03,576 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-23 16:45:03,577 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-23 16:45:03,578 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-23 16:45:03,579 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-23 16:45:03,580 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-23 16:45:03,581 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-23 16:45:13,017 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:13,019 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:13,021 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164513_46518cc6
+2025-12-23 16:45:13,023 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:13,023 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:13,024 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:13,026 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:13,027 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:13,028 - dq_rules - INFO - ===============================
+2025-12-23 16:45:13,029 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:13,030 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:13,032 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:13,033 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:13,035 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:13,041 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:13,042 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:13,063 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:13,075 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:13,077 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 102.1MB total, 0.0MB for dataframe
+2025-12-23 16:45:13,079 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:13,080 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:13,083 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:13,084 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:13,085 - dq_rules - INFO - User selected rule type: 1
+2025-12-23 16:45:13,088 - dq_rules - INFO - CREATING THRESHOLD RULE
+2025-12-23 16:45:13,089 - dq_rules - INFO - === DEBUG create_threshold_rule ===
+2025-12-23 16:45:13,090 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:13,091 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:13,092 - dq_rules - INFO -   threshold_column: NOT FOUND
+2025-12-23 16:45:13,094 - dq_rules - INFO -   pattern_column: NOT FOUND
+2025-12-23 16:45:13,095 - dq_rules - INFO -   range_column: NOT FOUND
+2025-12-23 16:45:13,097 - dq_rules - INFO -   kpi_threshold_value: NOT FOUND
+2025-12-23 16:45:13,097 - dq_rules - INFO -   pattern_columns: NOT FOUND
+2025-12-23 16:45:13,098 - dq_rules - INFO -   rule_type: 1
+2025-12-23 16:45:13,099 - dq_rules - INFO - ===================
+2025-12-23 16:45:13,101 - dq_rules - INFO - Auto-selected first numeric column: Phone
+2025-12-23 16:45:13,103 - dq_rules - INFO - Using default operator: >
+2025-12-23 16:45:13,103 - dq_rules - INFO - Using default threshold value: 0
+2025-12-23 16:45:13,106 - dq_rules - INFO - Threshold rule created: Phone > 0
+2025-12-23 16:45:13,108 - dq_rules - INFO - Defined 1 business rules
+2025-12-23 16:45:13,110 - dq_rules - INFO - EXECUTING 1 BUSINESS RULES
+2025-12-23 16:45:13,111 - dq_rules - INFO - Executing rule: Phone > 0
+2025-12-23 16:45:13,113 - dq_rules - INFO - Executing threshold rule: Phone > 0
+2025-12-23 16:45:13,115 - dq_rules - INFO - Threshold rule 'Phone > 0': 15 violations found
+2025-12-23 16:45:13,791 - dq_error_log - INFO - Batch logged 15 errors for session RULES_20251223_164513
+2025-12-23 16:45:13,794 - dq_rules - WARNING - 15 violations found
+2025-12-23 16:45:13,813 - dq_rules - INFO - Rule 'Phone > 0' completed with status: FAIL
+2025-12-23 16:45:13,815 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 15
+2025-12-23 16:45:13,818 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:13,821 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:13,822 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:13,847 - dq_audit - INFO - Inserted rules record with ID: 260
+2025-12-23 16:45:13,848 - dq_rules - INFO - Audit record logged with ID: 260
+2025-12-23 16:45:13,849 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164513
+2025-12-23 16:45:13,851 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:13,851 - dq_rules - INFO - API Report: Rules Executed: 1, Compliance Score: 0.0%
+2025-12-23 16:45:13,874 - dq_error_log - INFO - Retrieved 15 error logs for session RULES_20251223_164513
+2025-12-23 16:45:13,897 - dq_error_log - INFO - Retrieved summary: 15 total errors for session RULES_20251223_164513
+2025-12-23 16:45:13,965 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:14,466 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164513
+2025-12-23 16:45:14,488 - dq_error_log - INFO - Retrieved 15 error logs for session RULES_20251223_164513
+2025-12-23 16:45:14,519 - dq_error_log - INFO - Retrieved summary: 15 total errors for session RULES_20251223_164513
+2025-12-23 16:45:14,565 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164513
+2025-12-23 16:45:14,567 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164513
+2025-12-23 16:45:14,572 - __main__ - INFO - Completed with status 200 in 1.555s
+2025-12-23 16:45:17,630 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:17,631 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:17,634 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164517_086c80fd
+2025-12-23 16:45:17,638 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:17,639 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:17,641 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:17,643 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:17,645 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:17,646 - dq_rules - INFO - ===============================
+2025-12-23 16:45:17,647 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:17,648 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:17,650 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:17,654 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:17,655 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:17,660 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:17,661 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:17,670 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:17,683 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:17,688 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.4MB total, 0.0MB for dataframe
+2025-12-23 16:45:17,689 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:17,693 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:17,697 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:17,699 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:17,703 - dq_rules - INFO - User selected rule type: 2
+2025-12-23 16:45:17,704 - dq_rules - INFO - CREATING PATTERN RULE
+2025-12-23 16:45:17,705 - dq_rules - INFO - Auto-selected first string column: CustomerName
+2025-12-23 16:45:17,707 - dq_rules - INFO - Pattern rule created: CustomerName must match email pattern
+2025-12-23 16:45:17,709 - dq_rules - INFO - Defined 1 business rules
+2025-12-23 16:45:17,712 - dq_rules - INFO - EXECUTING 1 BUSINESS RULES
+2025-12-23 16:45:17,726 - dq_rules - INFO - Executing rule: CustomerName must match email pattern
+2025-12-23 16:45:17,727 - dq_rules - INFO - Executing pattern rule: CustomerName must match email pattern
+2025-12-23 16:45:17,732 - dq_rules - INFO - Pattern rule 'CustomerName must match email pattern': 15 pattern violations found
+2025-12-23 16:45:17,759 - dq_error_log - INFO - Batch logged 15 errors for session RULES_20251223_164517
+2025-12-23 16:45:17,761 - dq_rules - WARNING - 15 pattern violations found
+2025-12-23 16:45:17,772 - dq_rules - INFO - Rule 'CustomerName must match email pattern' completed with status: FAIL
+2025-12-23 16:45:17,773 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 15
+2025-12-23 16:45:17,777 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:17,778 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:17,779 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:17,808 - dq_audit - INFO - Inserted rules record with ID: 261
+2025-12-23 16:45:17,810 - dq_rules - INFO - Audit record logged with ID: 261
+2025-12-23 16:45:17,812 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164517
+2025-12-23 16:45:17,813 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:17,815 - dq_rules - INFO - API Report: Rules Executed: 1, Compliance Score: 0.0%
+2025-12-23 16:45:17,835 - dq_error_log - INFO - Retrieved 15 error logs for session RULES_20251223_164517
+2025-12-23 16:45:17,856 - dq_error_log - INFO - Retrieved summary: 15 total errors for session RULES_20251223_164517
+2025-12-23 16:45:17,857 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:17,877 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164517
+2025-12-23 16:45:17,896 - dq_error_log - INFO - Retrieved 15 error logs for session RULES_20251223_164517
+2025-12-23 16:45:17,918 - dq_error_log - INFO - Retrieved summary: 15 total errors for session RULES_20251223_164517
+2025-12-23 16:45:17,942 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164517
+2025-12-23 16:45:17,943 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164517
+2025-12-23 16:45:17,947 - __main__ - INFO - Completed with status 200 in 0.317s
+2025-12-23 16:45:21,008 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:21,009 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:21,013 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164521_7cc3ce00
+2025-12-23 16:45:21,016 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:21,017 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:21,018 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:21,019 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:21,020 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:21,022 - dq_rules - INFO - ===============================
+2025-12-23 16:45:21,023 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:21,024 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:21,025 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:21,027 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:21,029 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:21,033 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:21,033 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:21,040 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:21,047 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:21,049 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.5MB total, 0.0MB for dataframe
+2025-12-23 16:45:21,050 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:21,052 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:21,056 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:21,057 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:21,059 - dq_rules - INFO - User selected rule type: 3
+2025-12-23 16:45:21,061 - dq_rules - INFO - CREATING RANGE RULE
+2025-12-23 16:45:21,063 - dq_rules - INFO - Auto-selected first numeric column: Phone
+2025-12-23 16:45:21,064 - dq_rules - INFO - Using column minimum: 1112222
+2025-12-23 16:45:21,065 - dq_rules - INFO - Using column maximum: 9998887777
+2025-12-23 16:45:21,066 - dq_rules - INFO - Range rule created: Phone between 1112222 and 9998887777
+2025-12-23 16:45:21,067 - dq_rules - INFO - Defined 1 business rules
+2025-12-23 16:45:21,068 - dq_rules - INFO - EXECUTING 1 BUSINESS RULES
+2025-12-23 16:45:21,079 - dq_rules - INFO - Executing rule: Phone between 1112222 and 9998887777
+2025-12-23 16:45:21,080 - dq_rules - INFO - Executing range rule: Phone between 1112222 and 9998887777
+2025-12-23 16:45:21,083 - dq_rules - INFO - Range rule 'Phone between 1112222 and 9998887777': 0 range violations found
+2025-12-23 16:45:21,085 - dq_rules - INFO - No range violations found
+2025-12-23 16:45:21,090 - dq_rules - INFO - Rule 'Phone between 1112222 and 9998887777' completed with status: PASS
+2025-12-23 16:45:21,091 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 0
+2025-12-23 16:45:21,093 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:21,094 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:21,095 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:21,116 - dq_audit - INFO - Inserted rules record with ID: 262
+2025-12-23 16:45:21,118 - dq_rules - INFO - Audit record logged with ID: 262
+2025-12-23 16:45:21,118 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164521
+2025-12-23 16:45:21,119 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:21,120 - dq_rules - INFO - API Report: Rules Executed: 1, Compliance Score: 100.0%
+2025-12-23 16:45:21,135 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164521
+2025-12-23 16:45:21,151 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164521
+2025-12-23 16:45:21,153 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:21,169 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164521
+2025-12-23 16:45:21,183 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164521
+2025-12-23 16:45:21,199 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164521
+2025-12-23 16:45:21,215 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164521
+2025-12-23 16:45:21,216 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164521
+2025-12-23 16:45:21,217 - __main__ - INFO - Completed with status 200 in 0.209s
+2025-12-23 16:45:24,281 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:24,282 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:24,285 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164524_709f853e
+2025-12-23 16:45:24,288 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:24,289 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:24,290 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:24,291 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:24,293 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:24,293 - dq_rules - INFO - ===============================
+2025-12-23 16:45:24,295 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:24,295 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:24,297 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:24,297 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:24,298 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:24,302 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:24,303 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:24,312 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:24,320 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:24,322 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.5MB total, 0.0MB for dataframe
+2025-12-23 16:45:24,323 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:24,327 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:24,328 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:24,329 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:24,332 - dq_rules - INFO - User selected rule type: 4
+2025-12-23 16:45:24,333 - dq_rules - INFO - CREATING KPI THRESHOLD RULE
+2025-12-23 16:45:24,333 - dq_rules - INFO - Using default KPI type: 1 (Row Count)
+2025-12-23 16:45:24,335 - dq_rules - INFO - Current row count: 15
+2025-12-23 16:45:24,336 - dq_rules - INFO - Using default threshold type: absolute
+2025-12-23 16:45:24,338 - dq_rules - INFO - Using default threshold value: 16.5 (10% above current)
+2025-12-23 16:45:24,340 - dq_rules - INFO - Using default growth check: False
+2025-12-23 16:45:24,341 - dq_rules - INFO - KPI Rule created: {'type': 'kpi_threshold', 'kpi_name': 'row_count', 'kpi_description': 'Total row count', 'current_value': 15, 'threshold_type': 'absolute', 'threshold_value': 16.5, 'threshold_description': 'Absolute threshold: 16.5', 'enable_growth_check': False, 'growth_threshold': None, 'description': 'KPI: Total row count | Absolute threshold: 16.5'}
+2025-12-23 16:45:24,343 - dq_rules - INFO - KPI Name: row_count, Current Value: 15, Threshold: 16.5
+2025-12-23 16:45:24,344 - dq_rules - INFO - Storing KPI history for: row_count
+2025-12-23 16:45:24,346 - dq_rules - INFO - Storing KPI history for: row_count
+2025-12-23 16:45:24,347 - dq_rules - INFO - Connecting to database: dq_checks at localhost
+2025-12-23 16:45:24,366 - dq_rules - INFO - Database connection successful!
+2025-12-23 16:45:24,366 - dq_rules - INFO - Checking kpi_history table structure...
+2025-12-23 16:45:24,370 - dq_rules - INFO - kpi_history table exists, checking structure...
+2025-12-23 16:45:24,376 - dq_rules - INFO - Current columns in kpi_history: ['id', 'session_id', 'kpi_name', 'kpi_value', 'threshold_value', 'check_timestamp', 'created_at']
+2025-12-23 16:45:24,378 - dq_rules - INFO - Table has correct schema, using existing table
+2025-12-23 16:45:24,378 - dq_rules - INFO - Inserting KPI: row_count = 15.0 for session RULES_20251223_164524
+2025-12-23 16:45:24,385 - dq_rules - INFO - ✅ KPI history stored successfully for: row_count (ID: 9)
+2025-12-23 16:45:24,386 - dq_rules - INFO - KPI rule created: KPI: Total row count | Absolute threshold: 16.5
+2025-12-23 16:45:24,389 - dq_rules - INFO - Defined 1 business rules
+2025-12-23 16:45:24,391 - dq_rules - INFO - EXECUTING 1 BUSINESS RULES
+2025-12-23 16:45:24,398 - dq_rules - INFO - Executing rule: KPI: Total row count | Absolute threshold: 16.5
+2025-12-23 16:45:24,401 - dq_rules - INFO - Executing KPI threshold rule: KPI: Total row count | Absolute threshold: 16.5
+2025-12-23 16:45:24,402 - dq_rules - INFO - KPI within acceptable limits. Current value: 15.00, Threshold: 16.50
+2025-12-23 16:45:24,406 - dq_rules - INFO - Rule 'KPI: Total row count | Absolute threshold: 16.5' completed with status: PASS
+2025-12-23 16:45:24,408 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 0
+2025-12-23 16:45:24,410 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:24,411 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:24,413 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:24,434 - dq_audit - INFO - Inserted rules record with ID: 263
+2025-12-23 16:45:24,435 - dq_rules - INFO - Audit record logged with ID: 263
+2025-12-23 16:45:24,436 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164524
+2025-12-23 16:45:24,437 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:24,439 - dq_rules - INFO - API Report: Rules Executed: 1, Compliance Score: 100.0%
+2025-12-23 16:45:24,455 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164524
+2025-12-23 16:45:24,471 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164524
+2025-12-23 16:45:24,472 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:24,492 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164524
+2025-12-23 16:45:24,509 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164524
+2025-12-23 16:45:24,527 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164524
+2025-12-23 16:45:24,545 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164524
+2025-12-23 16:45:24,547 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164524
+2025-12-23 16:45:24,550 - __main__ - INFO - Completed with status 200 in 0.268s
+2025-12-23 16:45:27,623 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:27,625 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:27,628 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164527_15908059
+2025-12-23 16:45:27,632 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:27,633 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:27,634 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:27,636 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:27,637 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:27,638 - dq_rules - INFO - ===============================
+2025-12-23 16:45:27,641 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:27,642 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:27,643 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:27,646 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:27,648 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:27,655 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:27,656 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:27,663 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:27,671 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:27,674 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.6MB total, 0.0MB for dataframe
+2025-12-23 16:45:27,675 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:27,679 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:27,680 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:27,683 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:27,686 - dq_rules - INFO - User selected rule type: 6
+2025-12-23 16:45:27,687 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-23 16:45:27,692 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-23 16:45:27,694 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-23 16:45:27,696 - dq_rules - INFO - Using default create_threshold: n
+2025-12-23 16:45:27,698 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-23 16:45:27,705 - dq_rules - INFO - Available string columns: ['CustomerName', 'Email', 'JoinDate', 'PostalCode', 'City', 'State']
+2025-12-23 16:45:27,706 - dq_rules - INFO - Using default create_pattern: n
+2025-12-23 16:45:27,709 - dq_rules - INFO - RANGE RULES SETUP
+2025-12-23 16:45:27,711 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-23 16:45:27,713 - dq_rules - INFO - Using default create_range: n
+2025-12-23 16:45:27,725 - dq_rules - INFO - NULL CHECK RULES SETUP
+2025-12-23 16:45:27,726 - dq_rules - INFO - Using default create_null_checks: y
+2025-12-23 16:45:27,727 - dq_rules - INFO - Checking for columns with null values...
+2025-12-23 16:45:27,731 - dq_rules - INFO - Found 1 null values in 'CustomerName'
+2025-12-23 16:45:27,732 - dq_rules - INFO - Created null check rule for CustomerName
+2025-12-23 16:45:27,735 - dq_rules - INFO - Found 1 null values in 'Email'
+2025-12-23 16:45:27,738 - dq_rules - INFO - Created null check rule for Email
+2025-12-23 16:45:27,740 - dq_rules - INFO - Found 2 null values in 'Salary'
+2025-12-23 16:45:27,741 - dq_rules - INFO - Created null check rule for Salary
+2025-12-23 16:45:27,744 - dq_rules - INFO - Found 1 null values in 'Department'
+2025-12-23 16:45:27,747 - dq_rules - INFO - Created null check rule for Department
+2025-12-23 16:45:27,751 - dq_rules - INFO - Found 1 null values in 'State'
+2025-12-23 16:45:27,753 - dq_rules - INFO - Created null check rule for State
+2025-12-23 16:45:27,758 - dq_rules - INFO - KPI THRESHOLD RULES SETUP
+2025-12-23 16:45:27,758 - dq_rules - INFO - Using default create_kpi: n
+2025-12-23 16:45:27,760 - dq_rules - INFO - Created comprehensive rule set with 5 rules
+2025-12-23 16:45:27,768 - dq_rules - INFO - Defined 5 business rules
+2025-12-23 16:45:27,769 - dq_rules - INFO - EXECUTING 5 BUSINESS RULES
+2025-12-23 16:45:27,775 - dq_rules - INFO - Executing rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,776 - dq_rules - INFO - Executing threshold rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,779 - dq_rules - INFO - Threshold rule 'CustomerName should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:27,782 - dq_rules - INFO - No violations found
+2025-12-23 16:45:27,785 - dq_rules - INFO - Rule 'CustomerName should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:27,788 - dq_rules - INFO - Executing rule: Email should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,789 - dq_rules - INFO - Executing threshold rule: Email should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,790 - dq_rules - INFO - Threshold rule 'Email should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:27,792 - dq_rules - INFO - No violations found
+2025-12-23 16:45:27,794 - dq_rules - INFO - Rule 'Email should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:27,800 - dq_rules - INFO - Executing rule: Salary should have no null values (currently 2 nulls)
+2025-12-23 16:45:27,802 - dq_rules - INFO - Executing threshold rule: Salary should have no null values (currently 2 nulls)
+2025-12-23 16:45:27,804 - dq_rules - INFO - Threshold rule 'Salary should have no null values (currently 2 nulls)': 0 violations found
+2025-12-23 16:45:27,806 - dq_rules - INFO - No violations found
+2025-12-23 16:45:27,809 - dq_rules - INFO - Rule 'Salary should have no null values (currently 2 nulls)' completed with status: PASS
+2025-12-23 16:45:27,814 - dq_rules - INFO - Executing rule: Department should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,816 - dq_rules - INFO - Executing threshold rule: Department should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,818 - dq_rules - INFO - Threshold rule 'Department should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:27,820 - dq_rules - INFO - No violations found
+2025-12-23 16:45:27,824 - dq_rules - INFO - Rule 'Department should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:27,828 - dq_rules - INFO - Executing rule: State should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,829 - dq_rules - INFO - Executing threshold rule: State should have no null values (currently 1 nulls)
+2025-12-23 16:45:27,832 - dq_rules - INFO - Threshold rule 'State should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:27,834 - dq_rules - INFO - No violations found
+2025-12-23 16:45:27,837 - dq_rules - INFO - Rule 'State should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:27,838 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 0
+2025-12-23 16:45:27,840 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:27,842 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:27,843 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:27,866 - dq_audit - INFO - Inserted rules record with ID: 264
+2025-12-23 16:45:27,868 - dq_rules - INFO - Audit record logged with ID: 264
+2025-12-23 16:45:27,869 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164527
+2025-12-23 16:45:27,870 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:27,872 - dq_rules - INFO - API Report: Rules Executed: 5, Compliance Score: 100.0%
+2025-12-23 16:45:27,892 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164527
+2025-12-23 16:45:27,909 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164527
+2025-12-23 16:45:27,911 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:27,929 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164527
+2025-12-23 16:45:27,946 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164527
+2025-12-23 16:45:27,962 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164527
+2025-12-23 16:45:27,990 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164527
+2025-12-23 16:45:27,991 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164527
+2025-12-23 16:45:27,995 - __main__ - INFO - Completed with status 200 in 0.371s
+2025-12-23 16:45:31,066 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:31,069 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:31,071 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164531_7bb334f3
+2025-12-23 16:45:31,075 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:31,077 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:31,079 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:31,081 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'session_id']
+2025-12-23 16:45:31,083 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:31,084 - dq_rules - INFO - ===============================
+2025-12-23 16:45:31,086 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:31,089 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:31,090 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:31,093 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:31,094 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:31,098 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:31,100 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:31,109 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:31,123 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:31,127 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.7MB total, 0.0MB for dataframe
+2025-12-23 16:45:31,129 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:31,133 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:31,135 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:31,136 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:31,139 - dq_rules - INFO - User selected rule type: 6
+2025-12-23 16:45:31,141 - dq_rules - INFO - CREATING COMPREHENSIVE RULE SET
+2025-12-23 16:45:31,152 - dq_rules - INFO - THRESHOLD RULES SETUP
+2025-12-23 16:45:31,155 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-23 16:45:31,156 - dq_rules - INFO - Using default create_threshold: n
+2025-12-23 16:45:31,163 - dq_rules - INFO - PATTERN RULES SETUP
+2025-12-23 16:45:31,169 - dq_rules - INFO - Available string columns: ['CustomerName', 'Email', 'JoinDate', 'PostalCode', 'City', 'State']
+2025-12-23 16:45:31,171 - dq_rules - INFO - Using default create_pattern: n
+2025-12-23 16:45:31,176 - dq_rules - INFO - RANGE RULES SETUP
+2025-12-23 16:45:31,178 - dq_rules - INFO - Available numeric columns: ['Phone', 'Salary']
+2025-12-23 16:45:31,179 - dq_rules - INFO - Using default create_range: n
+2025-12-23 16:45:31,183 - dq_rules - INFO - NULL CHECK RULES SETUP
+2025-12-23 16:45:31,185 - dq_rules - INFO - Using default create_null_checks: y
+2025-12-23 16:45:31,189 - dq_rules - INFO - Checking for columns with null values...
+2025-12-23 16:45:31,191 - dq_rules - INFO - Found 1 null values in 'CustomerName'
+2025-12-23 16:45:31,195 - dq_rules - INFO - Created null check rule for CustomerName
+2025-12-23 16:45:31,197 - dq_rules - INFO - Found 1 null values in 'Email'
+2025-12-23 16:45:31,198 - dq_rules - INFO - Created null check rule for Email
+2025-12-23 16:45:31,201 - dq_rules - INFO - Found 2 null values in 'Salary'
+2025-12-23 16:45:31,202 - dq_rules - INFO - Created null check rule for Salary
+2025-12-23 16:45:31,207 - dq_rules - INFO - Found 1 null values in 'Department'
+2025-12-23 16:45:31,209 - dq_rules - INFO - Created null check rule for Department
+2025-12-23 16:45:31,212 - dq_rules - INFO - Found 1 null values in 'State'
+2025-12-23 16:45:31,213 - dq_rules - INFO - Created null check rule for State
+2025-12-23 16:45:31,218 - dq_rules - INFO - KPI THRESHOLD RULES SETUP
+2025-12-23 16:45:31,220 - dq_rules - INFO - Using default create_kpi: n
+2025-12-23 16:45:31,225 - dq_rules - INFO - Created comprehensive rule set with 5 rules
+2025-12-23 16:45:31,227 - dq_rules - INFO - Defined 5 business rules
+2025-12-23 16:45:31,229 - dq_rules - INFO - EXECUTING 5 BUSINESS RULES
+2025-12-23 16:45:31,240 - dq_rules - INFO - Executing rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,241 - dq_rules - INFO - Executing threshold rule: CustomerName should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,243 - dq_rules - INFO - Threshold rule 'CustomerName should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:31,245 - dq_rules - INFO - No violations found
+2025-12-23 16:45:31,248 - dq_rules - INFO - Rule 'CustomerName should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:31,250 - dq_rules - INFO - Executing rule: Email should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,251 - dq_rules - INFO - Executing threshold rule: Email should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,255 - dq_rules - INFO - Threshold rule 'Email should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:31,256 - dq_rules - INFO - No violations found
+2025-12-23 16:45:31,259 - dq_rules - INFO - Rule 'Email should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:31,261 - dq_rules - INFO - Executing rule: Salary should have no null values (currently 2 nulls)
+2025-12-23 16:45:31,263 - dq_rules - INFO - Executing threshold rule: Salary should have no null values (currently 2 nulls)
+2025-12-23 16:45:31,265 - dq_rules - INFO - Threshold rule 'Salary should have no null values (currently 2 nulls)': 0 violations found
+2025-12-23 16:45:31,267 - dq_rules - INFO - No violations found
+2025-12-23 16:45:31,269 - dq_rules - INFO - Rule 'Salary should have no null values (currently 2 nulls)' completed with status: PASS
+2025-12-23 16:45:31,274 - dq_rules - INFO - Executing rule: Department should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,274 - dq_rules - INFO - Executing threshold rule: Department should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,277 - dq_rules - INFO - Threshold rule 'Department should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:31,280 - dq_rules - INFO - No violations found
+2025-12-23 16:45:31,283 - dq_rules - INFO - Rule 'Department should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:31,293 - dq_rules - INFO - Executing rule: State should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,294 - dq_rules - INFO - Executing threshold rule: State should have no null values (currently 1 nulls)
+2025-12-23 16:45:31,296 - dq_rules - INFO - Threshold rule 'State should have no null values (currently 1 nulls)': 0 violations found
+2025-12-23 16:45:31,298 - dq_rules - INFO - No violations found
+2025-12-23 16:45:31,300 - dq_rules - INFO - Rule 'State should have no null values (currently 1 nulls)' completed with status: PASS
+2025-12-23 16:45:31,301 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 0
+2025-12-23 16:45:31,307 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:31,309 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:31,311 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:31,333 - dq_audit - INFO - Inserted rules record with ID: 265
+2025-12-23 16:45:31,334 - dq_rules - INFO - Audit record logged with ID: 265
+2025-12-23 16:45:31,335 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164531
+2025-12-23 16:45:31,336 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:31,337 - dq_rules - INFO - API Report: Rules Executed: 5, Compliance Score: 100.0%
+2025-12-23 16:45:31,355 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164531
+2025-12-23 16:45:31,371 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164531
+2025-12-23 16:45:31,373 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:31,392 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164531
+2025-12-23 16:45:31,409 - dq_error_log - INFO - Retrieved 0 error logs for session RULES_20251223_164531
+2025-12-23 16:45:31,427 - dq_error_log - INFO - Retrieved summary: 0 total errors for session RULES_20251223_164531
+2025-12-23 16:45:31,448 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164531
+2025-12-23 16:45:31,450 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164531
+2025-12-23 16:45:31,452 - __main__ - INFO - Completed with status 200 in 0.385s
+2025-12-23 16:45:34,536 - __main__ - INFO - POST /api/rules - Request started
+2025-12-23 16:45:34,538 - __main__ - INFO - Business rules analysis request received
+2025-12-23 16:45:34,542 - __main__ - INFO - Starting business rules analysis for session RULES_20251223_164534_24624c90
+2025-12-23 16:45:34,545 - dq_rules - INFO - LOADING DATA FOR BUSINESS RULES
+2025-12-23 16:45:34,546 - dq_rules - INFO - === DEBUG load_data_for_rules ===
+2025-12-23 16:45:34,548 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:34,550 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'run_text_comparison', 'actual_column', 'expected_column', 'session_id']
+2025-12-23 16:45:34,552 - dq_rules - INFO - File path in UI data: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:34,554 - dq_rules - INFO - ===============================
+2025-12-23 16:45:34,555 - dq_unified - INFO - Prompting user for data source type
+2025-12-23 16:45:34,557 - dq_unified - INFO - User selected source type: 1
+2025-12-23 16:45:34,559 - dq_rules - INFO - Source type: csv, Source config: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:34,560 - dq_unified - INFO - Loading data from CSV
+2025-12-23 16:45:34,562 - dq_unified - INFO - Loading large CSV: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\sample_data.csv
+2025-12-23 16:45:34,568 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 16:45:34,568 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 16:45:34,579 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 16:45:34,592 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 16:45:34,596 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 109.7MB total, 0.0MB for dataframe
+2025-12-23 16:45:34,600 - dq_rules - INFO - Loaded data: 15 rows, 10 columns
+2025-12-23 16:45:34,608 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 16:45:34,610 - dq_rules - INFO - DEFINING CUSTOM BUSINESS RULES
+2025-12-23 16:45:34,612 - dq_rules - INFO - Available columns: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 16:45:34,616 - dq_rules - INFO - User selected rule type: 1
+2025-12-23 16:45:34,621 - dq_rules - INFO - CREATING THRESHOLD RULE
+2025-12-23 16:45:34,623 - dq_rules - INFO - === DEBUG create_threshold_rule ===
+2025-12-23 16:45:34,624 - dq_rules - INFO - UI data type: <class 'dict'>
+2025-12-23 16:45:34,625 - dq_rules - INFO - UI data keys: ['analysis_type', 'source_type', 'file_path', 'rule_type', 'run_text_comparison', 'actual_column', 'expected_column', 'session_id']
+2025-12-23 16:45:34,626 - dq_rules - INFO -   threshold_column: NOT FOUND
+2025-12-23 16:45:34,627 - dq_rules - INFO -   pattern_column: NOT FOUND
+2025-12-23 16:45:34,629 - dq_rules - INFO -   range_column: NOT FOUND
+2025-12-23 16:45:34,631 - dq_rules - INFO -   kpi_threshold_value: NOT FOUND
+2025-12-23 16:45:34,633 - dq_rules - INFO -   pattern_columns: NOT FOUND
+2025-12-23 16:45:34,634 - dq_rules - INFO -   rule_type: 1
+2025-12-23 16:45:34,635 - dq_rules - INFO - ===================
+2025-12-23 16:45:34,638 - dq_rules - INFO - Auto-selected first numeric column: Phone
+2025-12-23 16:45:34,640 - dq_rules - INFO - Using default operator: >
+2025-12-23 16:45:34,642 - dq_rules - INFO - Using default threshold value: 0
+2025-12-23 16:45:34,644 - dq_rules - INFO - Threshold rule created: Phone > 0
+2025-12-23 16:45:34,648 - dq_rules - INFO - Defined 1 business rules
+2025-12-23 16:45:34,650 - dq_rules - INFO - EXECUTING 1 BUSINESS RULES
+2025-12-23 16:45:34,658 - dq_rules - INFO - Executing rule: Phone > 0
+2025-12-23 16:45:34,660 - dq_rules - INFO - Executing threshold rule: Phone > 0
+2025-12-23 16:45:34,664 - dq_rules - INFO - Threshold rule 'Phone > 0': 15 violations found
+2025-12-23 16:45:34,696 - dq_error_log - INFO - Batch logged 15 errors for session RULES_20251223_164534
+2025-12-23 16:45:34,699 - dq_rules - WARNING - 15 violations found
+2025-12-23 16:45:34,714 - dq_rules - INFO - Rule 'Phone > 0' completed with status: FAIL
+2025-12-23 16:45:34,715 - dq_rules - INFO - TOTAL VIOLATIONS ACROSS ALL RULES: 15
+2025-12-23 16:45:34,718 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT
+2025-12-23 16:45:34,719 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:34,722 - dq_audit - INFO - Starting database insertion for rules...
+2025-12-23 16:45:34,748 - dq_audit - INFO - Inserted rules record with ID: 266
+2025-12-23 16:45:34,749 - dq_rules - INFO - Audit record logged with ID: 266
+2025-12-23 16:45:34,750 - dq_rules - INFO - Returning JSON report for API, Session: RULES_20251223_164534
+2025-12-23 16:45:34,752 - dq_rules - INFO - GENERATING BUSINESS RULES VALIDATION REPORT FOR API
+2025-12-23 16:45:34,753 - dq_rules - INFO - API Report: Rules Executed: 1, Compliance Score: 0.0%
+2025-12-23 16:45:34,774 - dq_error_log - INFO - Retrieved 15 error logs for session RULES_20251223_164534
+2025-12-23 16:45:34,796 - dq_error_log - INFO - Retrieved summary: 15 total errors for session RULES_20251223_164534
+2025-12-23 16:45:34,798 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 16:45:34,820 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164534
+2025-12-23 16:45:34,827 - dq_rules - INFO - RUNNING SEPARATE TEXT COMPARISON
+2025-12-23 16:45:34,832 - dq_rules - INFO - DATA SUMMARY: Actual column: 'CustomerName', Expected column: 'Email', Total rows: 15
+2025-12-23 16:45:34,835 - dq_rules - INFO - Executing row-by-row text comparison: Text comparison: 'CustomerName' contains 'Email' (row-by-row)
+2025-12-23 16:45:34,837 - dq_rules - INFO - COMPARISON DETAILS: Actual column: 'CustomerName', Expected column: 'Email', Total rows to check: 15
+2025-12-23 16:45:35,111 - dq_rules - WARNING - 13 text comparison violations found
+2025-12-23 16:45:35,112 - dq_rules - INFO - SUMMARY STATISTICS: Total rows checked: 15, Valid comparisons: 13, Skipped (null/empty): 2, Violations: 13, Success rate: 0.0%
+2025-12-23 16:45:35,136 - dq_error_log - INFO - Retrieved 28 error logs for session RULES_20251223_164534
+2025-12-23 16:45:35,158 - dq_error_log - INFO - Retrieved summary: 28 total errors for session RULES_20251223_164534
+2025-12-23 16:45:35,179 - dq_audit - INFO - Retrieved 1 audit logs for session RULES_20251223_164534
+2025-12-23 16:45:35,181 - __main__ - INFO - Business rules analysis completed for session RULES_20251223_164534
+2025-12-23 16:45:35,188 - __main__ - INFO - Completed with status 200 in 0.652s
+2025-12-23 16:53:39,491 - __main__ - INFO - GET /api/single/SINGLE_20251223_124559 - Request started
+2025-12-23 16:53:39,575 - dq_audit - INFO - Retrieved 1 audit logs for session SINGLE_20251223_124559
+2025-12-23 16:53:39,605 - dq_error_log - INFO - Retrieved 16 error logs for session SINGLE_20251223_124559
+2025-12-23 16:53:39,624 - dq_error_log - INFO - Retrieved summary: 16 total errors for session SINGLE_20251223_124559
+2025-12-23 16:53:39,629 - __main__ - INFO - Retrieved single source session data for SINGLE_20251223_124559
+2025-12-23 16:53:39,632 - __main__ - INFO - Completed with status 200 in 0.141s

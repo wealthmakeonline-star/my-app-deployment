@@ -1,0 +1,64 @@
+2025-12-31 14:55:08,966 - root - INFO - CLI Mode Logging Initialized
+2025-12-31 14:55:08,967 - root - INFO - CLI logs will be saved to: logs/dq_framework_20251231_145508.log
+2025-12-31 14:55:08,967 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-31 14:55:08,968 - __main__ - INFO - Starting system resource check
+2025-12-31 14:55:08,973 - __main__ - INFO - Total RAM: 15.7 GB
+2025-12-31 14:55:08,973 - __main__ - INFO - Available RAM: 2.2 GB
+2025-12-31 14:55:08,973 - __main__ - INFO - Memory used: 86.1%
+2025-12-31 14:55:08,973 - __main__ - INFO - Memory status: OK
+2025-12-31 14:55:08,975 - __main__ - INFO - Free disk space: 261.2 GB
+2025-12-31 14:55:08,976 - __main__ - INFO - Disk used: 45.2%
+2025-12-31 14:55:08,976 - __main__ - INFO - Disk space: OK
+2025-12-31 14:55:09,476 - __main__ - INFO - CPU cores: 8
+2025-12-31 14:55:09,476 - __main__ - INFO - CPU usage: 36.1%
+2025-12-31 14:55:09,476 - __main__ - INFO - Python version: 3.12.4
+2025-12-31 14:55:09,476 - __main__ - INFO - System platform: win32
+2025-12-31 14:55:09,477 - __main__ - INFO - User session started at: 2025-12-31 14:55:09.476681
+2025-12-31 14:55:09,477 - __main__ - INFO - Displaying main menu options to user
+2025-12-31 14:55:10,600 - __main__ - INFO - User selected option: 1
+2025-12-31 14:55:10,601 - __main__ - INFO - Starting Single Source Analysis module
+2025-12-31 14:55:10,604 - dq_unified - INFO - Starting unified data quality analysis
+2025-12-31 14:55:10,604 - dq_unified - INFO - Prompting user for data source type
+2025-12-31 14:55:10,605 - dq_unified - INFO - UI Data source_type: No UI data
+2025-12-31 14:55:11,887 - dq_unified - INFO - User selected source type: 3
+2025-12-31 14:55:11,888 - dq_unified - INFO - Getting database configuration - Dual mode
+2025-12-31 14:55:13,610 - dq_unified - INFO - User selected Browse and Select mode
+2025-12-31 14:55:13,616 - database_navigator - INFO - DatabaseNavigator initialized
+2025-12-31 14:55:13,616 - database_navigator - INFO - Starting database navigation...
+2025-12-31 14:55:15,658 - database_navigator - INFO - Database type: postgres
+2025-12-31 14:55:15,659 - database_navigator - INFO - Getting database configuration...
+2025-12-31 14:55:21,502 - database_navigator - INFO - Connecting to POSTGRES...
+2025-12-31 14:55:21,734 - database_navigator - INFO - Successfully connected to POSTGRES!
+2025-12-31 14:55:21,762 - database_navigator - INFO - Found 3 databases
+2025-12-31 14:55:29,366 - database_navigator - INFO - Selected database: dq_checks
+2025-12-31 14:55:29,366 - database_navigator - INFO - Connecting to POSTGRES...
+2025-12-31 14:55:29,591 - database_navigator - INFO - Successfully connected to POSTGRES!
+2025-12-31 14:55:29,637 - database_navigator - INFO - Found 1 schemas
+2025-12-31 14:55:31,461 - database_navigator - INFO - Selected schema: public
+2025-12-31 14:55:31,522 - database_navigator - INFO - Found 2 tables in schema 'public'
+2025-12-31 14:55:35,744 - database_navigator - INFO - Selected table: customers
+2025-12-31 14:55:35,750 - database_navigator - INFO - Selection complete: {'type': 'postgres', 'database': 'dq_checks', 'schema': 'public', 'table': 'customers', 'selection_mode': 'hierarchical', 'host': 'localhost', 'port': '5432', 'user': 'postgres', 'password': 'postgres'}
+2025-12-31 14:55:35,750 - dq_unified - INFO - Selected via navigation: dq_checks.public.customers
+2025-12-31 14:55:35,751 - dq_unified - INFO - Loading data from DATABASE
+2025-12-31 14:55:35,751 - dq_unified - INFO - Loading data from DATABASE
+2025-12-31 14:55:35,751 - dq_unified - INFO - Loading large database table: customers
+2025-12-31 14:55:35,751 - dq_unified - INFO - Normalized DB config with schema: public
+2025-12-31 14:55:35,753 - dq_unified - ERROR - Error loading large database: Unsupported database type: postgres
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 223, in load_large_database
+    raise ValueError(f"Unsupported database type: {db_config['type']}")
+ValueError: Unsupported database type: postgres
+2025-12-31 14:55:35,758 - dq_unified - ERROR - Error loading data from database: Unsupported database type: postgres
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 1226, in load_data_from_source
+    df = LargeDatasetHandler.load_large_database(source_config, max_rows=max_rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\dq_unified.py", line 223, in load_large_database
+    raise ValueError(f"Unsupported database type: {db_config['type']}")
+ValueError: Unsupported database type: postgres
+2025-12-31 14:55:35,759 - dq_unified - ERROR - No data loaded or dataset is empty
+2025-12-31 14:55:35,759 - __main__ - INFO - Single Source Analysis completed successfully
+2025-12-31 14:55:35,760 - __main__ - INFO - Displaying main menu options to user
+2025-12-31 15:07:14,891 - __main__ - INFO - User selected option: 6
+2025-12-31 15:07:14,899 - __main__ - INFO - User session ended. Duration: 0:12:05.422359
+2025-12-31 15:07:14,903 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

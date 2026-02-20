@@ -1,0 +1,78 @@
+2026-01-06 15:37:10,753 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-06 15:37:10,754 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260106_153710.log
+2026-01-06 15:37:10,838 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-06 15:37:10,838 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-06 15:37:10,842 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-06 15:37:10,842 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-06 15:37:10,842 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-06 15:37:10,848 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-06 15:37:10,849 - __main__ - INFO - 📊 Modules available: True
+2026-01-06 15:37:10,849 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-06 15:37:10,850 - __main__ - INFO - 📋 Available endpoints:
+2026-01-06 15:37:10,850 - __main__ - INFO -   GET  /              - API status
+2026-01-06 15:37:10,851 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-06 15:37:10,852 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-06 15:37:10,853 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-06 15:37:10,853 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-06 15:37:10,854 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-06 15:37:10,854 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-06 15:37:10,855 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-06 15:37:10,856 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-06 15:37:16,694 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-06 15:37:16,695 - __main__ - ERROR - Error getting database hierarchy: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\run_api.py", line 761, in get_database_hierarchy_api
+    data = request.get_json()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 607, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 650, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2026-01-06 15:37:16,712 - __main__ - INFO - Completed with status 500 in 0.018s
+2026-01-06 15:38:18,694 - __main__ - INFO - POST /api/database-hierarchy - Request started
+2026-01-06 15:38:18,696 - __main__ - ERROR - Error getting database hierarchy: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 614, in get_json
+    rv = self.json_module.loads(data)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 188, in loads
+    return json.loads(s, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 648, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Data_Quality_Framework\run_api.py", line 761, in get_database_hierarchy_api
+    data = request.get_json()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 623, in get_json
+    rv = self.on_json_loading_failed(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 135, in on_json_loading_failed
+    raise BadRequest() from e
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-01-06 15:38:18,722 - __main__ - INFO - Completed with status 500 in 0.028s

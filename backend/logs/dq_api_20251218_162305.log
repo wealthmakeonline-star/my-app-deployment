@@ -1,0 +1,205 @@
+2025-12-18 16:23:05,674 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-18 16:23:05,908 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-18 16:23:05,908 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-18 16:23:05,915 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-18 16:23:05,915 - root - INFO - DQ modules available: True
+2025-12-18 16:23:05,915 - root - INFO - Config file mode: False
+2025-12-18 16:23:05,915 - root - INFO - Database config: localhost/dq_checks
+2025-12-18 16:23:06,858 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-18 16:23:06,858 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 16:23:27,256 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:23:27] "GET /api/health HTTP/1.1" 200 -
+2025-12-18 16:24:04,817 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-18 16:24:04,817 - root - INFO - Starting comparison for session CMP_20251218_162404_071cc432
+2025-12-18 16:24:04,817 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:04,819 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:04,830 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:04] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:06,893 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_file_path', 'target_sheet_name', 'selected_columns'])
+2025-12-18 16:24:06,893 - root - INFO - Starting comparison for session CMP_20251218_162406_61683ce4
+2025-12-18 16:24:06,893 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:06,901 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:06,904 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:06] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:08,986 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'source_sheet_name', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-18 16:24:08,987 - root - INFO - Starting comparison for session CMP_20251218_162408_e02b7904
+2025-12-18 16:24:08,987 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:08,993 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:08,996 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:08] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:11,076 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'target_source_type', 'target_db_type', 'target_host', 'target_port', 'target_database', 'target_user', 'target_password', 'target_table', 'selected_columns'])
+2025-12-18 16:24:11,076 - root - INFO - Starting comparison for session CMP_20251218_162411_65d72179
+2025-12-18 16:24:11,076 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:11,083 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:11,086 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:11] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:13,139 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'source_file_path', 'source_sheet_name', 'target_source_type', 'target_db_type', 'target_host', 'target_port', 'target_database', 'target_user', 'target_password', 'target_table', 'selected_columns'])
+2025-12-18 16:24:13,139 - root - INFO - Starting comparison for session CMP_20251218_162413_22169042
+2025-12-18 16:24:13,139 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:13,145 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:13,149 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:13] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:15,246 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'db_type', 'host', 'port', 'database', 'user', 'password', 'table', 'target_source_type', 'target_file_path', 'selected_columns'])
+2025-12-18 16:24:15,246 - root - INFO - Starting comparison for session CMP_20251218_162415_4246399d
+2025-12-18 16:24:15,246 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:15,252 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:15,255 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:15] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:17,340 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'db_type', 'host', 'port', 'database', 'user', 'password', 'table', 'target_source_type', 'target_file_path', 'target_sheet_name', 'selected_columns'])
+2025-12-18 16:24:17,340 - root - INFO - Starting comparison for session CMP_20251218_162417_c2d206af
+2025-12-18 16:24:17,340 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:17,347 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:17,350 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:17] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -
+2025-12-18 16:24:19,410 - root - INFO - Comparison analysis request received: dict_keys(['source_type', 'db_type', 'host', 'port', 'database', 'user', 'password', 'table', 'target_source_type', 'target_db_type', 'target_host', 'target_port', 'target_database', 'target_user', 'target_password', 'target_table', 'selected_columns'])
+2025-12-18 16:24:19,410 - root - INFO - Starting comparison for session CMP_20251218_162419_9a119314
+2025-12-18 16:24:19,410 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2025-12-18 16:24:19,416 - dq_comparison - ERROR - Error in comparison tool execution: Required field 'source_file_path' not provided in UI mode
+Traceback (most recent call last):
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 1267, in run_comparison_analysis_ui
+    source_df, target_df, source_info, target_info, source_file, target_file = load_comparison_sources(ui_data)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 281, in load_comparison_sources
+    source_df, source_info, source_file = load_single_comparison_source("SOURCE", source_ui_data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 55, in load_single_comparison_source
+    return load_csv_source(source_type_label, ui_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\dq_comparison.py", line 71, in load_csv_source
+    file_path = get_input(
+                ^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 236, in get_input
+    return handler.get_input(prompt, field_name, default, required)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\data_quality_framework-V2\input_handler.py", line 56, in get_input
+    raise ValueError(f"Required field '{field_name}' not provided in UI mode")
+ValueError: Required field 'source_file_path' not provided in UI mode
+2025-12-18 16:24:19,419 - werkzeug - INFO - 127.0.0.1 - - [18/Dec/2025 16:24:19] "[31m[1mPOST /api/compare HTTP/1.1[0m" 400 -

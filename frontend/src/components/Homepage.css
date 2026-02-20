@@ -1,0 +1,141 @@
+/* ================= PAGE ================= */
+
+.homepage-container {
+  width: 100%;
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 100px; */
+  background-color: #eef4ff;
+  /* Prevents any scaled elements from creating scrollbars */
+  overflow: hidden; 
+  /* overflow-y: auto; */
+  /* position: relative; */
+}
+
+/* ================= MAIN WRAPPER ================= */
+
+.arch-wrapper {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  /* Removed margin-left to ensure perfect flex centering */
+  margin: 0; 
+}
+
+/* ================= SHARED NODE ================= */
+
+.node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.node img {
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= LOGO SIZES ================= */
+
+.autoedge img { width: 230px; }
+.datacheck img { width: 200px; }
+.ingestor img  { width: 270px; }
+.notifyiq img  { width: 200px; }
+.securetag img { width: 110px; }
+.opsguard img  { width: 110px; }
+.migratex img  { width: 190px; }
+.finoptima img { width: 90px; }
+
+/* ================= POSITIONS ================= */
+
+.autoedge  { left: -60px; top: 238px; }
+.datacheck { left: 500px; top: 80px; }
+.ingestor  { left: 375px; top: 210px; }
+.notifyiq  { left: 410px; top: 430px; }
+.securetag { left: 485px; top: 530px; }
+.opsguard  { left: 895px; top: 160px; }
+.migratex  { left: 1060px; top: 315px; }
+.finoptima { left: 915px; top: 470px; }
+
+/* ================= AUTOEDGE CONCENTRIC RINGS ================= */
+
+.autoedge-ring {
+  position: absolute;
+}
+
+.autoedge-ring::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #163761 0deg 90deg,
+    #3967a3 90deg 180deg,
+    #163761 180deg 270deg,
+    #2a66b3 270deg 360deg
+  );
+  mask: radial-gradient(circle, transparent 60%, black 48%);
+  -webkit-mask: radial-gradient(circle, transparent 60%, black 48%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+/* ================= CONNECTORS ================= */
+
+.connectors {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.connectors path {
+  fill: none;
+  stroke: #59779e;
+  stroke-width: 2;
+  stroke-linecap: butt;
+}
+
+/* ================= RESPONSIVE SCALE ================= */
+
+@media (max-width: 1280px) {
+  .arch-wrapper {
+    /* Using center origin prevents the box from drifting into margins */
+    transform: scale(0.85); 
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .arch-wrapper {
+    transform: scale(0.7);
+    transform-origin: center center;
+  }
+}
+
+/* ================= HOVER EFFECTS ================= */
+
+.node:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 10px 22px rgba(22, 55, 97, 0.35));
+  z-index: 5;
+}
+
+.autoedge:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 16px 30px rgba(22, 55, 97, 0.45));
+}
+
+.autoedge:hover .autoedge-ring::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}

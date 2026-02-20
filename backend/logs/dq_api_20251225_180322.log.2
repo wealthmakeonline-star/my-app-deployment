@@ -1,0 +1,75 @@
+2025-12-25 18:03:22,013 - __main__ - INFO - 🌐 API Server Logging Initialized
+2025-12-25 18:03:22,014 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20251225_180322.log
+2025-12-25 18:03:22,155 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2025-12-25 18:03:22,155 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2025-12-25 18:03:22,157 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 18:03:22,158 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-25 18:03:22,158 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2025-12-25 18:03:22,166 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2025-12-25 18:03:22,167 - __main__ - INFO - 📊 Modules available: True
+2025-12-25 18:03:22,167 - __main__ - INFO - 🔧 Config file mode: False
+2025-12-25 18:03:22,168 - __main__ - INFO - 📋 Available endpoints:
+2025-12-25 18:03:22,169 - __main__ - INFO -   GET  /              - API status
+2025-12-25 18:03:22,169 - __main__ - INFO -   GET  /api/health    - Health check
+2025-12-25 18:03:22,170 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2025-12-25 18:03:22,171 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2025-12-25 18:03:22,171 - __main__ - INFO -   POST /api/upload    - File upload
+2025-12-25 18:03:22,172 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2025-12-25 18:03:22,173 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2025-12-25 18:03:22,174 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2025-12-25 18:03:22,175 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2025-12-25 18:09:11,951 - __main__ - INFO - GET /api/health - Request started
+2025-12-25 18:09:11,952 - __main__ - INFO - Completed with status 200 in 0.001s
+2025-12-25 18:09:14,000 - __main__ - INFO - POST /api/test-db-connection - Request started
+2025-12-25 18:09:14,142 - __main__ - INFO - Database connection test: MYSQL connection successful
+2025-12-25 18:09:14,144 - __main__ - INFO - Completed with status 200 in 0.144s
+2025-12-25 18:09:16,196 - __main__ - INFO - POST /api/check-single - Request started
+2025-12-25 18:09:16,197 - __main__ - INFO - Single source analysis request received
+2025-12-25 18:09:16,198 - __main__ - INFO - Starting analysis for session SINGLE_20251225_180916_7d07515a
+2025-12-25 18:09:16,198 - __main__ - INFO - UI Data being passed to dq_unified:
+2025-12-25 18:09:16,199 - __main__ - INFO -   source_type: database
+2025-12-25 18:09:16,199 - __main__ - INFO -   db_config: {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'user': 'root', 'password': 'root', 'table': 'employee'}
+2025-12-25 18:09:16,199 - __main__ - INFO -   mandatory_fields: all
+2025-12-25 18:09:16,200 - dq_unified - INFO - ==================================================
+2025-12-25 18:09:16,200 - dq_unified - INFO - RUN_SINGLE_SOURCE_ANALYSIS_UI - START
+2025-12-25 18:09:16,200 - dq_unified - INFO - UI Data received: {'analysis_type': 'single', 'source_type': 'database', 'mandatory_fields': 'all', 'db_config': {'type': 'mysql', 'host': 'localhost', 'port': 3306, 'database': 'dq_checks', 'user': 'root', 'password': 'root', 'table': 'employee'}}
+2025-12-25 18:09:16,201 - dq_unified - INFO - UI Data keys: ['analysis_type', 'source_type', 'mandatory_fields', 'db_config']
+2025-12-25 18:09:16,201 - dq_unified - INFO - Prompting user for data source type
+2025-12-25 18:09:16,203 - dq_unified - INFO - UI Data source_type: database
+2025-12-25 18:09:16,203 - dq_unified - INFO - Using source_type from UI data: database
+2025-12-25 18:09:16,204 - dq_unified - INFO - Loading data from DATABASE
+2025-12-25 18:09:16,204 - dq_unified - INFO - Loading data from DATABASE
+2025-12-25 18:09:16,205 - dq_unified - INFO - Loading large database table: employee
+2025-12-25 18:09:16,263 - dq_unified - INFO - MySQL table has 89,999 rows
+2025-12-25 18:09:16,264 - dq_unified - INFO - Loading 89,999 rows from MySQL...
+2025-12-25 18:09:17,037 - dq_unified - INFO - Loaded 89,999 rows from MySQL
+2025-12-25 18:09:17,661 - dq_unified - INFO - Memory optimization: 60.7MB -> 25.7MB (Saved: 35.0MB)
+2025-12-25 18:09:17,748 - dq_unified - INFO - Loaded 89,999 rows, 12 columns. Memory: 202.2MB total, 25.7MB for dataframe
+2025-12-25 18:09:17,749 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-25 18:09:17,750 - dq_unified - INFO - API Mode: Created ErrorLogger for session SINGLE_20251225_180917
+2025-12-25 18:09:17,751 - dq_unified - INFO - Checking for empty cells
+2025-12-25 18:09:17,751 - dq_unified - INFO - DEBUG: Checking for 'nan' strings in Email column:
+2025-12-25 18:09:17,806 - dq_unified - INFO - Column 'id': No empty cells
+2025-12-25 18:09:17,881 - dq_unified - INFO - Column 'customer_id': No empty cells
+2025-12-25 18:09:17,953 - dq_unified - INFO - Column 'transaction_id': No empty cells
+2025-12-25 18:09:17,954 - dq_unified - WARNING - Column 'customer_name': 3510 empty cells (3.9%)
+2025-12-25 18:09:18,084 - dq_error_log - INFO - Batch logged 1000 errors for session SINGLE_20251225_180917
+2025-12-25 18:09:18,086 - dq_unified - WARNING - Column 'email': 1517 empty cells (1.7%)
+2025-12-25 18:09:18,174 - dq_error_log - INFO - Batch logged 1000 errors for session SINGLE_20251225_180917
+2025-12-25 18:09:18,243 - dq_unified - WARNING - Column 'phone': 1282 empty cells (1.4%)
+2025-12-25 18:09:18,395 - dq_error_log - INFO - Batch logged 1000 errors for session SINGLE_20251225_180917
+2025-12-25 18:09:18,397 - dq_unified - INFO - Column 'transaction_date': No empty cells
+2025-12-25 18:09:18,450 - dq_unified - WARNING - Column 'amount': 1133 empty cells (1.3%)
+2025-12-25 18:09:18,564 - dq_error_log - INFO - Batch logged 1000 errors for session SINGLE_20251225_180917
+2025-12-25 18:09:18,565 - dq_unified - INFO - Column 'quantity': No empty cells
+2025-12-25 18:09:18,566 - dq_unified - INFO - Column 'age': No empty cells
+2025-12-25 18:09:18,567 - dq_unified - INFO - Column 'status': No empty cells
+2025-12-25 18:09:18,568 - dq_unified - INFO - Column 'description': No empty cells
+2025-12-25 18:09:18,568 - dq_unified - INFO - Total empty cells found: 7,442
+2025-12-25 18:09:18,569 - dq_unified - INFO - Checking for duplicate rows
+2025-12-25 18:09:18,570 - dq_unified - INFO - DEBUG: Data shape: (89999, 12)
+2025-12-25 18:09:18,570 - dq_unified - INFO - DEBUG: Checking duplicates on 89999 rows
+2025-12-25 18:09:18,572 - dq_unified - INFO - DEBUG: Checking CustomerName values with repr to see whitespace:
+2025-12-25 18:09:18,572 - dq_unified - INFO - DEBUG: Row 0 CustomerName: 'N/A'
+2025-12-25 18:09:18,573 - dq_unified - INFO - DEBUG: Row 5 CustomerName: 'N/A'
+2025-12-25 18:09:18,695 - dq_unified - INFO - DEBUG: Simple duplicate count: 203

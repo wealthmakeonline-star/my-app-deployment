@@ -1,0 +1,89 @@
+2025-12-02 15:27:57,352 - __main__ - INFO - 🚀 UNIVERSAL DATA QUALITY FRAMEWORK INITIALIZED
+2025-12-02 15:27:57,352 - __main__ - INFO - User session started at: 2025-12-02 15:27:57.352245
+2025-12-02 15:27:57,353 - __main__ - INFO - Displaying main menu options to user
+2025-12-02 15:28:00,303 - __main__ - INFO - User selected option: 2
+2025-12-02 15:28:00,304 - __main__ - INFO - Starting Source-Target Comparison module
+2025-12-02 15:28:00,304 - dq_comparison - INFO - 🚀 STARTING UNIVERSAL SOURCE-TARGET COMPARISON TOOL
+2025-12-02 15:28:00,304 - dq_comparison - INFO - 📂 LOADING SOURCE AND TARGET DATA
+2025-12-02 15:28:00,305 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-02 15:28:05,763 - dq_unified - INFO - User selected source type: 1
+2025-12-02 15:28:05,763 - dq_unified - INFO - Getting CSV file path from user
+2025-12-02 15:28:25,723 - dq_unified - INFO - File path validated: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\target_data_100k.csv
+2025-12-02 15:28:25,726 - dq_unified - INFO - 📋 PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-02 15:28:29,886 - dq_unified - INFO - User selected source type: 3
+2025-12-02 15:28:29,887 - dq_unified - INFO - 🗄️ GETTING DATABASE CONFIGURATION
+2025-12-02 15:28:33,276 - dq_unified - INFO - User selected database type: 3
+2025-12-02 15:28:37,378 - dq_unified - INFO - Database configuration collected: oracle, Table: employee
+2025-12-02 15:28:37,380 - dq_unified - INFO - 📥 LOADING DATA FROM CSV
+2025-12-02 15:28:37,380 - dq_unified - INFO - Loading CSV data from: C:\Users\003160\OneDrive - wisseninfotech.com\Documents\DQ-Checks-Shashi\Test_data\target_data_100k.csv
+2025-12-02 15:28:37,665 - dq_unified - INFO - ✅ CSV loaded: 100500 rows, 12 columns
+2025-12-02 15:28:37,666 - dq_unified - INFO - 📥 LOADING DATA FROM DATABASE
+2025-12-02 15:28:37,667 - dq_unified - INFO - Connecting to oracle database
+2025-12-02 15:28:37,781 - dq_unified - INFO - Executing query: SELECT * FROM employee WHERE ROWNUM <= 10000
+2025-12-02 15:28:38,925 - dq_unified - INFO - ✅ Database loaded: 10000 rows, 12 columns from employee
+2025-12-02 15:28:38,928 - dq_comparison - INFO - 🎯 SELECTING COLUMNS FOR COMPARISON
+2025-12-02 15:28:38,930 - dq_comparison - INFO - Found 12 common columns between source and target (case-insensitive)
+2025-12-02 15:28:45,686 - dq_comparison - INFO - User column selection input: all
+2025-12-02 15:28:45,687 - dq_comparison - INFO - User selected ALL common columns for comparison
+2025-12-02 15:28:45,689 - dq_comparison - INFO - 📊 GENERATING COMPREHENSIVE COMPARISON REPORT
+2025-12-02 15:28:45,694 - dq_comparison - INFO - Report details - Source: CSV: target_data_100k.csv, Target: Database: oracle - Table: employee, Selected columns: 12
+2025-12-02 15:28:45,694 - dq_comparison - INFO - 🏗️  STARTING STRUCTURE COMPARISON
+2025-12-02 15:28:45,695 - dq_comparison - INFO - Source columns: 12, Target columns: 12, Selected: 12
+2025-12-02 15:28:45,696 - dq_comparison - INFO - 🔧 Starting data type comparison for selected columns
+2025-12-02 15:28:45,699 - dq_comparison - WARNING - Data type mismatch for column 'amount': Source=float64 vs Target=object
+2025-12-02 15:28:45,700 - dq_comparison - WARNING - Data type mismatch for column 'age': Source=int64 vs Target=object
+2025-12-02 15:28:45,702 - dq_comparison - WARNING - Data type mismatch for column 'quantity': Source=int64 vs Target=object
+2025-12-02 15:28:45,703 - dq_comparison - INFO - Found 3 data type compatibility issues
+2025-12-02 15:28:45,703 - dq_comparison - INFO - 🔢 STARTING ROW COUNT COMPARISON
+2025-12-02 15:28:45,704 - dq_comparison - INFO - Source rows: 100,500, Target rows: 10,000
+2025-12-02 15:28:45,705 - dq_comparison - WARNING - Row count difference: 90,500 rows (90.05%)
+2025-12-02 15:28:45,705 - dq_comparison - WARNING - Source has 90,500 more rows than target
+2025-12-02 15:28:45,705 - dq_comparison - INFO - 📏 CHECKING LENGTH CONSISTENCY BETWEEN SOURCE AND TARGET
+2025-12-02 15:28:45,862 - dq_comparison - INFO - Column 'customer_name': Lengths consistent between source and target
+2025-12-02 15:28:46,005 - dq_comparison - INFO - Column 'id': Lengths consistent between source and target
+2025-12-02 15:28:46,142 - dq_comparison - INFO - Column 'amount': Lengths consistent between source and target
+2025-12-02 15:28:46,286 - dq_comparison - INFO - Column 'customer_id': Lengths consistent between source and target
+2025-12-02 15:28:46,466 - dq_comparison - INFO - Column 'email': Lengths consistent between source and target
+2025-12-02 15:28:46,603 - dq_comparison - INFO - Column 'age': Lengths consistent between source and target
+2025-12-02 15:28:46,766 - dq_comparison - INFO - Column 'status': Lengths consistent between source and target
+2025-12-02 15:28:47,438 - dq_comparison - INFO - Column 'transaction_date': Lengths consistent between source and target
+2025-12-02 15:28:47,629 - dq_comparison - INFO - Column 'phone': Lengths consistent between source and target
+2025-12-02 15:28:47,778 - dq_comparison - INFO - Column 'quantity': Lengths consistent between source and target
+2025-12-02 15:28:47,946 - dq_comparison - INFO - Column 'description': Lengths consistent between source and target
+2025-12-02 15:28:48,123 - dq_comparison - INFO - Column 'transaction_id': Lengths consistent between source and target
+2025-12-02 15:28:48,124 - dq_comparison - INFO - ✅ All selected columns have consistent lengths between source and target
+2025-12-02 15:28:48,126 - dq_comparison - INFO - 🎯 STARTING DATA QUALITY COMPARISON
+2025-12-02 15:28:48,177 - dq_comparison - INFO - Null values - Source: 8315 (0.69%), Target: 821 (0.68%)
+2025-12-02 15:28:48,180 - dq_comparison - WARNING - ⚠️  Target has FEWER nulls than source
+2025-12-02 15:28:48,328 - dq_comparison - INFO - Duplicate rows - Source: 250, Target: 1
+2025-12-02 15:28:48,332 - dq_comparison - WARNING - ⚠️  Target has FEWER duplicates than source
+2025-12-02 15:28:48,333 - dq_comparison - INFO - 🔍 STARTING IMPROVED SAMPLE DATA COMPARISON (first 5 rows)
+2025-12-02 15:28:48,335 - dq_comparison - INFO - Using column 'customer_name' (source) ↔ 'customer_name' (target) for improved sample comparison
+2025-12-02 15:28:48,337 - dq_comparison - INFO - Improved sample comparison completed: 5 matches, 0 differences
+2025-12-02 15:28:48,338 - dq_comparison - INFO - 🔬 STARTING IMPROVED VALUE MISMATCH DETECTION
+2025-12-02 15:28:49,408 - dq_comparison - WARNING - Value mismatch - transaction_date[Row 1]: '04/10/2023' ≠ '04-10-2023'
+2025-12-02 15:28:49,410 - dq_comparison - WARNING - Value mismatch - transaction_date[Row 3]: '2023/03/10' ≠ '10-03-2023'
+2025-12-02 15:28:50,711 - dq_comparison - WARNING - Found 3415 value mismatches across 12 columns
+2025-12-02 15:28:50,716 - dq_comparison - INFO - 🔬 STARTING IMPROVED HASH-BASED COMPARISON
+2025-12-02 15:28:50,717 - dq_comparison - INFO - Using 12 common columns for hash comparison
+2025-12-02 15:28:50,721 - dq_comparison - INFO - Generating SMART row hashes for 12 common columns
+2025-12-02 15:29:04,947 - dq_comparison - INFO - IMPROVED Hash comparison - Common: 6584, Unique to source: 93666, Unique to target: 3415
+2025-12-02 15:29:04,953 - dq_comparison - WARNING - ❌ 93,666 rows missing in target
+2025-12-02 15:29:04,954 - dq_comparison - WARNING - ❌ 3,415 rows extra in target
+2025-12-02 15:29:04,963 - dq_comparison - INFO - 🏆 CALCULATING OVERALL ASSESSMENT SCORE
+2025-12-02 15:29:04,964 - dq_comparison - WARNING - ⚠️  Structure: Column differences found
+2025-12-02 15:29:04,965 - dq_comparison - WARNING - ⚠️  Row Count: Differences found
+2025-12-02 15:29:04,967 - dq_comparison - WARNING - ⚠️  Data Types: Compatibility issues found
+2025-12-02 15:29:04,968 - dq_comparison - INFO - ✅ Length Consistency: All values have consistent lengths
+2025-12-02 15:29:04,968 - dq_comparison - WARNING - ⚠️  Data Quality: Data quality differences
+2025-12-02 15:29:04,969 - dq_comparison - INFO - ✅ Sample Data: No differences found
+2025-12-02 15:29:04,969 - dq_comparison - INFO - ✅ Advanced: Significant data matching found
+2025-12-02 15:29:04,970 - dq_comparison - INFO - Overall match score: 3/7 (42.9%)
+2025-12-02 15:29:04,970 - dq_comparison - WARNING - 🚨 POOR - Major synchronization issues!
+2025-12-02 15:29:05,133 - dq_audit - INFO - ✅ Audit record stored: comparison check
+2025-12-02 15:29:05,137 - dq_comparison - INFO - ✅ Comparison analysis completed successfully
+2025-12-02 15:29:05,145 - __main__ - INFO - Source-Target Comparison completed successfully
+2025-12-02 15:29:05,145 - __main__ - INFO - Displaying main menu options to user
+2025-12-02 15:29:29,854 - __main__ - INFO - User selected option: 5
+2025-12-02 15:29:29,856 - __main__ - INFO - User session ended. Duration: 0:01:32.503917
+2025-12-02 15:29:29,857 - __main__ - INFO - 👋 Thank you for using Universal Data Quality Framework!

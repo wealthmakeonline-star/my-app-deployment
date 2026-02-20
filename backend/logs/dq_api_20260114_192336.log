@@ -1,0 +1,438 @@
+2026-01-14 19:23:36,419 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-14 19:23:36,420 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260114_192336.log
+2026-01-14 19:23:36,569 - dq_rules - WARNING - Could not load config from database: name 'get_db_connection' is not defined
+2026-01-14 19:23:36,572 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-14 19:23:36,573 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-14 19:23:36,577 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-14 19:23:36,577 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-14 19:23:36,579 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-14 19:23:36,590 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-14 19:23:36,591 - __main__ - INFO - 📊 Modules available: True
+2026-01-14 19:23:36,592 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-14 19:23:36,592 - __main__ - INFO - 📋 Available endpoints:
+2026-01-14 19:23:36,593 - __main__ - INFO -   GET  /              - API status
+2026-01-14 19:23:36,594 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-14 19:23:36,595 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-14 19:23:36,596 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-14 19:23:36,597 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-14 19:23:36,597 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-14 19:23:36,598 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-14 19:23:36,599 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-14 19:23:36,600 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-14 19:23:40,381 - __main__ - INFO - POST /api/compare - Request started
+2026-01-14 19:23:40,383 - __main__ - INFO - Comparison request - Source: csv, Target: excel
+2026-01-14 19:23:40,385 - __main__ - INFO - Comparison analysis request received
+2026-01-14 19:23:40,386 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'csv', 'source_file_path': 'C:\\\\Users\\\\003160\\\\OneDrive - wisseninfotech.com\\\\Documents\\\\DQ-Checks-Shashi\\\\API_Test_Scrips\\\\sorce-target\\\\test_target.csv'}
+2026-01-14 19:23:40,388 - __main__ - INFO - Starting comparison for session CMP_20260114_192340
+2026-01-14 19:23:40,390 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-14 19:23:40,391 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-14 19:23:40,392 - dq_comparison - INFO - 
+==================================================
+2026-01-14 19:23:40,395 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-14 19:23:40,396 - dq_comparison - INFO - ==================================================
+2026-01-14 19:23:40,397 - dq_comparison - INFO - DEBUG load_csv_source called for SOURCE
+2026-01-14 19:23:40,398 - dq_comparison - INFO - DEBUG: Using file_path from 'file_path': C:\\Users\\003160\\OneDrive - wisseninfotech.com\\Documents\\DQ-Checks-Shashi\\API_Test_Scrips\\sorce-target\\test_target.csv
+2026-01-14 19:23:40,410 - dq_comparison - INFO - SOURCE CSV loaded: 50 rows, 8 columns
+2026-01-14 19:23:40,411 - dq_comparison - INFO - 
+==================================================
+2026-01-14 19:23:40,412 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-14 19:23:40,413 - dq_comparison - INFO - ==================================================
+2026-01-14 19:23:40,414 - dq_comparison - INFO - DEBUG load_excel_source called for TARGET
+2026-01-14 19:23:40,415 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'target_file_path': 'C:\\\\Users\\\\003160\\\\OneDrive - wisseninfotech.com\\\\Documents\\\\DQ-Checks-Shashi\\\\API_Test_Scrips\\\\sorce-target\\\\test_source.xlsx'}
+2026-01-14 19:23:40,415 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-14 19:23:40,416 - dq_comparison - INFO - DEBUG Found target_file_path in ui_data: C:\\Users\\003160\\OneDrive - wisseninfotech.com\\Documents\\DQ-Checks-Shashi\\API_Test_Scrips\\sorce-target\\test_source.xlsx
+2026-01-14 19:23:41,069 - dq_comparison - INFO - TARGET Excel loaded: 50 rows, 8 columns
+2026-01-14 19:23:41,070 - dq_comparison - INFO - Source data loaded: 50 rows, 8 columns
+2026-01-14 19:23:41,071 - dq_comparison - INFO - Target data loaded: 50 rows, 8 columns
+2026-01-14 19:23:41,072 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-14 19:23:41,072 - dq_comparison - INFO - Source columns (original): ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-14 19:23:41,074 - dq_comparison - INFO - Target columns (original): ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-14 19:23:41,074 - dq_comparison - INFO - Common columns lowercased: ['address', 'salary', 'joindate', 'email', 'lastname', 'firstname', 'customerid', 'phonenumber']
+2026-01-14 19:23:41,075 - dq_comparison - INFO - Found 8 common columns between source and target (case-insensitive)
+2026-01-14 19:23:41,075 - dq_comparison - INFO - User column selection input: all
+2026-01-14 19:23:41,076 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-14 19:23:41,076 - dq_comparison - INFO - Selected 8 columns for comparison: ['Address', 'Salary', 'JoinDate', 'Email', 'LastName']...
+2026-01-14 19:23:41,077 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-14 19:23:41,077 - dq_comparison - INFO - Report details - Source: CSV: test_target.csv, Target: Excel: test_source.xlsx (Sheet1), Selected columns: 8
+2026-01-14 19:23:41,078 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-14 19:23:41,078 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-14 19:23:41,209 - dq_error_log - INFO - Database connection successful
+2026-01-14 19:23:41,211 - dq_comparison - INFO - Session ID: CMP_20260114_192341
+2026-01-14 19:23:41,211 - dq_comparison - INFO - ✅ Row counts match: 50 rows
+2026-01-14 19:23:41,213 - dq_comparison - INFO - Comparing column structures...
+2026-01-14 19:23:41,214 - dq_comparison - WARNING - Found 1 incompatible data type mismatches
+2026-01-14 19:23:41,215 - dq_comparison - INFO - Column structure comparison complete. Match: False
+2026-01-14 19:23:41,230 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-14 19:23:41,230 - dq_comparison - INFO - Checking key fields: ['CustomerID', 'CustomerID']
+2026-01-14 19:23:41,234 - dq_comparison - INFO - Primary key validation complete. Passed: True
+2026-01-14 19:23:41,234 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-14 19:23:41,248 - dq_comparison - INFO - Table metadata comparison complete. Match: True
+2026-01-14 19:23:41,249 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-14 19:23:41,267 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-14 19:23:41,268 - dq_comparison - INFO - Column: Address
+2026-01-14 19:23:41,268 - dq_comparison - INFO -   Source type: <class 'str'>, value: 6702 Watson Bypass, Brownland, KS 13081
+2026-01-14 19:23:41,269 - dq_comparison - INFO -   Target type: <class 'str'>, value: 6702 Watson Bypass, Brownland, KS 13081
+2026-01-14 19:23:41,270 - dq_comparison - INFO -   Normalized: '6702 watson bypass, brownland, ks 13081' vs '6702 watson bypass, brownland, ks 13081'
+2026-01-14 19:23:41,271 - dq_comparison - INFO -   Match: True
+2026-01-14 19:23:41,271 - dq_comparison - INFO - Column: Salary
+2026-01-14 19:23:41,272 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: 111916
+2026-01-14 19:23:41,272 - dq_comparison - INFO -   Target type: <class 'numpy.int64'>, value: 111916
+2026-01-14 19:23:41,273 - dq_comparison - INFO -   Normalized: '111916' vs '111916'
+2026-01-14 19:23:41,274 - dq_comparison - INFO -   Match: True
+2026-01-14 19:23:41,274 - dq_comparison - INFO - Column: JoinDate
+2026-01-14 19:23:41,276 - dq_comparison - INFO -   Source type: <class 'str'>, value: 26-10-2025
+2026-01-14 19:23:41,278 - dq_comparison - INFO -   Target type: <class 'pandas._libs.tslibs.timestamps.Timestamp'>, value: 2025-10-26 00:00:00
+2026-01-14 19:23:41,281 - dq_comparison - INFO -   Normalized: '2025-10-26' vs '2025-10-26'
+2026-01-14 19:23:41,282 - dq_comparison - INFO -   Match: True
+2026-01-14 19:23:41,283 - dq_comparison - INFO - Source DF columns: ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-14 19:23:41,284 - dq_comparison - INFO - Target DF columns: ['CustomerID', 'FirstName', 'LastName', 'PhoneNumber', 'Email', 'Salary', 'JoinDate', 'Address']
+2026-01-14 19:23:41,285 - dq_comparison - INFO - Selected columns for comparison: ['Address', 'Salary', 'JoinDate', 'Email', 'LastName', 'FirstName', 'CustomerID', 'PhoneNumber']
+2026-01-14 19:23:41,285 - dq_comparison - INFO - Using 8 common columns for hash comparison
+2026-01-14 19:23:41,287 - dq_comparison - INFO - Source columns: ['Address', 'Salary', 'JoinDate', 'Email', 'LastName', 'FirstName', 'CustomerID', 'PhoneNumber']
+2026-01-14 19:23:41,288 - dq_comparison - INFO - Target columns: ['Address', 'Salary', 'JoinDate', 'Email', 'LastName', 'FirstName', 'CustomerID', 'PhoneNumber']
+2026-01-14 19:23:41,289 - dq_comparison - INFO - Generating hashes for source data (50 rows)...
+2026-01-14 19:23:41,291 - dq_comparison - INFO - DEBUG HASH ROW: Address: '6702 Watson Bypass, Brownland, KS 13081' -> '6702 watson bypass, brownland, ks 13081' | Salary: '111916' -> '111916' | JoinDate: '26-10-2025' -> '2025-10-26' | Email: 'mark.morris@example.com' -> 'mark.morris@example.com' | LastName: 'Morris' -> 'morris'
+2026-01-14 19:23:41,291 - dq_comparison - INFO - DEBUG HASH STRING: 6702 watson bypass, brownland, ks 13081|111916|2025-10-26|mark.morris@example.com|morris...
+2026-01-14 19:23:41,292 - dq_comparison - INFO - DEBUG HASH RESULT: 8e9122b2...
+2026-01-14 19:23:41,294 - dq_comparison - INFO - DEBUG HASH ROW: Address: '815 Rogers Row Apt. 396, Williamfurt, WA 10567' -> '815 rogers row apt. 396, williamfurt, wa 10567' | Salary: '39264' -> '39264' | JoinDate: '31-05-2025' -> '2025-05-31' | Email: 'dennis.owens@example.com' -> 'dennis.owens@example.com' | LastName: 'Owens' -> 'owens'
+2026-01-14 19:23:41,295 - dq_comparison - INFO - DEBUG HASH STRING: 815 rogers row apt. 396, williamfurt, wa 10567|39264|2025-05-31|dennis.owens@example.com|owens...
+2026-01-14 19:23:41,296 - dq_comparison - INFO - DEBUG HASH RESULT: db96f07e...
+2026-01-14 19:23:41,298 - dq_comparison - INFO - DEBUG HASH ROW: Address: '25439 Carney Mills Apt. 076, New April, CT 16626' -> '25439 carney mills apt. 076, new april, ct 16626' | Salary: '41191' -> '41191' | JoinDate: '31-03-2024' -> '2024-03-31' | Email: 'felicia.hatfield@example.com' -> 'felicia.hatfield@example.com' | LastName: 'Hatfield' -> 'hatfield'
+2026-01-14 19:23:41,299 - dq_comparison - INFO - DEBUG HASH STRING: 25439 carney mills apt. 076, new april, ct 16626|41191|2024-03-31|felicia.hatfield@example.com|hatfield...
+2026-01-14 19:23:41,300 - dq_comparison - INFO - DEBUG HASH RESULT: 8dbc72af...
+2026-01-14 19:23:41,302 - dq_comparison - INFO - DEBUG HASH ROW: Address: '57717 Mcbride Forks, East Derrick, MS 02913' -> '57717 mcbride forks, east derrick, ms 02913' | Salary: '116934' -> '116934' | JoinDate: '19-12-2023' -> '2023-12-19' | Email: 'michael.jenkins@example.com' -> 'michael.jenkins@example.com' | LastName: 'Jenkins' -> 'jenkins'
+2026-01-14 19:23:41,303 - dq_comparison - INFO - DEBUG HASH STRING: 57717 mcbride forks, east derrick, ms 02913|116934|2023-12-19|michael.jenkins@example.com|jenkins...
+2026-01-14 19:23:41,303 - dq_comparison - INFO - DEBUG HASH RESULT: 53491d92...
+2026-01-14 19:23:41,305 - dq_comparison - INFO - DEBUG HASH ROW: Address: '21259 Andrew Pass Suite 771, Frostfort, DC 47552' -> '21259 andrew pass suite 771, frostfort, dc 47552' | Salary: '46558' -> '46558' | JoinDate: '23-01-2025' -> '2025-01-23' | Email: 'nicholas.smith@example.com' -> 'nicholas.smith@example.com' | LastName: 'Smith' -> 'smith'
+2026-01-14 19:23:41,305 - dq_comparison - INFO - DEBUG HASH STRING: 21259 andrew pass suite 771, frostfort, dc 47552|46558|2025-01-23|nicholas.smith@example.com|smith...
+2026-01-14 19:23:41,306 - dq_comparison - INFO - DEBUG HASH RESULT: 58ab521a...
+2026-01-14 19:23:41,307 - dq_comparison - INFO - DEBUG HASH ROW: Address: '34480 Jesse Prairie, Olsenside, MN 78898' -> '34480 jesse prairie, olsenside, mn 78898' | Salary: '79928' -> '79928' | JoinDate: '18-12-2022' -> '2022-12-18' | Email: 'joseph.guerra@example.com' -> 'joseph.guerra@example.com' | LastName: 'Guerra' -> 'guerra'
+2026-01-14 19:23:41,308 - dq_comparison - INFO - DEBUG HASH STRING: 34480 jesse prairie, olsenside, mn 78898|79928|2022-12-18|joseph.guerra@example.com|guerra...
+2026-01-14 19:23:41,309 - dq_comparison - INFO - DEBUG HASH RESULT: 98d2ca7c...
+2026-01-14 19:23:41,310 - dq_comparison - INFO - DEBUG HASH ROW: Address: '592 Martinez Lodge Suite 654, Lake Susanton, VA 54606' -> '592 martinez lodge suite 654, lake susanton, va 54606' | Salary: '85292' -> '85292' | JoinDate: '19-11-2025' -> '2025-11-19' | Email: 'gabrielle.bell@example.com' -> 'gabrielle.bell@example.com' | LastName: 'Bell' -> 'bell'
+2026-01-14 19:23:41,310 - dq_comparison - INFO - DEBUG HASH STRING: 592 martinez lodge suite 654, lake susanton, va 54606|85292|2025-11-19|gabrielle.bell@example.com|bell...
+2026-01-14 19:23:41,311 - dq_comparison - INFO - DEBUG HASH RESULT: 9b8fa957...
+2026-01-14 19:23:41,311 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'PSC 3606, Box 9194, APO AP 13934' -> 'psc 3606, box 9194, apo ap 13934' | Salary: '50803' -> '50803' | JoinDate: '16-07-2021' -> '2021-07-16' | Email: 'joel.barber@example.com' -> 'joel.barber@example.com' | LastName: 'Barber' -> 'barber'
+2026-01-14 19:23:41,312 - dq_comparison - INFO - DEBUG HASH STRING: psc 3606, box 9194, apo ap 13934|50803|2021-07-16|joel.barber@example.com|barber...
+2026-01-14 19:23:41,313 - dq_comparison - INFO - DEBUG HASH RESULT: 5deece10...
+2026-01-14 19:23:41,314 - dq_comparison - INFO - DEBUG HASH ROW: Address: '85787 Heather Plains, Port Alberttown, NJ 91311' -> '85787 heather plains, port alberttown, nj 91311' | Salary: '84264' -> '84264' | JoinDate: '29-03-2022' -> '2022-03-29' | Email: 'autumn.flores@example.com' -> 'autumn.flores@example.com' | LastName: 'Flores' -> 'flores'
+2026-01-14 19:23:41,314 - dq_comparison - INFO - DEBUG HASH STRING: 85787 heather plains, port alberttown, nj 91311|84264|2022-03-29|autumn.flores@example.com|flores...
+2026-01-14 19:23:41,314 - dq_comparison - INFO - DEBUG HASH RESULT: 3c31d029...
+2026-01-14 19:23:41,315 - dq_comparison - INFO - DEBUG HASH ROW: Address: '372 Brittney Underpass Suite 324, Skinnermouth, DC 83658' -> '372 brittney underpass suite 324, skinnermouth, dc 83658' | Salary: '119153' -> '119153' | JoinDate: '24-04-2025' -> '2025-04-24' | Email: 'jared.andrews@example.com' -> 'jared.andrews@example.com' | LastName: 'Andrews' -> 'andrews'
+2026-01-14 19:23:41,316 - dq_comparison - INFO - DEBUG HASH STRING: 372 brittney underpass suite 324, skinnermouth, dc 83658|119153|2025-04-24|jared.andrews@example.com|andrews...
+2026-01-14 19:23:41,317 - dq_comparison - INFO - DEBUG HASH RESULT: d91717ee...
+2026-01-14 19:23:41,318 - dq_comparison - INFO - DEBUG HASH ROW: Address: '6714 Lorraine Heights Apt. 942, East Brianfurt, LA 40548' -> '6714 lorraine heights apt. 942, east brianfurt, la 40548' | Salary: '39331' -> '39331' | JoinDate: '15-06-2022' -> '2022-06-15' | Email: 'jason.kim@example.com' -> 'jason.kim@example.com' | LastName: 'Kim' -> 'kim'
+2026-01-14 19:23:41,319 - dq_comparison - INFO - DEBUG HASH STRING: 6714 lorraine heights apt. 942, east brianfurt, la 40548|39331|2022-06-15|jason.kim@example.com|kim...
+2026-01-14 19:23:41,319 - dq_comparison - INFO - DEBUG HASH RESULT: a656ed87...
+2026-01-14 19:23:41,320 - dq_comparison - INFO - DEBUG HASH ROW: Address: '210 Ochoa Pass, Crystalhaven, ND 49508' -> '210 ochoa pass, crystalhaven, nd 49508' | Salary: '48099' -> '48099' | JoinDate: '07-04-2025' -> '2025-04-07' | Email: 'ryan.barton@example.com' -> 'ryan.barton@example.com' | LastName: 'Barton' -> 'barton'
+2026-01-14 19:23:41,321 - dq_comparison - INFO - DEBUG HASH STRING: 210 ochoa pass, crystalhaven, nd 49508|48099|2025-04-07|ryan.barton@example.com|barton...
+2026-01-14 19:23:41,321 - dq_comparison - INFO - DEBUG HASH RESULT: dbb7d663...
+2026-01-14 19:23:41,322 - dq_comparison - INFO - DEBUG HASH ROW: Address: '9630 Amber Views, Port Tracy, AR 01162' -> '9630 amber views, port tracy, ar 01162' | Salary: '95775' -> '95775' | JoinDate: '11-11-2023' -> '2023-11-11' | Email: 'michael.williams@example.com' -> 'michael.williams@example.com' | LastName: 'Williams' -> 'williams'
+2026-01-14 19:23:41,323 - dq_comparison - INFO - DEBUG HASH STRING: 9630 amber views, port tracy, ar 01162|95775|2023-11-11|michael.williams@example.com|williams...
+2026-01-14 19:23:41,323 - dq_comparison - INFO - DEBUG HASH RESULT: ac12f54f...
+2026-01-14 19:23:41,324 - dq_comparison - INFO - DEBUG HASH ROW: Address: '255 Lucas Key Suite 075, South Michelehaven, PA 59058' -> '255 lucas key suite 075, south michelehaven, pa 59058' | Salary: '83452' -> '83452' | JoinDate: '16-02-2025' -> '2025-02-16' | Email: 'jennifer.white@example.com' -> 'jennifer.white@example.com' | LastName: 'White' -> 'white'
+2026-01-14 19:23:41,325 - dq_comparison - INFO - DEBUG HASH STRING: 255 lucas key suite 075, south michelehaven, pa 59058|83452|2025-02-16|jennifer.white@example.com|white...
+2026-01-14 19:23:41,326 - dq_comparison - INFO - DEBUG HASH RESULT: 06ebd30c...
+2026-01-14 19:23:41,327 - dq_comparison - INFO - DEBUG HASH ROW: Address: '48664 Mills Loaf, New Jennifershire, OK 32510' -> '48664 mills loaf, new jennifershire, ok 32510' | Salary: '98946' -> '98946' | JoinDate: '21-05-2024' -> '2024-05-21' | Email: 'shawn.park@example.com' -> 'shawn.park@example.com' | LastName: 'Park' -> 'park'
+2026-01-14 19:23:41,327 - dq_comparison - INFO - DEBUG HASH STRING: 48664 mills loaf, new jennifershire, ok 32510|98946|2024-05-21|shawn.park@example.com|park...
+2026-01-14 19:23:41,328 - dq_comparison - INFO - DEBUG HASH RESULT: 1fe98774...
+2026-01-14 19:23:41,329 - dq_comparison - INFO - DEBUG HASH ROW: Address: '58301 Christina Oval, New Albert, OK 52302' -> '58301 christina oval, new albert, ok 52302' | Salary: '49573' -> '49573' | JoinDate: '09-02-2024' -> '2024-02-09' | Email: 'jill.robertson@example.com' -> 'jill.robertson@example.com' | LastName: 'Robertson' -> 'robertson'
+2026-01-14 19:23:41,329 - dq_comparison - INFO - DEBUG HASH STRING: 58301 christina oval, new albert, ok 52302|49573|2024-02-09|jill.robertson@example.com|robertson...
+2026-01-14 19:23:41,329 - dq_comparison - INFO - DEBUG HASH RESULT: fea2c6de...
+2026-01-14 19:23:41,330 - dq_comparison - INFO - DEBUG HASH ROW: Address: '432 Nash Lodge, Gonzalezfort, MH 90452' -> '432 nash lodge, gonzalezfort, mh 90452' | Salary: '36536' -> '36536' | JoinDate: '04-07-2025' -> '2025-07-04' | Email: 'robert.lyons@example.com' -> 'robert.lyons@example.com' | LastName: 'Lyons' -> 'lyons'
+2026-01-14 19:23:41,331 - dq_comparison - INFO - DEBUG HASH STRING: 432 nash lodge, gonzalezfort, mh 90452|36536|2025-07-04|robert.lyons@example.com|lyons...
+2026-01-14 19:23:41,331 - dq_comparison - INFO - DEBUG HASH RESULT: d642ab6e...
+2026-01-14 19:23:41,332 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'PSC 8275, Box 4866, APO AE 97498' -> 'psc 8275, box 4866, apo ae 97498' | Salary: '34641' -> '34641' | JoinDate: '09-01-2023' -> '2023-01-09' | Email: 'jacob.acevedo@example.com' -> 'jacob.acevedo@example.com' | LastName: 'Acevedo' -> 'acevedo'
+2026-01-14 19:23:41,334 - dq_comparison - INFO - DEBUG HASH STRING: psc 8275, box 4866, apo ae 97498|34641|2023-01-09|jacob.acevedo@example.com|acevedo...
+2026-01-14 19:23:41,334 - dq_comparison - INFO - DEBUG HASH RESULT: fd789f8c...
+2026-01-14 19:23:41,335 - dq_comparison - INFO - DEBUG HASH ROW: Address: '37987 Becky Wells Apt. 935, Port Gary, NC 79584' -> '37987 becky wells apt. 935, port gary, nc 79584' | Salary: '106994' -> '106994' | JoinDate: '22-09-2023' -> '2023-09-22' | Email: 'christina.park@example.com' -> 'christina.park@example.com' | LastName: 'Park' -> 'park'
+2026-01-14 19:23:41,336 - dq_comparison - INFO - DEBUG HASH STRING: 37987 becky wells apt. 935, port gary, nc 79584|106994|2023-09-22|christina.park@example.com|park...
+2026-01-14 19:23:41,336 - dq_comparison - INFO - DEBUG HASH RESULT: b41dbcd4...
+2026-01-14 19:23:41,338 - dq_comparison - INFO - DEBUG HASH ROW: Address: '1324 Barbara Camp Suite 372, Port Nicolefort, FL 24835' -> '1324 barbara camp suite 372, port nicolefort, fl 24835' | Salary: '38187' -> '38187' | JoinDate: '22-04-2023' -> '2023-04-22' | Email: 'barbara.morgan@example.com' -> 'barbara.morgan@example.com' | LastName: 'Morgan' -> 'morgan'
+2026-01-14 19:23:41,339 - dq_comparison - INFO - DEBUG HASH STRING: 1324 barbara camp suite 372, port nicolefort, fl 24835|38187|2023-04-22|barbara.morgan@example.com|morgan...
+2026-01-14 19:23:41,339 - dq_comparison - INFO - DEBUG HASH RESULT: 6a3e1344...
+2026-01-14 19:23:41,340 - dq_comparison - INFO - DEBUG HASH ROW: Address: '31438 Omar Avenue, North Sarahville, FL 51548' -> '31438 omar avenue, north sarahville, fl 51548' | Salary: '71935' -> '71935' | JoinDate: '22-07-2024' -> '2024-07-22' | Email: 'april.lee@example.com' -> 'april.lee@example.com' | LastName: 'Lee' -> 'lee'
+2026-01-14 19:23:41,340 - dq_comparison - INFO - DEBUG HASH STRING: 31438 omar avenue, north sarahville, fl 51548|71935|2024-07-22|april.lee@example.com|lee...
+2026-01-14 19:23:41,341 - dq_comparison - INFO - DEBUG HASH RESULT: 963bb523...
+2026-01-14 19:23:41,342 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'USNV Brown, FPO AA 95726' -> 'usnv brown, fpo aa 95726' | Salary: '100357' -> '100357' | JoinDate: '27-07-2025' -> '2025-07-27' | Email: 'christina.morrison@example.com' -> 'christina.morrison@example.com' | LastName: 'Morrison' -> 'morrison'
+2026-01-14 19:23:41,343 - dq_comparison - INFO - DEBUG HASH STRING: usnv brown, fpo aa 95726|100357|2025-07-27|christina.morrison@example.com|morrison...
+2026-01-14 19:23:41,343 - dq_comparison - INFO - DEBUG HASH RESULT: 2953aff6...
+2026-01-14 19:23:41,345 - dq_comparison - INFO - DEBUG HASH ROW: Address: '37845 Christopher Motorway, Wintersland, PA 90021' -> '37845 christopher motorway, wintersland, pa 90021' | Salary: '74962' -> '74962' | JoinDate: '27-10-2023' -> '2023-10-27' | Email: 'jennifer.morgan@example.com' -> 'jennifer.morgan@example.com' | LastName: 'Morgan' -> 'morgan'
+2026-01-14 19:23:41,345 - dq_comparison - INFO - DEBUG HASH STRING: 37845 christopher motorway, wintersland, pa 90021|74962|2023-10-27|jennifer.morgan@example.com|morgan...
+2026-01-14 19:23:41,346 - dq_comparison - INFO - DEBUG HASH RESULT: fb878fe0...
+2026-01-14 19:23:41,346 - dq_comparison - INFO - DEBUG HASH ROW: Address: '1515 James Land Suite 516, Hamiltonville, MA 70369' -> '1515 james land suite 516, hamiltonville, ma 70369' | Salary: '98121' -> '98121' | JoinDate: '20-01-2021' -> '2021-01-20' | Email: 'david.duran@example.com' -> 'david.duran@example.com' | LastName: 'Duran' -> 'duran'
+2026-01-14 19:23:41,347 - dq_comparison - INFO - DEBUG HASH STRING: 1515 james land suite 516, hamiltonville, ma 70369|98121|2021-01-20|david.duran@example.com|duran...
+2026-01-14 19:23:41,348 - dq_comparison - INFO - DEBUG HASH RESULT: b7ad025f...
+2026-01-14 19:23:41,349 - dq_comparison - INFO - DEBUG HASH ROW: Address: '12606 Johnson Unions Apt. 511, East Ryan, KS 99517' -> '12606 johnson unions apt. 511, east ryan, ks 99517' | Salary: '45422' -> '45422' | JoinDate: '30-12-2021' -> '2021-12-30' | Email: 'jordan.wood@example.com' -> 'jordan.wood@example.com' | LastName: 'Wood' -> 'wood'
+2026-01-14 19:23:41,349 - dq_comparison - INFO - DEBUG HASH STRING: 12606 johnson unions apt. 511, east ryan, ks 99517|45422|2021-12-30|jordan.wood@example.com|wood...
+2026-01-14 19:23:41,349 - dq_comparison - INFO - DEBUG HASH RESULT: f225b87b...
+2026-01-14 19:23:41,351 - dq_comparison - INFO - DEBUG HASH ROW: Address: '871 Gary Mill, Osbornchester, HI 96073' -> '871 gary mill, osbornchester, hi 96073' | Salary: '111634' -> '111634' | JoinDate: '16-01-2024' -> '2024-01-16' | Email: 'jeffrey.freeman@example.com' -> 'jeffrey.freeman@example.com' | LastName: 'Freeman' -> 'freeman'
+2026-01-14 19:23:41,352 - dq_comparison - INFO - DEBUG HASH STRING: 871 gary mill, osbornchester, hi 96073|111634|2024-01-16|jeffrey.freeman@example.com|freeman...
+2026-01-14 19:23:41,352 - dq_comparison - INFO - DEBUG HASH RESULT: 8f916c86...
+2026-01-14 19:23:41,353 - dq_comparison - INFO - DEBUG HASH ROW: Address: '1136 Jason Loop Apt. 649, Kendraburgh, PA 88529' -> '1136 jason loop apt. 649, kendraburgh, pa 88529' | Salary: '99097' -> '99097' | JoinDate: '01-01-2024' -> '2024-01-01' | Email: 'elizabeth.wright@example.com' -> 'elizabeth.wright@example.com' | LastName: 'Wright' -> 'wright'
+2026-01-14 19:23:41,354 - dq_comparison - INFO - DEBUG HASH STRING: 1136 jason loop apt. 649, kendraburgh, pa 88529|99097|2024-01-01|elizabeth.wright@example.com|wright...
+2026-01-14 19:23:41,354 - dq_comparison - INFO - DEBUG HASH RESULT: b2cee183...
+2026-01-14 19:23:41,356 - dq_comparison - INFO - DEBUG HASH ROW: Address: '64883 Daniels Estates, Jodifort, MS 28546' -> '64883 daniels estates, jodifort, ms 28546' | Salary: '114429' -> '114429' | JoinDate: '03-11-2024' -> '2024-11-03' | Email: 'martin.reed@example.com' -> 'martin.reed@example.com' | LastName: 'Reed' -> 'reed'
+2026-01-14 19:23:41,357 - dq_comparison - INFO - DEBUG HASH STRING: 64883 daniels estates, jodifort, ms 28546|114429|2024-11-03|martin.reed@example.com|reed...
+2026-01-14 19:23:41,357 - dq_comparison - INFO - DEBUG HASH RESULT: da4c4db0...
+2026-01-14 19:23:41,358 - dq_comparison - INFO - DEBUG HASH ROW: Address: '806 Smith Mills Apt. 737, Evanshaven, WA 13442' -> '806 smith mills apt. 737, evanshaven, wa 13442' | Salary: '93270' -> '93270' | JoinDate: '02-06-2022' -> '2022-06-02' | Email: 'elizabeth.lane@example.com' -> 'elizabeth.lane@example.com' | LastName: 'Lane' -> 'lane'
+2026-01-14 19:23:41,358 - dq_comparison - INFO - DEBUG HASH STRING: 806 smith mills apt. 737, evanshaven, wa 13442|93270|2022-06-02|elizabeth.lane@example.com|lane...
+2026-01-14 19:23:41,359 - dq_comparison - INFO - DEBUG HASH RESULT: 95061f18...
+2026-01-14 19:23:41,360 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'USS Flores, FPO AP 36260' -> 'uss flores, fpo ap 36260' | Salary: '76901' -> '76901' | JoinDate: '21-09-2025' -> '2025-09-21' | Email: 'michael.jordan@example.com' -> 'michael.jordan@example.com' | LastName: 'Jordan' -> 'jordan'
+2026-01-14 19:23:41,361 - dq_comparison - INFO - DEBUG HASH STRING: uss flores, fpo ap 36260|76901|2025-09-21|michael.jordan@example.com|jordan...
+2026-01-14 19:23:41,361 - dq_comparison - INFO - DEBUG HASH RESULT: e287702c...
+2026-01-14 19:23:41,362 - dq_comparison - INFO - DEBUG HASH ROW: Address: '61072 Anthony Throughway Suite 039, New Brittany, WY 99273' -> '61072 anthony throughway suite 039, new brittany, wy 99273' | Salary: '40447' -> '40447' | JoinDate: '19-10-2024' -> '2024-10-19' | Email: 'edward.ramirez@example.com' -> 'edward.ramirez@example.com' | LastName: 'Ramirez' -> 'ramirez'
+2026-01-14 19:23:41,363 - dq_comparison - INFO - DEBUG HASH STRING: 61072 anthony throughway suite 039, new brittany, wy 99273|40447|2024-10-19|edward.ramirez@example.com|ramirez...
+2026-01-14 19:23:41,363 - dq_comparison - INFO - DEBUG HASH RESULT: 2d433a7e...
+2026-01-14 19:23:41,364 - dq_comparison - INFO - DEBUG HASH ROW: Address: '022 Floyd Route Apt. 449, Port Samuel, MT 24126' -> '022 floyd route apt. 449, port samuel, mt 24126' | Salary: '117596' -> '117596' | JoinDate: '05-09-2024' -> '2024-09-05' | Email: 'linda.melendez@example.com' -> 'linda.melendez@example.com' | LastName: 'Melendez' -> 'melendez'
+2026-01-14 19:23:41,365 - dq_comparison - INFO - DEBUG HASH STRING: 022 floyd route apt. 449, port samuel, mt 24126|117596|2024-09-05|linda.melendez@example.com|melendez...
+2026-01-14 19:23:41,365 - dq_comparison - INFO - DEBUG HASH RESULT: 6e602e2e...
+2026-01-14 19:23:41,367 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'USCGC Tapia, FPO AE 73916' -> 'uscgc tapia, fpo ae 73916' | Salary: '44106' -> '44106' | JoinDate: '08-08-2025' -> '2025-08-08' | Email: 'douglas.smith@example.com' -> 'douglas.smith@example.com' | LastName: 'Smith' -> 'smith'
+2026-01-14 19:23:41,367 - dq_comparison - INFO - DEBUG HASH STRING: uscgc tapia, fpo ae 73916|44106|2025-08-08|douglas.smith@example.com|smith...
+2026-01-14 19:23:41,368 - dq_comparison - INFO - DEBUG HASH RESULT: 8a283945...
+2026-01-14 19:23:41,369 - dq_comparison - INFO - DEBUG HASH ROW: Address: '264 Chavez Forge, Johnsonfort, WV 27270' -> '264 chavez forge, johnsonfort, wv 27270' | Salary: '85426' -> '85426' | JoinDate: '30-07-2021' -> '2021-07-30' | Email: 'nathaniel.white@example.com' -> 'nathaniel.white@example.com' | LastName: 'White' -> 'white'
+2026-01-14 19:23:41,369 - dq_comparison - INFO - DEBUG HASH STRING: 264 chavez forge, johnsonfort, wv 27270|85426|2021-07-30|nathaniel.white@example.com|white...
+2026-01-14 19:23:41,370 - dq_comparison - INFO - DEBUG HASH RESULT: 80ab7203...
+2026-01-14 19:23:41,371 - dq_comparison - INFO - DEBUG HASH ROW: Address: '44857 Washington Island, Lake Charlenefort, MA 32869' -> '44857 washington island, lake charlenefort, ma 32869' | Salary: '88819' -> '88819' | JoinDate: '02-11-2022' -> '2022-11-02' | Email: 'connie.nguyen@example.com' -> 'connie.nguyen@example.com' | LastName: 'Nguyen' -> 'nguyen'
+2026-01-14 19:23:41,372 - dq_comparison - INFO - DEBUG HASH STRING: 44857 washington island, lake charlenefort, ma 32869|88819|2022-11-02|connie.nguyen@example.com|nguyen...
+2026-01-14 19:23:41,372 - dq_comparison - INFO - DEBUG HASH RESULT: 200c1552...
+2026-01-14 19:23:41,373 - dq_comparison - INFO - DEBUG HASH ROW: Address: '5235 Duffy Field, Millerfort, MI 34624' -> '5235 duffy field, millerfort, mi 34624' | Salary: '61162' -> '61162' | JoinDate: '15-04-2021' -> '2021-04-15' | Email: 'lisa.woods@example.com' -> 'lisa.woods@example.com' | LastName: 'Woods' -> 'woods'
+2026-01-14 19:23:41,374 - dq_comparison - INFO - DEBUG HASH STRING: 5235 duffy field, millerfort, mi 34624|61162|2021-04-15|lisa.woods@example.com|woods...
+2026-01-14 19:23:41,374 - dq_comparison - INFO - DEBUG HASH RESULT: 42bde493...
+2026-01-14 19:23:41,375 - dq_comparison - INFO - DEBUG HASH ROW: Address: '8137 Nicholas Wells, South Andreaton, SC 99338' -> '8137 nicholas wells, south andreaton, sc 99338' | Salary: '98239' -> '98239' | JoinDate: '03-03-2024' -> '2024-03-03' | Email: 'jeanne.nichols@example.com' -> 'jeanne.nichols@example.com' | LastName: 'Nichols' -> 'nichols'
+2026-01-14 19:23:41,376 - dq_comparison - INFO - DEBUG HASH STRING: 8137 nicholas wells, south andreaton, sc 99338|98239|2024-03-03|jeanne.nichols@example.com|nichols...
+2026-01-14 19:23:41,377 - dq_comparison - INFO - DEBUG HASH RESULT: 0575d376...
+2026-01-14 19:23:41,378 - dq_comparison - INFO - DEBUG HASH ROW: Address: '2148 Blair Mission, Marybury, ID 53359' -> '2148 blair mission, marybury, id 53359' | Salary: '60926' -> '60926' | JoinDate: '23-09-2021' -> '2021-09-23' | Email: 'logan.gross@example.com' -> 'logan.gross@example.com' | LastName: 'Gross' -> 'gross'
+2026-01-14 19:23:41,379 - dq_comparison - INFO - DEBUG HASH STRING: 2148 blair mission, marybury, id 53359|60926|2021-09-23|logan.gross@example.com|gross...
+2026-01-14 19:23:41,379 - dq_comparison - INFO - DEBUG HASH RESULT: a6360d51...
+2026-01-14 19:23:41,380 - dq_comparison - INFO - DEBUG HASH ROW: Address: '487 Bryant Union, Julianfort, CO 40601' -> '487 bryant union, julianfort, co 40601' | Salary: '111507' -> '111507' | JoinDate: '08-06-2021' -> '2021-06-08' | Email: 'kevin.yates@example.com' -> 'kevin.yates@example.com' | LastName: 'Yates' -> 'yates'
+2026-01-14 19:23:41,381 - dq_comparison - INFO - DEBUG HASH STRING: 487 bryant union, julianfort, co 40601|111507|2021-06-08|kevin.yates@example.com|yates...
+2026-01-14 19:23:41,382 - dq_comparison - INFO - DEBUG HASH RESULT: f6f24adf...
+2026-01-14 19:23:41,384 - dq_comparison - INFO - DEBUG HASH ROW: Address: '05862 Pacheco Crossroad Suite 078, Weisshaven, TN 83237' -> '05862 pacheco crossroad suite 078, weisshaven, tn 83237' | Salary: '34060' -> '34060' | JoinDate: '06-05-2025' -> '2025-05-06' | Email: 'lisa.moore@example.com' -> 'lisa.moore@example.com' | LastName: 'Moore' -> 'moore'
+2026-01-14 19:23:41,385 - dq_comparison - INFO - DEBUG HASH STRING: 05862 pacheco crossroad suite 078, weisshaven, tn 83237|34060|2025-05-06|lisa.moore@example.com|moore...
+2026-01-14 19:23:41,386 - dq_comparison - INFO - DEBUG HASH RESULT: 10126988...
+2026-01-14 19:23:41,386 - dq_comparison - INFO - DEBUG HASH ROW: Address: '692 Stephanie Stravenue Suite 698, South Angela, TX 20461' -> '692 stephanie stravenue suite 698, south angela, tx 20461' | Salary: '113363' -> '113363' | JoinDate: '17-01-2021' -> '2021-01-17' | Email: 'scott.ashley@example.com' -> 'scott.ashley@example.com' | LastName: 'Ashley' -> 'ashley'
+2026-01-14 19:23:41,387 - dq_comparison - INFO - DEBUG HASH STRING: 692 stephanie stravenue suite 698, south angela, tx 20461|113363|2021-01-17|scott.ashley@example.com|ashley...
+2026-01-14 19:23:41,388 - dq_comparison - INFO - DEBUG HASH RESULT: 0da8ba3a...
+2026-01-14 19:23:41,389 - dq_comparison - INFO - DEBUG HASH ROW: Address: '31596 Cooper Turnpike, Cynthiamouth, UT 15112' -> '31596 cooper turnpike, cynthiamouth, ut 15112' | Salary: '93681' -> '93681' | JoinDate: '01-08-2021' -> '2021-08-01' | Email: 'david.baker@example.com' -> 'david.baker@example.com' | LastName: 'Baker' -> 'baker'
+2026-01-14 19:23:41,389 - dq_comparison - INFO - DEBUG HASH STRING: 31596 cooper turnpike, cynthiamouth, ut 15112|93681|2021-08-01|david.baker@example.com|baker...
+2026-01-14 19:23:41,390 - dq_comparison - INFO - DEBUG HASH RESULT: 4232e6a2...
+2026-01-14 19:23:41,391 - dq_comparison - INFO - DEBUG HASH ROW: Address: '72284 Jessica Fall, East Jeremy, GA 04567' -> '72284 jessica fall, east jeremy, ga 04567' | Salary: '77279' -> '77279' | JoinDate: '22-08-2023' -> '2023-08-22' | Email: 'rachel.rodriguez@example.com' -> 'rachel.rodriguez@example.com' | LastName: 'Rodriguez' -> 'rodriguez'
+2026-01-14 19:23:41,392 - dq_comparison - INFO - DEBUG HASH STRING: 72284 jessica fall, east jeremy, ga 04567|77279|2023-08-22|rachel.rodriguez@example.com|rodriguez...
+2026-01-14 19:23:41,393 - dq_comparison - INFO - DEBUG HASH RESULT: ff425d7f...
+2026-01-14 19:23:41,394 - dq_comparison - INFO - DEBUG HASH ROW: Address: '1045 Mosley Mills Apt. 818, Lewisland, MI 95655' -> '1045 mosley mills apt. 818, lewisland, mi 95655' | Salary: '84295' -> '84295' | JoinDate: '21-06-2022' -> '2022-06-21' | Email: 'jonathan.brown@example.com' -> 'jonathan.brown@example.com' | LastName: 'Brown' -> 'brown'
+2026-01-14 19:23:41,395 - dq_comparison - INFO - DEBUG HASH STRING: 1045 mosley mills apt. 818, lewisland, mi 95655|84295|2022-06-21|jonathan.brown@example.com|brown...
+2026-01-14 19:23:41,395 - dq_comparison - INFO - DEBUG HASH RESULT: 5a2f3cc8...
+2026-01-14 19:23:41,396 - dq_comparison - INFO - DEBUG HASH ROW: Address: '938 Knight Junction, New Molly, WY 16427' -> '938 knight junction, new molly, wy 16427' | Salary: '62444' -> '62444' | JoinDate: '02-06-2024' -> '2024-06-02' | Email: 'stephanie.jordan@example.com' -> 'stephanie.jordan@example.com' | LastName: 'Jordan' -> 'jordan'
+2026-01-14 19:23:41,396 - dq_comparison - INFO - DEBUG HASH STRING: 938 knight junction, new molly, wy 16427|62444|2024-06-02|stephanie.jordan@example.com|jordan...
+2026-01-14 19:23:41,398 - dq_comparison - INFO - DEBUG HASH RESULT: a9daf249...
+2026-01-14 19:23:41,399 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'nan' -> 'NULL' | Salary: '108150' -> '108150' | JoinDate: '27-02-2024' -> '2024-02-27' | Email: 'kathleen.medina@example.com' -> 'kathleen.medina@example.com' | LastName: 'Medina' -> 'medina'
+2026-01-14 19:23:41,399 - dq_comparison - INFO - DEBUG HASH STRING: NULL|108150|2024-02-27|kathleen.medina@example.com|medina...
+2026-01-14 19:23:41,400 - dq_comparison - INFO - DEBUG HASH RESULT: d619cc04...
+2026-01-14 19:23:41,402 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'nan' -> 'NULL' | Salary: '55606' -> '55606' | JoinDate: '18-10-2025' -> '2025-10-18' | Email: 'donna.melton@example.com' -> 'donna.melton@example.com' | LastName: 'Melton' -> 'melton'
+2026-01-14 19:23:41,403 - dq_comparison - INFO - DEBUG HASH STRING: NULL|55606|2025-10-18|donna.melton@example.com|melton...
+2026-01-14 19:23:41,403 - dq_comparison - INFO - DEBUG HASH RESULT: c90e8263...
+2026-01-14 19:23:41,404 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'nan' -> 'NULL' | Salary: '65948' -> '65948' | JoinDate: '08-03-2021' -> '2021-03-08' | Email: 'connor.hull@example.com' -> 'connor.hull@example.com' | LastName: 'Hull' -> 'hull'
+2026-01-14 19:23:41,405 - dq_comparison - INFO - DEBUG HASH STRING: NULL|65948|2021-03-08|connor.hull@example.com|hull...
+2026-01-14 19:23:41,405 - dq_comparison - INFO - DEBUG HASH RESULT: 109dcba3...
+2026-01-14 19:23:41,406 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'nan' -> 'NULL' | Salary: '38311' -> '38311' | JoinDate: '13-05-2022' -> '2022-05-13' | Email: 'stacey.jacobs@example.com' -> 'stacey.jacobs@example.com' | LastName: 'Jacobs' -> 'jacobs'
+2026-01-14 19:23:41,407 - dq_comparison - INFO - DEBUG HASH STRING: NULL|38311|2022-05-13|stacey.jacobs@example.com|jacobs...
+2026-01-14 19:23:41,408 - dq_comparison - INFO - DEBUG HASH RESULT: 987a0972...
+2026-01-14 19:23:41,409 - dq_comparison - INFO - DEBUG HASH ROW: Address: 'nan' -> 'NULL' | Salary: '37605' -> '37605' | JoinDate: '03-12-2023' -> '2023-12-03' | Email: 'mark.lester@example.com' -> 'mark.lester@example.com' | LastName: 'Lester' -> 'lester'
+2026-01-14 19:23:41,409 - dq_comparison - INFO - DEBUG HASH STRING: NULL|37605|2023-12-03|mark.lester@example.com|lester...
+2026-01-14 19:23:41,410 - dq_comparison - INFO - DEBUG HASH RESULT: 229c5c9f...
+2026-01-14 19:23:41,411 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-14 19:23:41,411 - dq_comparison - INFO - Hash 1: 8e9122b222188da4... (sample row 0)
+2026-01-14 19:23:41,412 - dq_comparison - INFO - Hash 2: db96f07ee9fddac9... (sample row 1)
+2026-01-14 19:23:41,412 - dq_comparison - INFO - Hash 3: 8dbc72af014bb2b1... (sample row 2)
+2026-01-14 19:23:41,413 - dq_comparison - INFO - Generating hashes for target data (50 rows)...
+2026-01-14 19:23:41,425 - dq_comparison - INFO - 
+======================================================================
+2026-01-14 19:23:41,426 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-14 19:23:41,427 - dq_comparison - INFO - ======================================================================
+2026-01-14 19:23:41,427 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-14 19:23:41,429 - dq_comparison - INFO - Column 'Address' → 'Address':
+2026-01-14 19:23:41,430 - dq_comparison - INFO -   Source: '6702 Watson Bypass, Brownland, KS 13081' (type: str) → '6702 watson bypass, brownland, ks 13081'
+2026-01-14 19:23:41,431 - dq_comparison - INFO -   Target: '6702 Watson Bypass, Brownland, KS 13081' (type: str) → '6702 watson bypass, brownland, ks 13081'
+2026-01-14 19:23:41,432 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,433 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-14 19:23:41,434 - dq_comparison - INFO -   Source: '111916' (type: int64) → '111916'
+2026-01-14 19:23:41,435 - dq_comparison - INFO -   Target: '111916' (type: int64) → '111916'
+2026-01-14 19:23:41,436 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,437 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-14 19:23:41,438 - dq_comparison - INFO -   Source: '26-10-2025' (type: str) → '2025-10-26'
+2026-01-14 19:23:41,439 - dq_comparison - INFO -   Target: '2025-10-26 00:00:00' (type: Timestamp) → '2025-10-26'
+2026-01-14 19:23:41,439 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,440 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-14 19:23:41,440 - dq_comparison - INFO -   Source: 'mark.morris@example.com' (type: str) → 'mark.morris@example.com'
+2026-01-14 19:23:41,441 - dq_comparison - INFO -   Target: 'mark.morris@example.com' (type: str) → 'mark.morris@example.com'
+2026-01-14 19:23:41,441 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,443 - dq_comparison - INFO - Column 'LastName' → 'LastName':
+2026-01-14 19:23:41,444 - dq_comparison - INFO -   Source: 'Morris' (type: str) → 'morris'
+2026-01-14 19:23:41,445 - dq_comparison - INFO -   Target: 'Morris' (type: str) → 'morris'
+2026-01-14 19:23:41,445 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,447 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-14 19:23:41,448 - dq_comparison - INFO - Source hash string start: 6702 watson bypass, brownland, ks 13081|111916|2025-10-26...
+2026-01-14 19:23:41,449 - dq_comparison - INFO - Target hash string start: 6702 watson bypass, brownland, ks 13081|111916|2025-10-26...
+2026-01-14 19:23:41,450 - dq_comparison - INFO - Same? ✅ YES
+2026-01-14 19:23:41,451 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-14 19:23:41,453 - dq_comparison - INFO - Column 'Address' → 'Address':
+2026-01-14 19:23:41,453 - dq_comparison - INFO -   Source: '815 Rogers Row Apt. 396, Williamfurt, WA 10567' (type: str) → '815 rogers row apt. 396, williamfurt, wa 10567'
+2026-01-14 19:23:41,455 - dq_comparison - INFO -   Target: '815 Rogers Row Apt. 396, Williamfurt, WA 10567' (type: str) → '815 rogers row apt. 396, williamfurt, wa 10567'
+2026-01-14 19:23:41,456 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,457 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-14 19:23:41,458 - dq_comparison - INFO -   Source: '39264' (type: int64) → '39264'
+2026-01-14 19:23:41,459 - dq_comparison - INFO -   Target: '39264' (type: int64) → '39264'
+2026-01-14 19:23:41,460 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,461 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-14 19:23:41,462 - dq_comparison - INFO -   Source: '31-05-2025' (type: str) → '2025-05-31'
+2026-01-14 19:23:41,463 - dq_comparison - INFO -   Target: '2025-05-31 00:00:00' (type: Timestamp) → '2025-05-31'
+2026-01-14 19:23:41,463 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,464 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-14 19:23:41,464 - dq_comparison - INFO -   Source: 'dennis.owens@example.com' (type: str) → 'dennis.owens@example.com'
+2026-01-14 19:23:41,466 - dq_comparison - INFO -   Target: 'dennis.owens@example.com' (type: str) → 'dennis.owens@example.com'
+2026-01-14 19:23:41,466 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,467 - dq_comparison - INFO - Column 'LastName' → 'LastName':
+2026-01-14 19:23:41,469 - dq_comparison - INFO -   Source: 'Owens' (type: str) → 'owens'
+2026-01-14 19:23:41,469 - dq_comparison - INFO -   Target: 'Owens' (type: str) → 'owens'
+2026-01-14 19:23:41,470 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,470 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-14 19:23:41,471 - dq_comparison - INFO - Source hash string start: 815 rogers row apt. 396, williamfurt, wa 10567|39264|2025-05-31...
+2026-01-14 19:23:41,472 - dq_comparison - INFO - Target hash string start: 815 rogers row apt. 396, williamfurt, wa 10567|39264|2025-05-31...
+2026-01-14 19:23:41,473 - dq_comparison - INFO - Same? ✅ YES
+2026-01-14 19:23:41,474 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-14 19:23:41,475 - dq_comparison - INFO - Column 'Address' → 'Address':
+2026-01-14 19:23:41,476 - dq_comparison - INFO -   Source: '25439 Carney Mills Apt. 076, New April, CT 16626' (type: str) → '25439 carney mills apt. 076, new april, ct 16626'
+2026-01-14 19:23:41,477 - dq_comparison - INFO -   Target: '25439 Carney Mills Apt. 076, New April, CT 16626' (type: str) → '25439 carney mills apt. 076, new april, ct 16626'
+2026-01-14 19:23:41,477 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,479 - dq_comparison - INFO - Column 'Salary' → 'Salary':
+2026-01-14 19:23:41,479 - dq_comparison - INFO -   Source: '41191' (type: int64) → '41191'
+2026-01-14 19:23:41,480 - dq_comparison - INFO -   Target: '41191' (type: int64) → '41191'
+2026-01-14 19:23:41,480 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,481 - dq_comparison - INFO - Column 'JoinDate' → 'JoinDate':
+2026-01-14 19:23:41,483 - dq_comparison - INFO -   Source: '31-03-2024' (type: str) → '2024-03-31'
+2026-01-14 19:23:41,483 - dq_comparison - INFO -   Target: '2024-03-31 00:00:00' (type: Timestamp) → '2024-03-31'
+2026-01-14 19:23:41,484 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,484 - dq_comparison - INFO - Column 'Email' → 'Email':
+2026-01-14 19:23:41,486 - dq_comparison - INFO -   Source: 'felicia.hatfield@example.com' (type: str) → 'felicia.hatfield@example.com'
+2026-01-14 19:23:41,486 - dq_comparison - INFO -   Target: 'felicia.hatfield@example.com' (type: str) → 'felicia.hatfield@example.com'
+2026-01-14 19:23:41,486 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,488 - dq_comparison - INFO - Column 'LastName' → 'LastName':
+2026-01-14 19:23:41,489 - dq_comparison - INFO -   Source: 'Hatfield' (type: str) → 'hatfield'
+2026-01-14 19:23:41,489 - dq_comparison - INFO -   Target: 'Hatfield' (type: str) → 'hatfield'
+2026-01-14 19:23:41,490 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-14 19:23:41,491 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-14 19:23:41,492 - dq_comparison - INFO - Source hash string start: 25439 carney mills apt. 076, new april, ct 16626|41191|2024-03-31...
+2026-01-14 19:23:41,493 - dq_comparison - INFO - Target hash string start: 25439 carney mills apt. 076, new april, ct 16626|41191|2024-03-31...
+2026-01-14 19:23:41,493 - dq_comparison - INFO - Same? ✅ YES
+2026-01-14 19:23:41,494 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-14 19:23:41,495 - dq_comparison - INFO - Column 1: 'Address' (object) ↔ 'Address' (object)
+2026-01-14 19:23:41,496 - dq_comparison - INFO -   Sample: Source='6702 Watson Bypass, Brownland, KS 13081', Target='6702 Watson Bypass, Brownland, KS 13081'
+2026-01-14 19:23:41,496 - dq_comparison - INFO - Column 2: 'Salary' (int64) ↔ 'Salary' (int64)
+2026-01-14 19:23:41,497 - dq_comparison - INFO -   Sample: Source='111916', Target='111916'
+2026-01-14 19:23:41,498 - dq_comparison - INFO - Column 3: 'JoinDate' (object) ↔ 'JoinDate' (datetime64[ns])
+2026-01-14 19:23:41,499 - dq_comparison - INFO -   Sample: Source='26-10-2025', Target='2025-10-26 00:00:00'
+2026-01-14 19:23:41,500 - dq_comparison - INFO - Column 4: 'Email' (object) ↔ 'Email' (object)
+2026-01-14 19:23:41,501 - dq_comparison - INFO -   Sample: Source='mark.morris@example.com', Target='mark.morris@example.com'
+2026-01-14 19:23:41,502 - dq_comparison - INFO - Column 5: 'LastName' (object) ↔ 'LastName' (object)
+2026-01-14 19:23:41,502 - dq_comparison - INFO -   Sample: Source='Morris', Target='Morris'
+2026-01-14 19:23:41,502 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-01-14 19:23:41,521 - dq_comparison - WARNING - Error processing mismatch row 0: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,554 - dq_comparison - WARNING - Error processing mismatch row 1: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,585 - dq_comparison - WARNING - Error processing mismatch row 2: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,613 - dq_comparison - WARNING - Error processing mismatch row 3: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,638 - dq_comparison - WARNING - Error processing mismatch row 4: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,659 - dq_comparison - WARNING - Error processing mismatch row 5: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,682 - dq_comparison - WARNING - Error processing mismatch row 6: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,706 - dq_comparison - WARNING - Error processing mismatch row 7: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,729 - dq_comparison - WARNING - Error processing mismatch row 8: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:41,756 - dq_comparison - WARNING - Error processing mismatch row 9: 'str' object has no attribute 'join_output'
+2026-01-14 19:23:42,592 - dq_comparison - INFO - 
+================================================================================
+2026-01-14 19:23:42,593 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-01-14 19:23:42,593 - dq_comparison - INFO -   Total mismatches found: 80
+2026-01-14 19:23:42,594 - dq_comparison - INFO -   Detailed comparisons logged: 80
+2026-01-14 19:23:42,595 - dq_comparison - INFO -   First 10 rows displayed above
+2026-01-14 19:23:42,596 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-01-14 19:23:42,596 - dq_comparison - INFO -   Use API to retrieve all 80 mismatches
+2026-01-14 19:23:42,597 - dq_comparison - INFO - ================================================================================
+2026-01-14 19:23:42,598 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-14 19:23:42,598 - dq_comparison - INFO -   • Unique source hashes: 50
+2026-01-14 19:23:42,599 - dq_comparison - INFO -   • Unique target hashes: 50
+2026-01-14 19:23:42,600 - dq_comparison - INFO -   • Common hashes: 10
+2026-01-14 19:23:42,600 - dq_comparison - INFO -   • Common rows (counting duplicates): 10
+2026-01-14 19:23:42,601 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 40
+2026-01-14 19:23:42,601 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 40
+2026-01-14 19:23:42,602 - dq_comparison - INFO - Found 40 source-only rows
+2026-01-14 19:23:42,663 - dq_comparison - INFO - Found 40 target-only rows
+2026-01-14 19:23:42,726 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-14 19:23:42,727 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-14 19:23:42,728 - dq_comparison - INFO -   Common rows: 10
+2026-01-14 19:23:42,728 - dq_comparison - INFO -   Unique to source: 40
+2026-01-14 19:23:42,729 - dq_comparison - INFO -   Unique to target: 40
+2026-01-14 19:23:42,730 - dq_comparison - INFO -   Value mismatches: 640
+2026-01-14 19:23:42,730 - dq_comparison - INFO -   Missing rows: 40
+2026-01-14 19:23:42,731 - dq_comparison - INFO -   Extra rows: 40
+2026-01-14 19:23:42,732 - dq_comparison - INFO - 
+========================================================================================================================
+Comparison of specific row data where differences were detected.
+========================================================================================================================
+Row   | Mismatch Summary                         | Source Data                         | Target Data                        
+------------------------------------------------------------------------------------------------------------------------
+2     | PhoneNumber: '-6089' ≠ '+1-486-229-5375' | Address: 6702 W... (+2 more columns) (+5 more) | Address: 6702 W... (+2 more columns) (+5 more)
+3     | PhoneNumber: '-3294' ≠ '+1-844-558-1893' | Address: 815 Ro... (+2 more columns) (+5 more) | Address: 815 Ro... (+2 more columns) (+5 more)
+4     | PhoneNumber: '-10861' ≠ '+1-910-312-9640 | Address: 25439 ... (+2 more columns) (+5 more) | Address: 25439 ... (+2 more columns) (+5 more)
+5     | PhoneNumber: '-10469' ≠ '+1-402-883-9185 | Address: 57717 ... (+2 more columns) (+5 more) | Address: 57717 ... (+2 more columns) (+5 more)
+6     | PhoneNumber: '-6209' ≠ '+1-754-612-4844' | Address: 21259 ... (+2 more columns) (+5 more) | Address: 21259 ... (+2 more columns) (+5 more)
+7     | PhoneNumber: '-5301' ≠ '+1-700-357-4245' | Address: 34480 ... (+2 more columns) (+5 more) | Address: 34480 ... (+2 more columns) (+5 more)
+8     | PhoneNumber: '-3679' ≠ '+1-229-749-2702' | Address: 592 Ma... (+2 more columns) (+5 more) | Address: 592 Ma... (+2 more columns) (+5 more)
+9     | PhoneNumber: '-9013' ≠ '+1-569-212-8233' | Address: PSC 36... (+2 more columns) (+5 more) | Address: PSC 36... (+2 more columns) (+5 more)
+10    | PhoneNumber: '-2926' ≠ '+1-852-913-1162' | Address: 85787 ... (+2 more columns) (+5 more) | Address: 85787 ... (+2 more columns) (+5 more)
+11    | PhoneNumber: '-6066' ≠ '+1-519-801-4747' | Address: 372 Br... (+2 more columns) (+5 more) | Address: 372 Br... (+2 more columns) (+5 more)
+------------------------------------------------------------------------------------------------------------------------
+Showing 1-10 of 80 mismatched rows. Use API for complete data.
+========================================================================================================================
+2026-01-14 19:23:42,732 - dq_comparison - INFO - Returning enhanced mismatch structure with 80 detailed mismatches
+2026-01-14 19:23:42,734 - dq_comparison - INFO - New structure: 80 detailed mismatches
+2026-01-14 19:23:42,735 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-14 19:23:42,758 - dq_comparison - INFO - Null values - Source: 5 (1.25%), Target: 5 (1.25%)
+2026-01-14 19:23:42,760 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-01-14 19:23:42,773 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260114_192341
+2026-01-14 19:23:42,774 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-14 19:23:42,775 - dq_comparison - INFO -   Source rows: 50
+2026-01-14 19:23:42,775 - dq_comparison - INFO -   Common rows (matched): 10
+2026-01-14 19:23:42,776 - dq_comparison - INFO -   Calculation: (10 / 50) * 100 = 20.00%
+2026-01-14 19:23:42,776 - dq_comparison - INFO -   Explanation: 10 matched rows out of 50 total source rows
+2026-01-14 19:23:42,777 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-14 19:23:42,777 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-14 19:23:42,778 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-14 19:23:42,779 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260114_192341
+2026-01-14 19:23:42,780 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-14 19:23:42,798 - dq_audit - INFO - Inserted comparison record with ID: 671
+2026-01-14 19:23:42,799 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 671)
+2026-01-14 19:23:42,814 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260114_192341
+2026-01-14 19:23:42,827 - dq_error_log - INFO - Retrieved summary: 101 total errors for session CMP_20260114_192341
+2026-01-14 19:23:42,829 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-14 19:23:42,848 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260114_192341
+2026-01-14 19:23:42,849 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-14 19:23:42,850 - dq_comparison - INFO -    Session ID: CMP_20260114_192341
+2026-01-14 19:23:42,851 - dq_comparison - INFO -    DQ Score (Simple %): 20.00%
+2026-01-14 19:23:42,852 - dq_comparison - INFO -    Source rows: 50
+2026-01-14 19:23:42,852 - dq_comparison - INFO -    Matched rows: 10
+2026-01-14 19:23:42,853 - dq_comparison - INFO -    Calculation: (10 / 50) * 100
+2026-01-14 19:23:42,854 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-14 19:23:42,868 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260114_192341
+2026-01-14 19:23:42,881 - dq_error_log - INFO - Retrieved 101 error logs for session CMP_20260114_192341
+2026-01-14 19:23:42,894 - dq_error_log - INFO - Retrieved summary: 101 total errors for session CMP_20260114_192341
+2026-01-14 19:23:42,896 - __main__ - INFO - Comparison completed for session CMP_20260114_192340
+2026-01-14 19:23:42,912 - __main__ - INFO - Completed with status 200 in 2.530s

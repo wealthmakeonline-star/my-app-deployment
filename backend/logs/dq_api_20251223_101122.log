@@ -1,0 +1,85 @@
+2025-12-23 10:11:22,316 - root - INFO - 🌐 API Server Logging Initialized
+2025-12-23 10:11:22,991 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 10:11:22,991 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 10:11:22,998 - root - INFO - Starting Data Quality API on 0.0.0.0:5000 (debug=False)
+2025-12-23 10:11:22,998 - root - INFO - DQ modules available: True
+2025-12-23 10:11:22,998 - root - INFO - Config file mode: False
+2025-12-23 10:11:22,998 - root - INFO - Database config: localhost/dq_checks
+2025-12-23 10:11:23,118 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.185.54:5000
+2025-12-23 10:11:23,118 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-23 10:11:38,409 - werkzeug - INFO - 127.0.0.1 - - [23/Dec/2025 10:11:38] "GET /api/health HTTP/1.1" 200 -
+2025-12-23 10:11:40,466 - root - INFO - Single source analysis request received: dict_keys(['source_type', 'file_path', 'mandatory_fields', 'analysis_type', 'check_completeness', 'check_uniqueness', 'check_consistency', 'check_validity', 'check_accuracy', 'check_timeliness', 'generate_report', 'calculate_kpis'])
+2025-12-23 10:11:40,466 - root - INFO - Starting single source analysis for session SINGLE_20251223_101140_91c4c2b2
+2025-12-23 10:11:40,466 - dq_unified - INFO - PROMPTING USER FOR DATA SOURCE TYPE
+2025-12-23 10:11:40,467 - dq_unified - INFO - User selected source type: 1
+2025-12-23 10:11:40,468 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-23 10:11:40,468 - dq_unified - INFO - LOADING DATA FROM CSV
+2025-12-23 10:11:40,468 - dq_unified - INFO - Loading large CSV: C:/Users/003160/OneDrive - wisseninfotech.com/Documents/DQ-Checks-Shashi/Test_data/sample_data.csv
+2025-12-23 10:11:40,473 - dq_unified - INFO - CSV file has 15 rows
+2025-12-23 10:11:40,473 - dq_unified - INFO - Loading 15 rows from CSV...
+2025-12-23 10:11:40,494 - dq_unified - INFO - Loaded 15 rows from CSV
+2025-12-23 10:11:40,507 - dq_unified - INFO - Memory optimization: 0.0MB -> 0.0MB (Saved: 0.0MB)
+2025-12-23 10:11:40,509 - dq_unified - INFO - Loaded 15 rows, 10 columns. Memory: 97.8MB total, 0.0MB for dataframe
+2025-12-23 10:11:40,510 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 10:11:40,511 - dq_unified - INFO - CHECKING FOR EMPTY CELLS
+2025-12-23 10:11:40,512 - dq_unified - WARNING - Column 'CustomerName': 1 empty cells (6.7%)
+2025-12-23 10:11:40,702 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_101140
+2025-12-23 10:11:40,704 - dq_unified - WARNING - Column 'Email': 1 empty cells (6.7%)
+2025-12-23 10:11:40,727 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_101140
+2025-12-23 10:11:40,727 - dq_unified - INFO - Column 'Phone': No empty cells
+2025-12-23 10:11:40,727 - dq_unified - WARNING - Column 'Salary': 2 empty cells (13.3%)
+2025-12-23 10:11:40,748 - dq_error_log - INFO - Batch logged 2 errors for session SINGLE_20251223_101140
+2025-12-23 10:11:40,749 - dq_unified - WARNING - Column 'Department': 1 empty cells (6.7%)
+2025-12-23 10:11:40,768 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_101140
+2025-12-23 10:11:40,771 - dq_unified - INFO - Column 'JoinDate': No empty cells
+2025-12-23 10:11:40,771 - dq_unified - INFO - Column 'PostalCode': No empty cells
+2025-12-23 10:11:40,773 - dq_unified - INFO - Column 'City': No empty cells
+2025-12-23 10:11:40,773 - dq_unified - INFO - Column 'Country': No empty cells
+2025-12-23 10:11:40,774 - dq_unified - WARNING - Column 'State': 1 empty cells (6.7%)
+2025-12-23 10:11:40,794 - dq_error_log - INFO - Batch logged 1 errors for session SINGLE_20251223_101140
+2025-12-23 10:11:40,794 - dq_unified - INFO - Total empty cells found: 6
+2025-12-23 10:11:40,794 - dq_unified - INFO - CHECKING FOR DUPLICATE ROWS
+2025-12-23 10:11:40,809 - dq_unified - INFO - No strict duplicate rows found
+2025-12-23 10:11:40,809 - dq_unified - INFO - AUTOMATICALLY DETECTING KEY FIELD DUPLICATES
+2025-12-23 10:11:40,813 - dq_unified - INFO - Detected potential key fields: ['CustomerName', 'Email', 'PostalCode']
+2025-12-23 10:11:40,815 - dq_unified - WARNING - Found 1 duplicate values in field 'Email'
+2025-12-23 10:11:40,816 - dq_unified - WARNING - Found 1 duplicate values in field 'PostalCode'
+2025-12-23 10:11:40,897 - dq_unified - INFO - Skipping automatic format checking (disabled)
+2025-12-23 10:11:40,897 - dq_unified - INFO - CHECKING MANDATORY FIELDS
+2025-12-23 10:11:40,897 - dq_unified - INFO - Checking ALL columns as mandatory: ['CustomerName', 'Email', 'Phone', 'Salary', 'Department', 'JoinDate', 'PostalCode', 'City', 'Country', 'State']
+2025-12-23 10:11:40,899 - dq_unified - WARNING - Mandatory field 'CustomerName': 1 missing values (93.3% filled)
+2025-12-23 10:11:40,903 - dq_unified - WARNING - Mandatory field 'Email': 1 missing values (93.3% filled)
+2025-12-23 10:11:40,906 - dq_unified - INFO - Mandatory field 'Phone': 100.0% filled
+2025-12-23 10:11:40,906 - dq_unified - WARNING - Mandatory field 'Salary': 2 missing values (86.7% filled)
+2025-12-23 10:11:40,909 - dq_unified - WARNING - Mandatory field 'Department': 1 missing values (93.3% filled)
+2025-12-23 10:11:40,912 - dq_unified - INFO - Mandatory field 'JoinDate': 100.0% filled
+2025-12-23 10:11:40,914 - dq_unified - INFO - Mandatory field 'PostalCode': 100.0% filled
+2025-12-23 10:11:40,915 - dq_unified - INFO - Mandatory field 'City': 100.0% filled
+2025-12-23 10:11:40,916 - dq_unified - INFO - Mandatory field 'Country': 100.0% filled
+2025-12-23 10:11:40,918 - dq_unified - WARNING - Mandatory field 'State': 1 missing values (93.3% filled)
+2025-12-23 10:11:40,921 - dq_unified - INFO - Mandatory field check completed: 5 columns with issues, 6 total missing values
+2025-12-23 10:11:41,037 - dq_unified - INFO - CALCULATING OVERALL QUALITY SCORE
+2025-12-23 10:11:41,037 - dq_unified - INFO - QUALITY SCORE FORMULA:
+2025-12-23 10:11:41,037 - dq_unified - INFO -   Total cells: 150
+2025-12-23 10:11:41,037 - dq_unified - INFO -   Nulls: 6 (weight: 1.0)
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Duplicates: 2 (weight: 0.5)
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Key field duplicates: 2 (weight: 1.5)
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Mandatory missing: 6 (weight: 1.0)
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Format issues: 0 (weight: 0.3)
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Weighted issues: 16.0
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Max weighted issues possible: 225.0
+2025-12-23 10:11:41,038 - dq_unified - INFO -   Quality score: 92.9%
+2025-12-23 10:11:41,038 - dq_unified - INFO - GENERATING DETAILED DATA QUALITY REPORT
+2025-12-23 10:11:41,051 - dq_unified - INFO - Returning JSON report for API, Session: SINGLE_20251223_101140
+2025-12-23 10:11:41,057 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 10:11:41,148 - dq_audit - INFO - Starting database insertion for single_source...
+2025-12-23 10:11:41,175 - dq_audit - INFO - Inserted single_source record with ID: 226
+2025-12-23 10:11:41,175 - dq_audit - INFO - Inserted single_source record with ID: 226
+2025-12-23 10:11:41,187 - dq_unified - INFO - Analysis completed successfully for CSV: sample_data.csv
+2025-12-23 10:11:41,187 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2025-12-23 10:11:41,235 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2025-12-23 10:11:41,309 - root - INFO - Completed single source analysis for session SINGLE_20251223_101140
+2025-12-23 10:11:41,317 - werkzeug - INFO - 127.0.0.1 - - [23/Dec/2025 10:11:41] "POST /api/check-single HTTP/1.1" 200 -

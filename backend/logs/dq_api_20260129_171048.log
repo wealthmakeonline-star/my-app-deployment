@@ -1,0 +1,299 @@
+2026-01-29 17:10:48,193 - __main__ - INFO - 🌐 API Server Logging Initialized
+2026-01-29 17:10:48,194 - __main__ - INFO - 📝 Logs saved to: logs/dq_api_20260129_171048.log
+2026-01-29 17:10:48,258 - __main__ - INFO - APP_SETTINGS loaded. Audit enabled: True
+2026-01-29 17:10:48,259 - __main__ - INFO - ✅ All DQ modules loaded successfully
+2026-01-29 17:10:48,262 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-29 17:10:48,264 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-29 17:10:48,264 - __main__ - INFO - ✅ ErrorLogger and DataQualityAudit initialized
+2026-01-29 17:10:48,277 - __main__ - INFO - 🚀 Starting Data Quality Framework API
+2026-01-29 17:10:48,279 - __main__ - INFO - 📊 Modules available: True
+2026-01-29 17:10:48,280 - __main__ - INFO - 🔧 Config file mode: False
+2026-01-29 17:10:48,281 - __main__ - INFO - 📋 Available endpoints:
+2026-01-29 17:10:48,283 - __main__ - INFO -   GET  /              - API status
+2026-01-29 17:10:48,284 - __main__ - INFO -   GET  /api/health    - Health check
+2026-01-29 17:10:48,285 - __main__ - INFO -   POST /api/check-single - Single source analysis
+2026-01-29 17:10:48,286 - __main__ - INFO -   POST /api/compare   - Source-target comparison
+2026-01-29 17:10:48,287 - __main__ - INFO -   GET  /api/compare/{id} - Get comparison results
+2026-01-29 17:10:48,288 - __main__ - INFO -   GET  /api/compare/{id}/mismatches - Paginated mismatches
+2026-01-29 17:10:48,288 - __main__ - INFO -   GET  /api/compare/{id}/rows/count - Row counts
+2026-01-29 17:10:48,289 - __main__ - INFO -   POST /api/upload    - File upload
+2026-01-29 17:10:48,290 - __main__ - INFO -   GET  /api/sessions  - List sessions
+2026-01-29 17:10:48,291 - __main__ - INFO -   GET  /api/sessions/<id> - Get session data
+2026-01-29 17:10:48,292 - __main__ - INFO -   GET  /api/debug-db  - Database debug
+2026-01-29 17:10:48,292 - __main__ - INFO - 🌍 Server starting on 0.0.0.0:5000 (debug=False)
+2026-01-29 17:12:04,439 - __main__ - INFO - POST /api/upload - Request started
+2026-01-29 17:12:04,538 - __main__ - INFO - File uploaded: 20260129_171204_product_master_9k.xlsx (excel)
+2026-01-29 17:12:04,540 - __main__ - INFO - Completed with status 200 in 0.102s
+2026-01-29 17:12:04,667 - __main__ - INFO - POST /api/upload - Request started
+2026-01-29 17:12:04,696 - __main__ - INFO - File uploaded: 20260129_171204_product_master_10k.csv (csv)
+2026-01-29 17:12:04,697 - __main__ - INFO - Completed with status 200 in 0.030s
+2026-01-29 17:12:04,865 - __main__ - INFO - POST /api/compare - Request started
+2026-01-29 17:12:04,866 - __main__ - INFO - Comparison request - Source: excel, Target: csv
+2026-01-29 17:12:04,868 - __main__ - INFO - Comparison analysis request received
+2026-01-29 17:12:04,870 - __main__ - INFO - DEBUG source_data from nested: {'source_type': 'excel', 'source_file_path': 'uploads\\20260129_171204_product_master_9k.xlsx'}
+2026-01-29 17:12:04,871 - __main__ - INFO - Starting comparison for session CMP_20260129_171204
+2026-01-29 17:12:04,872 - dq_comparison - INFO - Starting comparison analysis in UI mode
+2026-01-29 17:12:04,872 - dq_comparison - INFO - LOADING SOURCE AND TARGET DATA
+2026-01-29 17:12:04,873 - dq_comparison - INFO - 
+==================================================
+2026-01-29 17:12:04,873 - dq_comparison - INFO - 🔗 SOURCE DATA CONFIGURATION
+2026-01-29 17:12:04,875 - dq_comparison - INFO - ==================================================
+2026-01-29 17:12:04,876 - dq_comparison - INFO - DEBUG load_excel_source called for SOURCE
+2026-01-29 17:12:04,877 - dq_comparison - INFO - DEBUG ui_data: {'source_type': 'excel', 'source_file_path': 'uploads\\20260129_171204_product_master_9k.xlsx', 'file_path': 'uploads\\20260129_171204_product_master_9k.xlsx', 'sheet_name': None}
+2026-01-29 17:12:04,877 - dq_comparison - INFO - DEBUG ui_data type: <class 'dict'>
+2026-01-29 17:12:04,878 - dq_comparison - INFO - DEBUG Found file_path in ui_data: uploads\20260129_171204_product_master_9k.xlsx
+2026-01-29 17:12:08,357 - dq_comparison - INFO - SOURCE Excel loaded: 8,999 rows, 13 columns
+2026-01-29 17:12:08,359 - dq_comparison - INFO - 
+==================================================
+2026-01-29 17:12:08,360 - dq_comparison - INFO - 🔗 TARGET DATA CONFIGURATION
+2026-01-29 17:12:08,361 - dq_comparison - INFO - ==================================================
+2026-01-29 17:12:08,362 - dq_comparison - INFO - DEBUG load_csv_source called for TARGET
+2026-01-29 17:12:08,363 - dq_comparison - INFO - DEBUG: Using file_path from 'target_file_path': uploads\20260129_171204_product_master_10k.csv
+2026-01-29 17:12:08,410 - dq_comparison - INFO - TARGET CSV loaded: 10,000 rows, 13 columns
+2026-01-29 17:12:08,411 - dq_comparison - INFO - Source data loaded: 8999 rows, 13 columns
+2026-01-29 17:12:08,412 - dq_comparison - INFO - Target data loaded: 10000 rows, 13 columns
+2026-01-29 17:12:08,413 - dq_comparison - INFO - SELECTING COLUMNS FOR COMPARISON
+2026-01-29 17:12:08,414 - dq_comparison - INFO - Source columns (original): ['ProductID', 'ProductName', 'Category', 'SubCategory', 'Brand', 'UOM', 'Length_cm', 'Width_cm', 'Height_cm', 'Weight_kg', 'Price', 'CountryOfOrigin', 'Barcode']
+2026-01-29 17:12:08,415 - dq_comparison - INFO - Target columns (original): ['ProductID', 'ProductName', 'Category', 'SubCategory', 'Brand', 'UOM', 'Length_cm', 'Width_cm', 'Height_cm', 'Weight_kg', 'Price', 'CountryOfOrigin', 'Barcode']
+2026-01-29 17:12:08,416 - dq_comparison - INFO - Common columns lowercased: ['category', 'length_cm', 'productname', 'countryoforigin', 'uom', 'weight_kg', 'price', 'barcode', 'width_cm', 'brand', 'subcategory', 'productid', 'height_cm']
+2026-01-29 17:12:08,417 - dq_comparison - INFO - Found 13 common columns between source and target (case-insensitive)
+2026-01-29 17:12:08,418 - dq_comparison - INFO - User column selection input: all
+2026-01-29 17:12:08,419 - dq_comparison - INFO - User selected ALL common columns for comparison
+2026-01-29 17:12:08,420 - dq_comparison - INFO - Selected 13 columns for comparison: ['Category', 'Length_cm', 'ProductName', 'CountryOfOrigin', 'UOM']...
+2026-01-29 17:12:08,420 - dq_comparison - INFO - GENERATING COMPREHENSIVE COMPARISON REPORT
+2026-01-29 17:12:08,422 - dq_comparison - INFO - Report details - Source: Excel: 20260129_171204_product_master_9k.xlsx (product_master_9k), Target: CSV: 20260129_171204_product_master_10k.csv, Selected columns: 13
+2026-01-29 17:12:08,423 - dq_comparison - INFO - Initializing Error Logger...
+2026-01-29 17:12:08,424 - dq_error_log - INFO - ErrorLogger initialized with database: dq_checks
+2026-01-29 17:12:08,589 - dq_error_log - INFO - Database connection successful
+2026-01-29 17:12:08,590 - dq_comparison - INFO - Session ID: CMP_20260129_171208
+2026-01-29 17:12:08,591 - dq_comparison - WARNING - ❌ Row count mismatch: Source=8,999, Target=10,000, Difference=1,001
+2026-01-29 17:12:08,592 - dq_comparison - WARNING -    Extra in target: 1,001 rows
+2026-01-29 17:12:08,593 - dq_comparison - INFO - Comparing column structures...
+2026-01-29 17:12:08,595 - dq_comparison - INFO - Column structure comparison complete. Match: True
+2026-01-29 17:12:08,596 - dq_comparison - INFO - Validating primary key/unique fields...
+2026-01-29 17:12:08,598 - dq_comparison - INFO - Checking key fields: ['ProductID', 'ProductID', 'Barcode']
+2026-01-29 17:12:08,605 - dq_comparison - WARNING - Field 'Barcode' has duplicates in source: 562 rows
+2026-01-29 17:12:08,607 - dq_comparison - WARNING - Field 'Barcode' has duplicates in target: 642 rows
+2026-01-29 17:12:08,608 - dq_comparison - INFO - Primary key validation complete. Passed: False
+2026-01-29 17:12:08,638 - dq_comparison - INFO - Comparing table-level metadata...
+2026-01-29 17:12:08,772 - dq_comparison - INFO - Table metadata comparison complete. Match: False
+2026-01-29 17:12:08,787 - dq_comparison - INFO - SECOND CHECK: HASH-BASED COMPARISON WITH PERFECT NORMALIZATION
+2026-01-29 17:12:08,807 - dq_comparison - INFO - Starting comparison of 18,999 total rows...
+2026-01-29 17:12:08,807 - dq_comparison - INFO - === DEBUG: DATA TYPE CHECK ===
+2026-01-29 17:12:08,808 - dq_comparison - INFO - Column: Category
+2026-01-29 17:12:08,809 - dq_comparison - INFO -   Source type: <class 'str'>, value: Apparel
+2026-01-29 17:12:08,809 - dq_comparison - INFO -   Target type: <class 'str'>, value: Apparel
+2026-01-29 17:12:08,812 - dq_comparison - INFO -   Normalized: 'apparel' vs 'apparel'
+2026-01-29 17:12:08,813 - dq_comparison - INFO -   Match: True
+2026-01-29 17:12:08,814 - dq_comparison - INFO - Column: Length_cm
+2026-01-29 17:12:08,814 - dq_comparison - INFO -   Source type: <class 'numpy.int64'>, value: 139
+2026-01-29 17:12:08,815 - dq_comparison - INFO -   Target type: <class 'numpy.int64'>, value: 139
+2026-01-29 17:12:08,816 - dq_comparison - INFO -   Normalized: '139' vs '139'
+2026-01-29 17:12:08,817 - dq_comparison - INFO -   Match: True
+2026-01-29 17:12:08,817 - dq_comparison - INFO - Column: ProductName
+2026-01-29 17:12:08,819 - dq_comparison - INFO -   Source type: <class 'str'>, value: Product-0
+2026-01-29 17:12:08,819 - dq_comparison - INFO -   Target type: <class 'str'>, value: Product-0
+2026-01-29 17:12:08,820 - dq_comparison - INFO -   Normalized: 'product-0' vs 'product-0'
+2026-01-29 17:12:08,821 - dq_comparison - INFO -   Match: True
+2026-01-29 17:12:08,821 - dq_comparison - INFO - Source DF columns: ['ProductID', 'ProductName', 'Category', 'SubCategory', 'Brand', 'UOM', 'Length_cm', 'Width_cm', 'Height_cm', 'Weight_kg', 'Price', 'CountryOfOrigin', 'Barcode']
+2026-01-29 17:12:08,823 - dq_comparison - INFO - Target DF columns: ['ProductID', 'ProductName', 'Category', 'SubCategory', 'Brand', 'UOM', 'Length_cm', 'Width_cm', 'Height_cm', 'Weight_kg', 'Price', 'CountryOfOrigin', 'Barcode']
+2026-01-29 17:12:08,824 - dq_comparison - INFO - Selected columns for comparison: ['Category', 'Length_cm', 'ProductName', 'CountryOfOrigin', 'UOM', 'Weight_kg', 'Price', 'Barcode', 'Width_cm', 'Brand', 'SubCategory', 'ProductID', 'Height_cm']
+2026-01-29 17:12:08,825 - dq_comparison - INFO - Using 13 common columns for hash comparison
+2026-01-29 17:12:08,826 - dq_comparison - INFO - Source columns: ['Category', 'Length_cm', 'ProductName', 'CountryOfOrigin', 'UOM', 'Weight_kg', 'Price', 'Barcode', 'Width_cm', 'Brand', 'SubCategory', 'ProductID', 'Height_cm']
+2026-01-29 17:12:08,828 - dq_comparison - INFO - Target columns: ['Category', 'Length_cm', 'ProductName', 'CountryOfOrigin', 'UOM', 'Weight_kg', 'Price', 'Barcode', 'Width_cm', 'Brand', 'SubCategory', 'ProductID', 'Height_cm']
+2026-01-29 17:12:08,828 - dq_comparison - INFO - Generating hashes for source data (8999 rows)...
+2026-01-29 17:12:11,210 - dq_comparison - INFO -    Hashing source data: 10.0% complete (1,900/18,999 rows)
+2026-01-29 17:12:12,620 - dq_comparison - INFO -    Hashing source data: 20.0% complete (3,800/18,999 rows)
+2026-01-29 17:12:13,656 - dq_comparison - INFO -    Hashing source data: 30.0% complete (5,700/18,999 rows)
+2026-01-29 17:12:14,753 - dq_comparison - INFO -    Hashing source data: 40.0% complete (7,600/18,999 rows)
+2026-01-29 17:12:15,572 - dq_comparison - INFO - === DEBUG: SAMPLE HASHES ===
+2026-01-29 17:12:15,572 - dq_comparison - INFO - Hash 1: 63858b513ebc38ab... (sample row 0)
+2026-01-29 17:12:15,573 - dq_comparison - INFO - Hash 2: 8c181786c0f8ccd7... (sample row 1)
+2026-01-29 17:12:15,573 - dq_comparison - INFO - Hash 3: f6b936d42e331dd4... (sample row 2)
+2026-01-29 17:12:15,574 - dq_comparison - INFO - Generating hashes for target data (10000 rows)...
+2026-01-29 17:12:15,818 - dq_comparison - INFO -    Hashing target data: 50.0% complete (9,500/18,999 rows)
+2026-01-29 17:12:16,908 - dq_comparison - INFO -    Hashing target data: 60.0% complete (11,400/18,999 rows)
+2026-01-29 17:12:19,280 - dq_comparison - INFO -    Hashing target data: 70.0% complete (13,300/18,999 rows)
+2026-01-29 17:12:21,735 - dq_comparison - INFO -    Hashing target data: 80.0% complete (15,200/18,999 rows)
+2026-01-29 17:12:22,901 - dq_comparison - INFO -    Hashing target data: 90.0% complete (17,100/18,999 rows)
+2026-01-29 17:12:23,876 - dq_comparison - INFO - 
+======================================================================
+2026-01-29 17:12:23,877 - dq_comparison - INFO - 🔍 DEBUG: ANALYZING WHY HASHES DON'T MATCH
+2026-01-29 17:12:23,877 - dq_comparison - INFO - ======================================================================
+2026-01-29 17:12:23,878 - dq_comparison - INFO - 
+--- Analyzing Row 0 ---
+2026-01-29 17:12:23,880 - dq_comparison - INFO - Column 'Category' → 'Category':
+2026-01-29 17:12:23,881 - dq_comparison - INFO -   Source: 'Apparel' (type: str) → 'apparel'
+2026-01-29 17:12:23,882 - dq_comparison - INFO -   Target: 'Apparel' (type: str) → 'apparel'
+2026-01-29 17:12:23,882 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,883 - dq_comparison - INFO - Column 'Length_cm' → 'Length_cm':
+2026-01-29 17:12:23,885 - dq_comparison - INFO -   Source: '139' (type: int64) → '139'
+2026-01-29 17:12:23,886 - dq_comparison - INFO -   Target: '139' (type: int64) → '139'
+2026-01-29 17:12:23,887 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,888 - dq_comparison - INFO - Column 'ProductName' → 'ProductName':
+2026-01-29 17:12:23,888 - dq_comparison - INFO -   Source: 'Product-0' (type: str) → 'product-0'
+2026-01-29 17:12:23,889 - dq_comparison - INFO -   Target: 'Product-0' (type: str) → 'product-0'
+2026-01-29 17:12:23,890 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,891 - dq_comparison - INFO - Column 'CountryOfOrigin' → 'CountryOfOrigin':
+2026-01-29 17:12:23,892 - dq_comparison - INFO -   Source: 'Germany' (type: str) → 'germany'
+2026-01-29 17:12:23,893 - dq_comparison - INFO -   Target: 'Germany' (type: str) → 'germany'
+2026-01-29 17:12:23,894 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,894 - dq_comparison - INFO - Column 'UOM' → 'UOM':
+2026-01-29 17:12:23,896 - dq_comparison - INFO -   Source: 'PR' (type: str) → 'pr'
+2026-01-29 17:12:23,896 - dq_comparison - INFO -   Target: 'PR' (type: str) → 'pr'
+2026-01-29 17:12:23,897 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,898 - dq_comparison - INFO - 
+Hash components for Row 0:
+2026-01-29 17:12:23,899 - dq_comparison - INFO - Source hash string start: apparel|139|product-0...
+2026-01-29 17:12:23,900 - dq_comparison - INFO - Target hash string start: apparel|139|product-0...
+2026-01-29 17:12:23,900 - dq_comparison - INFO - Same? ✅ YES
+2026-01-29 17:12:23,901 - dq_comparison - INFO - 
+--- Analyzing Row 1 ---
+2026-01-29 17:12:23,902 - dq_comparison - INFO - Column 'Category' → 'Category':
+2026-01-29 17:12:23,903 - dq_comparison - INFO -   Source: 'Appliances' (type: str) → 'appliances'
+2026-01-29 17:12:23,903 - dq_comparison - INFO -   Target: 'Appliances' (type: str) → 'appliances'
+2026-01-29 17:12:23,903 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,904 - dq_comparison - INFO - Column 'Length_cm' → 'Length_cm':
+2026-01-29 17:12:23,905 - dq_comparison - INFO -   Source: '66' (type: int64) → '66'
+2026-01-29 17:12:23,906 - dq_comparison - INFO -   Target: '66' (type: int64) → '66'
+2026-01-29 17:12:23,906 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,907 - dq_comparison - INFO - Column 'ProductName' → 'ProductName':
+2026-01-29 17:12:23,907 - dq_comparison - INFO -   Source: 'Product-1' (type: str) → 'product-1'
+2026-01-29 17:12:23,908 - dq_comparison - INFO -   Target: 'Product-1' (type: str) → 'product-1'
+2026-01-29 17:12:23,910 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,910 - dq_comparison - INFO - Column 'CountryOfOrigin' → 'CountryOfOrigin':
+2026-01-29 17:12:23,911 - dq_comparison - INFO -   Source: 'USA' (type: str) → 'usa'
+2026-01-29 17:12:23,912 - dq_comparison - INFO -   Target: 'USA' (type: str) → 'usa'
+2026-01-29 17:12:23,912 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,913 - dq_comparison - INFO - Column 'UOM' → 'UOM':
+2026-01-29 17:12:23,914 - dq_comparison - INFO -   Source: 'KG' (type: str) → 'kg'
+2026-01-29 17:12:23,915 - dq_comparison - INFO -   Target: 'KG' (type: str) → 'kg'
+2026-01-29 17:12:23,915 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,916 - dq_comparison - INFO - 
+Hash components for Row 1:
+2026-01-29 17:12:23,917 - dq_comparison - INFO - Source hash string start: appliances|66|product-1...
+2026-01-29 17:12:23,918 - dq_comparison - INFO - Target hash string start: appliances|66|product-1...
+2026-01-29 17:12:23,918 - dq_comparison - INFO - Same? ✅ YES
+2026-01-29 17:12:23,918 - dq_comparison - INFO - 
+--- Analyzing Row 2 ---
+2026-01-29 17:12:23,920 - dq_comparison - INFO - Column 'Category' → 'Category':
+2026-01-29 17:12:23,921 - dq_comparison - INFO -   Source: 'Appliances' (type: str) → 'appliances'
+2026-01-29 17:12:23,922 - dq_comparison - INFO -   Target: 'Appliances' (type: str) → 'appliances'
+2026-01-29 17:12:23,922 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,923 - dq_comparison - INFO - Column 'Length_cm' → 'Length_cm':
+2026-01-29 17:12:23,923 - dq_comparison - INFO -   Source: '86' (type: int64) → '86'
+2026-01-29 17:12:23,924 - dq_comparison - INFO -   Target: '86' (type: int64) → '86'
+2026-01-29 17:12:23,925 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,925 - dq_comparison - INFO - Column 'ProductName' → 'ProductName':
+2026-01-29 17:12:23,927 - dq_comparison - INFO -   Source: 'Product-2' (type: str) → 'product-2'
+2026-01-29 17:12:23,927 - dq_comparison - INFO -   Target: 'Product-2' (type: str) → 'product-2'
+2026-01-29 17:12:23,928 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,929 - dq_comparison - INFO - Column 'CountryOfOrigin' → 'CountryOfOrigin':
+2026-01-29 17:12:23,929 - dq_comparison - INFO -   Source: 'Germany' (type: str) → 'germany'
+2026-01-29 17:12:23,929 - dq_comparison - INFO -   Target: 'Germany' (type: str) → 'germany'
+2026-01-29 17:12:23,930 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,931 - dq_comparison - INFO - Column 'UOM' → 'UOM':
+2026-01-29 17:12:23,932 - dq_comparison - INFO -   Source: 'KG' (type: str) → 'kg'
+2026-01-29 17:12:23,932 - dq_comparison - INFO -   Target: 'KG' (type: str) → 'kg'
+2026-01-29 17:12:23,933 - dq_comparison - INFO -   Match after normalization: ✅ YES
+2026-01-29 17:12:23,934 - dq_comparison - INFO - 
+Hash components for Row 2:
+2026-01-29 17:12:23,935 - dq_comparison - INFO - Source hash string start: appliances|86|product-2...
+2026-01-29 17:12:23,935 - dq_comparison - INFO - Target hash string start: appliances|86|product-2...
+2026-01-29 17:12:23,935 - dq_comparison - INFO - Same? ✅ YES
+2026-01-29 17:12:23,937 - dq_comparison - INFO - 
+--- Column Data Types Analysis ---
+2026-01-29 17:12:23,937 - dq_comparison - INFO - Column 1: 'Category' (object) ↔ 'Category' (object)
+2026-01-29 17:12:23,938 - dq_comparison - INFO -   Sample: Source='Apparel', Target='Apparel'
+2026-01-29 17:12:23,938 - dq_comparison - INFO - Column 2: 'Length_cm' (int64) ↔ 'Length_cm' (int64)
+2026-01-29 17:12:23,939 - dq_comparison - INFO -   Sample: Source='139', Target='139'
+2026-01-29 17:12:23,940 - dq_comparison - INFO - Column 3: 'ProductName' (object) ↔ 'ProductName' (object)
+2026-01-29 17:12:23,941 - dq_comparison - INFO -   Sample: Source='Product-0', Target='Product-0'
+2026-01-29 17:12:23,941 - dq_comparison - INFO - Column 4: 'CountryOfOrigin' (object) ↔ 'CountryOfOrigin' (object)
+2026-01-29 17:12:23,942 - dq_comparison - INFO -   Sample: Source='Germany', Target='Germany'
+2026-01-29 17:12:23,942 - dq_comparison - INFO - Column 5: 'UOM' (object) ↔ 'UOM' (object)
+2026-01-29 17:12:23,943 - dq_comparison - INFO -   Sample: Source='PR', Target='PR'
+2026-01-29 17:12:23,944 - dq_comparison - INFO - PERFORMING DETAILED ROW-LEVEL COMPARISON WITH PAGINATION...
+2026-01-29 17:12:23,946 - dq_comparison - INFO - Found 1,005 total mismatches
+2026-01-29 17:12:23,947 - dq_comparison - INFO - Will process detailed comparisons for first 1,005 rows
+2026-01-29 17:12:31,716 - dq_comparison - INFO - Progress: 500/1,005 rows (7.8s)
+2026-01-29 17:12:39,721 - dq_comparison - INFO - Progress: 1,000/1,005 rows (15.8s)
+2026-01-29 17:12:39,819 - dq_comparison - INFO - 
+================================================================================
+2026-01-29 17:12:39,820 - dq_comparison - INFO - DETAILED MISMATCH SUMMARY:
+2026-01-29 17:12:39,821 - dq_comparison - INFO -   Total mismatches found: 1003
+2026-01-29 17:12:39,822 - dq_comparison - INFO -   Detailed comparisons logged: 1003
+2026-01-29 17:12:39,823 - dq_comparison - INFO -   First 10 rows displayed above
+2026-01-29 17:12:39,824 - dq_comparison - INFO -   All mismatches stored in database with complete data
+2026-01-29 17:12:39,824 - dq_comparison - INFO -   Use API to retrieve all 1003 mismatches
+2026-01-29 17:12:39,825 - dq_comparison - INFO - ================================================================================
+2026-01-29 17:12:39,835 - dq_comparison - INFO - Hash-based Comparison Results (with duplicate handling):
+2026-01-29 17:12:39,836 - dq_comparison - INFO -   • Unique source hashes: 8999
+2026-01-29 17:12:39,836 - dq_comparison - INFO -   • Unique target hashes: 10000
+2026-01-29 17:12:39,837 - dq_comparison - INFO -   • Common hashes: 8997
+2026-01-29 17:12:39,838 - dq_comparison - INFO -   • Common rows (counting duplicates): 8,997
+2026-01-29 17:12:39,839 - dq_comparison - INFO -   • Rows only in source (counting duplicates): 2
+2026-01-29 17:12:39,840 - dq_comparison - INFO -   • Rows only in target (counting duplicates): 1,003
+2026-01-29 17:12:39,851 - dq_comparison - INFO - HASH-ONLY COMPARISON COMPLETED
+2026-01-29 17:12:39,852 - dq_comparison - INFO - Returning counts for simple scoring:
+2026-01-29 17:12:39,853 - dq_comparison - INFO -   Common rows: 8,997
+2026-01-29 17:12:39,854 - dq_comparison - INFO -   Unique to source: 2
+2026-01-29 17:12:39,855 - dq_comparison - INFO -   Unique to target: 1,003
+2026-01-29 17:12:39,857 - dq_comparison - INFO -   Value mismatches: 13065
+2026-01-29 17:12:39,858 - dq_comparison - INFO -   Missing rows: 2
+2026-01-29 17:12:39,858 - dq_comparison - INFO -   Extra rows: 1,003
+2026-01-29 17:12:39,860 - dq_comparison - INFO - 
+========================================================================================================================
+COMPARISON: Excel (20260129_171204_product_master_9k.xlsx (product_master_9k)) vs CSV (20260129_171204_product_master_10k.csv)
+========================================================================================================================
+Row   | Diff Count | Source (Sample)                          | Target (Sample)                         
+------------------------------------------------------------------------------------------------------------------------
+8996  | 1          | Category: Kitchenware                    | Category: Kitchenware                   
+8999  | 1          | Category: Electronics                    | Category: Electronics                   
+9001  | 13         | Category: NULL                           | Category: Electronics                   
+9002  | 13         | Category: NULL                           | Category: Electronics                   
+9003  | 13         | Category: NULL                           | Category: Electronics                   
+9004  | 13         | Category: NULL                           | Category: Footwear                      
+9005  | 13         | Category: NULL                           | Category: Electronics                   
+9006  | 13         | Category: NULL                           | Category: Storage                       
+9007  | 13         | Category: NULL                           | Category: Storage                       
+9008  | 13         | Category: NULL                           | Category: Electronics                   
+------------------------------------------------------------------------------------------------------------------------
+Showing 1-10 of 1003 mismatched rows. Use API for complete data.
+========================================================================================================================
+2026-01-29 17:12:39,861 - dq_comparison - INFO - Returning enhanced mismatch structure with 1003 detailed mismatches
+2026-01-29 17:12:39,869 - dq_comparison - INFO - New structure: 100 detailed mismatches
+2026-01-29 17:12:39,870 - dq_comparison - INFO - Analyzing data quality metrics...
+2026-01-29 17:12:47,272 - dq_comparison - INFO - Null values - Source: 486 (0.42%), Target: 534 (0.41%)
+2026-01-29 17:12:47,296 - dq_comparison - INFO - Duplicate rows (normalized) - Source: 0, Target: 0
+2026-01-29 17:12:47,340 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260129_171208
+2026-01-29 17:12:47,341 - dq_comparison - INFO - 
+📊 SIMPLE SCORING CALCULATION:
+2026-01-29 17:12:47,342 - dq_comparison - INFO -   Source rows: 8999
+2026-01-29 17:12:47,343 - dq_comparison - INFO -   Common rows (matched): 8997
+2026-01-29 17:12:47,344 - dq_comparison - INFO -   Calculation: (8997 / 8999) * 100 = 99.98%
+2026-01-29 17:12:47,345 - dq_comparison - INFO -   Explanation: 8997 matched rows out of 8999 total source rows
+2026-01-29 17:12:47,345 - dq_comparison - INFO - 
+=== AUDIT LOGGING SECTION ===
+2026-01-29 17:12:47,346 - dq_comparison - INFO - 🔍 Audit logging is ENABLED in APP_SETTINGS
+2026-01-29 17:12:47,347 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-29 17:12:47,348 - dq_comparison - INFO - Attempting to log audit record for session: CMP_20260129_171208
+2026-01-29 17:12:47,348 - dq_audit - INFO - Starting database insertion for comparison...
+2026-01-29 17:12:47,363 - dq_audit - INFO - Inserted comparison record with ID: 852
+2026-01-29 17:12:47,364 - dq_comparison - INFO - ✅ Audit record logged successfully (ID: 852)
+2026-01-29 17:12:47,400 - dq_error_log - INFO - Retrieved 100 error logs for session CMP_20260129_171208
+2026-01-29 17:12:47,417 - dq_error_log - INFO - Retrieved summary: 1006 total errors for session CMP_20260129_171208
+2026-01-29 17:12:47,418 - dq_audit - INFO - Audit class initialized with database: dq_checks
+2026-01-29 17:12:47,432 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260129_171208
+2026-01-29 17:12:47,433 - dq_comparison - INFO - 
+🔍 Final results verification:
+2026-01-29 17:12:47,434 - dq_comparison - INFO -    Session ID: CMP_20260129_171208
+2026-01-29 17:12:47,434 - dq_comparison - INFO -    DQ Score (Simple %): 99.98%
+2026-01-29 17:12:47,435 - dq_comparison - INFO -    Source rows: 8999
+2026-01-29 17:12:47,436 - dq_comparison - INFO -    Matched rows: 8997
+2026-01-29 17:12:47,436 - dq_comparison - INFO -    Calculation: (8997 / 8999) * 100
+2026-01-29 17:12:47,437 - dq_comparison - INFO - Comparison analysis completed successfully
+2026-01-29 17:12:47,452 - dq_audit - INFO - Retrieved 1 audit logs for session CMP_20260129_171208
+2026-01-29 17:12:47,492 - dq_error_log - INFO - Retrieved 200 error logs for session CMP_20260129_171208
+2026-01-29 17:12:47,510 - dq_error_log - INFO - Retrieved summary: 1006 total errors for session CMP_20260129_171208
+2026-01-29 17:12:47,531 - __main__ - INFO - Completed with status 200 in 42.666s
